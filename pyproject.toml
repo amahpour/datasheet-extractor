@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datasheet-extractor"
+version = "0.1.0"
+description = "Local datasheet PDF extraction pipeline using Docling"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "docling",
+  "pydantic>=2",
+  "pillow",
+  "pypdf",
+]
+
+[project.optional-dependencies]
+ocr = ["pytesseract"]
+vision = ["opencv-python"]
+dev = ["pytest"]
+
+[project.scripts]
+datasheet-extract = "cli.ds_extract:main"
+datasheet-smoke-test = "cli.smoke_test:main"
+
+[tool.setuptools]
+packages = ["cli", "src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
