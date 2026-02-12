@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0058",
   "image_path": "out/dac5578/figures/fig_0058.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a graph that displays the relationship between voltage and current in a circuit, with the x-axis representing voltage and the y-axis representing current. The graph shows a downward trend, indicating that as the voltage increases, the current decreases. There is also a line of best fit on the graph, which suggests an equation to describe this relationship. The text \"Source Current at Positive Rail\" can be seen in the image, possibly referring to the positive rail resistance or the resistance of the circuit when it's connected to a positive terminal.\n\nThe graph has two peaks: one at 4.85V and another at 5.0V. These points are likely representing the maximum current and voltage that the circuit can handle without any issues. The x-axis is labeled with numbers, which could be units of measurement or values from the experiment being conducted.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0058/llm_analysis.json",
+    "processed_at": "2026-02-12T04:54:02Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:43:08.896843+00:00"
+  "processed_at": "2026-02-12T04:54:02Z"
 }

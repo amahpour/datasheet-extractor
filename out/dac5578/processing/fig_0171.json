@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0171",
   "image_path": "out/dac5578/figures/fig_0171.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a detailed diagram of a data line stable (DSL) circuit, with the components clearly labeled and organized in a grid format. The DSL circuit is designed to store and process digital information using a data line, which is a continuous loop of electrical conductors that can be used for various purposes such as data storage or transmission.\n\nThe diagram includes two lines: one representing the data line stable (DSL) component, and another representing the change of data allowed (CDA) component. The DSL circuit has three input pins and two output pins, with the input pins connected to the DSL component and the output pins connected to the CDA component.\n\nThe diagram also includes a legend that explains the different components in the circuit, such as the data line stable (DSL), change of data allowed (CDA), and dark void (DV). The legend is located at the bottom right corner of the image.",
   "local_llm_classification": "pinout",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0171/llm_analysis.json",
+    "processed_at": "2026-02-12T05:15:13Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:52:05.776894+00:00"
+  "processed_at": "2026-02-12T05:15:13Z"
 }

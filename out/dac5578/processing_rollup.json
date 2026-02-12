@@ -1,1353 +1,1122 @@
 {
   "total_figures": 221,
   "resolved_local": 106,
-  "resolved_external": 0,
-  "needs_external": 115,
+  "resolved_external": 115,
+  "needs_external": 0,
   "summary": {
-    "fully_processed": 106,
-    "pending_external": 115,
-    "percent_complete": 48.0
+    "fully_processed": 221,
+    "pending_external": 0,
+    "percent_complete": 100.0
   },
   "figures": {
     "resolved_local": [
       {
         "id": "fig_0001",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0003",
-        "classification": "logo",
-        "description": "The image features a black and white triangle-shaped logo with two weights, one on each side of the triangle. The weight"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0004",
-        "classification": "logo",
-        "description": "The image presents two electronic components, a larger component and a smaller one, both featuring the logo of the state"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0005",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length of 6 characters. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0006",
-        "classification": "logo",
-        "description": "The image features a striking black and white logo for a company, which is composed of three triangles arranged in a tri"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0007",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0008",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0009",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0010",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0013",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0014",
-        "classification": "other",
-        "description": "The image presents a detailed black and white diagram of an electronic circuit, with various components such as resistor"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0015",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0016",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0023",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0024",
-        "classification": "other",
-        "description": "The image shows a close-up view of three black and white license plates, each with the number \"DAC\" written in capital l"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0025",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0032",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0033",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0040",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0041",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0048",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0049",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0055",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0056",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0063",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0064",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0070",
-        "classification": "screenshot",
-        "description": "The image presents a black and white diagram that illustrates the relationship between falling edge, trigger pulse, and "
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0071",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0072",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0074",
-        "classification": "icon",
-        "description": "The image presents a graph of an electrical circuit, with the x-axis representing time and the y-axis indicating voltage"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0076",
-        "classification": "icon",
-        "description": "The image presents a black and white line graph that displays the relationship between two variables, with each variable"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0078",
-        "classification": "screenshot",
-        "description": "The image presents a black and white diagram of a power-off glitch in a DAC (Digital Audio Coder) amplifier, with the am"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0079",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0081",
-        "classification": "other",
-        "description": "The image presents a detailed electronic datasheet for a device that measures the trigger pulse of a signal. The device "
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0082",
-        "classification": "icon",
-        "description": "The image presents a black and white diagram that illustrates the flow of electricity through a circuit. The circuit is "
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0086",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0087",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0090",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0094",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0095",
-        "classification": "other",
-        "description": "The image shows a close-up view of three black and white license plates, each with the number \"DAC\" written in capital l"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0102",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0103",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0104",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0111",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0112",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0119",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0120",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0127",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0128",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0134",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0135",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0142",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0143",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0150",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0151",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0158",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0159",
-        "classification": "icon",
-        "description": "The image presents a black and white diagram of an electronic device, with the device's name prominently displayed in th"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0163",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0166",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0168",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0169",
-        "classification": "screenshot",
-        "description": "The image presents a detailed diagram of a digital circuit, with each component clearly labeled and connected to the nex"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0170",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0172",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0173",
-        "classification": "icon",
-        "description": "The image presents a detailed diagram of a digital circuit, specifically focusing on the transfer function and its compo"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0174",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0175",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0176",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0177",
-        "classification": "other",
-        "description": "The image presents a detailed electronic datasheet for a computer system, specifically focusing on the command line inte"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0178",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0179",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0180",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0181",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0182",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0183",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0184",
-        "classification": "screenshot",
-        "description": "The image presents a black and white diagram of an electronic circuit, with the components clearly labeled for easy unde"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0185",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0186",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0187",
-        "classification": "icon",
-        "description": "The image presents a black and white circuit diagram that illustrates the components of a digital audio processing syste"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0189",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0190",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0192",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0193",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0194",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0195",
-        "classification": "screenshot",
-        "description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first n"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0196",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0197",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0198",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0199",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0200",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0201",
-        "classification": "screenshot",
-        "description": "The image presents a detailed diagram of a circular device, likely a motor or gear, with measurements and dimensions pro"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0202",
-        "classification": "icon",
-        "description": "The image presents a detailed diagram of a sprockets pocket quadrant, which is a component used in electronic devices to"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0203",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0204",
-        "classification": "photo",
-        "description": "The image presents a black and white diagram of a cardboard box with its lid open, revealing the interior. The box is ou"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0205",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0206",
-        "classification": "mechanical",
-        "description": "The image presents a detailed diagram of a tube with measurements and specifications for its dimensions, including the l"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0207",
-        "classification": "icon",
-        "description": "The image presents a black and white electronic device, possibly a semiconductor chip or a component of a larger circuit"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0208",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0210",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0211",
-        "classification": "icon",
-        "description": "The image presents a detailed technical drawing of a circuit board, with measurements and specifications provided in bot"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0212",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0214",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0216",
-        "classification": "logo",
-        "description": "The image features a black and white logo for Texas Instruments (TI). The logo is displayed in a rectangular shape, with"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0218",
-        "classification": "screenshot",
-        "description": "The image presents a detailed technical drawing of a soldering mask, which is a crucial tool in the field of electronics"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0219",
-        "classification": "logo",
-        "description": "The image features a logo for Texas Instruments (TI) that is predominantly black and white, with the company's name disp"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0220",
-        "classification": "screenshot",
-        "description": "The image presents a detailed technical drawing of a soldering iron, with the focus on its components and their dimensio"
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0221",
-        "classification": "logo",
-        "description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology."
+        "classification": "",
+        "description": ""
       }
     ],
-    "needs_external": [
+    "resolved_external": [
       {
         "id": "fig_0002",
-        "image_path": "out/dac5578/figures/fig_0002.png",
-        "classification": "block_diagram",
-        "description": "The image presents a detailed black and white diagram of a digital circuit board, specifically focusing on the DAC5728 c",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0011",
-        "image_path": "out/dac5578/figures/fig_0011.png",
-        "classification": "block_diagram",
-        "description": "The image presents a detailed black and white diagram of a digital circuit board, specifically focusing on the DACX5728 ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0012",
-        "image_path": "out/dac5578/figures/fig_0012.png",
-        "classification": "block_diagram",
-        "description": "The image presents a detailed diagram of a DAC5728 circuit board, which is a component used in electronic devices for di",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0017",
-        "image_path": "out/dac5578/figures/fig_0017.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between linearity error and digital input code (DAC) for eight",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0018",
-        "image_path": "out/dac5578/figures/fig_0018.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". The gr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0019",
-        "image_path": "out/dac5578/figures/fig_0019.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linear error\". The graph",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0020",
-        "image_path": "out/dac5578/figures/fig_0020.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0021",
-        "image_path": "out/dac5578/figures/fig_0021.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the error in digital input code and the other showing the di",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0022",
-        "image_path": "out/dac5578/figures/fig_0022.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0026",
-        "image_path": "out/dac5578/figures/fig_0026.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linear error\". The graph",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0027",
-        "image_path": "out/dac5578/figures/fig_0027.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between linearity error and digital input code (DAC) for vario",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0028",
-        "image_path": "out/dac5578/figures/fig_0028.png",
-        "classification": "plot",
-        "description": "The image presents a line graph that displays the relationship between digital input code (DAC) and external reference (",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0029",
-        "image_path": "out/dac5578/figures/fig_0029.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0030",
-        "image_path": "out/dac5578/figures/fig_0030.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0031",
-        "image_path": "out/dac5578/figures/fig_0031.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the differential linearity error and the other showing the d",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0034",
-        "image_path": "out/dac5578/figures/fig_0034.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". The gr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0035",
-        "image_path": "out/dac5578/figures/fig_0035.png",
-        "classification": "plot",
-        "description": "The image presents a line graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". T",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0036",
-        "image_path": "out/dac5578/figures/fig_0036.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". The gr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0037",
-        "image_path": "out/dac5578/figures/fig_0037.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0038",
-        "image_path": "out/dac5578/figures/fig_0038.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0039",
-        "image_path": "out/dac5578/figures/fig_0039.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0042",
-        "image_path": "out/dac5578/figures/fig_0042.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the linear error and the other representing the temperature.",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0043",
-        "image_path": "out/dac5578/figures/fig_0043.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the linear error and the other representing the temperature.",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0044",
-        "image_path": "out/dac5578/figures/fig_0044.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the error in linearity and the other representing temperatur",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0045",
-        "image_path": "out/dac5578/figures/fig_0045.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference and the other representing the maximu",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0046",
-        "image_path": "out/dac5578/figures/fig_0046.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference and the other representing the maximu",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0047",
-        "image_path": "out/dac5578/figures/fig_0047.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference and the other representing the maximu",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0050",
-        "image_path": "out/dac5578/figures/fig_0050.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference and the other indicating the current ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0051",
-        "image_path": "out/dac5578/figures/fig_0051.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference voltage (V) and the other representin",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0052",
-        "image_path": "out/dac5578/figures/fig_0052.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"External Reference\" and the y-axis labeled \"Voltage\". The graph disp",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0053",
-        "image_path": "out/dac5578/figures/fig_0053.png",
-        "classification": "plot",
-        "description": "The image presents a graph with temperature values on the y-axis and time intervals on the x-axis, showing how the tempe",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0054",
-        "image_path": "out/dac5578/figures/fig_0054.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"External Reference\" and the y-axis labeled \"Voltage (V)\", indicating",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0057",
-        "image_path": "out/dac5578/figures/fig_0057.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between current and voltage in a circuit, with the x-axis repr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0058",
-        "image_path": "out/dac5578/figures/fig_0058.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between voltage and current in a circuit, with the x-axis repr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0059",
-        "image_path": "out/dac5578/figures/fig_0059.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between voltage and current in a circuit, with the x-axis repr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0060",
-        "image_path": "out/dac5578/figures/fig_0060.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the input voltage and the other representing the output curr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0061",
-        "image_path": "out/dac5578/figures/fig_0061.png",
-        "classification": "plot",
-        "description": "The image presents a line graph with two lines, one representing the DC current and the other representing the AC voltag",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0062",
-        "image_path": "out/dac5578/figures/fig_0062.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the DC current and the other representing the AC voltage. Th",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0065",
-        "image_path": "out/dac5578/figures/fig_0065.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between power supply current and digital input code for an ele",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0066",
-        "image_path": "out/dac5578/figures/fig_0066.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between power supply voltage and current in a circuit. The x-a",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0067",
-        "image_path": "out/dac5578/figures/fig_0067.png",
-        "classification": "plot",
-        "description": "The image presents a black and white diagram of a sensor's output, which is displayed in a graph format with time on the",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0068",
-        "image_path": "out/dac5578/figures/fig_0068.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between power supply voltage and current, with the x-axis repr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0069",
-        "image_path": "out/dac5578/figures/fig_0069.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the power-supply current of a device over time, with the x-axis representing ti",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0073",
-        "image_path": "out/dac5578/figures/fig_0073.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the rise and fall of a signal over time, with a range of values ranging from 0 ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0075",
-        "image_path": "out/dac5578/figures/fig_0075.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one labeled \"Power-on Glitch\" and the other labeled \"Reset-to-mid Scale\". The",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0077",
-        "image_path": "out/dac5578/figures/fig_0077.png",
-        "classification": "plot",
-        "description": "The image presents a black and white diagram of a circuit, with the words \"DAC Unloaded\" written in the top left corner.",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0080",
-        "image_path": "out/dac5578/figures/fig_0080.png",
-        "classification": "plot",
-        "description": "The image presents a black and white line graph that displays the relationship between voltage, current, and resistance ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0083",
-        "image_path": "out/dac5578/figures/fig_0083.png",
-        "classification": "plot",
-        "description": "The image presents a detailed electronic datasheet for Glitch Energy, which is a type of energy that can be generated us",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0084",
-        "image_path": "out/dac5578/figures/fig_0084.png",
-        "classification": "schematic",
-        "description": "The image presents a detailed electronic circuit diagram, with various components and their respective values. The circu",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0085",
-        "image_path": "out/dac5578/figures/fig_0085.png",
-        "classification": "plot",
-        "description": "The image presents a black and white diagram of an electronic device, with the x-axis labeled \"Time\" and the y-axis labe",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0088",
-        "image_path": "out/dac5578/figures/fig_0088.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between frequency and DC output for three different DC sources",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0089",
-        "image_path": "out/dac5578/figures/fig_0089.png",
-        "classification": "plot",
-        "description": "The image presents a black and white diagram of a circuit, with the x-axis labeled \"Time\" and the y-axis labeled \"Voltag",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0091",
-        "image_path": "out/dac5578/figures/fig_0091.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference and the other indicating the current ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0092",
-        "image_path": "out/dac5578/figures/fig_0092.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between power supply current and digital input code for an ele",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0093",
-        "image_path": "out/dac5578/figures/fig_0093.png",
-        "classification": "pinout",
-        "description": "The image presents a line graph that displays the supply current of various electronic devices, with each device represe",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0096",
-        "image_path": "out/dac5578/figures/fig_0096.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between linear error and digital input code (DAC) for a digita",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0097",
-        "image_path": "out/dac5578/figures/fig_0097.png",
-        "classification": "plot",
-        "description": "The image presents a line graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". T",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0098",
-        "image_path": "out/dac5578/figures/fig_0098.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between linearity error and digital input code (DAC) for a dig",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0099",
-        "image_path": "out/dac5578/figures/fig_0099.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the digital input code and the other showing the differentia",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0100",
-        "image_path": "out/dac5578/figures/fig_0100.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0101",
-        "image_path": "out/dac5578/figures/fig_0101.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the digital input code and the other showing the differentia",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0105",
-        "image_path": "out/dac5578/figures/fig_0105.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between linearity error and digital input code (DAC) for a spe",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0106",
-        "image_path": "out/dac5578/figures/fig_0106.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". The gr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0107",
-        "image_path": "out/dac5578/figures/fig_0107.png",
-        "classification": "plot",
-        "description": "The image presents a line graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linear error\". The ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0108",
-        "image_path": "out/dac5578/figures/fig_0108.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the differential linearity error and the other showing the d",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0109",
-        "image_path": "out/dac5578/figures/fig_0109.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between differential linearity error and digital input code (D",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0110",
-        "image_path": "out/dac5578/figures/fig_0110.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0113",
-        "image_path": "out/dac5578/figures/fig_0113.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linear error\". The graph",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0114",
-        "image_path": "out/dac5578/figures/fig_0114.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". The gr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0115",
-        "image_path": "out/dac5578/figures/fig_0115.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". The gr",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0116",
-        "image_path": "out/dac5578/figures/fig_0116.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0117",
-        "image_path": "out/dac5578/figures/fig_0117.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0118",
-        "image_path": "out/dac5578/figures/fig_0118.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity e",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0121",
-        "image_path": "out/dac5578/figures/fig_0121.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the error in linearity and the other showing the temperature",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0122",
-        "image_path": "out/dac5578/figures/fig_0122.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the linear error and the other representing the temperature.",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0123",
-        "image_path": "out/dac5578/figures/fig_0123.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the error in linearity and the other representing the temper",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0124",
-        "image_path": "out/dac5578/figures/fig_0124.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference and the other representing the temper",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0125",
-        "image_path": "out/dac5578/figures/fig_0125.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference and the other representing the maximu",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0126",
-        "image_path": "out/dac5578/figures/fig_0126.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference and the other representing the temper",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0129",
-        "image_path": "out/dac5578/figures/fig_0129.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the external reference and the other indicating the current ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0130",
-        "image_path": "out/dac5578/figures/fig_0130.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between power supply current and temperature for various exter",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0131",
-        "image_path": "out/dac5578/figures/fig_0131.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"External Reference\" and the y-axis labeled \"Temperature (°C)\". The g",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0132",
-        "image_path": "out/dac5578/figures/fig_0132.png",
-        "classification": "plot",
-        "description": "The image presents a graph with temperature values on the y-axis and time intervals on the x-axis, showing how the tempe",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0133",
-        "image_path": "out/dac5578/figures/fig_0133.png",
-        "classification": "plot",
-        "description": "The image presents a graph with temperature values on the y-axis and time intervals on the x-axis, indicating that it is",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0136",
-        "image_path": "out/dac5578/figures/fig_0136.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between voltage and current in a DC circuit, specifically focu",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0137",
-        "image_path": "out/dac5578/figures/fig_0137.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between the input voltage and current for a DC circuit. The x-",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0138",
-        "image_path": "out/dac5578/figures/fig_0138.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the relationship between current and voltage in a DC circuit, with two lines re",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0139",
-        "image_path": "out/dac5578/figures/fig_0139.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the DC current and the other representing the AC voltage of ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0140",
-        "image_path": "out/dac5578/figures/fig_0140.png",
-        "classification": "plot",
-        "description": "The image presents a graph with the x-axis labeled \"Channel B\" and the y-axis labeled \"DC Loaded with 0h External Refere",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0141",
-        "image_path": "out/dac5578/figures/fig_0141.png",
-        "classification": "plot",
-        "description": "The image presents a graph with two lines, one representing the DC current and the other representing the AC voltage. Th",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0144",
-        "image_path": "out/dac5578/figures/fig_0144.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the power supply of an electronic device, with the x-axis representing time and",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0145",
-        "image_path": "out/dac5578/figures/fig_0145.png",
-        "classification": "plot",
-        "description": "The image presents a detailed electronic datasheet for a device that measures the rise and fall of an external reference",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0146",
-        "image_path": "out/dac5578/figures/fig_0146.png",
-        "classification": "plot",
-        "description": "The image presents a black and white diagram of a sensor, with the x-axis labeled \"Time\" and the y-axis labeled \"Voltage",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0147",
-        "image_path": "out/dac5578/figures/fig_0147.png",
-        "classification": "plot",
-        "description": "The image presents a graph that displays the power supply current of a device over time, with the x-axis representing ti",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0148",
-        "image_path": "out/dac5578/figures/fig_0148.png",
-        "classification": "plot",
-        "description": "The image presents a technical diagram of a falling edge, with the x-axis labeled \"External Reference\" and the y-axis la",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0149",
-        "image_path": "out/dac5578/figures/fig_0149.png",
-        "classification": "plot",
-        "description": "The image presents a black and white diagram that illustrates the falling edge of a trigger pulse, with time intervals r",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0152",
-        "image_path": "out/dac5578/figures/fig_0152.png",
-        "classification": "plot",
-        "description": "The image presents a black and white line graph that displays the relationship between voltage (V) and current (I). The ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0153",
-        "image_path": "out/dac5578/figures/fig_0153.png",
-        "classification": "plot",
-        "description": "The image presents a detailed electronic datasheet for a device that measures DC voltage and current in millivolts (mV).",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0154",
-        "image_path": "out/dac5578/figures/fig_0154.png",
-        "classification": "schematic",
-        "description": "The image presents a detailed electronic circuit diagram, with various components and their respective values labeled in",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0155",
-        "image_path": "out/dac5578/figures/fig_0155.png",
-        "classification": "plot",
-        "description": "The image presents a black and white diagram of an electronic device, with the x-axis labeled \"Time\" and the y-axis labe",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0156",
-        "image_path": "out/dac5578/figures/fig_0156.png",
-        "classification": "plot",
-        "description": "The image presents a black and white diagram of a power-off glitch, which is a type of electrical interference that can ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0157",
-        "image_path": "out/dac5578/figures/fig_0157.png",
-        "classification": "timing_diagram",
-        "description": "The image presents a black and white diagram that illustrates the flow of electricity in a circuit, with various compone",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0160",
-        "image_path": "out/dac5578/figures/fig_0160.png",
-        "classification": "timing_diagram",
-        "description": "The image presents a black and white diagram that illustrates the external reference of a trigger pulse, which is used t",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0161",
-        "image_path": "out/dac5578/figures/fig_0161.png",
-        "classification": "timing_diagram",
-        "description": "The image presents a black and white diagram of an electronic device, with the x-axis labeled \"External Reference\" and t",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0162",
-        "image_path": "out/dac5578/figures/fig_0162.png",
-        "classification": "timing_diagram",
-        "description": "The image presents a black and white diagram of an electronic device, with the device's name prominently displayed in th",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0164",
-        "image_path": "out/dac5578/figures/fig_0164.png",
-        "classification": "schematic",
-        "description": "The image presents a black and white circuit diagram that illustrates the components of a DC amplifier. The diagram incl",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0165",
-        "image_path": "out/dac5578/figures/fig_0165.png",
-        "classification": "schematic",
-        "description": "The image presents a detailed circuit diagram for a low-pass filter, specifically designed to pass signals with a freque",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0167",
-        "image_path": "out/dac5578/figures/fig_0167.png",
-        "classification": "pinout",
-        "description": "The image presents a detailed electronic circuit diagram, specifically focusing on the components of a digital clock. Th",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0171",
-        "image_path": "out/dac5578/figures/fig_0171.png",
-        "classification": "pinout",
-        "description": "The image presents a detailed diagram of a data line stable (DSL) circuit, with the components clearly labeled and organ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0188",
-        "image_path": "out/dac5578/figures/fig_0188.png",
-        "classification": "pinout",
-        "description": "The image presents a detailed black and white diagram of a microcontroller circuit board, specifically focusing on the A",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0191",
-        "image_path": "out/dac5578/figures/fig_0191.png",
-        "classification": "schematic",
-        "description": "The image presents a detailed circuit diagram for a microcontroller, specifically a DAC18 controller. The circuit is des",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0209",
-        "image_path": "out/dac5578/figures/fig_0209.png",
-        "classification": "pinout",
-        "description": "The image presents a detailed technical drawing of a pin-sized electronic device, likely a microcontroller or a similar ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0213",
-        "image_path": "out/dac5578/figures/fig_0213.png",
-        "classification": "block_diagram",
-        "description": "The image presents a detailed technical drawing of a circuit board, specifically focusing on the soldering paste used in",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0215",
-        "image_path": "out/dac5578/figures/fig_0215.png",
-        "classification": "block_diagram",
-        "description": "The image presents a black electronic device, likely a circuit board or integrated circuit, resting on its side against ",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       },
       {
         "id": "fig_0217",
-        "image_path": "out/dac5578/figures/fig_0217.png",
-        "classification": "pinout",
-        "description": "The image presents a detailed technical drawing of a pin-sized electronic device, including its dimensions and specifica",
-        "ocr_preview": ""
+        "classification": "",
+        "description": ""
       }
-    ],
-    "resolved_external": []
+    ]
   }
 }

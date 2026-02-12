@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0080",
   "image_path": "out/dac5578/figures/fig_0080.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a black and white line graph that displays the relationship between voltage, current, and resistance in a circuit. The x-axis of the graph represents time (in seconds), while the y-axis represents the measured values of voltage (V), current (I), and resistance (R). The graph shows an increase in voltage over time, indicating a rise in the circuit's potential energy. The line connecting the data points on the graph is steep, suggesting a strong relationship between the variables.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0080/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:45:34.342091+00:00"
+  "processed_at": "2026-02-12T05:00:08Z"
 }

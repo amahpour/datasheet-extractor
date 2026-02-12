@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0068",
   "image_path": "out/dac5578/figures/fig_0068.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a graph that displays the relationship between power supply voltage and current, with the x-axis representing the voltage in volts (V) and the y-axis representing the current in amperes (A). The graph shows a positive linear relationship between these two variables, indicating that as the voltage increases, so does the current. The line on the graph slopes upwards from left to right, suggesting an increase in both voltage and current over time or across different conditions.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0068/llm_analysis.json",
+    "processed_at": "2026-02-12T04:54:02Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:44:47.739297+00:00"
+  "processed_at": "2026-02-12T04:54:02Z"
 }

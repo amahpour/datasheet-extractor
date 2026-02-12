@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0110",
   "image_path": "out/dac5578/figures/fig_0110.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays the relationship between the digital input code (DAC) and the differential linearity error, represented by the number of channels shown on the graph.\n\nThere are six channels visible in the image, with three channels being shown for DAC A and three channels for DAC B. The x-axis shows the DAC codes, while the y-axis displays the corresponding errors. The graph is color-coded to differentiate between DAC A and DAC B, making it easy to understand the relationship between the input code and the error.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0110/llm_analysis.json",
+    "processed_at": "2026-02-12T05:06:45Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:48:14.848579+00:00"
+  "processed_at": "2026-02-12T05:06:45Z"
 }

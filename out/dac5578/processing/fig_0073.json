@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0073",
   "image_path": "out/dac5578/figures/fig_0073.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a graph that displays the rise and fall of a signal over time, with a range of values ranging from 0 to 5us/div. The x-axis represents time in hours, while the y-axis shows the voltage or power level of the signal. The graph is color-coded for clarity, with different colors representing different ranges of voltage levels. The rise and fall of the signal are depicted by a series of peaks and valleys on the graph, indicating changes in the signal's power over time.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0073/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:45:06.714815+00:00"
+  "processed_at": "2026-02-12T05:00:08Z"
 }

@@ -1,0 +1,38 @@
+{
+  "classification": "wiring_diagram",
+  "title": "Three DACx578 Devices on Shared I2C Bus",
+  "summary": "Multi-device hookup showing three DACx578 parts on one SCL/SDA bus with pull-ups and one device option marked leave floating.",
+  "structured_data": {
+    "connections": [
+      {
+        "from": "Microcontroller.SCL",
+        "to": "DACx578_1.SCL/DACx578_2.SCL/DACx578_3.SCL",
+        "wire_color": "not specified"
+      },
+      {
+        "from": "Microcontroller.SDA",
+        "to": "DACx578_1.SDA/DACx578_2.SDA/DACx578_3.SDA",
+        "wire_color": "not specified"
+      },
+      {
+        "from": "VDD",
+        "to": "Bus pull-up resistors",
+        "wire_color": "not specified"
+      },
+      {
+        "from": "Ground",
+        "to": "Selected device pins",
+        "wire_color": "not specified"
+      }
+    ]
+  },
+  "component_references": [
+    "DACx578",
+    "Microcontroller/Microprocessor with I2C Port"
+  ],
+  "key_values": {
+    "pull_up_range": "1 kOhm to 10 kOhm (typ)",
+    "bus_type": "I2C multi-drop"
+  },
+  "confidence": 0.97
+}

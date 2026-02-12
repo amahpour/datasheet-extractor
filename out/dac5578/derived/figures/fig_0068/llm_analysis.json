@@ -1,0 +1,56 @@
+{
+  "classification": "plot",
+  "title": "Power Supply Current vs Power Supply Voltage",
+  "summary": "Active supply current versus AVDD from 2.7 V to 5.5 V; current increases with supply voltage.",
+  "structured_data": {
+    "x_axis": "Power Supply Voltage (V)",
+    "y_axis": "Power Supply Current (mA)",
+    "series": [
+      {
+        "name": "Power Supply Current",
+        "data_points": [
+          {
+            "x": 2.7,
+            "y": 0.73
+          },
+          {
+            "x": 3.1,
+            "y": 0.78
+          },
+          {
+            "x": 3.5,
+            "y": 0.82
+          },
+          {
+            "x": 3.8,
+            "y": 0.86
+          },
+          {
+            "x": 4.3,
+            "y": 0.92
+          },
+          {
+            "x": 4.7,
+            "y": 0.97
+          },
+          {
+            "x": 5.1,
+            "y": 1.03
+          },
+          {
+            "x": 5.5,
+            "y": 1.10
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nPower Supply Current,2.7,0.73\nPower Supply Current,3.1,0.78\nPower Supply Current,3.5,0.82\nPower Supply Current,3.8,0.86\nPower Supply Current,4.3,0.92\nPower Supply Current,4.7,0.97\nPower Supply Current,5.1,1.03\nPower Supply Current,5.5,1.10"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "avdd_range": "2.7V to 5.5V"
+  },
+  "confidence": 0.98
+}

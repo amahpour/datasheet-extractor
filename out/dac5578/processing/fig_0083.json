@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0083",
   "image_path": "out/dac5578/figures/fig_0083.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a detailed electronic datasheet for Glitch Energy, which is a type of energy that can be generated using a trigger pulse. The datasheet provides information about the energy generation process and its efficiency. It includes a graph showing the energy output over time, with the x-axis representing time in seconds and the y-axis representing energy in units of power. The graph shows fluctuations in energy production as it varies from 5V to 12V, indicating that the energy generated can be adjusted depending on the input voltage.\n\nThe datasheet also includes a table providing information about the trigger pulse's efficiency, which is represented by the letter \"L\". It states that the trigger pulse has an efficiency of 5/4, meaning that only 4% of the input energy is converted into usable power, while the remaining energy is lost as heat. The datasheet concludes with a statement about falling edge and falling edge voltage, stating that the falling edge voltage should be set to 0V when the trigger pulse is off.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0083/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:45:45.539109+00:00"
+  "processed_at": "2026-02-12T05:00:08Z"
 }

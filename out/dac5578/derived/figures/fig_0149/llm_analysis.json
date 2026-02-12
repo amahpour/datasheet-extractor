@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Falling Edge Scope Capture (C00h to 400h)",
+  "summary": "Oscilloscope capture of falling-edge transition and post-step noise.",
+  "structured_data": {
+    "description": "Annotated with falling edge 2 V/div, zoomed falling edge 100 uV/div, trigger pulse 5 V/div, and external reference 2.5 V."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "time_scale": "5 us/div",
+    "external_reference": "2.5V",
+    "code_transition": "C00h to 400h"
+  },
+  "confidence": 0.96
+}

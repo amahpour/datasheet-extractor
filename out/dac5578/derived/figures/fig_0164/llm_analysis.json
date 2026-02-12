@@ -1,0 +1,50 @@
+{
+  "classification": "schematic",
+  "title": "DAC Output Amplifier and Resistor String Segment",
+  "summary": "Functional circuit fragment showing DAC register drive into resistor string nodes and an op-amp output stage generating VOUTX.",
+  "structured_data": {
+    "components": [
+      {
+        "ref": "U1",
+        "type": "Op-amp",
+        "value": "-"
+      },
+      {
+        "ref": "R1",
+        "type": "Resistor",
+        "value": "178 kOhm"
+      },
+      {
+        "ref": "R2",
+        "type": "Resistor",
+        "value": "150 kOhm"
+      },
+      {
+        "ref": "R3",
+        "type": "Resistor",
+        "value": "150 kOhm"
+      },
+      {
+        "ref": "RS",
+        "type": "Resistor string",
+        "value": "REF(+)/REF(-) segment"
+      }
+    ],
+    "nets": [
+      "VREFIN",
+      "DAC Register bus",
+      "Op-amp negative feedback node",
+      "VOUTX",
+      "Ground references"
+    ],
+    "description": "The DAC register selects a resistor-string tap that is buffered/scaled by an op-amp stage with resistor feedback to produce VOUTX."
+  },
+  "component_references": [
+    "DAC Register",
+    "VOUTX"
+  ],
+  "key_values": {
+    "resistor_values": "178 kOhm, 150 kOhm, 150 kOhm"
+  },
+  "confidence": 0.94
+}

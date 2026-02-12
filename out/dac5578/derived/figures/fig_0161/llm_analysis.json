@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Falling Edge Scope Capture (201h to 200h)",
+  "summary": "Oscilloscope screenshot of a falling-edge DAC transition with LDAC clock feed-through under 2.5 V reference.",
+  "structured_data": {
+    "description": "VOUT trace shown at 1 mV/div and LDAC trigger at 5 V/div. Transition annotated from code 201h to 200h. Feed-through and settling are visible after the edge."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V",
+    "vout_scale": "1 mV/div",
+    "trigger_scale": "5 V/div",
+    "code_transition": "201h to 200h"
+  },
+  "confidence": 0.96
+}

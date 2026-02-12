@@ -1,0 +1,70 @@
+{
+  "classification": "plot",
+  "title": "Gain Error vs Temperature",
+  "summary": "Multi-channel gain error versus temperature; traces are slightly negative and drift downward with temperature.",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "Gain Error (%FSR)",
+    "series": [
+      {
+        "name": "Upper channel envelope",
+        "data_points": [
+          {
+            "x": -40,
+            "y": -0.002
+          },
+          {
+            "x": 0,
+            "y": -0.003
+          },
+          {
+            "x": 40,
+            "y": -0.004
+          },
+          {
+            "x": 80,
+            "y": -0.006
+          },
+          {
+            "x": 125,
+            "y": -0.008
+          }
+        ]
+      },
+      {
+        "name": "Lower channel envelope",
+        "data_points": [
+          {
+            "x": -40,
+            "y": -0.010
+          },
+          {
+            "x": 0,
+            "y": -0.010
+          },
+          {
+            "x": 40,
+            "y": -0.011
+          },
+          {
+            "x": 80,
+            "y": -0.012
+          },
+          {
+            "x": 125,
+            "y": -0.013
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nUpper channel envelope,-40,-0.002\nUpper channel envelope,0,-0.003\nUpper channel envelope,40,-0.004\nUpper channel envelope,80,-0.006\nUpper channel envelope,125,-0.008\nLower channel envelope,-40,-0.010\nLower channel envelope,0,-0.010\nLower channel envelope,40,-0.011\nLower channel envelope,80,-0.012\nLower channel envelope,125,-0.013"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V",
+    "channels": "A-H"
+  },
+  "confidence": 0.86
+}

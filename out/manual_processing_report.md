@@ -1,75 +1,8 @@
-# Global Manual Processing Report
+# Global Processing Report
 
-- fig_0001: none
-- fig_0002: none
-- fig_0003: none
-- fig_0004: none
-- fig_0005: none
-- fig_0006: none
-- fig_0007: none
-- fig_0008: none
-- fig_0009: none
-- fig_0010: none
-- fig_0011: none
-- fig_0012: none
-- fig_0013: none
-- fig_0014: none
-- fig_0015: none
-- fig_0016: none
-- fig_0017: none
-- fig_0018: none
-- fig_0019: none
-- fig_0020: none
-- fig_0021: none
-- fig_0022: none
-- fig_0023: none
-- fig_0001: none
-- fig_0002: none
-- fig_0003: none
-- fig_0004: none
-- fig_0005: none
-- fig_0006: none
-- fig_0007: none
-- fig_0008: none
-- fig_0009: none
-- fig_0010: none
-- fig_0011: none
-- fig_0012: none
-- fig_0013: none
-- fig_0014: none
-- fig_0015: none
-- fig_0016: none
-- fig_0017: none
-- fig_0018: none
-- fig_0019: none
-- fig_0020: none
-- fig_0021: none
-- fig_0022: none
-- fig_0023: none
-- fig_0024: none
-- fig_0025: none
-- fig_0026: none
-- fig_0027: none
-- fig_0028: none
-- fig_0029: none
-- fig_0030: none
-- fig_0031: none
-- fig_0032: none
-- fig_0033: none
-- fig_0034: none
-- fig_0035: none
-- fig_0036: none
-- fig_0037: none
-- fig_0038: none
-- fig_0039: none
-- fig_0040: none
-- fig_0041: none
-- fig_0042: none
-- fig_0043: none
-- fig_0044: none
-- fig_0045: none
-- fig_0046: none
-- fig_0047: none
-- fig_0048: none
-- fig_0049: none
-- fig_0050: none
+| PDF | Total | Local | External | Pending |
+|-----|-------|-------|----------|---------|
+| dac5578 | 221 | 106 | 115 | 0 |
+| **Total** | **221** | | | **0** |
+
+**Overall: 221/221 figures processed (100.0%)**

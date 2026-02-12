@@ -1,0 +1,78 @@
+{
+  "classification": "plot",
+  "title": "Gain Error vs Temperature",
+  "summary": "Multi-channel gain error vs temperature with 2.5 V external reference.",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "Gain Error (%FSR)",
+    "series": [
+      {
+        "name": "Upper channel envelope",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.010
+          },
+          {
+            "x": 0,
+            "y": 0.009
+          },
+          {
+            "x": 35,
+            "y": 0.008
+          },
+          {
+            "x": 65,
+            "y": 0.008
+          },
+          {
+            "x": 95,
+            "y": 0.007
+          },
+          {
+            "x": 125,
+            "y": 0.006
+          }
+        ]
+      },
+      {
+        "name": "Lower channel envelope",
+        "data_points": [
+          {
+            "x": -40,
+            "y": -0.010
+          },
+          {
+            "x": 0,
+            "y": -0.010
+          },
+          {
+            "x": 35,
+            "y": -0.010
+          },
+          {
+            "x": 65,
+            "y": -0.011
+          },
+          {
+            "x": 95,
+            "y": -0.011
+          },
+          {
+            "x": 125,
+            "y": -0.012
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nUpper channel envelope,-40,0.010\nUpper channel envelope,0,0.009\nUpper channel envelope,35,0.008\nUpper channel envelope,65,0.008\nUpper channel envelope,95,0.007\nUpper channel envelope,125,0.006\nLower channel envelope,-40,-0.010\nLower channel envelope,0,-0.010\nLower channel envelope,35,-0.010\nLower channel envelope,65,-0.011\nLower channel envelope,95,-0.011\nLower channel envelope,125,-0.012"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V",
+    "channels": "A-H"
+  },
+  "confidence": 0.90
+}

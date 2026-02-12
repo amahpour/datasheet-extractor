@@ -1,0 +1,15 @@
+{
+  "classification": "photo",
+  "title": "Small Outline IC Package Photo",
+  "summary": "Product-style image of the DAC package showing a black molded body with gull-wing leads.",
+  "structured_data": {
+    "description": "Oblique-view photograph/render of a small rectangular IC package with leads on both sides; no dimensions annotated in this image."
+  },
+  "component_references": [
+    "DACx578 package"
+  ],
+  "key_values": {
+    "package_style": "leaded small-outline style"
+  },
+  "confidence": 0.88
+}

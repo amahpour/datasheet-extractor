@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0164",
   "image_path": "out/dac5578/figures/fig_0164.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a black and white circuit diagram that illustrates the components of a DC amplifier. The diagram includes resistors, capacitors, and a voltage divider connected in series to form the amplifier. The resistors are arranged in parallel with their resistances shown as numbers on the diagram. A voltage divider is also present, which is used to control the input voltage for the amplifier.\n\nThe circuit diagram shows that there are multiple resistors connected together, and a voltage divider is included among them. This combination of components allows for precise control over the input voltage in the DC amplifier.",
   "local_llm_classification": "schematic",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0164/llm_analysis.json",
+    "processed_at": "2026-02-12T05:15:13Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:51:38.845951+00:00"
+  "processed_at": "2026-02-12T05:15:13Z"
 }

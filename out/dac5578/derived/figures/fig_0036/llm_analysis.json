@@ -1,0 +1,81 @@
+{
+  "classification": "plot",
+  "title": "Linearity Error vs Digital Input Code (DAC5578, 8-Bit, +125C)",
+  "summary": "Eight-channel INL plot for DAC5578 at +125C and 5 V reference. Curves remain tightly grouped with small code-dependent ripple.",
+  "structured_data": {
+    "x_axis": "Digital Input Code",
+    "y_axis": "INL Error (LSB)",
+    "series": [
+      {
+        "name": "Upper channel envelope",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.004
+          },
+          {
+            "x": 32,
+            "y": 0.004
+          },
+          {
+            "x": 96,
+            "y": 0.006
+          },
+          {
+            "x": 160,
+            "y": 0.005
+          },
+          {
+            "x": 192,
+            "y": 0.006
+          },
+          {
+            "x": 256,
+            "y": 0.004
+          }
+        ]
+      },
+      {
+        "name": "Lower channel envelope",
+        "data_points": [
+          {
+            "x": 0,
+            "y": -0.004
+          },
+          {
+            "x": 32,
+            "y": -0.004
+          },
+          {
+            "x": 96,
+            "y": -0.002
+          },
+          {
+            "x": 160,
+            "y": -0.003
+          },
+          {
+            "x": 192,
+            "y": -0.002
+          },
+          {
+            "x": 256,
+            "y": -0.004
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nUpper channel envelope,0,0.004\nUpper channel envelope,32,0.004\nUpper channel envelope,96,0.006\nUpper channel envelope,160,0.005\nUpper channel envelope,192,0.006\nUpper channel envelope,256,0.004\nLower channel envelope,0,-0.004\nLower channel envelope,32,-0.004\nLower channel envelope,96,-0.002\nLower channel envelope,160,-0.003\nLower channel envelope,192,-0.002\nLower channel envelope,256,-0.004"
+  },
+  "component_references": [
+    "DAC5578"
+  ],
+  "key_values": {
+    "metric": "INL",
+    "resolution": "8-bit",
+    "temperature": "+125C",
+    "external_reference": "5V",
+    "channels": "A-H"
+  },
+  "confidence": 0.93
+}

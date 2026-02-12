@@ -1,0 +1,45 @@
+{
+  "classification": "plot",
+  "title": "Power Supply Current vs Temperature (External Reference 3.3 V)",
+  "summary": "Supply current increases with temperature for 3.3 V external reference.",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "Power Supply Current (mA)",
+    "series": [
+      {
+        "name": "Power Supply Current",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.75
+          },
+          {
+            "x": 0,
+            "y": 0.82
+          },
+          {
+            "x": 35,
+            "y": 0.87
+          },
+          {
+            "x": 80,
+            "y": 0.93
+          },
+          {
+            "x": 125,
+            "y": 0.99
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nPower Supply Current,-40,0.75\nPower Supply Current,0,0.82\nPower Supply Current,35,0.87\nPower Supply Current,80,0.93\nPower Supply Current,125,0.99"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "3.3V",
+    "temperature_range": "-40C to +125C"
+  },
+  "confidence": 0.97
+}

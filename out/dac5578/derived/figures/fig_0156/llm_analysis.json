@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Power-Off Glitch Scope Capture",
+  "summary": "Power-off transient/noise behavior as AVDD decays with DAC at zero scale.",
+  "structured_data": {
+    "description": "Traces labeled VOUT 1 mV/div and AVDD 2 V/div under power-off condition."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "vout_scale": "1 mV/div",
+    "avdd_scale": "2 V/div",
+    "condition": "DAC at zero scale"
+  },
+  "confidence": 0.94
+}

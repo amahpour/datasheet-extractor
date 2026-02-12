@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0101",
   "image_path": "out/dac5578/figures/fig_0101.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a graph with two lines, one representing the digital input code and the other showing the differential linearity error. The x-axis of the graph is labeled \"Digital input code\" while the y-axis is labeled \"Differential linearity error\". The graph displays the relationship between these two variables, with the digital input code on the left side and the differential linearity error on the right side.\n\nThe graph shows that there are four channels shown in the digital input code, each channel represented by a different color (blue, purple, green, and orange). Additionally, there is an external reference line for the digital input code, which is marked with a black dot at the top of the graph. The x-axis of the graph also displays the values 0.15, 0.25, 0.35, 0.45, 0.5, 0.6, 0.69, and 0.8 on it.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0101/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:47:24.440462+00:00"
+  "processed_at": "2026-02-12T05:00:08Z"
 }

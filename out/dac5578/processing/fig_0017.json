@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0017",
   "image_path": "out/dac5578/figures/fig_0017.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a graph that displays the relationship between linearity error and digital input code (DAC) for eight channels shown on an external reference. The x-axis of the graph represents DAC, while the y-axis shows linearity error in bits. The graph is color-coded to indicate different channels, with each channel represented by a distinct color. The graph also includes text that provides information about the relationship between linearity error and digital input code for eight channels shown on an external reference.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0017/llm_analysis.json",
+    "processed_at": "2026-02-12T04:45:59Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:35:26.348518+00:00"
+  "processed_at": "2026-02-12T04:45:59Z"
 }

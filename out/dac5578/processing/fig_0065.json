@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0065",
   "image_path": "out/dac5578/figures/fig_0065.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a graph that displays the relationship between power supply current and digital input code for an electronic device. The x-axis of the graph represents the power supply current, while the y-axis represents the digital input code. The graph shows two peaks in the data points, indicating the values at which the power supply current is equal to the digital input code. The graph also includes a legend that provides information about the relationship between the two variables.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0065/llm_analysis.json",
+    "processed_at": "2026-02-12T04:54:02Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:44:35.163567+00:00"
+  "processed_at": "2026-02-12T04:54:02Z"
 }

@@ -1,0 +1,47 @@
+{
+  "classification": "plot",
+  "title": "Falling Edge Scope Capture (Code 81h to 801h)",
+  "summary": "Oscilloscope capture showing LDAC feed-through and output transient for a falling-edge code change.",
+  "structured_data": {
+    "x_axis": "Time (us/div)",
+    "y_axis": "Vout/Trigger (scaled)",
+    "series": [
+      {
+        "name": "Step Response (approx)",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.00
+          },
+          {
+            "x": 0.5,
+            "y": -0.1
+          },
+          {
+            "x": 1.0,
+            "y": -0.35
+          },
+          {
+            "x": 2.0,
+            "y": -0.25
+          },
+          {
+            "x": 4.0,
+            "y": -0.20
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nStep Response (approx),0,0.00\nStep Response (approx),0.5,-0.1\nStep Response (approx),1.0,-0.35\nStep Response (approx),2.0,-0.25\nStep Response (approx),4.0,-0.20"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "time_scale": "2 us/div",
+    "vout_scale": "5 mV/div",
+    "trigger_scale": "5 V/div",
+    "code_transition": "81h to 801h"
+  },
+  "confidence": 0.84
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "plot",
+  "title": "Source Current at Positive Rail (Channel B, FFFh)",
+  "summary": "Output voltage droop with source current at positive rail, channel B.",
+  "structured_data": {
+    "x_axis": "Source Current (mA)",
+    "y_axis": "Output Voltage (V)",
+    "series": [
+      {
+        "name": "Channel B",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 2.495
+          },
+          {
+            "x": 2,
+            "y": 2.487
+          },
+          {
+            "x": 4,
+            "y": 2.478
+          },
+          {
+            "x": 6,
+            "y": 2.469
+          },
+          {
+            "x": 8,
+            "y": 2.460
+          },
+          {
+            "x": 10,
+            "y": 2.452
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nChannel B,0,2.495\nChannel B,2,2.487\nChannel B,4,2.478\nChannel B,6,2.469\nChannel B,8,2.460\nChannel B,10,2.452"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "channel": "B",
+    "code_loaded": "FFFh",
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.98
+}

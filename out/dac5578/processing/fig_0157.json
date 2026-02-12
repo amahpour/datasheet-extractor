@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0157",
   "image_path": "out/dac5578/figures/fig_0157.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a black and white diagram that illustrates the flow of electricity in a circuit, with various components such as resistors, capacitors, and transistors depicted on the graph paper. The diagram is labeled with text that provides information about the circuit's operation, including details like \"From Code 80h to External Reference 2.5V\", \"LDA Clock Feed Through\", \"LDA - Trigger Pulse 5 V/d Divider\", and \"Time (2 us/div)\".",
   "local_llm_classification": "timing_diagram",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0157/llm_analysis.json",
+    "processed_at": "2026-02-12T05:06:45Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:51:07.349109+00:00"
+  "processed_at": "2026-02-12T05:06:45Z"
 }

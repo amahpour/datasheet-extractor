@@ -1,0 +1,17 @@
+{
+  "classification": "mechanical",
+  "title": "PW Package Mechanical Drawing",
+  "summary": "Mechanical outline drawing for a 16-pin leaded package with top/side/detail views and dimensional tolerances.",
+  "structured_data": {
+    "description": "Shows body dimensions (e.g., width around 6.2-6.6 mm and length around 4.3-4.5 mm), lead geometry, seating plane, pin-1 index area, and detail-A lead profile."
+  },
+  "component_references": [
+    "PW package"
+  ],
+  "key_values": {
+    "pin_count": "16",
+    "drawing_id": "4220204/B",
+    "revision_date": "12/2023"
+  },
+  "confidence": 0.95
+}

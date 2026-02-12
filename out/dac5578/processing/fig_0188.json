@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0188",
   "image_path": "out/dac5578/figures/fig_0188.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a detailed black and white diagram of a microcontroller circuit board, specifically focusing on the ADC (Adc) component. The ADC is shown as a single-pin device with multiple inputs and outputs, connected to various resistors and other components within the circuit. The diagram also includes labels for the ADC's input pins, output pins, and the ADC itself.",
   "local_llm_classification": "pinout",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0188/llm_analysis.json",
+    "processed_at": "2026-02-12T05:15:13Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:53:05.987270+00:00"
+  "processed_at": "2026-02-12T05:15:13Z"
 }

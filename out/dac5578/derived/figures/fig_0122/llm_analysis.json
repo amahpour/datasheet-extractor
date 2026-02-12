@@ -1,0 +1,79 @@
+{
+  "classification": "plot",
+  "title": "Linearity Error vs Temperature (DAC6578, 10-Bit)",
+  "summary": "Temperature dependence of INL max/min for DAC6578 with 2.5 V external reference.",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "INL Error (LSB)",
+    "series": [
+      {
+        "name": "INL MAX",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.07
+          },
+          {
+            "x": 0,
+            "y": 0.07
+          },
+          {
+            "x": 35,
+            "y": 0.07
+          },
+          {
+            "x": 65,
+            "y": 0.07
+          },
+          {
+            "x": 95,
+            "y": 0.07
+          },
+          {
+            "x": 125,
+            "y": 0.07
+          }
+        ]
+      },
+      {
+        "name": "INL MIN",
+        "data_points": [
+          {
+            "x": -40,
+            "y": -0.06
+          },
+          {
+            "x": 0,
+            "y": -0.05
+          },
+          {
+            "x": 35,
+            "y": -0.05
+          },
+          {
+            "x": 65,
+            "y": -0.04
+          },
+          {
+            "x": 95,
+            "y": -0.04
+          },
+          {
+            "x": 125,
+            "y": -0.04
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nINL MAX,-40,0.07\nINL MAX,0,0.07\nINL MAX,35,0.07\nINL MAX,65,0.07\nINL MAX,95,0.07\nINL MAX,125,0.07\nINL MIN,-40,-0.06\nINL MIN,0,-0.05\nINL MIN,35,-0.05\nINL MIN,65,-0.04\nINL MIN,95,-0.04\nINL MIN,125,-0.04"
+  },
+  "component_references": [
+    "DAC6578"
+  ],
+  "key_values": {
+    "metric": "INL",
+    "resolution": "10-bit",
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.96
+}

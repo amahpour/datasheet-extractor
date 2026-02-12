@@ -1,0 +1,54 @@
+{
+  "classification": "plot",
+  "title": "Power Supply Current vs Digital Input Code",
+  "summary": "Supply current versus digital input code at AVDD=2.7 V and external reference=2.5 V.",
+  "structured_data": {
+    "x_axis": "Digital Input Code",
+    "y_axis": "Power Supply Current (mA)",
+    "series": [
+      {
+        "name": "Power Supply Current",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.60
+          },
+          {
+            "x": 128,
+            "y": 0.78
+          },
+          {
+            "x": 512,
+            "y": 0.81
+          },
+          {
+            "x": 1024,
+            "y": 0.84
+          },
+          {
+            "x": 2048,
+            "y": 0.85
+          },
+          {
+            "x": 3072,
+            "y": 0.86
+          },
+          {
+            "x": 4096,
+            "y": 0.85
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nPower Supply Current,0,0.60\nPower Supply Current,128,0.78\nPower Supply Current,512,0.81\nPower Supply Current,1024,0.84\nPower Supply Current,2048,0.85\nPower Supply Current,3072,0.86\nPower Supply Current,4096,0.85"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "avdd": "2.7V",
+    "external_reference": "2.5V",
+    "channels_loaded": "all eight"
+  },
+  "confidence": 0.96
+}

@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0154",
   "image_path": "out/dac5578/figures/fig_0154.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a detailed electronic circuit diagram, with various components and their respective values labeled in black text against a white background. The diagram is divided into four quadrants, each representing a different component or voltage setting. The top left quadrant shows the code 800h to 80th reference, while the bottom right quadrant displays the external reference of 2.5V. The middle section of the diagram indicates that the trigger pulse is 5V and the trigger pulse is 5V. The bottom left quadrant shows a voltage of 500 joules divided into two equal parts, with each part labeled as \"OUTC\".",
   "local_llm_classification": "schematic",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0154/llm_analysis.json",
+    "processed_at": "2026-02-12T05:06:45Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:50:55.755613+00:00"
+  "processed_at": "2026-02-12T05:06:45Z"
 }

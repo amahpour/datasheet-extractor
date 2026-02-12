@@ -1,13 +1,17 @@
 {
   "figure_id": "fig_0098",
   "image_path": "out/dac5578/figures/fig_0098.png",
-  "status": "needs_external",
+  "status": "resolved_external",
   "stage": "local_llm",
   "ocr_text": "",
   "local_llm_description": "The image presents a graph that displays the relationship between linearity error and digital input code (DAC) for a digital audio system. The x-axis of the graph represents DAC, while the y-axis shows linearity error. The graph is colored in purple, green, orange, and blue lines representing different channels. The graph also includes text that provides information about the relationship between linearity error and DAC.",
   "local_llm_classification": "plot",
-  "external_llm_result": null,
-  "needs_external": true,
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0098/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
   "confidence": 0.3,
-  "processed_at": "2026-02-12T00:47:08.578496+00:00"
+  "processed_at": "2026-02-12T05:00:08Z"
 }
