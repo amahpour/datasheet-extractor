@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0156",
+  "image_path": "out/dac5578/figures/fig_0156.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a black and white diagram of a power-off glitch, which is a type of electrical interference that can occur in electronic devices. The diagram shows the voltage across three different components: DAC (Digital Audio Cascading), OUT (Outermost), and Vdd (Voltage Doubledepth). Each component has its own line on the graph, indicating their respective values at various points in time or frequency. The diagram also includes a legend that explains what each line represents.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:51:03.685055+00:00"
+}

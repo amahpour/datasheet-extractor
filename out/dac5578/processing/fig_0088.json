@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0088",
+  "image_path": "out/dac5578/figures/fig_0088.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the relationship between frequency and DC output for three different DC sources, each represented by a line on the graph. The x-axis of the graph represents frequency in Hertz (Hz), while the y-axis represents the DC output in Volts (V). Each source is shown with its own line, indicating their respective DC output at various frequencies.\n\nThe graph shows that as the frequency increases, the DC output also increases for all three sources. The lines on the graph are of different colors to distinguish between the sources. The graph provides a visual representation of how the DC output changes with respect to frequency and is useful in understanding the relationship between these two variables.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:46:07.783861+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0006",
+  "image_path": "out/dac5578/figures/fig_0006.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image features a striking black and white logo for a company, which is composed of three triangles arranged in a triangular formation with the largest triangle at the top and the smallest at the bottom. The logo also includes a hand holding a stylized tree branch, adding a touch of nature to the design.",
+  "local_llm_classification": "logo",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:34:21.238043+00:00"
+}

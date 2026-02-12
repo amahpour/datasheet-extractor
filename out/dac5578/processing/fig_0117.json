@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0117",
+  "image_path": "out/dac5578/figures/fig_0117.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays the relationship between the digital input code (DAC) and the differential linearity error, represented by a purple line on the graph.\n\nThere are six distinct points on the graph, each representing a different DAC value: 0.0, 0.25, 0.45, 0.55, 0.82, 1.0. The x-coordinate of each point is labeled with the DAC value it corresponds to, and the y-coordinate shows the corresponding differential linearity error.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:48:49.258082+00:00"
+}

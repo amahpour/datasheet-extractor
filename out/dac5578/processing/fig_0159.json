@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0159",
+  "image_path": "out/dac5578/figures/fig_0159.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a black and white diagram of an electronic device, with the device's name prominently displayed in the top left corner. The device is connected to a clock that displays the time as 2:15 pm. Below the clock, there are three lines representing different voltage levels: 1V, 5V, and 10V. These lines indicate the input and output of the electronic device. In addition, there is an arrow pointing towards the trigger pulse line, which is connected to a trigger pulse source that feeds the device with a current of 2A.",
+  "local_llm_classification": "icon",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:51:16.184115+00:00"
+}

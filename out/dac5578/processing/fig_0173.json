@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0173",
+  "image_path": "out/dac5578/figures/fig_0173.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed diagram of a digital circuit, specifically focusing on the transfer function and its components. The circuit is depicted in black and white, with various symbols representing different elements such as resistors, capacitors, and transistors. The diagram also includes labels for the input and output terminals, as well as the start/stop conditions for the circuit.",
+  "local_llm_classification": "icon",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:52:14.467990+00:00"
+}

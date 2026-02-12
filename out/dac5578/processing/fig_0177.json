@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0177",
+  "image_path": "out/dac5578/figures/fig_0177.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed electronic datasheet for a computer system, specifically focusing on the command line interface (CLI) and its various components. The text is written in black against a white background, making it easy to read. The main sections of the document are labeled with numbers and letters, providing information about the different parts of the system.",
+  "local_llm_classification": "other",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:52:27.229050+00:00"
+}

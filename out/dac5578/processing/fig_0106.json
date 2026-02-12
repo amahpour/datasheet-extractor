@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0106",
+  "image_path": "out/dac5578/figures/fig_0106.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". The graph displays six channels, each represented by a different color bar on the right side of the graph. The colors are red, green, blue, purple, orange, and yellow. The graph shows that there is an error in the digital input code for channel 0, which is represented by a red line. The x-axis also displays the temperature in degrees Celsius (°C) at various points on the graph.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:47:51.804630+00:00"
+}

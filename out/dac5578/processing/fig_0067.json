@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0067",
+  "image_path": "out/dac5578/figures/fig_0067.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a black and white diagram of a sensor's output, which is displayed in a graph format with time on the x-axis and voltage or current on the y-axis. The graph shows a rise and fall pattern, indicating that the sensor is detecting changes in the environment over time. There are two trigger points labeled \"Rising Edge\" and \"Zoomed Rising Edge\", which represent different stages of the sensor's operation. Additionally, there is a text box below the graph that provides information about the sensor's functionality or purpose.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:44:43.550585+00:00"
+}

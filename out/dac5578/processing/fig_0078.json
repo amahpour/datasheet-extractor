@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0078",
+  "image_path": "out/dac5578/figures/fig_0078.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a black and white diagram of a power-off glitch in a DAC (Digital Audio Coder) amplifier, with the amplifier's output voltage displayed on the left side of the diagram. The diagram also includes a time scale at 10ms/div and an input voltage of 2V/div.",
+  "local_llm_classification": "screenshot",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:45:27.233517+00:00"
+}

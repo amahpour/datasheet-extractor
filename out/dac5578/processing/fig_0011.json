@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0011",
+  "image_path": "out/dac5578/figures/fig_0011.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed black and white diagram of a digital circuit board, specifically focusing on the DACX5728 chip. The DACX5728 is a type of ADC (Adder-Adder Circuit) that can be used for various applications such as digital signal processing or analog signal processing.\n\nThe circuit board features multiple inputs and outputs, with each input connected to an output through wires. There are also several labels on the diagram indicating different components within the DACX5728 chip. The diagram is organized in a way that allows for easy understanding of the circuit's functionality and structure.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:34:50.917756+00:00"
+}

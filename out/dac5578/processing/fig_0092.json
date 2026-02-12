@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0092",
+  "image_path": "out/dac5578/figures/fig_0092.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the relationship between power supply current and digital input code for an electronic device, likely a computer or a similar appliance. The x-axis of the graph represents the power supply current in milliampere-hours (mW), while the y-axis represents the digital input code in bits per second (bps). The graph shows that as the power supply current increases, so does the digital input code. This relationship is depicted by a line on the graph, which slopes upwards from left to right, indicating an increase in the two variables.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:46:31.287412+00:00"
+}

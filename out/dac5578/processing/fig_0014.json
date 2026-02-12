@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0014",
+  "image_path": "out/dac5578/figures/fig_0014.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed black and white diagram of an electronic circuit, with various components such as resistors, capacitors, and transistors depicted in the diagram. The diagram is meticulously labeled, providing information about each component's function or location within the circuit. The layout of the components suggests that they are arranged in a specific order to perform their respective tasks efficiently.",
+  "local_llm_classification": "other",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:35:08.745464+00:00"
+}

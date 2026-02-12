@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0012",
+  "image_path": "out/dac5578/figures/fig_0012.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed diagram of a DAC5728 circuit board, which is a component used in electronic devices for digital signal processing and filtering tasks. The board features various components such as resistors, capacitors, and transistors, all meticulously arranged to perform specific functions within the device. The diagram also includes labels indicating the names of these components, providing valuable information about their roles in the circuit.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:34:59.366003+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0125",
+  "image_path": "out/dac5578/figures/fig_0125.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with two lines, one representing the external reference and the other representing the maximum value of a component. The x-axis is labeled \"External Reference\", while the y-axis is labeled \"Maximum Value\". The graph shows that the maximum value of the component is 2.5V, as indicated by the green line on the right side of the graph.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:49:17.051962+00:00"
+}

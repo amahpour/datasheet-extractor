@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0209",
+  "image_path": "out/dac5578/figures/fig_0209.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed technical drawing of a pin-sized electronic device, likely a microcontroller or a similar component. The device is outlined in blue and features various measurements and dimensions, including the length of the device being 1.5 cm (0.88 inches) and the width being 0.25 cm (0.39 inches). The device also includes a seating area with a backrest designating a seat height of 0.26 m (0.46 inches), indicating that it is designed for human use.",
+  "local_llm_classification": "pinout",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:54:20.379501+00:00"
+}

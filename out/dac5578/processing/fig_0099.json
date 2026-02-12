@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0099",
+  "image_path": "out/dac5578/figures/fig_0099.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with two lines, one representing the digital input code and the other showing the differential linearity error. The x-axis of the graph is labeled \"Digital Input Code\" while the y-axis is labeled \"Differential Linearity Error\". The graph displays four channels, each represented by a different color: purple for channel A, green for channel B, orange for channel C, and yellow for channel D. The data points on the graph are connected with lines to show the relationship between the two variables.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:47:13.442919+00:00"
+}

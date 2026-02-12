@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0105",
+  "image_path": "out/dac5578/figures/fig_0105.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the relationship between linearity error and digital input code (DAC) for a specific electronic device, likely a computer or audio system. The x-axis of the graph represents DAC, while the y-axis shows linearity error in percentage. The graph is divided into four quadrants, each representing a different DAC value: 0-2V, 2-4V, 4-8V, and 8-16V. Each quadrant displays the corresponding linearity error for that specific DAC value.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:47:46.376137+00:00"
+}

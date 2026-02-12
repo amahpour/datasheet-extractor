@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0217",
+  "image_path": "out/dac5578/figures/fig_0217.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed technical drawing of a pin-sized electronic device, including its dimensions and specifications. The device is shown in three different orientations, providing a comprehensive view of the design. The drawing includes labels for various components such as \"pin 1\", \"pin 2\", \"pin 3\", \"pin 4\", \"pin 5\", \"pin 6\", \"pin 7\", \"pin 8\", \"pin 9\", and \"pin 10\". Additionally, there are measurements provided in millimeters (mm) for the device's dimensions. The drawing also includes a scale bar indicating the size of the device relative to other objects or standards.",
+  "local_llm_classification": "pinout",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:54:49.023507+00:00"
+}

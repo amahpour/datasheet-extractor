@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0076",
+  "image_path": "out/dac5578/figures/fig_0076.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a black and white line graph that displays the relationship between two variables, with each variable represented by a different color on the x and y axes respectively. The x-axis is labeled \"Zoomed Falling Edge\", while the y-axis is labeled \"Falling Edge\". The graph shows a downward trend from Code COH to 400 THz, indicating that the falling edge of an electronic device is decreasing over time.\n\nThe graph also includes text at the top and bottom, which provide information about the relationship between the two variables. Additionally, there are arrows pointing towards the x-axis and y-axis, respectively, providing further context for the data presented in the image.",
+  "local_llm_classification": "icon",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:45:18.612484+00:00"
+}

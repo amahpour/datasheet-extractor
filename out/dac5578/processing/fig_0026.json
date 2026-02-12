@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0026",
+  "image_path": "out/dac5578/figures/fig_0026.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linear error\". The graph displays the relationship between digital input code (DAC) and linear error, with DAC values ranging from 0 to 1 on the x-axis and corresponding linear errors ranging from -0.5 to 0.5 on the y-axis. There are multiple data points representing different DAC values, each connected by a line. The graph also includes text that provides information about the relationship between DAC and linear error, as well as the units of measurement for both axes.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:36:28.943466+00:00"
+}

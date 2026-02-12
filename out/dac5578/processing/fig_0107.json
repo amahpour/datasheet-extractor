@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0107",
+  "image_path": "out/dac5578/figures/fig_0107.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a line graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linear error\". The graph displays six different channels, each represented by a distinct color - red, blue, green, yellow, orange, and purple. The channels are shown in ascending order of their corresponding digital input codes. The graph also includes text that provides information about the linear error between the digital input code and the actual value.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:47:57.367577+00:00"
+}

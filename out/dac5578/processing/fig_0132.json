@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0132",
+  "image_path": "out/dac5578/figures/fig_0132.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with temperature values on the y-axis and time intervals on the x-axis, showing how the temperature changes over time for different electronic devices. The graph is color-coded to represent the different types of devices, with each device having its own line on the graph. The graph also includes labels indicating the external reference value (2.5V) and the type of device (DCAC).",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:49:42.379800+00:00"
+}

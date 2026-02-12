@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0138",
+  "image_path": "out/dac5578/figures/fig_0138.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the relationship between current and voltage in a DC circuit, with two lines representing the source current and the external reference current respectively. The x-axis of the graph is labeled \"Source Current\" while the y-axis is labeled \"Voltage\". The graph shows an upward trend from left to right, indicating that as the source current increases, so does the voltage in the DC circuit.\n\nThe text at the bottom of the image reads \"Figure 3\", which could be a title or a description of the graph's content.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:50:00.516560+00:00"
+}

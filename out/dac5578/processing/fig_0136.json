@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0136",
+  "image_path": "out/dac5578/figures/fig_0136.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the relationship between voltage and current in a DC circuit, specifically focusing on the source current at a positive rail. The x-axis of the graph represents the voltage, while the y-axis represents the current. A line is drawn connecting two points on the graph, indicating the source current for a channel with an external reference of 2.5V and 2.5A.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:49:54.666134+00:00"
+}

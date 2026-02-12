@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0042",
+  "image_path": "out/dac5578/figures/fig_0042.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with two lines, one representing the linear error and the other representing the temperature. The x-axis of the graph is labeled \"External Reference\", while the y-axis is labeled \"Temperature (DC)\". The graph shows that there are two different sets of data represented by these two lines: the first line represents a linear error in the external reference, and the second line represents the temperature.\n\nThe x-axis of the graph has values ranging from 0 to 5, while the y-axis ranges from 0 to 12. The graph is labeled with text that reads \"Linearity Error vs Temperature (DC)\". There are also two additional lines on the graph: one representing the linear error and another representing the temperature. These lines have different colors - blue for the linear error and green for the temperature.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:38:24.392947+00:00"
+}

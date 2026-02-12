@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0219",
+  "image_path": "out/dac5578/figures/fig_0219.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image features a logo for Texas Instruments (TI) that is predominantly black and white, with the company's name displayed in large, bold letters at the top of the design. Below the company name, there are two smaller text elements - one reading \"TI\" and another stating \"www.ti.com\". The entire logo is set against a light gray background, which contrasts nicely with the black and white color scheme of the logo.",
+  "local_llm_classification": "logo",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:54:57.332247+00:00"
+}

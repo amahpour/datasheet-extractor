@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0191",
+  "image_path": "out/dac5578/figures/fig_0191.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed circuit diagram for a microcontroller, specifically a DAC18 controller. The circuit is designed to control the flow of current through three separate channels, each with its own set of inputs and outputs. The inputs include a VGA view, a VCD view, and an ADC view, while the output consists of two sets of DACs - one for each channel.\n\nThe diagram also includes various resistors and capacitors that are part of the circuit's functionality. These components are connected to the channels using wires, ensuring proper electrical flow within the system. The layout is organized in a way that allows for easy identification of each component and its function.",
+  "local_llm_classification": "schematic",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:53:15.703706+00:00"
+}

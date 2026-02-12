@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0167",
+  "image_path": "out/dac5578/figures/fig_0167.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed electronic circuit diagram, specifically focusing on the components of a digital clock. The circuit is divided into two parallel lines, each representing a different component or function within the clock. The top line depicts the clock's timekeeping mechanism, while the bottom line represents the display screen. Each component is clearly labeled with its name and function, providing a comprehensive understanding of the circuit's inner workings.",
+  "local_llm_classification": "pinout",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:51:51.656634+00:00"
+}

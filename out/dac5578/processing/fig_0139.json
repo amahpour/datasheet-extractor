@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0139",
+  "image_path": "out/dac5578/figures/fig_0139.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with two lines, one representing the DC current and the other representing the AC voltage of a device. The DC current line is at 0V, while the AC voltage line is at 2V. The graph shows that the DC current is currently 0V, but it has the potential to increase as more power is added or if the device operates at higher currents.\n\nThe image also includes text that provides information about the device's operation and its expected performance.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:50:03.735237+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0130",
+  "image_path": "out/dac5578/figures/fig_0130.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the relationship between power supply current and temperature for various external reference values of 2.5V, 3.0V, and 2.7V. The x-axis represents the power supply current in amperes (A), while the y-axis represents the temperature in degrees Celsius (°C). The graph shows a clear trend: as the power supply current increases, so does the temperature. This relationship is depicted by a line on the graph that slopes upwards from left to right, indicating an increase in temperature with each unit of current.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:49:34.389558+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0147",
+  "image_path": "out/dac5578/figures/fig_0147.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the power supply current of a device over time, with the x-axis representing time and the y-axis representing the current in amperes (A). The graph shows a steady increase in the current over time, indicating that the device is drawing more power as it operates. This information can be useful for understanding how efficiently the device is performing its task or for troubleshooting any issues related to the device's power supply.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:50:31.936124+00:00"
+}

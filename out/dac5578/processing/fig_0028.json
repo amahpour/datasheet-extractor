@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0028",
+  "image_path": "out/dac5578/figures/fig_0028.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a line graph that displays the relationship between digital input code (DAC) and external reference (ERR). The graph shows that DAC is measured in bits, with each point on the graph representing a specific DAC value. The x-axis of the graph represents DAC, while the y-axis represents ERR. The graph illustrates how DAC and ERR are related to each other, providing valuable information for understanding the relationship between these two quantities.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:36:43.155148+00:00"
+}

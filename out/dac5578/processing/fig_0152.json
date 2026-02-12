@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0152",
+  "image_path": "out/dac5578/figures/fig_0152.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a black and white line graph that displays the relationship between voltage (V) and current (I). The x-axis of the graph represents time, while the y-axis shows the measured values in amperes. The graph is divided into four quadrants, each representing a different range of voltage levels: 0V to 5V, 5V to 10V, 10V to 15V, and 15V to 25V. The data points on the graph are connected by lines, showing the relationship between the two variables over time.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:50:48.192076+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0023",
+    "page": 1,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0023.png",
+    "classification": {
+      "type": "other",
+      "confidence": 0.4,
+      "rationale": "no rule matched"
+    },
+    "derived": {
+      "description": {
+        "text": "Local-only placeholder description; no semantic reconstruction performed.",
+        "confidence": 0.2,
+        "notes": "none"
+      }
+    }
+  }
+}

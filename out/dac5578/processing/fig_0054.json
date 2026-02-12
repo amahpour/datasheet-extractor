@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0054",
+  "image_path": "out/dac5578/figures/fig_0054.png",
+  "status": "needs_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"External Reference\" and the y-axis labeled \"Voltage (V)\", indicating that it is a graph of external reference values against voltage values. The graph shows a line connecting the points, which are the external reference values and their corresponding voltage values. There are five points on this line, each representing an external reference value and its associated voltage value.",
+  "local_llm_classification": "plot",
+  "external_llm_result": null,
+  "needs_external": true,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T00:42:55.594687+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0169",
+  "image_path": "out/dac5578/figures/fig_0169.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed diagram of a digital circuit, with each component clearly labeled and connected to the next in a line-by-line manner. The circuit is designed for data output by a receiver, which is shown as a horizontal line extending from left to right across the page. A vertical line runs diagonally from top to bottom on the same page. The diagram also includes text that provides information about the circuit's functionality and the types of input devices it can be used with.",
+  "local_llm_classification": "screenshot",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:51:58.618266+00:00"
+}
