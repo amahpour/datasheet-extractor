@@ -109,10 +109,34 @@ Return your analysis as a JSON object with this exact schema:
 
 ## Batch usage
 
-To process all figures from a datasheet extraction run:
+To process all figures from a datasheet extraction run, **check each figure's
+processing status first** to avoid re-analysing figures that have already been
+handled (either locally or in a previous external pass).
 
 ```
 for each image in out/<pdf_stem>/figures/fig_*.png:
+    fig_id   = stem of the image filename (e.g. "fig_0042")
+    status   = load out/<pdf_stem>/processing/<fig_id>.json   # per-figure status
+
+    # ── Skip rules ──────────────────────────────────────────
+    # 1. Already resolved locally (OCR / local LLM was sufficient)
+    if status.status == "resolved_local":
+        skip
+
+    # 2. Already processed by an external LLM in a prior run
+    if file exists out/<pdf_stem>/derived/figures/<fig_id>/llm_analysis.json:
+        skip
+
+    # ── Process ─────────────────────────────────────────────
+    # Only figures with status "needs_external" (or missing status) should be sent.
     send this prompt + the image to your vision LLM
     save the JSON response to out/<pdf_stem>/derived/figures/<fig_id>/llm_analysis.json
+
+    # Optionally update the processing status:
+    status.status = "resolved_external"
+    write status back to out/<pdf_stem>/processing/<fig_id>.json
 ```
+
+**Key:** the `processing/<fig_id>.json` files are written during Stage 1 (local
+processing) and record the tier, classification, and whether the figure was
+resolved. Only figures marked `needs_external` should be sent to the paid LLM.
