@@ -1,34 +1,18 @@
 from __future__ import annotations
 
 import logging
-import re
 from pathlib import Path
 
 from src.export_figures import derive_description
 from src.export_tables import export_table
-from src.extract_docling import extract_document, synthesize_placeholder_figure, to_blocks
+from src.extract_docling import extract_document, to_blocks
+from src.local_processor import process_all_figures, write_rollup
 from src.report import write_manual_report
 from src.schema import Classification, Derived, Description, DocStats, Document, Figure, SourceMeta, Table
 from src.tagger import classify_figure, tags_from_text
 from src.utils import deterministic_id, ensure_dir, parse_page_ranges, sha256_file, write_json
 
 logger = logging.getLogger(__name__)
-
-FIGURE_RE = re.compile(r"\b(fig(?:ure)?\.?\s*\d+[a-zA-Z0-9\-]*)\b", flags=re.IGNORECASE)
-
-
-def _detect_figures_from_blocks(blocks: list, max_figures: int) -> list[tuple[int, str]]:
-    found: list[tuple[int, str]] = []
-    for blk in blocks:
-        if len(found) >= max_figures:
-            break
-        text = blk.text or ""
-        for match in FIGURE_RE.finditer(text):
-            snippet = text[max(0, match.start() - 30) : min(len(text), match.end() + 80)].replace("\n", " ").strip()
-            found.append((blk.page, snippet))
-            if len(found) >= max_figures:
-                break
-    return found
 
 
 def process_pdf(
@@ -40,18 +24,18 @@ def process_pdf(
     no_tables: bool = False,
     ocr: str = "off",
     max_figures: int = 25,
+    ollama_model: str | None = None,
 ) -> dict:
     pdf_out = ensure_dir(out_root / pdf_path.stem)
-    if force and pdf_out.exists():
-        # keep directory but overwrite files deterministically
-        pass
 
-    raw = extract_document(pdf_path)
+    # Pass out_dir so Docling can save extracted images directly
+    raw = extract_document(pdf_path, out_dir=pdf_out if not no_images else None)
     blocks = to_blocks(raw.get("blocks", []))
     page_filter = parse_page_ranges(pages)
     if page_filter:
         blocks = [b for b in blocks if b.page in page_filter]
 
+    # --- Tables ---
     tables: list[Table] = []
     if not no_tables:
         for i, t in enumerate(raw.get("tables", []), start=1):
@@ -66,21 +50,27 @@ def process_pdf(
             export_table(table, pdf_out)
             tables.append(table)
 
+    # --- Figures (from Docling's actual image extraction) ---
     figures: list[Figure] = []
     if not no_images:
-        figures_dir = ensure_dir(pdf_out / "figures")
-        for i, (page, caption) in enumerate(_detect_figures_from_blocks(blocks, max_figures=max_figures), start=1):
-            fig_id = deterministic_id("fig", i)
-            image_path = figures_dir / f"{fig_id}.png"
-            synthesize_placeholder_figure(image_path, caption)
-            classification = classify_figure(caption, " ".join(b.text[:200] for b in blocks if b.page == page))
+        raw_figures = raw.get("figures", [])
+        for i, fig_data in enumerate(raw_figures[:max_figures], start=1):
+            fig_id = fig_data.get("id", deterministic_id("fig", i))
+            caption = fig_data.get("caption", "")
+            page = fig_data.get("page", 1)
+            image_path = fig_data.get("image_path", "")
+
+            # Classify based on caption and surrounding text
+            context = " ".join(b.text[:200] for b in blocks if b.page == page)
+            classification = classify_figure(caption, context)
+
             figure = Figure(
                 id=fig_id,
                 page=page,
-                bbox=[0.0, 0.0, 0.0, 0.0],
+                bbox=[float(x) for x in fig_data.get("bbox", [0.0, 0.0, 0.0, 0.0])],
                 caption=caption,
                 tags=tags_from_text(caption),
-                image_path=str(image_path),
+                image_path=image_path,
                 classification=classification,
                 derived=Derived(description=Description(text="", confidence=0.0, notes="")),
             )
@@ -126,11 +116,33 @@ def process_pdf(
         )
 
     per_pdf_report = write_manual_report(figures, pdf_out)
+
+    # --- Stage 1.5: Local figure processing (OCR + local LLM) ---
+    processing_statuses = []
+    if not no_images and (pdf_out / "figures").is_dir():
+        processing_dir = ensure_dir(pdf_out / "processing")
+        logger.info("Running local figure processing for %s ...", pdf_path.stem)
+        processing_statuses = process_all_figures(
+            figures_dir=pdf_out / "figures",
+            processing_dir=processing_dir,
+            ollama_model=ollama_model,
+            force=force,
+        )
+        # Write per-PDF rollup
+        rollup = write_rollup(processing_dir, pdf_out)
+        logger.info(
+            "  Rollup: %d resolved locally, %d need external LLM (%.0f%% complete)",
+            rollup["resolved_local"],
+            rollup["needs_external"],
+            rollup["summary"]["percent_complete"],
+        )
+
     return {
         "pdf": str(pdf_path),
         "out_dir": str(pdf_out),
         "document": doc.model_dump(),
         "manual_report": per_pdf_report,
+        "processing_statuses": processing_statuses,
     }
 
 
@@ -144,6 +156,7 @@ def run_pipeline(
     no_tables: bool = False,
     ocr: str = "off",
     max_figures: int = 25,
+    ollama_model: str | None = None,
 ) -> dict:
     ensure_dir(out_dir)
     pdfs = sorted(input_dir.glob(pattern))
@@ -160,6 +173,7 @@ def run_pipeline(
             no_tables=no_tables,
             ocr=ocr,
             max_figures=max_figures,
+            ollama_model=ollama_model,
         )
         for pdf in pdfs
     ]
@@ -175,4 +189,20 @@ def run_pipeline(
     if not all_entries:
         lines.append("- none")
     (out_dir / "manual_processing_report.md").write_text("\n".join(lines), encoding="utf-8")
+
+    # Global rollup across all PDFs
+    all_statuses = []
+    for result in results:
+        all_statuses.extend(result.get("processing_statuses", []))
+    if all_statuses:
+        from src.local_processor import build_rollup
+        global_rollup = build_rollup(all_statuses)
+        write_json(out_dir / "processing_rollup.json", global_rollup)
+        logger.info(
+            "Global rollup: %d/%d figures complete (%.0f%%)",
+            global_rollup["summary"]["fully_processed"],
+            global_rollup["total_figures"],
+            global_rollup["summary"]["percent_complete"],
+        )
+
     return {"results": results, "global_report": global_report}

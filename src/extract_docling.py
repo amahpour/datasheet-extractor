@@ -11,27 +11,130 @@ from src.utils import deterministic_id
 
 logger = logging.getLogger(__name__)
 
+IMAGE_RESOLUTION_SCALE = 2.0
 
-def _extract_with_docling(pdf_path: Path) -> dict[str, Any]:
-    from docling.document_converter import DocumentConverter  # type: ignore
 
-    converter = DocumentConverter()
-    result = converter.convert(str(pdf_path))
-    doc = result.document
+def _extract_with_docling(pdf_path: Path, out_dir: Path | None = None) -> dict[str, Any]:
+    """Extract text, tables, and figures from a PDF using Docling.
 
+    When *out_dir* is provided, extracted figure images are saved there and
+    their paths are included in the returned dict.
+    """
+    from docling.datamodel.base_models import InputFormat
+    from docling.datamodel.pipeline_options import PdfPipelineOptions
+    from docling.document_converter import DocumentConverter, PdfFormatOption
+    from docling_core.types.doc import PictureItem, TableItem
+
+    # Configure pipeline to generate images for pictures (and optionally pages)
+    pipeline_options = PdfPipelineOptions()
+    pipeline_options.images_scale = IMAGE_RESOLUTION_SCALE
+    pipeline_options.generate_page_images = False
+    pipeline_options.generate_picture_images = True
+
+    converter = DocumentConverter(
+        format_options={
+            InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options),
+        }
+    )
+    conv_res = converter.convert(str(pdf_path))
+    doc = conv_res.document
+
+    # --- page count ---
+    pc = getattr(doc, "num_pages", None)
+    if callable(pc):
+        page_count = int(pc())
+    elif isinstance(pc, int):
+        page_count = pc
+    else:
+        page_count = len(getattr(doc, "pages", {})) or 1
+
+    # --- text blocks (markdown) ---
     blocks: list[dict[str, Any]] = []
-    page_count = getattr(doc, "num_pages", 0) or len(getattr(doc, "pages", []))
-    for i, page in enumerate(getattr(doc, "pages", []), start=1):
-        text = ""
-        if hasattr(page, "text"):
-            text = str(page.text)
-        blocks.append({"page": i, "text": text, "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"})
-    if not blocks and hasattr(doc, "export_to_markdown"):
+    if hasattr(doc, "export_to_markdown"):
         md = doc.export_to_markdown()
-        blocks = [{"page": 1, "text": md, "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"}]
-        page_count = max(page_count, 1)
+        if md and md.strip():
+            blocks.append({"page": 1, "text": md.strip(), "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"})
+            page_count = max(page_count, 1)
 
-    return {"page_count": page_count, "blocks": blocks, "tables": [], "figures": []}
+    if not blocks:
+        for i, page in enumerate(getattr(doc, "pages", {}).values(), start=1):
+            text = ""
+            if hasattr(page, "text"):
+                text = str(page.text) if page.text else ""
+            blocks.append({"page": i, "text": text, "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"})
+
+    # --- tables ---
+    tables_out: list[dict[str, Any]] = []
+    for i, table in enumerate(getattr(doc, "tables", []), start=1):
+        try:
+            df = table.export_to_dataframe(doc=doc)
+            grid = [[str(v) for v in row] for row in df.values.tolist()]
+            header = list(df.columns.astype(str))
+            grid = [header] + grid if grid else ([header] if header else [])
+            tables_out.append({
+                "page": 1,
+                "bbox": [0.0, 0.0, 0.0, 0.0],
+                "caption": "",
+                "grid": grid,
+            })
+        except Exception as exc:
+            logger.warning("Could not export table %s: %s", i, exc)
+
+    # --- figures (actual images via iterate_items) ---
+    figures_out: list[dict[str, Any]] = []
+    if out_dir is not None:
+        figures_dir = out_dir / "figures"
+        figures_dir.mkdir(parents=True, exist_ok=True)
+        picture_counter = 0
+        table_img_counter = 0
+        for element, _level in doc.iterate_items():
+            if isinstance(element, PictureItem):
+                picture_counter += 1
+                fig_id = deterministic_id("fig", picture_counter)
+                image_path = figures_dir / f"{fig_id}.png"
+                try:
+                    pil_img = element.get_image(doc)
+                    if pil_img is not None:
+                        pil_img.save(image_path, format="PNG")
+                    else:
+                        _synthesize_placeholder(image_path, f"Picture {picture_counter} (no image data)")
+                except Exception as exc:
+                    logger.warning("Could not save picture %s: %s", picture_counter, exc)
+                    _synthesize_placeholder(image_path, f"Picture {picture_counter} (error)")
+
+                # Extract caption/text from the element if available
+                caption = ""
+                if hasattr(element, "caption_text"):
+                    caption = str(element.caption_text(doc)) if callable(getattr(element, "caption_text", None)) else str(getattr(element, "caption_text", ""))
+                elif hasattr(element, "text"):
+                    caption = str(element.text) if element.text else ""
+
+                figures_out.append({
+                    "id": fig_id,
+                    "page": getattr(element, "page_no", 1) or 1,
+                    "bbox": [0.0, 0.0, 0.0, 0.0],
+                    "caption": caption,
+                    "image_path": str(image_path),
+                })
+
+            elif isinstance(element, TableItem):
+                # Also save table images for reference
+                table_img_counter += 1
+                tbl_img_id = deterministic_id("table_img", table_img_counter)
+                image_path = figures_dir / f"{tbl_img_id}.png"
+                try:
+                    pil_img = element.get_image(doc)
+                    if pil_img is not None:
+                        pil_img.save(image_path, format="PNG")
+                except Exception:
+                    pass  # Table images are optional
+
+    return {
+        "page_count": page_count,
+        "blocks": blocks,
+        "tables": tables_out,
+        "figures": figures_out,
+    }
 
 
 def _extract_with_pypdf(pdf_path: Path) -> dict[str, Any]:
@@ -45,19 +148,23 @@ def _extract_with_pypdf(pdf_path: Path) -> dict[str, Any]:
     return {"page_count": len(reader.pages), "blocks": blocks, "tables": [], "figures": []}
 
 
-def extract_document(pdf_path: Path) -> dict[str, Any]:
+def extract_document(pdf_path: Path, out_dir: Path | None = None) -> dict[str, Any]:
     try:
-        return _extract_with_docling(pdf_path)
+        return _extract_with_docling(pdf_path, out_dir=out_dir)
     except Exception as exc:
         logger.warning("Docling extraction failed for %s; falling back to pypdf: %s", pdf_path, exc)
         return _extract_with_pypdf(pdf_path)
 
 
-def synthesize_placeholder_figure(fig_path: Path, caption: str) -> None:
+def _synthesize_placeholder(fig_path: Path, caption: str) -> None:
     img = Image.new("RGB", (600, 350), color=(248, 248, 248))
     draw = ImageDraw.Draw(img)
     draw.text((20, 20), f"Placeholder figure\n{caption[:120]}", fill=(0, 0, 0))
     img.save(fig_path)
+
+
+# Keep old name for backward compat
+synthesize_placeholder_figure = _synthesize_placeholder
 
 
 def to_blocks(raw_blocks: list[dict[str, Any]]) -> list[Block]:

@@ -18,6 +18,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--no-tables", action="store_true")
     parser.add_argument("--ocr", choices=["off", "on", "auto"], default="off")
     parser.add_argument("--max-figures", type=int, default=25)
+    parser.add_argument("--ollama-model", default=None,
+                        help="Ollama vision model for local figure processing (auto-detected if omitted)")
     return parser
 
 
@@ -36,6 +38,7 @@ def main() -> int:
         no_tables=args.no_tables,
         ocr=args.ocr,
         max_figures=args.max_figures,
+        ollama_model=args.ollama_model,
     )
     return 0
 
