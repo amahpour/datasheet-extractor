@@ -1,0 +1,46 @@
+{
+  "classification": "plot",
+  "title": "Power Supply Current vs Temperature",
+  "summary": "Power supply current increases with temperature under 5 V external reference (Figure 26).",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "Power Supply Current (mA)",
+    "series": [
+      {
+        "name": "Power Supply Current",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.92
+          },
+          {
+            "x": 0,
+            "y": 0.99
+          },
+          {
+            "x": 35,
+            "y": 1.03
+          },
+          {
+            "x": 80,
+            "y": 1.09
+          },
+          {
+            "x": 125,
+            "y": 1.15
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nPower Supply Current,-40,0.92\nPower Supply Current,0,0.99\nPower Supply Current,35,1.03\nPower Supply Current,80,1.09\nPower Supply Current,125,1.15"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V",
+    "temperature_range": "-40C to +125C",
+    "figure": "Figure 26"
+  },
+  "confidence": 0.96
+}

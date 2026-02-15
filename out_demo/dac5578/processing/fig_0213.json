@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0213",
+  "image_path": "out/dac5578/figures/fig_0213.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed technical drawing of a circuit board, specifically focusing on the soldering paste used in its assembly. The circuit board is outlined with red and black lines, providing a clear visual representation of its components and layout. The drawing includes measurements for each component, such as the size of the soldering paste used to bond the components together. The text \"Solder Paste Example\" indicates that this is an example or illustration of how soldering paste should be applied in practice.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0213/llm_analysis.json",
+    "processed_at": "2026-02-12T05:15:13Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:15:13Z"
+}

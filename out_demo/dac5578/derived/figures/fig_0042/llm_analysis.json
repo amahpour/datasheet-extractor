@@ -1,0 +1,89 @@
+{
+  "classification": "plot",
+  "title": "Linearity Error vs Temperature (DAC6578, 10-Bit)",
+  "summary": "Temperature sweep plot of INL limits for DAC6578 (10-bit) at 5 V external reference. INL MAX stays slightly positive and INL MIN slightly negative across -40C to +125C.",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "INL Error (LSB)",
+    "series": [
+      {
+        "name": "INL MAX",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.05
+          },
+          {
+            "x": -10,
+            "y": 0.055
+          },
+          {
+            "x": 20,
+            "y": 0.055
+          },
+          {
+            "x": 50,
+            "y": 0.06
+          },
+          {
+            "x": 80,
+            "y": 0.06
+          },
+          {
+            "x": 110,
+            "y": 0.06
+          },
+          {
+            "x": 125,
+            "y": 0.065
+          }
+        ]
+      },
+      {
+        "name": "INL MIN",
+        "data_points": [
+          {
+            "x": -40,
+            "y": -0.04
+          },
+          {
+            "x": -10,
+            "y": -0.04
+          },
+          {
+            "x": 20,
+            "y": -0.035
+          },
+          {
+            "x": 50,
+            "y": -0.035
+          },
+          {
+            "x": 80,
+            "y": -0.035
+          },
+          {
+            "x": 110,
+            "y": -0.035
+          },
+          {
+            "x": 125,
+            "y": -0.035
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nINL MAX,-40,0.05\nINL MAX,-10,0.055\nINL MAX,20,0.055\nINL MAX,50,0.06\nINL MAX,80,0.06\nINL MAX,110,0.06\nINL MAX,125,0.065\nINL MIN,-40,-0.04\nINL MIN,-10,-0.04\nINL MIN,20,-0.035\nINL MIN,50,-0.035\nINL MIN,80,-0.035\nINL MIN,110,-0.035\nINL MIN,125,-0.035"
+  },
+  "component_references": [
+    "DAC6578"
+  ],
+  "key_values": {
+    "metric": "INL",
+    "resolution": "10-bit",
+    "external_reference": "5V",
+    "temperature_range": "-40C to +125C",
+    "series": "INL MAX, INL MIN"
+  },
+  "confidence": 0.96
+}

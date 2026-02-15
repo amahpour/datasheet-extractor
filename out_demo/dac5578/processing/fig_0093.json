@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0093",
+  "image_path": "out/dac5578/figures/fig_0093.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a line graph that displays the supply current of various electronic devices, with each device represented by a bar on the graph. The x-axis of the graph is labeled \"External Reference\", and the y-axis is labeled \"Supply Current (mA)\". The bars are colored in shades of pink and purple to differentiate between different types of devices. The graph shows that some electronic devices have a supply current of 3.3V, while others have a supply current of 3.5V or higher.",
+  "local_llm_classification": "pinout",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0093/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:00:08Z"
+}

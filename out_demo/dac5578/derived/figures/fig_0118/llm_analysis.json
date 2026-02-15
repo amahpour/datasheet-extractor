@@ -1,0 +1,80 @@
+{
+  "classification": "plot",
+  "title": "Differential Linearity Error vs Digital Input Code (DAC5578, 8-Bit, +125C)",
+  "summary": "DNL envelope for DAC5578 at +125C and 2.5 V external reference.",
+  "structured_data": {
+    "x_axis": "Digital Input Code",
+    "y_axis": "DNL Error (LSB)",
+    "series": [
+      {
+        "name": "Upper channel envelope",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.006
+          },
+          {
+            "x": 32,
+            "y": 0.006
+          },
+          {
+            "x": 96,
+            "y": 0.006
+          },
+          {
+            "x": 160,
+            "y": 0.006
+          },
+          {
+            "x": 192,
+            "y": 0.006
+          },
+          {
+            "x": 256,
+            "y": 0.006
+          }
+        ]
+      },
+      {
+        "name": "Lower channel envelope",
+        "data_points": [
+          {
+            "x": 0,
+            "y": -0.006
+          },
+          {
+            "x": 32,
+            "y": -0.006
+          },
+          {
+            "x": 96,
+            "y": -0.006
+          },
+          {
+            "x": 160,
+            "y": -0.006
+          },
+          {
+            "x": 192,
+            "y": -0.006
+          },
+          {
+            "x": 256,
+            "y": -0.006
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nUpper channel envelope,0,0.006\nUpper channel envelope,32,0.006\nUpper channel envelope,96,0.006\nUpper channel envelope,160,0.006\nUpper channel envelope,192,0.006\nUpper channel envelope,256,0.006\nLower channel envelope,0,-0.006\nLower channel envelope,32,-0.006\nLower channel envelope,96,-0.006\nLower channel envelope,160,-0.006\nLower channel envelope,192,-0.006\nLower channel envelope,256,-0.006"
+  },
+  "component_references": [
+    "DAC5578"
+  ],
+  "key_values": {
+    "metric": "DNL",
+    "resolution": "8-bit",
+    "temperature": "+125C",
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.95
+}

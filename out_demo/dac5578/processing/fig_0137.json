@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0137",
+  "image_path": "out/dac5578/figures/fig_0137.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the relationship between the input voltage and current for a DC circuit. The x-axis of the graph represents the input voltage, while the y-axis shows the corresponding current. The graph is colored in blue, with a line representing the relationship between the two variables. The graph also includes text that provides information about the channel B and the external reference.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0137/llm_analysis.json",
+    "processed_at": "2026-02-12T05:06:45Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:06:45Z"
+}

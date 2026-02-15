@@ -1,0 +1,49 @@
+{
+  "classification": "plot",
+  "title": "Source Current at Positive Rail (Channel D, Code FFFh)",
+  "summary": "Output voltage droop at the positive rail as source current increases for Channel D.",
+  "structured_data": {
+    "x_axis": "Source Current (mA)",
+    "y_axis": "Output Voltage (V)",
+    "series": [
+      {
+        "name": "Channel D",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 5.00
+          },
+          {
+            "x": 2,
+            "y": 4.99
+          },
+          {
+            "x": 4,
+            "y": 4.98
+          },
+          {
+            "x": 6,
+            "y": 4.975
+          },
+          {
+            "x": 8,
+            "y": 4.968
+          },
+          {
+            "x": 10,
+            "y": 4.960
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nChannel D,0,5.00\nChannel D,2,4.99\nChannel D,4,4.98\nChannel D,6,4.975\nChannel D,8,4.968\nChannel D,10,4.960"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "channel": "D",
+    "code_loaded": "FFFh"
+  },
+  "confidence": 0.97
+}

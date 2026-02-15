@@ -1,0 +1,1122 @@
+{
+  "total_figures": 221,
+  "resolved_local": 106,
+  "resolved_external": 115,
+  "needs_external": 0,
+  "summary": {
+    "fully_processed": 221,
+    "pending_external": 0,
+    "percent_complete": 100.0
+  },
+  "figures": {
+    "resolved_local": [
+      {
+        "id": "fig_0001",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0003",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0004",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0005",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0006",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0007",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0008",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0009",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0010",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0013",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0014",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0015",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0016",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0023",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0024",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0025",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0032",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0033",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0040",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0041",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0048",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0049",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0055",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0056",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0063",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0064",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0070",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0071",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0072",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0074",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0076",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0078",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0079",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0081",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0082",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0086",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0087",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0090",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0094",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0095",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0102",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0103",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0104",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0111",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0112",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0119",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0120",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0127",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0128",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0134",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0135",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0142",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0143",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0150",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0151",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0158",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0159",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0163",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0166",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0168",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0169",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0170",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0172",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0173",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0174",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0175",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0176",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0177",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0178",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0179",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0180",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0181",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0182",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0183",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0184",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0185",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0186",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0187",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0189",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0190",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0192",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0193",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0194",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0195",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0196",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0197",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0198",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0199",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0200",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0201",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0202",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0203",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0204",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0205",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0206",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0207",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0208",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0210",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0211",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0212",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0214",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0216",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0218",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0219",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0220",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0221",
+        "classification": "",
+        "description": ""
+      }
+    ],
+    "resolved_external": [
+      {
+        "id": "fig_0002",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0011",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0012",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0017",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0018",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0019",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0020",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0021",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0022",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0026",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0027",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0028",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0029",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0030",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0031",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0034",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0035",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0036",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0037",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0038",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0039",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0042",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0043",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0044",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0045",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0046",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0047",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0050",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0051",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0052",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0053",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0054",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0057",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0058",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0059",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0060",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0061",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0062",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0065",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0066",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0067",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0068",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0069",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0073",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0075",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0077",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0080",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0083",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0084",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0085",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0088",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0089",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0091",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0092",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0093",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0096",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0097",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0098",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0099",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0100",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0101",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0105",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0106",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0107",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0108",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0109",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0110",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0113",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0114",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0115",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0116",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0117",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0118",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0121",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0122",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0123",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0124",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0125",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0126",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0129",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0130",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0131",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0132",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0133",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0136",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0137",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0138",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0139",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0140",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0141",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0144",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0145",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0146",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0147",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0148",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0149",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0152",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0153",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0154",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0155",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0156",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0157",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0160",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0161",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0162",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0164",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0165",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0167",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0171",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0188",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0191",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0209",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0213",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0215",
+        "classification": "",
+        "description": ""
+      },
+      {
+        "id": "fig_0217",
+        "classification": "",
+        "description": ""
+      }
+    ]
+  }
+}

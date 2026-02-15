@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Falling 1-LSB Step Glitch Capture (801h to 800h)",
+  "summary": "Scope capture of 1-LSB falling-edge glitch and LDAC feed-through.",
+  "structured_data": {
+    "description": "VOUT at 500 uV/div, LDAC trigger pulse at 5 V/div, time base 2 us/div, external reference 2.5 V."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "time_scale": "2 us/div",
+    "vout_scale": "500 uV/div",
+    "trigger_scale": "5 V/div",
+    "code_transition": "801h to 800h"
+  },
+  "confidence": 0.96
+}

@@ -1,0 +1,81 @@
+{
+  "classification": "plot",
+  "title": "Linearity Error vs Digital Input Code (DAC7578, 12-Bit, -40C)",
+  "summary": "Eight-channel INL plot for DAC7578 at -40C with external reference at 5 V. INL remains close to 0 LSB with modest spread and ripple across the code range.",
+  "structured_data": {
+    "x_axis": "Digital Input Code",
+    "y_axis": "INL Error (LSB)",
+    "series": [
+      {
+        "name": "Upper channel envelope",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.10
+          },
+          {
+            "x": 512,
+            "y": 0.12
+          },
+          {
+            "x": 1536,
+            "y": 0.18
+          },
+          {
+            "x": 2560,
+            "y": 0.20
+          },
+          {
+            "x": 3072,
+            "y": 0.22
+          },
+          {
+            "x": 4096,
+            "y": 0.12
+          }
+        ]
+      },
+      {
+        "name": "Lower channel envelope",
+        "data_points": [
+          {
+            "x": 0,
+            "y": -0.12
+          },
+          {
+            "x": 512,
+            "y": -0.15
+          },
+          {
+            "x": 1536,
+            "y": -0.10
+          },
+          {
+            "x": 2560,
+            "y": -0.08
+          },
+          {
+            "x": 3072,
+            "y": -0.12
+          },
+          {
+            "x": 4096,
+            "y": -0.10
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nUpper channel envelope,0,0.10\nUpper channel envelope,512,0.12\nUpper channel envelope,1536,0.18\nUpper channel envelope,2560,0.20\nUpper channel envelope,3072,0.22\nUpper channel envelope,4096,0.12\nLower channel envelope,0,-0.12\nLower channel envelope,512,-0.15\nLower channel envelope,1536,-0.10\nLower channel envelope,2560,-0.08\nLower channel envelope,3072,-0.12\nLower channel envelope,4096,-0.10"
+  },
+  "component_references": [
+    "DAC7578"
+  ],
+  "key_values": {
+    "metric": "INL",
+    "resolution": "12-bit",
+    "temperature": "-40C",
+    "external_reference": "5V",
+    "channels": "A-H"
+  },
+  "confidence": 0.88
+}

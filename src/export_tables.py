@@ -1,3 +1,5 @@
+"""Table export helpers for JSON/CSV/Markdown artifacts."""
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -7,6 +9,7 @@ from src.utils import flatten_grid_rows, write_json
 
 
 def grid_to_markdown(grid: list[list[str]]) -> str:
+    """Render a rectangular-ish grid as GitHub-flavored Markdown table text."""
     if not grid:
         return ""
     header = grid[0]
@@ -20,6 +23,7 @@ def grid_to_markdown(grid: list[list[str]]) -> str:
 
 
 def export_table(table: Table, out_dir: Path) -> None:
+    """Write all table artifact formats and annotate paths on the table object."""
     table_dir = out_dir / "tables"
     table_dir.mkdir(parents=True, exist_ok=True)
 
@@ -27,7 +31,9 @@ def export_table(table: Table, out_dir: Path) -> None:
     csv_path = table_dir / f"{table.id}.csv"
     md_path = table_dir / f"{table.id}.md"
 
-    write_json(json_path, {"id": table.id, "grid": table.grid, "caption": table.caption})
+    write_json(
+        json_path, {"id": table.id, "grid": table.grid, "caption": table.caption}
+    )
     csv_path.write_text(flatten_grid_rows(table.grid), encoding="utf-8")
     md_path.write_text(grid_to_markdown(table.grid), encoding="utf-8")
 

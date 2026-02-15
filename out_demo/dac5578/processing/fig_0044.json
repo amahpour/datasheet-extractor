@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0044",
+  "image_path": "out/dac5578/figures/fig_0044.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with two lines, one representing the error in linearity and the other representing temperature. The x-axis of the graph is labeled \"External Reference\", while the y-axis is labeled \"Temperature (DC5768)\". The graph shows that there are two errors in the linearity measurement: an external reference of 0.15 and an internal reference of 0.5, with a temperature of 8 degrees Celsius.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0044/llm_analysis.json",
+    "processed_at": "2026-02-12T04:54:02Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T04:54:02Z"
+}

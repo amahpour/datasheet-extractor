@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0035",
+  "image_path": "out/dac5578/figures/fig_0035.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a line graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". The graph displays the relationship between digital input code (DAC) and the corresponding linear error, represented by the color blue on the graph. The graph shows that as the DAC increases, the linear error also increases, indicating a negative correlation between the two variables.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0035/llm_analysis.json",
+    "processed_at": "2026-02-12T04:45:59Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T04:45:59Z"
+}

@@ -1,3 +1,5 @@
+"""Top-level pipeline orchestration for datasheet extraction."""
+
 from __future__ import annotations
 
 import logging
@@ -8,9 +10,23 @@ from src.export_tables import export_table
 from src.extract_docling import extract_document, to_blocks
 from src.local_processor import process_all_figures, write_rollup
 from src.report import write_manual_report
-from src.schema import Classification, Derived, Description, DocStats, Document, Figure, SourceMeta, Table
+from src.schema import (
+    Derived,
+    Description,
+    DocStats,
+    Document,
+    Figure,
+    SourceMeta,
+    Table,
+)
 from src.tagger import classify_figure, tags_from_text
-from src.utils import deterministic_id, ensure_dir, parse_page_ranges, sha256_file, write_json
+from src.utils import (
+    deterministic_id,
+    ensure_dir,
+    parse_page_ranges,
+    sha256_file,
+    write_json,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -26,22 +42,26 @@ def process_pdf(
     max_figures: int = 25,
     ollama_model: str | None = None,
 ) -> dict:
+    """Process a single PDF and persist all per-document artifacts."""
     pdf_out = ensure_dir(out_root / pdf_path.stem)
 
-    # Pass out_dir so Docling can save extracted images directly
+    # Pass ``out_dir`` so Docling can write figure images directly to disk.
     raw = extract_document(pdf_path, out_dir=pdf_out if not no_images else None)
     blocks = to_blocks(raw.get("blocks", []))
     page_filter = parse_page_ranges(pages)
     if page_filter:
         blocks = [b for b in blocks if b.page in page_filter]
 
-    # --- Tables ---
+    # Stage 1: normalize and export structured tables.
     tables: list[Table] = []
     if not no_tables:
         for i, t in enumerate(raw.get("tables", []), start=1):
+            table_page = int(t.get("page", 1))
+            if page_filter and table_page not in page_filter:
+                continue
             table = Table(
                 id=deterministic_id("table", i),
-                page=int(t.get("page", 1)),
+                page=table_page,
                 bbox=[float(x) for x in t.get("bbox", [0, 0, 0, 0])],
                 caption=str(t.get("caption", "")),
                 tags=tags_from_text(str(t.get("caption", ""))),
@@ -50,7 +70,7 @@ def process_pdf(
             export_table(table, pdf_out)
             tables.append(table)
 
-    # --- Figures (from Docling's actual image extraction) ---
+    # Stage 2: normalize figures and attach lightweight local descriptions.
     figures: list[Figure] = []
     if not no_images:
         raw_figures = raw.get("figures", [])
@@ -58,9 +78,11 @@ def process_pdf(
             fig_id = fig_data.get("id", deterministic_id("fig", i))
             caption = fig_data.get("caption", "")
             page = fig_data.get("page", 1)
+            if page_filter and page not in page_filter:
+                continue
             image_path = fig_data.get("image_path", "")
 
-            # Classify based on caption and surrounding text
+            # Use same-page text as weak context for rule-based classification.
             context = " ".join(b.text[:200] for b in blocks if b.page == page)
             classification = classify_figure(caption, context)
 
@@ -72,7 +94,9 @@ def process_pdf(
                 tags=tags_from_text(caption),
                 image_path=image_path,
                 classification=classification,
-                derived=Derived(description=Description(text="", confidence=0.0, notes="")),
+                derived=Derived(
+                    description=Description(text="", confidence=0.0, notes="")
+                ),
             )
             figure = derive_description(figure, ocr_mode=ocr)
             figures.append(figure)
@@ -117,7 +141,7 @@ def process_pdf(
 
     per_pdf_report = write_manual_report(figures, pdf_out)
 
-    # --- Stage 1.5: Local figure processing (OCR + local LLM) ---
+    # Stage 2.5: optional local OCR/vision pass with per-figure status files.
     processing_statuses = []
     if not no_images and (pdf_out / "figures").is_dir():
         processing_dir = ensure_dir(pdf_out / "processing")
@@ -158,6 +182,7 @@ def run_pipeline(
     max_figures: int = 25,
     ollama_model: str | None = None,
 ) -> dict:
+    """Run the extraction pipeline for all matching PDFs in ``input_dir``."""
     ensure_dir(out_dir)
     pdfs = sorted(input_dir.glob(pattern))
     if not pdfs and pattern == "*.pdf":
@@ -185,10 +210,17 @@ def run_pipeline(
     write_json(out_dir / "index.json", {"documents": [r["out_dir"] for r in results]})
     write_json(out_dir / "manual_processing_report.json", global_report)
     lines = ["# Global Manual Processing Report", ""]
-    lines.extend([f"- {entry['figure_id']}: {entry['recommended_manual_action']}" for entry in all_entries])
+    lines.extend(
+        [
+            f"- {entry['figure_id']}: {entry['recommended_manual_action']}"
+            for entry in all_entries
+        ]
+    )
     if not all_entries:
         lines.append("- none")
-    (out_dir / "manual_processing_report.md").write_text("\n".join(lines), encoding="utf-8")
+    (out_dir / "manual_processing_report.md").write_text(
+        "\n".join(lines), encoding="utf-8"
+    )
 
     # Global rollup across all PDFs
     all_statuses = []
@@ -196,6 +228,7 @@ def run_pipeline(
         all_statuses.extend(result.get("processing_statuses", []))
     if all_statuses:
         from src.local_processor import build_rollup
+
         global_rollup = build_rollup(all_statuses)
         write_json(out_dir / "processing_rollup.json", global_rollup)
         logger.info(

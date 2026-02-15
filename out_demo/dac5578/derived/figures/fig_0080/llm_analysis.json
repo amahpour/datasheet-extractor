@@ -1,0 +1,19 @@
+{
+  "classification": "screenshot",
+  "title": "Rising Edge Scope Capture (Code 400h to C00h)",
+  "summary": "Oscilloscope capture of rising-edge transition with zoomed post-step behavior and trigger pulse.",
+  "structured_data": {
+    "description": "Annotated as rising edge 2 V/div with zoomed rising edge 100 uV/div, trigger pulse 5 V/div, time base 5 us/div, transition from code 400h to C00h."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "time_scale": "5 us/div",
+    "rising_edge_scale": "2 V/div",
+    "zoom_scale": "100 uV/div",
+    "trigger_scale": "5 V/div",
+    "code_transition": "400h to C00h"
+  },
+  "confidence": 0.96
+}

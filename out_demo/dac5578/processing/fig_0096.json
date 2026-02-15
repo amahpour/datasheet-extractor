@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0096",
+  "image_path": "out/dac5578/figures/fig_0096.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the relationship between linear error and digital input code (DAC) for a digital input device, such as a computer or a sensor. The x-axis of the graph represents DAC, while the y-axis shows linear error in bits. The graph is colored with different shades of purple to represent various DAC values. There are four distinct lines on the graph representing different DAC values: 0.0, 0.12, 0.5, and 0.8. Each line has a corresponding color based on its DAC value: purple for 0.0, green for 0.12, orange for 0.5, and gray for 0.8. The graph also includes text that provides information about the relationship between linear error and DAC in digital input code (DAC) for a digital input device.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0096/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:00:08Z"
+}

@@ -1,0 +1,64 @@
+{
+  "classification": "plot",
+  "title": "Power-Supply Current Histogram",
+  "summary": "Histogram of supply current distribution at 5 V external reference, with peak population near ~1.03 mA.",
+  "structured_data": {
+    "x_axis": "Supply Current (mA)",
+    "y_axis": "% of Population",
+    "series": [
+      {
+        "name": "Histogram Bars",
+        "data_points": [
+          {
+            "x": 0.94,
+            "y": 1.5
+          },
+          {
+            "x": 0.98,
+            "y": 5.5
+          },
+          {
+            "x": 1.00,
+            "y": 6.5
+          },
+          {
+            "x": 1.02,
+            "y": 9.5
+          },
+          {
+            "x": 1.03,
+            "y": 11.8
+          },
+          {
+            "x": 1.05,
+            "y": 8.8
+          },
+          {
+            "x": 1.08,
+            "y": 6.0
+          },
+          {
+            "x": 1.10,
+            "y": 3.0
+          },
+          {
+            "x": 1.12,
+            "y": 1.0
+          },
+          {
+            "x": 1.15,
+            "y": 0.1
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nHistogram Bars,0.94,1.5\nHistogram Bars,0.98,5.5\nHistogram Bars,1.00,6.5\nHistogram Bars,1.02,9.5\nHistogram Bars,1.03,11.8\nHistogram Bars,1.05,8.8\nHistogram Bars,1.08,6.0\nHistogram Bars,1.10,3.0\nHistogram Bars,1.12,1.0\nHistogram Bars,1.15,0.1"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V"
+  },
+  "confidence": 0.95
+}

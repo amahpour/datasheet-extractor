@@ -12,6 +12,7 @@ Status values:
   - needs_external   – flagged for a more capable external LLM
   - resolved_external – external LLM has processed it (set by stage 2)
 """
+
 from __future__ import annotations
 
 import base64
@@ -21,6 +22,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from PIL import Image
+
+from src.utils import run_ocr
 
 logger = logging.getLogger(__name__)
 
@@ -34,9 +37,26 @@ NOISE_PIXEL_THRESHOLD = 500
 # If OCR extracts this many clean chars, the image is "text-heavy"
 OCR_RICH_CHARS = 120
 
+# Minimum description length to consider locally resolved
+MIN_DESCRIPTION_LEN = 50
+
+# Truncation limits for rollup summaries
+ROLLUP_DESCRIPTION_MAX = 120
+ROLLUP_DESCRIPTION_DISPLAY_MAX = 80
+ROLLUP_OCR_PREVIEW_MAX = 80
+
 # Classification keywords that mean "needs external for precision"
-COMPLEX_TYPES = {"plot", "pinout", "schematic", "block_diagram", "timing_diagram",
-                 "register_map", "wiring_diagram", "state_machine", "table_image"}
+COMPLEX_TYPES = {
+    "plot",
+    "pinout",
+    "schematic",
+    "block_diagram",
+    "timing_diagram",
+    "register_map",
+    "wiring_diagram",
+    "state_machine",
+    "table_image",
+}
 
 # Classification keywords that are simple enough to resolve locally
 SIMPLE_TYPES = {"logo", "icon", "decorative", "photo", "screenshot", "other"}
@@ -49,7 +69,9 @@ DESCRIBE_PROMPT = "Describe this image from an electronics datasheet."
 # Per-figure status file
 # ---------------------------------------------------------------------------
 
+
 def _status_path(processing_dir: Path, figure_id: str) -> Path:
+    """Return the status-file path for a figure within ``processing_dir``."""
     return processing_dir / f"{figure_id}.json"
 
 
@@ -69,6 +91,7 @@ def write_status(processing_dir: Path, status: dict) -> None:
 
 
 def _new_status(figure_id: str, image_path: str) -> dict:
+    """Create a default status payload for a new figure-processing run."""
     return {
         "figure_id": figure_id,
         "image_path": image_path,
@@ -85,23 +108,9 @@ def _new_status(figure_id: str, image_path: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# OCR
-# ---------------------------------------------------------------------------
-
-def _run_ocr(image_path: Path) -> str:
-    try:
-        import pytesseract  # type: ignore
-        return pytesseract.image_to_string(Image.open(image_path)).strip()
-    except ImportError:
-        return ""
-    except Exception as exc:
-        logger.debug("OCR failed for %s: %s", image_path, exc)
-        return ""
-
-
-# ---------------------------------------------------------------------------
 # Local LLM via Ollama Python library
 # ---------------------------------------------------------------------------
+
 
 def _ollama_generate(model: str, prompt: str, image_path: Path) -> str:
     """Call ollama.generate with an image. Returns response text or ''."""
@@ -125,6 +134,7 @@ def _detect_ollama_model() -> str | None:
     """Find a suitable vision model from ollama."""
     try:
         import ollama  # type: ignore
+
         result = ollama.list()
 
         # ollama.list() may return a dict or an object with a .models attribute
@@ -146,7 +156,8 @@ def _detect_ollama_model() -> str | None:
                 name = str(m)
             model_names.append(name.lower())
 
-        for candidate in ["moondream", "llava:7b", "llava", "bakllava", "minicpm-v"]:
+        # Prefer stronger general-purpose vision models before lightweight ones.
+        for candidate in ["llava:7b", "llava", "bakllava", "minicpm-v", "moondream"]:
             for name in model_names:
                 if candidate in name:
                     return name
@@ -173,7 +184,10 @@ def _infer_classification(description: str) -> str:
         (["register", "bit field", "register map"], "register_map"),
         (["block diagram", "functional block"], "block_diagram"),
         (["wiring", "hookup", "connection diagram"], "wiring_diagram"),
-        (["plot", "graph", "chart", "x-axis", "y-axis", "linearity", "error", "vs"], "plot"),
+        (
+            ["plot", "graph", "chart", "x-axis", "y-axis", "linearity", "error", "vs"],
+            "plot",
+        ),
         (["table", "row", "column", "header"], "table_image"),
         (["circuit board", "inputs and outputs", "chip diagram"], "block_diagram"),
         (["photo", "photograph", "pcb", "board", "chip"], "photo"),
@@ -191,6 +205,7 @@ def _infer_classification(description: str) -> str:
 # Decide if locally resolved
 # ---------------------------------------------------------------------------
 
+
 def _is_resolved_locally(classification: str, ocr_text: str, description: str) -> bool:
     """Decide if local processing is sufficient for this figure."""
     # Simple types are always resolved locally
@@ -207,7 +222,7 @@ def _is_resolved_locally(classification: str, ocr_text: str, description: str) -
         return False
 
     # Unknown classification — if we got a decent description, resolve it
-    if len(description) > 50:
+    if len(description) > MIN_DESCRIPTION_LEN:
         return True
 
     return False
@@ -216,6 +231,7 @@ def _is_resolved_locally(classification: str, ocr_text: str, description: str) -
 # ---------------------------------------------------------------------------
 # Main: process a single figure
 # ---------------------------------------------------------------------------
+
 
 def process_figure(
     figure_id: str,
@@ -233,7 +249,11 @@ def process_figure(
     if not force:
         existing = read_status(processing_dir, figure_id)
         if existing is not None:
-            logger.debug("  %s: already processed (status=%s), skipping", figure_id, existing["status"])
+            logger.debug(
+                "  %s: already processed (status=%s), skipping",
+                figure_id,
+                existing["status"],
+            )
             return existing
 
     status = _new_status(figure_id, str(image_path))
@@ -265,7 +285,7 @@ def process_figure(
         return status
 
     # --- OCR ---
-    ocr_text = _run_ocr(image_path)
+    ocr_text = run_ocr(image_path)
     status["ocr_text"] = ocr_text
 
     # --- Local LLM ---
@@ -286,10 +306,14 @@ def process_figure(
         text_lower = ocr_text.lower()
         if any(kw in text_lower for kw in ["vs", "error", "response", "frequency"]):
             classification = "plot"
-        elif any(kw in text_lower for kw in ["pin", "vout", "vcc", "gnd", "sda", "scl"]):
+        elif any(
+            kw in text_lower for kw in ["pin", "vout", "vcc", "gnd", "sda", "scl"]
+        ):
             classification = "pinout"
         status["local_llm_classification"] = classification
-        status["local_llm_description"] = f"OCR text: {ocr_text[:300]}" if ocr_text else ""
+        status["local_llm_description"] = (
+            f"OCR text: {ocr_text[:300]}" if ocr_text else ""
+        )
 
     # --- Decide resolved vs needs_external ---
     resolved = _is_resolved_locally(classification, ocr_text, description)
@@ -305,6 +329,7 @@ def process_figure(
 # ---------------------------------------------------------------------------
 # Batch: process all figures in a directory
 # ---------------------------------------------------------------------------
+
 
 def process_all_figures(
     figures_dir: Path,
@@ -329,12 +354,16 @@ def process_all_figures(
         fig_id = fig_path.stem
         logger.info("  [%d/%d] Processing %s ...", i, total, fig_id)
         status = process_figure(
-            fig_id, fig_path, processing_dir,
-            ollama_model=ollama_model, force=force,
+            fig_id,
+            fig_path,
+            processing_dir,
+            ollama_model=ollama_model,
+            force=force,
         )
         logger.info(
             "    → status=%s, classification=%s",
-            status["status"], status["local_llm_classification"],
+            status["status"],
+            status["local_llm_classification"],
         )
         results.append(status)
 
@@ -344,6 +373,7 @@ def process_all_figures(
 # ---------------------------------------------------------------------------
 # Rollup report (reads from per-figure status files)
 # ---------------------------------------------------------------------------
+
 
 def build_rollup_from_dir(processing_dir: Path) -> dict:
     """Build rollup by reading all status files in the processing dir."""
@@ -381,7 +411,9 @@ def build_rollup(statuses: list[dict]) -> dict:
                 {
                     "id": s["figure_id"],
                     "classification": s.get("local_llm_classification", ""),
-                    "description": s.get("local_llm_description", "")[:120],
+                    "description": s.get("local_llm_description", "")[
+                        :ROLLUP_DESCRIPTION_MAX
+                    ],
                 }
                 for s in resolved_local
             ],
@@ -390,8 +422,10 @@ def build_rollup(statuses: list[dict]) -> dict:
                     "id": s["figure_id"],
                     "image_path": s["image_path"],
                     "classification": s.get("local_llm_classification", ""),
-                    "description": s.get("local_llm_description", "")[:120],
-                    "ocr_preview": s.get("ocr_text", "")[:80],
+                    "description": s.get("local_llm_description", "")[
+                        :ROLLUP_DESCRIPTION_MAX
+                    ],
+                    "ocr_preview": s.get("ocr_text", "")[:ROLLUP_OCR_PREVIEW_MAX],
                 }
                 for s in needs_external
             ],
@@ -434,7 +468,7 @@ def write_rollup(processing_dir: Path, out_dir: Path) -> dict:
         lines.append(f"## Resolved locally ({rollup['resolved_local']})")
         lines.append("")
         for fig in rollup["figures"]["resolved_local"]:
-            desc = fig["description"].replace("\n", " ")[:80]
+            desc = fig["description"].replace("\n", " ")[:ROLLUP_DESCRIPTION_DISPLAY_MAX]
             lines.append(f"- `{fig['id']}` [{fig['classification']}] {desc}")
         lines.append("")
 
@@ -444,8 +478,10 @@ def write_rollup(processing_dir: Path, out_dir: Path) -> dict:
         lines.append("Use the prompt template in `prompts/figure_analysis.md`.")
         lines.append("")
         for fig in rollup["figures"]["needs_external"]:
-            desc = fig["description"].replace("\n", " ")[:80]
-            lines.append(f"- `{fig['id']}` [{fig['classification']}] → `{fig['image_path']}`")
+            desc = fig["description"].replace("\n", " ")[:ROLLUP_DESCRIPTION_DISPLAY_MAX]
+            lines.append(
+                f"- `{fig['id']}` [{fig['classification']}] → `{fig['image_path']}`"
+            )
             if desc:
                 lines.append(f"  {desc}")
         lines.append("")

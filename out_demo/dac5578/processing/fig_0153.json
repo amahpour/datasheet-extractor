@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0153",
+  "image_path": "out/dac5578/figures/fig_0153.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a detailed electronic datasheet for a device that measures DC voltage and current in millivolts (mV). The device is designed to measure DC voltage at 2V, 5V, 10V, and 20V. It can also measure DC current at 1A, 2A, 4A, 8A, 16A, 32A, and 64A amperes. The datasheet includes a graph that shows the relationship between DC voltage and current for each of these voltage levels.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0153/llm_analysis.json",
+    "processed_at": "2026-02-12T05:06:45Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:06:45Z"
+}

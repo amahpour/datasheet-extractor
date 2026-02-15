@@ -1,0 +1,72 @@
+{
+  "classification": "plot",
+  "title": "Linearity Error vs Temperature (DAC5578, 8-Bit)",
+  "summary": "Temperature sweep of INL bounds for DAC5578 at 8-bit resolution with 5 V external reference.",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "INL Error (LSB)",
+    "series": [
+      {
+        "name": "INL MAX",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.015
+          },
+          {
+            "x": 0,
+            "y": 0.015
+          },
+          {
+            "x": 40,
+            "y": 0.016
+          },
+          {
+            "x": 80,
+            "y": 0.016
+          },
+          {
+            "x": 125,
+            "y": 0.016
+          }
+        ]
+      },
+      {
+        "name": "INL MIN",
+        "data_points": [
+          {
+            "x": -40,
+            "y": -0.012
+          },
+          {
+            "x": 0,
+            "y": -0.011
+          },
+          {
+            "x": 40,
+            "y": -0.010
+          },
+          {
+            "x": 80,
+            "y": -0.009
+          },
+          {
+            "x": 125,
+            "y": -0.008
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nINL MAX,-40,0.015\nINL MAX,0,0.015\nINL MAX,40,0.016\nINL MAX,80,0.016\nINL MAX,125,0.016\nINL MIN,-40,-0.012\nINL MIN,0,-0.011\nINL MIN,40,-0.010\nINL MIN,80,-0.009\nINL MIN,125,-0.008"
+  },
+  "component_references": [
+    "DAC5578"
+  ],
+  "key_values": {
+    "metric": "INL",
+    "resolution": "8-bit",
+    "external_reference": "5V",
+    "temperature_range": "-40C to +125C"
+  },
+  "confidence": 0.95
+}

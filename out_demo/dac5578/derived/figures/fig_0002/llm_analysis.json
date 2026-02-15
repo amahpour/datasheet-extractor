@@ -1,0 +1,71 @@
+{
+  "classification": "block_diagram",
+  "title": "DACx578 Functional Block Diagram",
+  "summary": "Functional architecture of the DACx578 showing I2C/control interfaces, per-channel data buffers and DAC registers, eight DAC channels (A-H), output buffers, and power-down control. AVDD and VREFIN feed the analog path while SCL/SDA and control pins drive digital control logic.",
+  "structured_data": {
+    "mermaid": "flowchart LR\n  SCL[SCL] --> ICL[Input Control Logic]\n  SDA[SDA] --> ICL\n  ADDR0[ADDR0] --> CL[Control Logic]\n  ADDR1[ADDR1] --> CL\n  LDAC[LDAC] --> CL\n  RSTSEL[RSTSEL] --> CL\n  CLR[CLR] --> CL\n  ICL --> CL\n  CL --> BC[Buffer Control]\n  CL --> RC[Register Control]\n  DBH[Data Buffer H] --> DRH[DAC Register H] --> DACH[8-/10-/12-Bit DAC H] --> OBH[Output Buffer H] --> VOUTH[VOUT_H]\n  DBG[Data Buffer G] --> DRG[DAC Register G] --> DACG[8-/10-/12-Bit DAC G] --> OBG[Output Buffer G] --> VOUTG[VOUT_G]\n  DBF[Data Buffer F] --> DRF[DAC Register F] --> DACF[8-/10-/12-Bit DAC F] --> OBF[Output Buffer F] --> VOUTF[VOUT_F]\n  DBE[Data Buffer E] --> DRE[DAC Register E] --> DACE[8-/10-/12-Bit DAC E] --> OBE[Output Buffer E] --> VOUTE[VOUT_E]\n  DBD[Data Buffer D] --> DRD[DAC Register D] --> DACD[8-/10-/12-Bit DAC D] --> OBD[Output Buffer D] --> VOUTD[VOUT_D]\n  DBC[Data Buffer C] --> DRC[DAC Register C] --> DACC[8-/10-/12-Bit DAC C] --> OBC[Output Buffer C] --> VOUTC[VOUT_C]\n  DBB[Data Buffer B] --> DRB[DAC Register B] --> DACB[8-/10-/12-Bit DAC B] --> OBB[Output Buffer B] --> VOUTB[VOUT_B]\n  DBA[Data Buffer A] --> DRA[DAC Register A] --> DACA[8-/10-/12-Bit DAC A] --> OBA[Output Buffer A] --> VOUTA[VOUT_A]\n  AVDD[AVDD] -.analog supply.-> DACH\n  AVDD -.-> DACG\n  AVDD -.-> DACF\n  AVDD -.-> DACE\n  AVDD -.-> DACD\n  AVDD -.-> DACC\n  AVDD -.-> DACB\n  AVDD -.-> DACA\n  VREFIN[VREFIN] -.reference.-> DACH\n  VREFIN -.-> DACG\n  VREFIN -.-> DACF\n  VREFIN -.-> DACE\n  VREFIN -.-> DACD\n  VREFIN -.-> DACC\n  VREFIN -.-> DACB\n  VREFIN -.-> DACA\n  PD[Power-Down Control Logic] --> OBA\n  PD --> OBB\n  PD --> OBC\n  PD --> OBD\n  PD --> OBE\n  PD --> OBF\n  PD --> OBG\n  PD --> OBH\n  GND[GND] --- PD",
+    "nodes": [
+      "SCL",
+      "SDA",
+      "Input Control Logic",
+      "Control Logic",
+      "Buffer Control",
+      "Register Control",
+      "Data Buffer A",
+      "Data Buffer B",
+      "Data Buffer C",
+      "Data Buffer D",
+      "Data Buffer E",
+      "Data Buffer F",
+      "Data Buffer G",
+      "Data Buffer H",
+      "DAC Register A",
+      "DAC Register B",
+      "DAC Register C",
+      "DAC Register D",
+      "DAC Register E",
+      "DAC Register F",
+      "DAC Register G",
+      "DAC Register H",
+      "8-/10-/12-Bit DAC A-H",
+      "Output Buffer A-H",
+      "Power-Down Control Logic",
+      "AVDD",
+      "VREFIN",
+      "GND",
+      "VOUT_A",
+      "VOUT_B",
+      "VOUT_C",
+      "VOUT_D",
+      "VOUT_E",
+      "VOUT_F",
+      "VOUT_G",
+      "VOUT_H"
+    ],
+    "connections": [
+      {"from": "SCL", "to": "Input Control Logic", "label": "serial clock"},
+      {"from": "SDA", "to": "Input Control Logic", "label": "serial data"},
+      {"from": "Input Control Logic", "to": "Control Logic", "label": "decoded control"},
+      {"from": "Control Logic", "to": "Buffer Control", "label": "buffer write control"},
+      {"from": "Control Logic", "to": "Register Control", "label": "register update control"},
+      {"from": "Data Buffer A-H", "to": "DAC Register A-H", "label": "channel data"},
+      {"from": "DAC Register A-H", "to": "8-/10-/12-Bit DAC A-H", "label": "digital code"},
+      {"from": "8-/10-/12-Bit DAC A-H", "to": "Output Buffer A-H", "label": "analog conversion"},
+      {"from": "Output Buffer A-H", "to": "VOUT_A..VOUT_H", "label": "output voltage"},
+      {"from": "AVDD", "to": "8-/10-/12-Bit DAC A-H", "label": "analog supply"},
+      {"from": "VREFIN", "to": "8-/10-/12-Bit DAC A-H", "label": "reference"},
+      {"from": "Power-Down Control Logic", "to": "Output Buffer A-H", "label": "power-down gating"}
+    ]
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "dac_channels": "8 (A through H)",
+    "dac_resolution_options": "8-bit, 10-bit, 12-bit",
+    "digital_interface": "I2C (SCL, SDA)",
+    "control_pins": "LDAC, RSTSEL, CLR, ADDR0, ADDR1",
+    "analog_pins": "AVDD, VREFIN, GND"
+  },
+  "confidence": 0.95
+}

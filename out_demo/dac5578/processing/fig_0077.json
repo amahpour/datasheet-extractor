@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0077",
+  "image_path": "out/dac5578/figures/fig_0077.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a black and white diagram of a circuit, with the words \"DAC Unloaded\" written in the top left corner. The circuit is connected to a power supply labeled \"V2 mViv\", which indicates that it operates at 2 mViv voltage. A graph is displayed below the circuit, showing the relationship between time (in seconds) and current (in amperes). The x-axis of the graph represents time in seconds, while the y-axis represents the current flowing through the circuit.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0077/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:00:08Z"
+}

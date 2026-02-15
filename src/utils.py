@@ -1,12 +1,18 @@
+"""Shared utility helpers used across the extraction pipeline."""
+
 from __future__ import annotations
 
 import hashlib
 import json
+import logging
 from pathlib import Path
 from typing import Iterable
 
+logger = logging.getLogger(__name__)
+
 
 def sha256_file(path: Path) -> str:
+    """Return the SHA-256 digest for a file."""
     h = hashlib.sha256()
     with path.open("rb") as f:
         for chunk in iter(lambda: f.read(1024 * 1024), b""):
@@ -15,19 +21,23 @@ def sha256_file(path: Path) -> str:
 
 
 def deterministic_id(prefix: str, index: int) -> str:
+    """Build a stable, sortable ID like ``fig_0001``."""
     return f"{prefix}_{index:04d}"
 
 
 def ensure_dir(path: Path) -> Path:
+    """Create a directory (including parents) and return the same path."""
     path.mkdir(parents=True, exist_ok=True)
     return path
 
 
 def write_json(path: Path, payload: dict | list) -> None:
+    """Serialize a dict/list to UTF-8 JSON with indentation."""
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
 def parse_page_ranges(spec: str | None) -> set[int] | None:
+    """Parse a page-range string like ``1,3-5`` into a set of page numbers."""
     if not spec:
         return None
     pages: set[int] = set()
@@ -44,17 +54,29 @@ def parse_page_ranges(spec: str | None) -> set[int] | None:
     return pages
 
 
-def relpath(path: Path, base: Path) -> str:
-    return str(path.resolve().relative_to(base.resolve()))
+def run_ocr(image_path: Path) -> str:
+    """Run OCR via pytesseract when installed; otherwise return an empty string."""
+    try:
+        import pytesseract  # type: ignore
+        from PIL import Image
+    except ImportError:
+        return ""
+    try:
+        return pytesseract.image_to_string(Image.open(image_path)).strip()
+    except Exception as exc:
+        logger.debug("OCR failed for %s: %s", image_path, exc)
+        return ""
 
 
 def csv_escape(value: str) -> str:
+    """Escape a CSV field following standard quote-doubling behavior."""
     if any(ch in value for ch in [",", "\n", '"']):
         return '"' + value.replace('"', '""') + '"'
     return value
 
 
 def flatten_grid_rows(grid: Iterable[Iterable[str]]) -> str:
+    """Convert a table grid into CSV text."""
     lines = []
     for row in grid:
         lines.append(",".join(csv_escape(str(cell)) for cell in row))

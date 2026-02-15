@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Rising Edge Oscilloscope Capture",
+  "summary": "Oscilloscope screenshot showing a trigger pulse, a rising edge step response, and a zoomed rising-edge noise region.",
+  "structured_data": {
+    "description": "Scope plot annotated with 2 V/div for the coarse rising edge and 100 uV/div for the zoomed segment, timebase 5 us/div, and transition noted from code 000h to FFFh."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "time_scale": "5 us/div",
+    "rising_edge_scale": "2 V/div",
+    "zoom_scale": "100 uV/div",
+    "code_transition": "000h to FFFh"
+  },
+  "confidence": 0.96
+}

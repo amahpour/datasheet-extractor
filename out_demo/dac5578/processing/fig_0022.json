@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0022",
+  "image_path": "out/dac5578/figures/fig_0022.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays four channels, each represented by a different color - purple, green, orange, and blue. The channels are shown as varying in their respective errors, with the purple channel having the highest error and the blue channel having the lowest error. The graph also includes text that provides information about the channels' errors and their corresponding input codes.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0022/llm_analysis.json",
+    "processed_at": "2026-02-12T04:45:59Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T04:45:59Z"
+}

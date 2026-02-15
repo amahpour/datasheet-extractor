@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0109",
+  "image_path": "out/dac5578/figures/fig_0109.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph that displays the relationship between differential linearity error and digital input code (DAC) for different channels. The x-axis of the graph represents DAC, while the y-axis shows the differential linearity error. Each channel is represented by a line on the graph, with the x-coordinate corresponding to the DAC value and the y-coordinate representing the linearity error.\n\nThe graph illustrates that as the DAC increases, the linearity error also increases. This relationship can be observed from the points where the lines intersect on the graph. The graph is labeled \"DIFFERENTIAL LINARITY ERROR vs DIGITAL INPUT CODE (DAC), 10-bit + 25°C\" and includes a legend that explains the meaning of each axis.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0109/llm_analysis.json",
+    "processed_at": "2026-02-12T05:06:45Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:06:45Z"
+}

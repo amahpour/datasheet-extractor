@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0031",
+  "image_path": "out/dac5578/figures/fig_0031.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with two lines, one representing the differential linearity error and the other showing the digital input code (DAC). The graph is color-coded to distinguish between the two lines. The x-axis of the graph displays the DAC codes, while the y-axis represents the linearity error in dB.\n\nThe graph shows that all eight channels shown on the external reference are shown correctly, with a linearity error of 0.5 dB. This information is crucial for understanding the performance and accuracy of the digital input code used to process the data.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0031/llm_analysis.json",
+    "processed_at": "2026-02-12T04:45:59Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T04:45:59Z"
+}

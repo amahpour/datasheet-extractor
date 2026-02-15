@@ -1,0 +1,70 @@
+{
+  "classification": "plot",
+  "title": "Full-Scale Error vs Temperature",
+  "summary": "Full-scale error traces for channels A-H versus temperature at 5 V external reference.",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "Full-Scale Error (%FSR)",
+    "series": [
+      {
+        "name": "Upper channel envelope",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.015
+          },
+          {
+            "x": 0,
+            "y": 0.015
+          },
+          {
+            "x": 40,
+            "y": 0.015
+          },
+          {
+            "x": 80,
+            "y": 0.015
+          },
+          {
+            "x": 125,
+            "y": 0.015
+          }
+        ]
+      },
+      {
+        "name": "Lower channel envelope",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.005
+          },
+          {
+            "x": 0,
+            "y": 0.005
+          },
+          {
+            "x": 40,
+            "y": 0.005
+          },
+          {
+            "x": 80,
+            "y": 0.005
+          },
+          {
+            "x": 125,
+            "y": 0.005
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nUpper channel envelope,-40,0.015\nUpper channel envelope,0,0.015\nUpper channel envelope,40,0.015\nUpper channel envelope,80,0.015\nUpper channel envelope,125,0.015\nLower channel envelope,-40,0.005\nLower channel envelope,0,0.005\nLower channel envelope,40,0.005\nLower channel envelope,80,0.005\nLower channel envelope,125,0.005"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V",
+    "channels": "A-H"
+  },
+  "confidence": 0.89
+}

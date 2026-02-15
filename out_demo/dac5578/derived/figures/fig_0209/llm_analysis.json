@@ -1,0 +1,17 @@
+{
+  "classification": "mechanical",
+  "title": "RGE Package Mechanical Drawing",
+  "summary": "Detailed package mechanical dimensions for a 24-pin QFN-style package including top, side, and bottom views with tolerances.",
+  "structured_data": {
+    "description": "Shows body dimensions around 3.9-4.1 mm, seating plane reference, pin pitch/terminal geometries, pin-1 indicators, and drawing references/notes."
+  },
+  "component_references": [
+    "RGE package"
+  ],
+  "key_values": {
+    "body_size": "~4.0 mm square (3.9 to 4.1 mm)",
+    "pin_count": "24",
+    "drawing_id": "4219016 /A"
+  },
+  "confidence": 0.95
+}

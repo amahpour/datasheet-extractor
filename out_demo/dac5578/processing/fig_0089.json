@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0089",
+  "image_path": "out/dac5578/figures/fig_0089.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a black and white diagram of a circuit, with the x-axis labeled \"Time\" and the y-axis labeled \"Voltage\". The circuit is shown in black and white, with various lines representing different components such as resistors, capacitors, and transistors. A text box at the bottom of the image provides information about the circuit's operation, stating that it is a DAC (Digital Amplification Circuit) output noise filter designed to handle 0.1 Hz to 10 Hz.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0089/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:00:08Z"
+}

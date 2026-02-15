@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0051",
+  "image_path": "out/dac5578/figures/fig_0051.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with two lines, one representing the external reference voltage (V) and the other representing the current (I). The graph is colored in blue for the current line and red for the voltage line. The x-axis of the graph represents temperature (°C), while the y-axis represents power (W). The graph shows a curve that starts at 0 on both axes, indicating an initial value or reference point. As the temperature increases along the x-axis, the corresponding current values increase linearly, creating a positive relationship between the two variables.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0051/llm_analysis.json",
+    "processed_at": "2026-02-12T04:54:02Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T04:54:02Z"
+}

@@ -1,0 +1,61 @@
+{
+  "classification": "plot",
+  "title": "IDD Supply Current Histogram (3.3 V)",
+  "summary": "Histogram of IDD distribution at AVDD=3.3 V and external reference=3.3 V.",
+  "structured_data": {
+    "x_axis": "IDD - Supply Current (mA)",
+    "y_axis": "% of Population",
+    "series": [
+      {
+        "name": "Histogram Bars",
+        "data_points": [
+          {
+            "x": 0.78,
+            "y": 1.0
+          },
+          {
+            "x": 0.82,
+            "y": 3.5
+          },
+          {
+            "x": 0.84,
+            "y": 6.8
+          },
+          {
+            "x": 0.86,
+            "y": 12.0
+          },
+          {
+            "x": 0.87,
+            "y": 12.5
+          },
+          {
+            "x": 0.89,
+            "y": 9.5
+          },
+          {
+            "x": 0.91,
+            "y": 6.2
+          },
+          {
+            "x": 0.93,
+            "y": 2.2
+          },
+          {
+            "x": 0.95,
+            "y": 0.5
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nHistogram Bars,0.78,1.0\nHistogram Bars,0.82,3.5\nHistogram Bars,0.84,6.8\nHistogram Bars,0.86,12.0\nHistogram Bars,0.87,12.5\nHistogram Bars,0.89,9.5\nHistogram Bars,0.91,6.2\nHistogram Bars,0.93,2.2\nHistogram Bars,0.95,0.5"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "avdd": "3.3V",
+    "external_reference": "3.3V"
+  },
+  "confidence": 0.94
+}

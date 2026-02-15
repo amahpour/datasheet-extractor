@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0020",
+  "image_path": "out/dac5578/figures/fig_0020.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays the relationship between the digital input code (DAC) and the differential linearity error, with DAC values ranging from 0 to 40 and corresponding errors ranging from -40 to 40.\n\nThe graph shows a clear negative correlation between DAC and linearity error, indicating that as the DAC increases, the linearity error decreases. This is indicated by the downward trend of the line on the graph. The x-axis also displays the DAC values in ascending order, starting at 0 and ending at 40.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0020/llm_analysis.json",
+    "processed_at": "2026-02-12T04:45:59Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T04:45:59Z"
+}

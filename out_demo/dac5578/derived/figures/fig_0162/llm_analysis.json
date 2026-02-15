@@ -1,0 +1,19 @@
+{
+  "classification": "screenshot",
+  "title": "Falling Edge Scope Capture (81h to 80h)",
+  "summary": "Scope capture of a small falling-edge code step with LDAC feed-through and settling behavior.",
+  "structured_data": {
+    "description": "VOUT scale is 5 mV/div with LDAC trigger pulse at 5 V/div, time base 2 us/div, and external reference 2.5 V. Transition is from code 81h to 80h."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V",
+    "time_scale": "2 us/div",
+    "vout_scale": "5 mV/div",
+    "trigger_scale": "5 V/div",
+    "code_transition": "81h to 80h"
+  },
+  "confidence": 0.96
+}

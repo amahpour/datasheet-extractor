@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0100",
+  "image_path": "out/dac5578/figures/fig_0100.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays four lines, each representing a different digital input code. The first line is labeled \"DAC7778\", the second line is labeled \"DAC7778, 12 bit + 25°C\", the third line is labeled \"DAC7778, 12 bit - 25°C\", and the fourth line is labeled \"DAC7778, 12 bit + 35°C\". The graph shows that there are differences in linearity between these four lines.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0100/llm_analysis.json",
+    "processed_at": "2026-02-12T05:00:08Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:00:08Z"
+}

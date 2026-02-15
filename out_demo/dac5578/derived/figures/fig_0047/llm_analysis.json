@@ -1,0 +1,72 @@
+{
+  "classification": "plot",
+  "title": "Differential Linearity Error vs Temperature (DAC5578, 8-Bit)",
+  "summary": "Temperature sweep of DNL bounds for DAC5578 at 8-bit resolution with 5 V reference.",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "DNL Error (LSB)",
+    "series": [
+      {
+        "name": "DNL MAX",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.015
+          },
+          {
+            "x": 0,
+            "y": 0.014
+          },
+          {
+            "x": 40,
+            "y": 0.013
+          },
+          {
+            "x": 80,
+            "y": 0.012
+          },
+          {
+            "x": 125,
+            "y": 0.010
+          }
+        ]
+      },
+      {
+        "name": "DNL MIN",
+        "data_points": [
+          {
+            "x": -40,
+            "y": -0.012
+          },
+          {
+            "x": 0,
+            "y": -0.011
+          },
+          {
+            "x": 40,
+            "y": -0.010
+          },
+          {
+            "x": 80,
+            "y": -0.010
+          },
+          {
+            "x": 125,
+            "y": -0.011
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nDNL MAX,-40,0.015\nDNL MAX,0,0.014\nDNL MAX,40,0.013\nDNL MAX,80,0.012\nDNL MAX,125,0.010\nDNL MIN,-40,-0.012\nDNL MIN,0,-0.011\nDNL MIN,40,-0.010\nDNL MIN,80,-0.010\nDNL MIN,125,-0.011"
+  },
+  "component_references": [
+    "DAC5578"
+  ],
+  "key_values": {
+    "metric": "DNL",
+    "resolution": "8-bit",
+    "external_reference": "5V",
+    "temperature_range": "-40C to +125C"
+  },
+  "confidence": 0.95
+}

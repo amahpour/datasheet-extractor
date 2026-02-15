@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0123",
+  "image_path": "out/dac5578/figures/fig_0123.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with two lines, one representing the error in linearity and the other representing the temperature. The x-axis of the graph is labeled \"External Reference\", while the y-axis is labeled \"Temperature (DC5768)\". The graph shows that there are two errors in the linearity, with one being 0.25 and the other being 0.28. These errors indicate a discrepancy between the expected linear relationship and the actual observed relationship.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0123/llm_analysis.json",
+    "processed_at": "2026-02-12T05:06:45Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T05:06:45Z"
+}

@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0037",
+  "image_path": "out/dac5578/figures/fig_0037.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays the relationship between the digital input code (DAC) and the differential linearity error, represented by a purple line on the graph. The x-axis shows the DAC values from 0 to 40, while the y-axis represents the corresponding errors in linearity.\n\nThe graph also includes text that explains the relationship between the DAC and the linearity error, stating \"All eight channels shown are external reference + 5V\".",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0037/llm_analysis.json",
+    "processed_at": "2026-02-12T04:45:59Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T04:45:59Z"
+}

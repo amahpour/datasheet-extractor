@@ -1,0 +1,13 @@
+{
+  "figure_id": "fig_0187",
+  "image_path": "out/dac5578/figures/fig_0187.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a black and white circuit diagram that illustrates the components of a digital audio processing system, including a DAC (Digital Audio Coder) and an amplifier. The DAC is connected to the amplifier via wires, with the DAC's output terminals clearly visible on both sides of the circuit. The amplifier has multiple input terminals, one for each component in the DAC's input chain.\n\nThe diagram also includes labels that describe the components: \"DAC\" for the DAC and \"OPA303\" for the amplifier. Additionally, there are arrows pointing to the respective input terminals on both sides of the circuit, indicating the direction of the audio signal flow within the system.",
+  "local_llm_classification": "icon",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-12T00:53:00.819152+00:00"
+}

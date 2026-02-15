@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Glitch Energy Scope Capture (Falling Edge, 1 LSB Step)",
+  "summary": "Oscilloscope capture of glitch response on a falling-edge 1 LSB code transition with LDAC clock feed-through.",
+  "structured_data": {
+    "description": "Figure title indicates 5 V, 12-bit, 1 LSB step, falling edge; annotated with VOUT 500 uV/div, trigger pulse 5 V/div, time base 2 us/div, transition 801h to 800h."
+  },
+  "component_references": [
+    "DAC7578"
+  ],
+  "key_values": {
+    "time_scale": "2 us/div",
+    "vout_scale": "500 uV/div",
+    "trigger_scale": "5 V/div",
+    "code_transition": "801h to 800h"
+  },
+  "confidence": 0.97
+}

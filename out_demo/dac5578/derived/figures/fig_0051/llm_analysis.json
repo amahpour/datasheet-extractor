@@ -1,0 +1,70 @@
+{
+  "classification": "plot",
+  "title": "Offset Error vs Temperature",
+  "summary": "Multi-channel offset error trend versus temperature at 5 V external reference.",
+  "structured_data": {
+    "x_axis": "Temperature (C)",
+    "y_axis": "Offset Error (mV)",
+    "series": [
+      {
+        "name": "Upper channel envelope",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 1.20
+          },
+          {
+            "x": 0,
+            "y": 1.22
+          },
+          {
+            "x": 40,
+            "y": 1.24
+          },
+          {
+            "x": 80,
+            "y": 1.26
+          },
+          {
+            "x": 125,
+            "y": 1.28
+          }
+        ]
+      },
+      {
+        "name": "Lower channel envelope",
+        "data_points": [
+          {
+            "x": -40,
+            "y": 0.45
+          },
+          {
+            "x": 0,
+            "y": 0.50
+          },
+          {
+            "x": 40,
+            "y": 0.56
+          },
+          {
+            "x": 80,
+            "y": 0.62
+          },
+          {
+            "x": 125,
+            "y": 0.70
+          }
+        ]
+      }
+    ],
+    "csv": "series,x,y\nUpper channel envelope,-40,1.20\nUpper channel envelope,0,1.22\nUpper channel envelope,40,1.24\nUpper channel envelope,80,1.26\nUpper channel envelope,125,1.28\nLower channel envelope,-40,0.45\nLower channel envelope,0,0.50\nLower channel envelope,40,0.56\nLower channel envelope,80,0.62\nLower channel envelope,125,0.70"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V",
+    "channels": "A-H"
+  },
+  "confidence": 0.88
+}

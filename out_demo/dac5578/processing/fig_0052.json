@@ -1,0 +1,17 @@
+{
+  "figure_id": "fig_0052",
+  "image_path": "out/dac5578/figures/fig_0052.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "ocr_text": "",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"External Reference\" and the y-axis labeled \"Voltage\". The graph displays six different voltage values, each represented by a line on the graph. The lines are colored in various shades of green, red, blue, yellow, orange, and purple to differentiate between them. The graph also includes text that provides information about the gain and temperature settings for an external reference device.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "analysis_path": "out/dac5578/derived/figures/fig_0052/llm_analysis.json",
+    "processed_at": "2026-02-12T04:54:02Z",
+    "processor": "codex"
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-12T04:54:02Z"
+}
