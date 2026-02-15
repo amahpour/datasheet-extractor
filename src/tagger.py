@@ -1,7 +1,8 @@
 from __future__ import annotations
 
-from src.schema import Classification
+"""Rule-based tagging and figure classification helpers."""
 
+from src.schema import Classification
 
 RULES: list[tuple[str, str, float, str]] = [
     ("timing", "timing_diagram", 0.92, "caption mentions timing"),
@@ -16,6 +17,7 @@ RULES: list[tuple[str, str, float, str]] = [
 
 
 def classify_figure(caption: str, context_text: str = "") -> Classification:
+    """Classify a figure using simple keyword rules over caption and context."""
     haystack = f"{caption} {context_text}".lower()
     for needle, cls, confidence, rationale in RULES:
         if needle in haystack:
@@ -24,6 +26,7 @@ def classify_figure(caption: str, context_text: str = "") -> Classification:
 
 
 def tags_from_text(*chunks: str) -> list[str]:
+    """Extract coarse tags from text using a fixed candidate list."""
     joined = " ".join(chunks).lower()
     tags: list[str] = []
     candidates = [

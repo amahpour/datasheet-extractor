@@ -1,9 +1,13 @@
 from __future__ import annotations
 
+"""Typed schema objects shared by all pipeline stages."""
+
 from pydantic import BaseModel, Field
 
 
 class SourceMeta(BaseModel):
+    """Source file metadata persisted in each document payload."""
+
     path: str
     sha256: str
     size: int
@@ -11,22 +15,30 @@ class SourceMeta(BaseModel):
 
 
 class Classification(BaseModel):
+    """Lightweight label assigned to a figure."""
+
     type: str
     confidence: float
     rationale: str
 
 
 class Description(BaseModel):
+    """Derived textual description for a figure."""
+
     text: str
     confidence: float
     notes: str
 
 
 class Derived(BaseModel):
+    """Container for enrichment outputs generated after extraction."""
+
     description: Description
 
 
 class Block(BaseModel):
+    """Textual block extracted from a page."""
+
     id: str
     type: str
     page: int
@@ -36,6 +48,8 @@ class Block(BaseModel):
 
 
 class Table(BaseModel):
+    """Extracted table plus paths to exported artifacts."""
+
     id: str
     page: int
     bbox: list[float] = Field(default_factory=list)
@@ -48,6 +62,8 @@ class Table(BaseModel):
 
 
 class Figure(BaseModel):
+    """Extracted figure metadata and derived analysis fields."""
+
     id: str
     page: int
     bbox: list[float] = Field(default_factory=list)
@@ -59,6 +75,8 @@ class Figure(BaseModel):
 
 
 class DocStats(BaseModel):
+    """High-level counts for extracted content."""
+
     page_count: int = 0
     block_count: int = 0
     table_count: int = 0
@@ -66,6 +84,8 @@ class DocStats(BaseModel):
 
 
 class Document(BaseModel):
+    """Top-level normalized document structure written to ``document.json``."""
+
     source: SourceMeta
     doc_stats: DocStats
     blocks: list[Block] = Field(default_factory=list)

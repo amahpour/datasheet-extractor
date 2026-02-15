@@ -1,5 +1,11 @@
 from __future__ import annotations
 
+"""Document extraction adapters.
+
+This module prefers Docling for rich extraction and falls back to pypdf for
+text-only extraction when Docling is unavailable or fails.
+"""
+
 import logging
 from pathlib import Path
 from typing import Any
@@ -14,7 +20,9 @@ logger = logging.getLogger(__name__)
 IMAGE_RESOLUTION_SCALE = 2.0
 
 
-def _extract_with_docling(pdf_path: Path, out_dir: Path | None = None) -> dict[str, Any]:
+def _extract_with_docling(
+    pdf_path: Path, out_dir: Path | None = None
+) -> dict[str, Any]:
     """Extract text, tables, and figures from a PDF using Docling.
 
     When *out_dir* is provided, extracted figure images are saved there and
@@ -53,7 +61,14 @@ def _extract_with_docling(pdf_path: Path, out_dir: Path | None = None) -> dict[s
     if hasattr(doc, "export_to_markdown"):
         md = doc.export_to_markdown()
         if md and md.strip():
-            blocks.append({"page": 1, "text": md.strip(), "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"})
+            blocks.append(
+                {
+                    "page": 1,
+                    "text": md.strip(),
+                    "bbox": [0.0, 0.0, 0.0, 0.0],
+                    "type": "text",
+                }
+            )
             page_count = max(page_count, 1)
 
     if not blocks:
@@ -61,7 +76,9 @@ def _extract_with_docling(pdf_path: Path, out_dir: Path | None = None) -> dict[s
             text = ""
             if hasattr(page, "text"):
                 text = str(page.text) if page.text else ""
-            blocks.append({"page": i, "text": text, "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"})
+            blocks.append(
+                {"page": i, "text": text, "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"}
+            )
 
     # --- tables ---
     tables_out: list[dict[str, Any]] = []
@@ -71,12 +88,14 @@ def _extract_with_docling(pdf_path: Path, out_dir: Path | None = None) -> dict[s
             grid = [[str(v) for v in row] for row in df.values.tolist()]
             header = list(df.columns.astype(str))
             grid = [header] + grid if grid else ([header] if header else [])
-            tables_out.append({
-                "page": 1,
-                "bbox": [0.0, 0.0, 0.0, 0.0],
-                "caption": "",
-                "grid": grid,
-            })
+            tables_out.append(
+                {
+                    "page": 1,
+                    "bbox": [0.0, 0.0, 0.0, 0.0],
+                    "caption": "",
+                    "grid": grid,
+                }
+            )
         except Exception as exc:
             logger.warning("Could not export table %s: %s", i, exc)
 
@@ -97,25 +116,37 @@ def _extract_with_docling(pdf_path: Path, out_dir: Path | None = None) -> dict[s
                     if pil_img is not None:
                         pil_img.save(image_path, format="PNG")
                     else:
-                        _synthesize_placeholder(image_path, f"Picture {picture_counter} (no image data)")
+                        _synthesize_placeholder(
+                            image_path, f"Picture {picture_counter} (no image data)"
+                        )
                 except Exception as exc:
-                    logger.warning("Could not save picture %s: %s", picture_counter, exc)
-                    _synthesize_placeholder(image_path, f"Picture {picture_counter} (error)")
+                    logger.warning(
+                        "Could not save picture %s: %s", picture_counter, exc
+                    )
+                    _synthesize_placeholder(
+                        image_path, f"Picture {picture_counter} (error)"
+                    )
 
                 # Extract caption/text from the element if available
                 caption = ""
                 if hasattr(element, "caption_text"):
-                    caption = str(element.caption_text(doc)) if callable(getattr(element, "caption_text", None)) else str(getattr(element, "caption_text", ""))
+                    caption = (
+                        str(element.caption_text(doc))
+                        if callable(getattr(element, "caption_text", None))
+                        else str(getattr(element, "caption_text", ""))
+                    )
                 elif hasattr(element, "text"):
                     caption = str(element.text) if element.text else ""
 
-                figures_out.append({
-                    "id": fig_id,
-                    "page": getattr(element, "page_no", 1) or 1,
-                    "bbox": [0.0, 0.0, 0.0, 0.0],
-                    "caption": caption,
-                    "image_path": str(image_path),
-                })
+                figures_out.append(
+                    {
+                        "id": fig_id,
+                        "page": getattr(element, "page_no", 1) or 1,
+                        "bbox": [0.0, 0.0, 0.0, 0.0],
+                        "caption": caption,
+                        "image_path": str(image_path),
+                    }
+                )
 
             elif isinstance(element, TableItem):
                 # Also save table images for reference
@@ -138,25 +169,37 @@ def _extract_with_docling(pdf_path: Path, out_dir: Path | None = None) -> dict[s
 
 
 def _extract_with_pypdf(pdf_path: Path) -> dict[str, Any]:
+    """Extract text blocks from a PDF using ``pypdf`` as a fallback."""
     from pypdf import PdfReader  # type: ignore
 
     reader = PdfReader(str(pdf_path))
     blocks: list[dict[str, Any]] = []
     for i, page in enumerate(reader.pages, start=1):
         text = page.extract_text() or ""
-        blocks.append({"page": i, "text": text, "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"})
-    return {"page_count": len(reader.pages), "blocks": blocks, "tables": [], "figures": []}
+        blocks.append(
+            {"page": i, "text": text, "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"}
+        )
+    return {
+        "page_count": len(reader.pages),
+        "blocks": blocks,
+        "tables": [],
+        "figures": [],
+    }
 
 
 def extract_document(pdf_path: Path, out_dir: Path | None = None) -> dict[str, Any]:
+    """Extract document content, preferring Docling and falling back to pypdf."""
     try:
         return _extract_with_docling(pdf_path, out_dir=out_dir)
     except Exception as exc:
-        logger.warning("Docling extraction failed for %s; falling back to pypdf: %s", pdf_path, exc)
+        logger.warning(
+            "Docling extraction failed for %s; falling back to pypdf: %s", pdf_path, exc
+        )
         return _extract_with_pypdf(pdf_path)
 
 
 def _synthesize_placeholder(fig_path: Path, caption: str) -> None:
+    """Create a placeholder figure when a real image cannot be extracted."""
     img = Image.new("RGB", (600, 350), color=(248, 248, 248))
     draw = ImageDraw.Draw(img)
     draw.text((20, 20), f"Placeholder figure\n{caption[:120]}", fill=(0, 0, 0))
@@ -168,6 +211,7 @@ synthesize_placeholder_figure = _synthesize_placeholder
 
 
 def to_blocks(raw_blocks: list[dict[str, Any]]) -> list[Block]:
+    """Convert raw block dictionaries into typed ``Block`` models."""
     blocks: list[Block] = []
     for i, raw in enumerate(raw_blocks, start=1):
         blocks.append(
