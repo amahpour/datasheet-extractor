@@ -1,6 +1,6 @@
-from __future__ import annotations
-
 """Top-level pipeline orchestration for datasheet extraction."""
+
+from __future__ import annotations
 
 import logging
 from pathlib import Path
@@ -11,7 +11,6 @@ from src.extract_docling import extract_document, to_blocks
 from src.local_processor import process_all_figures, write_rollup
 from src.report import write_manual_report
 from src.schema import (
-    Classification,
     Derived,
     Description,
     DocStats,
@@ -57,9 +56,12 @@ def process_pdf(
     tables: list[Table] = []
     if not no_tables:
         for i, t in enumerate(raw.get("tables", []), start=1):
+            table_page = int(t.get("page", 1))
+            if page_filter and table_page not in page_filter:
+                continue
             table = Table(
                 id=deterministic_id("table", i),
-                page=int(t.get("page", 1)),
+                page=table_page,
                 bbox=[float(x) for x in t.get("bbox", [0, 0, 0, 0])],
                 caption=str(t.get("caption", "")),
                 tags=tags_from_text(str(t.get("caption", ""))),
@@ -76,6 +78,8 @@ def process_pdf(
             fig_id = fig_data.get("id", deterministic_id("fig", i))
             caption = fig_data.get("caption", "")
             page = fig_data.get("page", 1)
+            if page_filter and page not in page_filter:
+                continue
             image_path = fig_data.get("image_path", "")
 
             # Use same-page text as weak context for rule-based classification.

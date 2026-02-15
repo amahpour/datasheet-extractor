@@ -1,6 +1,6 @@
-from __future__ import annotations
-
 """Rule-based tagging and figure classification helpers."""
+
+from __future__ import annotations
 
 from src.schema import Classification
 

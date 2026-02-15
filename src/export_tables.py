@@ -1,6 +1,6 @@
-from __future__ import annotations
-
 """Table export helpers for JSON/CSV/Markdown artifacts."""
+
+from __future__ import annotations
 
 from pathlib import Path
 

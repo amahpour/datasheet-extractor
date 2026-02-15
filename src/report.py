@@ -1,6 +1,6 @@
-from __future__ import annotations
-
 """Manual follow-up report generation for extracted figures."""
+
+from __future__ import annotations
 
 from pathlib import Path
 

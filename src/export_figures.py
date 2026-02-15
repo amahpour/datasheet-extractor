@@ -1,37 +1,17 @@
-from __future__ import annotations
-
 """Figure post-processing helpers for OCR and description derivation."""
+
+from __future__ import annotations
 
 import logging
 from pathlib import Path
 
-from PIL import Image
-
 from src.schema import Description, Derived, Figure
+from src.utils import run_ocr
+
+# Maximum characters to keep from OCR output in descriptions.
+OCR_TEXT_MAX = 1000
 
 logger = logging.getLogger(__name__)
-
-
-def _ocr_text(image_path: Path) -> str | None:
-    """Run OCR on an image and return extracted text when available."""
-    try:
-        import pytesseract  # type: ignore
-    except Exception:
-        return None
-    try:
-        return pytesseract.image_to_string(Image.open(image_path)).strip()
-    except Exception as exc:
-        logger.warning("OCR failed for %s: %s", image_path, exc)
-        return None
-
-
-def ensure_png(image_path: Path) -> Path:
-    """Ensure an image is stored as PNG and return the PNG path."""
-    if image_path.suffix.lower() == ".png":
-        return image_path
-    png_path = image_path.with_suffix(".png")
-    Image.open(image_path).save(png_path)
-    return png_path
 
 
 def derive_description(figure: Figure, ocr_mode: str) -> Figure:
@@ -41,9 +21,9 @@ def derive_description(figure: Figure, ocr_mode: str) -> Figure:
     notes = "LLM recommended"
 
     if ocr_mode != "off":
-        ocr = _ocr_text(Path(figure.image_path))
+        ocr = run_ocr(Path(figure.image_path))
         if ocr:
-            text = f"Visible text (OCR): {ocr[:1000]}"
+            text = f"Visible text (OCR): {ocr[:OCR_TEXT_MAX]}"
             confidence = 0.6
             notes = "OCR-derived text only"
     if (

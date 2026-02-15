@@ -23,6 +23,8 @@ from pathlib import Path
 
 from PIL import Image
 
+from src.utils import run_ocr
+
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
@@ -34,6 +36,14 @@ NOISE_PIXEL_THRESHOLD = 500
 
 # If OCR extracts this many clean chars, the image is "text-heavy"
 OCR_RICH_CHARS = 120
+
+# Minimum description length to consider locally resolved
+MIN_DESCRIPTION_LEN = 50
+
+# Truncation limits for rollup summaries
+ROLLUP_DESCRIPTION_MAX = 120
+ROLLUP_DESCRIPTION_DISPLAY_MAX = 80
+ROLLUP_OCR_PREVIEW_MAX = 80
 
 # Classification keywords that mean "needs external for precision"
 COMPLEX_TYPES = {
@@ -95,24 +105,6 @@ def _new_status(figure_id: str, image_path: str) -> dict:
         "confidence": 0.0,
         "processed_at": "",
     }
-
-
-# ---------------------------------------------------------------------------
-# OCR
-# ---------------------------------------------------------------------------
-
-
-def _run_ocr(image_path: Path) -> str:
-    """Run OCR via pytesseract when installed; otherwise return an empty string."""
-    try:
-        import pytesseract  # type: ignore
-
-        return pytesseract.image_to_string(Image.open(image_path)).strip()
-    except ImportError:
-        return ""
-    except Exception as exc:
-        logger.debug("OCR failed for %s: %s", image_path, exc)
-        return ""
 
 
 # ---------------------------------------------------------------------------
@@ -230,7 +222,7 @@ def _is_resolved_locally(classification: str, ocr_text: str, description: str) -
         return False
 
     # Unknown classification — if we got a decent description, resolve it
-    if len(description) > 50:
+    if len(description) > MIN_DESCRIPTION_LEN:
         return True
 
     return False
@@ -293,7 +285,7 @@ def process_figure(
         return status
 
     # --- OCR ---
-    ocr_text = _run_ocr(image_path)
+    ocr_text = run_ocr(image_path)
     status["ocr_text"] = ocr_text
 
     # --- Local LLM ---
@@ -419,7 +411,9 @@ def build_rollup(statuses: list[dict]) -> dict:
                 {
                     "id": s["figure_id"],
                     "classification": s.get("local_llm_classification", ""),
-                    "description": s.get("local_llm_description", "")[:120],
+                    "description": s.get("local_llm_description", "")[
+                        :ROLLUP_DESCRIPTION_MAX
+                    ],
                 }
                 for s in resolved_local
             ],
@@ -428,8 +422,10 @@ def build_rollup(statuses: list[dict]) -> dict:
                     "id": s["figure_id"],
                     "image_path": s["image_path"],
                     "classification": s.get("local_llm_classification", ""),
-                    "description": s.get("local_llm_description", "")[:120],
-                    "ocr_preview": s.get("ocr_text", "")[:80],
+                    "description": s.get("local_llm_description", "")[
+                        :ROLLUP_DESCRIPTION_MAX
+                    ],
+                    "ocr_preview": s.get("ocr_text", "")[:ROLLUP_OCR_PREVIEW_MAX],
                 }
                 for s in needs_external
             ],
@@ -472,7 +468,7 @@ def write_rollup(processing_dir: Path, out_dir: Path) -> dict:
         lines.append(f"## Resolved locally ({rollup['resolved_local']})")
         lines.append("")
         for fig in rollup["figures"]["resolved_local"]:
-            desc = fig["description"].replace("\n", " ")[:80]
+            desc = fig["description"].replace("\n", " ")[:ROLLUP_DESCRIPTION_DISPLAY_MAX]
             lines.append(f"- `{fig['id']}` [{fig['classification']}] {desc}")
         lines.append("")
 
@@ -482,7 +478,7 @@ def write_rollup(processing_dir: Path, out_dir: Path) -> dict:
         lines.append("Use the prompt template in `prompts/figure_analysis.md`.")
         lines.append("")
         for fig in rollup["figures"]["needs_external"]:
-            desc = fig["description"].replace("\n", " ")[:80]
+            desc = fig["description"].replace("\n", " ")[:ROLLUP_DESCRIPTION_DISPLAY_MAX]
             lines.append(
                 f"- `{fig['id']}` [{fig['classification']}] → `{fig['image_path']}`"
             )

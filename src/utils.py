@@ -1,11 +1,14 @@
-from __future__ import annotations
-
 """Shared utility helpers used across the extraction pipeline."""
+
+from __future__ import annotations
 
 import hashlib
 import json
+import logging
 from pathlib import Path
 from typing import Iterable
+
+logger = logging.getLogger(__name__)
 
 
 def sha256_file(path: Path) -> str:
@@ -51,9 +54,18 @@ def parse_page_ranges(spec: str | None) -> set[int] | None:
     return pages
 
 
-def relpath(path: Path, base: Path) -> str:
-    """Return ``path`` relative to ``base`` using resolved absolute paths."""
-    return str(path.resolve().relative_to(base.resolve()))
+def run_ocr(image_path: Path) -> str:
+    """Run OCR via pytesseract when installed; otherwise return an empty string."""
+    try:
+        import pytesseract  # type: ignore
+        from PIL import Image
+    except ImportError:
+        return ""
+    try:
+        return pytesseract.image_to_string(Image.open(image_path)).strip()
+    except Exception as exc:
+        logger.debug("OCR failed for %s: %s", image_path, exc)
+        return ""
 
 
 def csv_escape(value: str) -> str:

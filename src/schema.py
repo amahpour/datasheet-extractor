@@ -1,6 +1,6 @@
-from __future__ import annotations
-
 """Typed schema objects shared by all pipeline stages."""
+
+from __future__ import annotations
 
 from pydantic import BaseModel, Field
 

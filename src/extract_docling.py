@@ -1,10 +1,10 @@
-from __future__ import annotations
-
 """Document extraction adapters.
 
 This module prefers Docling for rich extraction and falls back to pypdf for
 text-only extraction when Docling is unavailable or fails.
 """
+
+from __future__ import annotations
 
 import logging
 from pathlib import Path
@@ -18,6 +18,11 @@ from src.utils import deterministic_id
 logger = logging.getLogger(__name__)
 
 IMAGE_RESOLUTION_SCALE = 2.0
+
+# Dimensions for placeholder images when extraction fails.
+PLACEHOLDER_WIDTH = 600
+PLACEHOLDER_HEIGHT = 350
+PLACEHOLDER_CAPTION_MAX = 120
 
 
 def _extract_with_docling(
@@ -88,9 +93,19 @@ def _extract_with_docling(
             grid = [[str(v) for v in row] for row in df.values.tolist()]
             header = list(df.columns.astype(str))
             grid = [header] + grid if grid else ([header] if header else [])
+
+            # Derive page number from the table element when available.
+            table_page = getattr(table, "page_no", None)
+            if table_page is None:
+                prov = getattr(table, "prov", None) or []
+                if prov:
+                    first = prov[0] if isinstance(prov, list) else prov
+                    table_page = getattr(first, "page_no", None) or getattr(
+                        first, "page", None
+                    )
             tables_out.append(
                 {
-                    "page": 1,
+                    "page": int(table_page) if table_page else 1,
                     "bbox": [0.0, 0.0, 0.0, 0.0],
                     "caption": "",
                     "grid": grid,
@@ -200,14 +215,16 @@ def extract_document(pdf_path: Path, out_dir: Path | None = None) -> dict[str, A
 
 def _synthesize_placeholder(fig_path: Path, caption: str) -> None:
     """Create a placeholder figure when a real image cannot be extracted."""
-    img = Image.new("RGB", (600, 350), color=(248, 248, 248))
+    img = Image.new(
+        "RGB", (PLACEHOLDER_WIDTH, PLACEHOLDER_HEIGHT), color=(248, 248, 248)
+    )
     draw = ImageDraw.Draw(img)
-    draw.text((20, 20), f"Placeholder figure\n{caption[:120]}", fill=(0, 0, 0))
+    draw.text(
+        (20, 20),
+        f"Placeholder figure\n{caption[:PLACEHOLDER_CAPTION_MAX]}",
+        fill=(0, 0, 0),
+    )
     img.save(fig_path)
-
-
-# Keep old name for backward compat
-synthesize_placeholder_figure = _synthesize_placeholder
 
 
 def to_blocks(raw_blocks: list[dict[str, Any]]) -> list[Block]:
