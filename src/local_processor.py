@@ -336,8 +336,14 @@ def process_all_figures(
     processing_dir: Path,
     ollama_model: str | None = None,
     force: bool = False,
+    figure_ids: set[str] | None = None,
 ) -> list[dict]:
-    """Process all fig_*.png files, write per-figure status, return all statuses."""
+    """Process fig_*.png files, write per-figure status, return all statuses.
+
+    When *figure_ids* is provided, only figures whose stem (e.g. ``fig_0001``)
+    is in the set are processed.  This allows the caller to honour page filters
+    without touching the on-disk figures directory.
+    """
     # Auto-detect model if not specified
     if ollama_model is None:
         ollama_model = _detect_ollama_model()
@@ -348,6 +354,8 @@ def process_all_figures(
 
     results = []
     fig_paths = sorted(figures_dir.glob("fig_*.png"))
+    if figure_ids is not None:
+        fig_paths = [p for p in fig_paths if p.stem in figure_ids]
     total = len(fig_paths)
 
     for i, fig_path in enumerate(fig_paths, start=1):

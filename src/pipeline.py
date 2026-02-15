@@ -146,11 +146,14 @@ def process_pdf(
     if not no_images and (pdf_out / "figures").is_dir():
         processing_dir = ensure_dir(pdf_out / "processing")
         logger.info("Running local figure processing for %s ...", pdf_path.stem)
+        # Only process figures that survived the page filter.
+        filtered_ids = {f.id for f in figures} if page_filter else None
         processing_statuses = process_all_figures(
             figures_dir=pdf_out / "figures",
             processing_dir=processing_dir,
             ollama_model=ollama_model,
             force=force,
+            figure_ids=filtered_ids,
         )
         # Write per-PDF rollup
         rollup = write_rollup(processing_dir, pdf_out)
