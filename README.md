@@ -4,8 +4,21 @@ Local-first Python CLI for extracting datasheet PDFs into structured JSON, table
 
 ## Install
 
+### Using Poetry (recommended)
+
 ```bash
+poetry install
+poetry shell  # activate the virtual environment
+```
+
+### Using pip
+
+```bash
+# Install from local directory
 pip install .
+
+# Install directly from GitHub
+pip install git+https://github.com/amahpour/datasheet-extractor.git
 ```
 
 ### Ollama (local vision LLM)
@@ -21,6 +34,8 @@ ollama pull moondream   # fast, ~1.7GB
 ## CLI usage
 
 Use `--file` to process a single PDF, or `--dir` to process every PDF in a directory.
+
+**Note:** If using Poetry, prefix commands with `poetry run` (e.g., `poetry run datasheet-extract`).
 
 ```bash
 # Single file
@@ -40,7 +55,15 @@ datasheet-extract --dir ./examples --out ./out --no-images
 datasheet-extract --dir ./examples --out ./out --no-tables
 ```
 
-Python module invocation:
+With Poetry:
+
+```bash
+poetry run datasheet-extract --file ./examples/dac7578/dac5578.pdf --out ./out
+poetry run datasheet-extract --dir ./examples --out ./out
+poetry run datasheet-smoke-test
+```
+
+With pip or as a module:
 
 ```bash
 python -m cli.ds_extract --file ./examples/dac7578/dac5578.pdf --out ./out
