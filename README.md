@@ -8,13 +8,6 @@ Local-first Python CLI for extracting datasheet PDFs into structured JSON, table
 pip install .
 ```
 
-Optional extras:
-
-```bash
-pip install .[ocr]      # pytesseract for OCR
-pip install .[vision]   # opencv
-```
-
 ### Ollama (local vision LLM)
 
 The pipeline uses [Ollama](https://ollama.com) to classify and describe extracted figures locally. Install it, then pull a vision model:
@@ -27,35 +20,44 @@ ollama pull moondream   # fast, ~1.7GB
 
 ## CLI usage
 
+Use `--file` to process a single PDF, or `--dir` to process every PDF in a directory.
+
 ```bash
-# Full pipeline: extract + local figure processing
-datasheet-extract --input ./examples --out ./out --glob "*.pdf"
+# Single file
+datasheet-extract --file ./examples/dac7578/dac5578.pdf --out ./out
+
+# Single file, first 3 pages only
+datasheet-extract --file ./examples/dac7578/dac5578.pdf --out ./out --pages "1-3"
+
+# All PDFs in a directory
+datasheet-extract --dir ./examples --out ./out
 
 # Specify Ollama model explicitly
-datasheet-extract --input ./examples --out ./out --ollama-model moondream
+datasheet-extract --dir ./examples --out ./out --ollama-model moondream
 
 # Skip images or tables
-datasheet-extract --input ./examples --out ./out --no-images
-datasheet-extract --input ./examples --out ./out --no-tables
+datasheet-extract --dir ./examples --out ./out --no-images
+datasheet-extract --dir ./examples --out ./out --no-tables
 ```
 
 Python module invocation:
 
 ```bash
-python -m cli.ds_extract --input ./examples --out ./out
+python -m cli.ds_extract --file ./examples/dac7578/dac5578.pdf --out ./out
+python -m cli.ds_extract --dir ./examples --out ./out
 python -m cli.smoke_test
 ```
 
 ### Options
 
-- `--input` (default `./examples`)
+- `--file` — path to a single PDF file (mutually exclusive with `--dir`)
+- `--dir` — directory containing PDF files (mutually exclusive with `--file`)
 - `--out` (default `./out`)
-- `--glob` (default `*.pdf`)
+- `--glob` (default `*.pdf`) — filename pattern when using `--dir`
 - `--pages "1-3,7"`
 - `--force` — reprocess even if status files exist
 - `--no-images`
 - `--no-tables`
-- `--ocr {off,on,auto}` (default `off`)
 - `--max-figures N`
 - `--ollama-model NAME` — Ollama vision model (auto-detected if omitted)
 
@@ -66,11 +68,11 @@ python -m cli.smoke_test
 The pipeline runs two phases in one command:
 
 1. **Docling extraction** — text (markdown), tables (CSV/MD/JSON), and all figure images (PNG)
-2. **Local figure processing** — each figure gets OCR + local vision LLM (Ollama). Results are written to per-figure status files.
+2. **Local figure processing** — each figure is classified and described by Ollama. Results are written to per-figure status files.
 
 Figures are classified and routed:
 
-- **Resolved locally** — logos, icons, simple photos, text-heavy images
+- **Resolved locally** — logos, icons, simple photos
 - **Needs external LLM** — plots, pinouts, schematics, block diagrams, timing diagrams
 
 ### Stage 2: External LLM (manual)
@@ -109,7 +111,6 @@ Each `processing/fig_XXXX.json` tracks:
   "image_path": "out/dac5578/figures/fig_0017.png",
   "status": "needs_external",
   "stage": "local_llm",
-  "ocr_text": "",
   "local_llm_description": "Graph showing linearity error vs digital input code...",
   "local_llm_classification": "plot",
   "external_llm_result": null,
@@ -125,7 +126,7 @@ Stage 2 skips any figure where status is `resolved_local` or `resolved_external`
 
 ## Caveats
 
-- Docling extraction behavior varies by PDF type.
-- OCR is optional and best-effort (requires pytesseract).
+- **Docling is required.** There is no fallback PDF extractor — if Docling fails, the error propagates.
+- Figures that Docling cannot extract an image for are skipped (logged as warnings), not replaced with placeholders.
 - Local vision models (moondream, llava) hallucinate on complex figures — they're used for classification/triage only, not precision extraction.
 - Complex figures (plots, pinouts, schematics) are intentionally deferred to external LLM via the rollup report.

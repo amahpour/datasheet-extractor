@@ -1,8 +1,6 @@
 """Local figure processing with per-figure status tracking.
 
-Every figure gets:
-  1. OCR (if pytesseract is available)
-  2. Local vision LLM via Ollama (classify + describe)
+Every figure gets classified and described by a local vision LLM via Ollama.
 
 The result is written to  out/<pdf>/processing/<fig_id>.json  so that
 stage 2 (external LLM) can skip already-resolved figures.
@@ -23,8 +21,6 @@ from pathlib import Path
 
 from PIL import Image
 
-from src.utils import run_ocr
-
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
@@ -34,16 +30,12 @@ logger = logging.getLogger(__name__)
 # Images below this are literal noise (a couple of stray pixels)
 NOISE_PIXEL_THRESHOLD = 500
 
-# If OCR extracts this many clean chars, the image is "text-heavy"
-OCR_RICH_CHARS = 120
-
 # Minimum description length to consider locally resolved
 MIN_DESCRIPTION_LEN = 50
 
 # Truncation limits for rollup summaries
 ROLLUP_DESCRIPTION_MAX = 120
 ROLLUP_DESCRIPTION_DISPLAY_MAX = 80
-ROLLUP_OCR_PREVIEW_MAX = 80
 
 # Classification keywords that mean "needs external for precision"
 COMPLEX_TYPES = {
@@ -97,7 +89,6 @@ def _new_status(figure_id: str, image_path: str) -> dict:
         "image_path": image_path,
         "status": "needs_external",
         "stage": "",
-        "ocr_text": "",
         "local_llm_description": "",
         "local_llm_classification": "",
         "external_llm_result": None,
@@ -114,11 +105,7 @@ def _new_status(figure_id: str, image_path: str) -> dict:
 
 def _ollama_generate(model: str, prompt: str, image_path: Path) -> str:
     """Call ollama.generate with an image. Returns response text or ''."""
-    try:
-        import ollama  # type: ignore
-    except ImportError:
-        logger.warning("ollama Python package not installed. Run: pip install ollama")
-        return ""
+    import ollama
 
     try:
         with open(image_path, "rb") as f:
@@ -131,42 +118,39 @@ def _ollama_generate(model: str, prompt: str, image_path: Path) -> str:
 
 
 def _detect_ollama_model() -> str | None:
-    """Find a suitable vision model from ollama."""
+    """Find a suitable vision model from the running Ollama server."""
+    import ollama
+
     try:
-        import ollama  # type: ignore
-
         result = ollama.list()
-
-        # ollama.list() may return a dict or an object with a .models attribute
-        if hasattr(result, "models"):
-            model_list = result.models
-        elif isinstance(result, dict):
-            model_list = result.get("models", [])
-        else:
-            model_list = []
-
-        model_names = []
-        for m in model_list:
-            # Each model may be a dict or an object with .model attribute
-            if hasattr(m, "model"):
-                name = m.model
-            elif isinstance(m, dict):
-                name = m.get("name", "") or m.get("model", "")
-            else:
-                name = str(m)
-            model_names.append(name.lower())
-
-        # Prefer stronger general-purpose vision models before lightweight ones.
-        for candidate in ["llava:7b", "llava", "bakllava", "minicpm-v", "moondream"]:
-            for name in model_names:
-                if candidate in name:
-                    return name
-        return None
-    except ImportError:
-        return None
     except Exception as exc:
         logger.debug("Could not list ollama models: %s", exc)
         return None
+
+    # ollama.list() may return a dict or an object with a .models attribute
+    if hasattr(result, "models"):
+        model_list = result.models
+    elif isinstance(result, dict):
+        model_list = result.get("models", [])
+    else:
+        model_list = []
+
+    model_names = []
+    for m in model_list:
+        if hasattr(m, "model"):
+            name = m.model
+        elif isinstance(m, dict):
+            name = m.get("name", "") or m.get("model", "")
+        else:
+            name = str(m)
+        model_names.append(name.lower())
+
+    # Prefer stronger general-purpose vision models before lightweight ones.
+    for candidate in ["llava:7b", "llava", "bakllava", "minicpm-v", "moondream"]:
+        for name in model_names:
+            if candidate in name:
+                return name
+    return None
 
 
 def _infer_classification(description: str) -> str:
@@ -206,18 +190,11 @@ def _infer_classification(description: str) -> str:
 # ---------------------------------------------------------------------------
 
 
-def _is_resolved_locally(classification: str, ocr_text: str, description: str) -> bool:
+def _is_resolved_locally(classification: str, description: str) -> bool:
     """Decide if local processing is sufficient for this figure."""
-    # Simple types are always resolved locally
     if classification in SIMPLE_TYPES:
         return True
 
-    # If OCR got a ton of text and it's not a complex type, resolve it
-    clean_ocr = "".join(ch for ch in ocr_text if ch.isalnum() or ch.isspace()).strip()
-    if len(clean_ocr) >= OCR_RICH_CHARS and classification not in COMPLEX_TYPES:
-        return True
-
-    # Complex types always need external
     if classification in COMPLEX_TYPES:
         return False
 
@@ -284,10 +261,6 @@ def process_figure(
         write_status(processing_dir, status)
         return status
 
-    # --- OCR ---
-    ocr_text = run_ocr(image_path)
-    status["ocr_text"] = ocr_text
-
     # --- Local LLM ---
     classification = "other"
     description = ""
@@ -300,23 +273,9 @@ def process_figure(
             status["stage"] = "local_llm"
             status["local_llm_classification"] = classification
             status["local_llm_description"] = description
-    else:
-        # No local LLM — use OCR-only heuristics
-        status["stage"] = "ocr"
-        text_lower = ocr_text.lower()
-        if any(kw in text_lower for kw in ["vs", "error", "response", "frequency"]):
-            classification = "plot"
-        elif any(
-            kw in text_lower for kw in ["pin", "vout", "vcc", "gnd", "sda", "scl"]
-        ):
-            classification = "pinout"
-        status["local_llm_classification"] = classification
-        status["local_llm_description"] = (
-            f"OCR text: {ocr_text[:300]}" if ocr_text else ""
-        )
 
     # --- Decide resolved vs needs_external ---
-    resolved = _is_resolved_locally(classification, ocr_text, description)
+    resolved = _is_resolved_locally(classification, description)
     status["status"] = "resolved_local" if resolved else "needs_external"
     status["needs_external"] = not resolved
     status["confidence"] = 0.7 if resolved else 0.3
@@ -350,7 +309,7 @@ def process_all_figures(
         if ollama_model:
             logger.info("Detected Ollama vision model: %s", ollama_model)
         else:
-            logger.warning("No Ollama vision model found. Running OCR-only mode.")
+            logger.warning("No Ollama vision model found. Figures will not be classified.")
 
     results = []
     fig_paths = sorted(figures_dir.glob("fig_*.png"))
@@ -433,7 +392,6 @@ def build_rollup(statuses: list[dict]) -> dict:
                     "description": s.get("local_llm_description", "")[
                         :ROLLUP_DESCRIPTION_MAX
                     ],
-                    "ocr_preview": s.get("ocr_text", "")[:ROLLUP_OCR_PREVIEW_MAX],
                 }
                 for s in needs_external
             ],

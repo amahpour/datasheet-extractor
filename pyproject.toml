@@ -14,12 +14,9 @@ dependencies = [
   "pandas",
   "pydantic>=2",
   "pillow",
-  "pypdf",
 ]
 
 [project.optional-dependencies]
-ocr = ["pytesseract"]
-vision = ["opencv-python"]
 dev = ["pytest"]
 
 [project.scripts]
