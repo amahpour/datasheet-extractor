@@ -10,7 +10,7 @@ flowchart LR
   D --> E[Enrich Metadata<br/>tags, classification, descriptions]
   E --> F[Export Artifacts<br/>document.json, tables, figure metadata]
   F --> G[Generate Manual Follow-up Report]
-  F --> H[Local Figure Processing<br/>OCR + local vision model]
+  F --> H[Local Figure Processing<br/>local vision model via Ollama]
   H --> I[Processing Rollups<br/>per-PDF and global]
   G --> J[Global Outputs]
   I --> J[Global Outputs]
@@ -40,7 +40,6 @@ graph TD
   ET --> U
   R --> S
   R --> U
-  LP --> U
 
   P --> OUT[(out/<pdf>/* artifacts)]
 ```
@@ -87,7 +86,7 @@ sequenceDiagram
       loop each raw figure
         PP->>T: classify_figure(caption, page context)
         T-->>PP: Classification
-        PP->>EF: derive_description(Figure, ocr_mode)
+        PP->>EF: derive_description(Figure)
         EF-->>PP: Figure with Derived.description
       end
     end

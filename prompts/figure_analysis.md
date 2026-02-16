@@ -119,7 +119,7 @@ for each image in out/<pdf_stem>/figures/fig_*.png:
     status   = load out/<pdf_stem>/processing/<fig_id>.json   # per-figure status
 
     # ── Skip rules ──────────────────────────────────────────
-    # 1. Already resolved locally (OCR / local LLM was sufficient)
+    # 1. Already resolved locally (local LLM was sufficient)
     if status.status == "resolved_local":
         skip
 

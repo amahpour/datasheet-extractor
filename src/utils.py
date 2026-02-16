@@ -54,20 +54,6 @@ def parse_page_ranges(spec: str | None) -> set[int] | None:
     return pages
 
 
-def run_ocr(image_path: Path) -> str:
-    """Run OCR via pytesseract when installed; otherwise return an empty string."""
-    try:
-        import pytesseract  # type: ignore
-        from PIL import Image
-    except ImportError:
-        return ""
-    try:
-        return pytesseract.image_to_string(Image.open(image_path)).strip()
-    except Exception as exc:
-        logger.debug("OCR failed for %s: %s", image_path, exc)
-        return ""
-
-
 def csv_escape(value: str) -> str:
     """Escape a CSV field following standard quote-doubling behavior."""
     if any(ch in value for ch in [",", "\n", '"']):

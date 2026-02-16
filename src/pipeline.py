@@ -38,7 +38,6 @@ def process_pdf(
     force: bool = False,
     no_images: bool = False,
     no_tables: bool = False,
-    ocr: str = "off",
     max_figures: int = 25,
     ollama_model: str | None = None,
 ) -> dict:
@@ -98,7 +97,7 @@ def process_pdf(
                     description=Description(text="", confidence=0.0, notes="")
                 ),
             )
-            figure = derive_description(figure, ocr_mode=ocr)
+            figure = derive_description(figure)
             figures.append(figure)
 
     stat = pdf_path.stat()
@@ -141,7 +140,7 @@ def process_pdf(
 
     per_pdf_report = write_manual_report(figures, pdf_out)
 
-    # Stage 2.5: optional local OCR/vision pass with per-figure status files.
+    # Stage 2.5: local vision LLM pass with per-figure status files.
     processing_statuses = []
     if not no_images and (pdf_out / "figures").is_dir():
         processing_dir = ensure_dir(pdf_out / "processing")
@@ -181,7 +180,6 @@ def run_pipeline(
     force: bool = False,
     no_images: bool = False,
     no_tables: bool = False,
-    ocr: str = "off",
     max_figures: int = 25,
     ollama_model: str | None = None,
 ) -> dict:
@@ -199,7 +197,6 @@ def run_pipeline(
             force=force,
             no_images=no_images,
             no_tables=no_tables,
-            ocr=ocr,
             max_figures=max_figures,
             ollama_model=ollama_model,
         )

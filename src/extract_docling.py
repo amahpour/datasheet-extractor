@@ -1,8 +1,4 @@
-"""Document extraction adapters.
-
-This module prefers Docling for rich extraction and falls back to pypdf for
-text-only extraction when Docling is unavailable or fails.
-"""
+"""Document extraction via Docling."""
 
 from __future__ import annotations
 
@@ -10,19 +6,12 @@ import logging
 from pathlib import Path
 from typing import Any
 
-from PIL import Image, ImageDraw
-
 from src.schema import Block
 from src.utils import deterministic_id
 
 logger = logging.getLogger(__name__)
 
 IMAGE_RESOLUTION_SCALE = 2.0
-
-# Dimensions for placeholder images when extraction fails.
-PLACEHOLDER_WIDTH = 600
-PLACEHOLDER_HEIGHT = 350
-PLACEHOLDER_CAPTION_MAX = 120
 
 
 def _extract_with_docling(
@@ -131,16 +120,16 @@ def _extract_with_docling(
                     if pil_img is not None:
                         pil_img.save(image_path, format="PNG")
                     else:
-                        _synthesize_placeholder(
-                            image_path, f"Picture {picture_counter} (no image data)"
+                        logger.warning(
+                            "Picture %s: no image data returned by Docling, skipping",
+                            picture_counter,
                         )
+                        continue
                 except Exception as exc:
                     logger.warning(
-                        "Could not save picture %s: %s", picture_counter, exc
+                        "Could not save picture %s: %s, skipping", picture_counter, exc
                     )
-                    _synthesize_placeholder(
-                        image_path, f"Picture {picture_counter} (error)"
-                    )
+                    continue
 
                 # Extract caption/text from the element if available
                 caption = ""
@@ -183,48 +172,9 @@ def _extract_with_docling(
     }
 
 
-def _extract_with_pypdf(pdf_path: Path) -> dict[str, Any]:
-    """Extract text blocks from a PDF using ``pypdf`` as a fallback."""
-    from pypdf import PdfReader  # type: ignore
-
-    reader = PdfReader(str(pdf_path))
-    blocks: list[dict[str, Any]] = []
-    for i, page in enumerate(reader.pages, start=1):
-        text = page.extract_text() or ""
-        blocks.append(
-            {"page": i, "text": text, "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"}
-        )
-    return {
-        "page_count": len(reader.pages),
-        "blocks": blocks,
-        "tables": [],
-        "figures": [],
-    }
-
-
 def extract_document(pdf_path: Path, out_dir: Path | None = None) -> dict[str, Any]:
-    """Extract document content, preferring Docling and falling back to pypdf."""
-    try:
-        return _extract_with_docling(pdf_path, out_dir=out_dir)
-    except Exception as exc:
-        logger.warning(
-            "Docling extraction failed for %s; falling back to pypdf: %s", pdf_path, exc
-        )
-        return _extract_with_pypdf(pdf_path)
-
-
-def _synthesize_placeholder(fig_path: Path, caption: str) -> None:
-    """Create a placeholder figure when a real image cannot be extracted."""
-    img = Image.new(
-        "RGB", (PLACEHOLDER_WIDTH, PLACEHOLDER_HEIGHT), color=(248, 248, 248)
-    )
-    draw = ImageDraw.Draw(img)
-    draw.text(
-        (20, 20),
-        f"Placeholder figure\n{caption[:PLACEHOLDER_CAPTION_MAX]}",
-        fill=(0, 0, 0),
-    )
-    img.save(fig_path)
+    """Extract document content using Docling."""
+    return _extract_with_docling(pdf_path, out_dir=out_dir)
 
 
 def to_blocks(raw_blocks: list[dict[str, Any]]) -> list[Block]:
