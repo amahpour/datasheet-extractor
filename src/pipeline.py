@@ -39,7 +39,7 @@ def process_pdf(
     force: bool = False,
     no_images: bool = False,
     no_tables: bool = False,
-    max_figures: int = 25,
+    max_figures: int | None = None,
     ollama_model: str | None = None,
     max_tokens: int = DEFAULT_MAX_TOKENS,
 ) -> dict:
@@ -86,7 +86,9 @@ def process_pdf(
     figures: list[Figure] = []
     if not no_images:
         raw_figures = raw.get("figures", [])
-        for i, fig_data in enumerate(raw_figures[:max_figures], start=1):
+        if max_figures is not None:
+            raw_figures = raw_figures[:max_figures]
+        for i, fig_data in enumerate(raw_figures, start=1):
             fig_id = fig_data.get("id", deterministic_id("fig", i))
             caption = fig_data.get("caption", "")
             page = fig_data.get("page", 1)
@@ -254,7 +256,7 @@ def run_pipeline(
     force: bool = False,
     no_images: bool = False,
     no_tables: bool = False,
-    max_figures: int = 25,
+    max_figures: int | None = None,
     ollama_model: str | None = None,
     max_tokens: int = DEFAULT_MAX_TOKENS,
 ) -> dict:
