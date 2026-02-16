@@ -169,3 +169,5 @@ Stage 2 skips any figure where status is `resolved_local` or `resolved_external`
 - Figures that Docling cannot extract an image for are skipped (logged as warnings), not replaced with placeholders.
 - Local vision models (moondream, llava) hallucinate on complex figures — they're used for classification/triage only, not precision extraction. Garbled or non-text output (control characters, `<unk>` tokens) is automatically detected and treated as a failed description.
 - Complex figures (plots, pinouts, schematics) are intentionally deferred to external LLM via the rollup report.
+- **Docling does not extract figure captions or bounding boxes** for many PDF layouts. Figures will have empty `caption` fields and zeroed `bbox` values. This limits rule-based classification (which falls back to page context or LLM inference).
+- **Table header OCR artifacts** (e.g., `THERMAL.THERMAL`, `PACKAGE- LEAD`) are passed through as-is from Docling's table extraction. These are upstream OCR/layout issues, not pipeline bugs.

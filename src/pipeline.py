@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import shutil
 from pathlib import Path
 
 from src.export_figures import derive_description
@@ -44,6 +45,13 @@ def process_pdf(
 ) -> dict:
     """Process a single PDF and persist all per-document artifacts."""
     pdf_out = ensure_dir(out_root / pdf_path.stem)
+
+    # Clean stale artifacts from prior runs so downstream consumers never
+    # see orphaned figures, processing statuses, or derived files.
+    for subdir in ("figures", "tables", "processing", "derived"):
+        stale = pdf_out / subdir
+        if stale.is_dir():
+            shutil.rmtree(stale)
 
     # Pass ``out_dir`` so Docling can write figure images directly to disk.
     raw = extract_document(
@@ -105,6 +113,19 @@ def process_pdf(
             figure = derive_description(figure)
             figures.append(figure)
 
+        # Keep only finalized figure images so output artifacts match the
+        # filtered figure list (e.g., page filters / max_figures limits).
+        figures_dir = pdf_out / "figures"
+        if figures_dir.is_dir():
+            keep_names = {Path(f.image_path).name for f in figures if f.image_path}
+            removed = 0
+            for img_path in figures_dir.glob("*.png"):
+                if img_path.name not in keep_names:
+                    img_path.unlink()
+                    removed += 1
+            if removed:
+                logger.info("Removed %d unreferenced figure image(s)", removed)
+
     stat = pdf_path.stat()
     doc = Document(
         source=SourceMeta(
@@ -143,8 +164,6 @@ def process_pdf(
             encoding="utf-8",
         )
 
-    per_pdf_report = write_manual_report(figures, pdf_out)
-
     # Stage 2.5: local vision LLM pass with per-figure status files.
     processing_statuses = []
     if not no_images and (pdf_out / "figures").is_dir():
@@ -160,14 +179,22 @@ def process_pdf(
             figure_ids=filtered_ids,
         )
         # Fold local LLM results back into the Figure objects so that
-        # document.json and derived description files reflect reality
-        # instead of the "Pending local LLM processing." placeholder.
+        # document.json, derived files, and the manual report all reflect
+        # the actual LLM output rather than pre-LLM placeholders.
         for figure in figures:
             status = read_status(processing_dir, figure.id)
             if status is None:
                 continue
             desc_text = status.get("local_llm_description", "")
             llm_cls = status.get("local_llm_classification", "")
+
+            # Update the figure classification from LLM inference when
+            # the rule-based classifier had no signal (empty caption).
+            if llm_cls and figure.classification.type == "other":
+                figure.classification.type = llm_cls
+                figure.classification.confidence = status.get("confidence", 0.0)
+                figure.classification.rationale = "local_llm classification"
+
             if desc_text:
                 figure.derived.description.text = desc_text
                 figure.derived.description.confidence = status.get("confidence", 0.0)
@@ -183,7 +210,7 @@ def process_pdf(
                 figure.derived.description.text = "Pending external LLM processing."
                 figure.derived.description.notes = "needs_external"
 
-        # Rewrite document.json with updated descriptions.
+        # Rewrite document.json with updated descriptions and classifications.
         doc.figures = figures
         write_json(pdf_out / "document.json", doc.model_dump())
 
@@ -204,6 +231,11 @@ def process_pdf(
             rollup["needs_external"],
             rollup["summary"]["percent_complete"],
         )
+
+    # Write manual report AFTER LLM processing so classifications and
+    # descriptions are up-to-date.  This ensures the report's routing
+    # decisions are consistent with the processing rollup.
+    per_pdf_report = write_manual_report(figures, pdf_out)
 
     return {
         "pdf": str(pdf_path),

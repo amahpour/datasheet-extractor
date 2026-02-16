@@ -183,8 +183,7 @@ def _detect_ollama_model() -> str | None:
             name = str(m)
         model_names.append(name.lower())
 
-    # Prefer stronger general-purpose vision models before lightweight ones.
-    for candidate in ["llava:7b", "llava", "bakllava", "minicpm-v", "moondream"]:
+    for candidate in ["moondream"]:
         for name in model_names:
             if candidate in name:
                 return name
