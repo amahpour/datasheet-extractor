@@ -44,6 +44,8 @@ class Block(BaseModel):
     page: int
     bbox: list[float] = Field(default_factory=list)
     text: str = ""
+    enriched_text: str = ""
+    headings: list[str] = Field(default_factory=list)
     heading_level: int | None = None
 
 

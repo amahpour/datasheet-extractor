@@ -14,18 +14,47 @@ logger = logging.getLogger(__name__)
 IMAGE_RESOLUTION_SCALE = 2.0
 
 
+def _page_from_provenance(element: object) -> int:
+    """Extract the page number from a Docling element's provenance metadata.
+
+    PictureItem and TableItem objects store their location in a ``prov``
+    list rather than a top-level ``page_no`` attribute.  This helper
+    mirrors the provenance walk used by the HybridChunker block loop.
+    """
+    for p in getattr(element, "prov", []):
+        page_no = getattr(p, "page_no", None)
+        if page_no is not None:
+            return int(page_no)
+    return 1
+
+# Default chunking parameter (token limit aligned to embedding model).
+DEFAULT_MAX_TOKENS = 256
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+
+
 def _extract_with_docling(
-    pdf_path: Path, out_dir: Path | None = None
+    pdf_path: Path,
+    out_dir: Path | None = None,
+    max_tokens: int = DEFAULT_MAX_TOKENS,
 ) -> dict[str, Any]:
     """Extract text, tables, and figures from a PDF using Docling.
 
     When *out_dir* is provided, extracted figure images are saved there and
     their paths are included in the returned dict.
+
+    Text is chunked using Docling's ``HybridChunker`` with a HuggingFace
+    tokenizer aligned to the target embedding model.  Each chunk carries
+    section headings and an ``enriched_text`` field ready for embedding.
     """
+    from docling.chunking import HybridChunker
     from docling.datamodel.base_models import InputFormat
     from docling.datamodel.pipeline_options import PdfPipelineOptions
     from docling.document_converter import DocumentConverter, PdfFormatOption
+    from docling_core.transforms.chunker.tokenizer.huggingface import (
+        HuggingFaceTokenizer,
+    )
     from docling_core.types.doc import PictureItem, TableItem
+    from transformers import AutoTokenizer
 
     # Configure pipeline to generate images for pictures (and optionally pages)
     pipeline_options = PdfPipelineOptions()
@@ -50,29 +79,29 @@ def _extract_with_docling(
     else:
         page_count = len(getattr(doc, "pages", {})) or 1
 
-    # --- text blocks (markdown) ---
-    blocks: list[dict[str, Any]] = []
-    if hasattr(doc, "export_to_markdown"):
-        md = doc.export_to_markdown()
-        if md and md.strip():
-            blocks.append(
-                {
-                    "page": 1,
-                    "text": md.strip(),
-                    "bbox": [0.0, 0.0, 0.0, 0.0],
-                    "type": "text",
-                }
-            )
-            page_count = max(page_count, 1)
+    # --- text blocks via HybridChunker ---
+    tok = AutoTokenizer.from_pretrained(EMBEDDING_MODEL)
+    hf_tok = HuggingFaceTokenizer(tokenizer=tok, max_tokens=max_tokens)
+    chunker = HybridChunker(tokenizer=hf_tok)
 
-    if not blocks:
-        for i, page in enumerate(getattr(doc, "pages", {}).values(), start=1):
-            text = ""
-            if hasattr(page, "text"):
-                text = str(page.text) if page.text else ""
-            blocks.append(
-                {"page": i, "text": text, "bbox": [0.0, 0.0, 0.0, 0.0], "type": "text"}
-            )
+    blocks: list[dict[str, Any]] = []
+    for ch in chunker.chunk(doc):
+        pages: set[int] = set()
+        for item in ch.meta.doc_items:
+            for p in getattr(item, "prov", []):
+                pages.add(p.page_no)
+        page = min(pages) if pages else 1
+
+        blocks.append(
+            {
+                "page": page,
+                "text": ch.text,
+                "enriched_text": chunker.contextualize(ch),
+                "headings": ch.meta.headings or [],
+                "bbox": [0.0, 0.0, 0.0, 0.0],
+                "type": "text",
+            }
+        )
 
     # --- tables ---
     tables_out: list[dict[str, Any]] = []
@@ -145,7 +174,7 @@ def _extract_with_docling(
                 figures_out.append(
                     {
                         "id": fig_id,
-                        "page": getattr(element, "page_no", 1) or 1,
+                        "page": _page_from_provenance(element),
                         "bbox": [0.0, 0.0, 0.0, 0.0],
                         "caption": caption,
                         "image_path": str(image_path),
@@ -172,9 +201,13 @@ def _extract_with_docling(
     }
 
 
-def extract_document(pdf_path: Path, out_dir: Path | None = None) -> dict[str, Any]:
+def extract_document(
+    pdf_path: Path,
+    out_dir: Path | None = None,
+    max_tokens: int = DEFAULT_MAX_TOKENS,
+) -> dict[str, Any]:
     """Extract document content using Docling."""
-    return _extract_with_docling(pdf_path, out_dir=out_dir)
+    return _extract_with_docling(pdf_path, out_dir=out_dir, max_tokens=max_tokens)
 
 
 def to_blocks(raw_blocks: list[dict[str, Any]]) -> list[Block]:
@@ -188,6 +221,8 @@ def to_blocks(raw_blocks: list[dict[str, Any]]) -> list[Block]:
                 page=int(raw.get("page", 1)),
                 bbox=[float(x) for x in raw.get("bbox", [0, 0, 0, 0])],
                 text=str(raw.get("text", "")),
+                enriched_text=str(raw.get("enriched_text", "")),
+                headings=raw.get("headings", []),
             )
         )
     return blocks

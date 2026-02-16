@@ -15,15 +15,15 @@ This document describes every output artifact generated under `out/` by the curr
 
 | Path pattern | Type | Stage | Produced by | Purpose |
 |---|---|---|---|---|
-| `out/<pdf_stem>/document.json` | Final | Structured export | `src/pipeline.py::process_pdf` | Canonical normalized document payload (`source`, stats, blocks, tables, figures). |
+| `out/<pdf_stem>/document.json` | Final | Structured export | `src/pipeline.py::process_pdf` | Canonical normalized document payload (`source`, stats, structure-aware chunked text blocks, tables, figures). Text blocks are produced by Docling's `HybridChunker` with heading context and `enriched_text` for embedding (configurable via `--max-tokens`). Rewritten after local LLM processing to include figure descriptions. |
 | `out/<pdf_stem>/index.json` | Final | Structured export | `src/pipeline.py::process_pdf` | Per-document index of key artifact paths (`document_json`, figure image paths, table JSON paths). |
 | `out/<pdf_stem>/tables/<table_id>.json` | Final | Table export | `src/export_tables.py::export_table` | Table content as structured JSON (`id`, `grid`, `caption`). |
 | `out/<pdf_stem>/tables/<table_id>.csv` | Final | Table export | `src/export_tables.py::export_table` | Flattened CSV table export. |
 | `out/<pdf_stem>/tables/<table_id>.md` | Final | Table export | `src/export_tables.py::export_table` | Markdown table rendering. |
 | `out/<pdf_stem>/figures/<fig_id>.png` | Final input to downstream | Docling extraction | `src/extract_docling.py::_extract_with_docling` | Figure images extracted from the PDF. |
 | `out/<pdf_stem>/figures/table_img_XXXX.png` | Interim/optional | Docling extraction | `src/extract_docling.py::_extract_with_docling` | Optional table snapshots emitted by Docling `TableItem` image export. |
-| `out/<pdf_stem>/derived/figures/<fig_id>/meta.json` | Interim | Figure enrichment | `src/pipeline.py::process_pdf` | Snapshot of enriched `Figure` model (classification + derived description baseline). |
-| `out/<pdf_stem>/derived/figures/<fig_id>/description.md` | Interim | Figure enrichment | `src/pipeline.py::process_pdf` | Human-readable initial derived description for the figure. |
+| `out/<pdf_stem>/derived/figures/<fig_id>/meta.json` | Interim | Figure enrichment | `src/pipeline.py::process_pdf` | Snapshot of enriched `Figure` model (classification + derived description). Rewritten after local LLM processing. |
+| `out/<pdf_stem>/derived/figures/<fig_id>/description.md` | Interim | Figure enrichment | `src/pipeline.py::process_pdf` | Human-readable derived description for the figure. Rewritten after local LLM processing. |
 | `out/<pdf_stem>/manual_processing_report.json` | Final handoff | Manual/LLM routing | `src/report.py::write_manual_report` | Figure-by-figure recommended next action (`none` vs external LLM/manual). |
 | `out/<pdf_stem>/manual_processing_report.md` | Final handoff | Manual/LLM routing | `src/report.py::write_manual_report` | Markdown view of the same manual follow-up recommendations. |
 | `out/<pdf_stem>/processing/<fig_id>.json` | Interim (stateful) | Local LLM pass | `src/local_processor.py::write_status` via `process_figure` | Per-figure local processing status (`resolved_local` / `needs_external` / `resolved_external`). |
@@ -45,6 +45,7 @@ This document describes every output artifact generated under `out/` by the curr
 - `--no-images`: skips `figures/`, `derived/figures/`, `processing/`, and per-document `processing_rollup.*`.
 - `max_figures` (default `25`): limits figures normalized into `document.json`, `derived/`, reports, and `processing/` files.
   - Note: `figures/*.png` can still contain more images because Docling extraction happens before this cap is applied.
+- `--max-tokens` (default `256`): controls the maximum token count per text block chunk in `document.json`. Aligned to the `sentence-transformers/all-MiniLM-L6-v2` tokenizer. Smaller values produce more blocks with finer granularity.
 - Global `out/processing_rollup.json` is only written when at least one per-figure processing status exists.
 
 ## Notes on Files Seen in `out/` Today

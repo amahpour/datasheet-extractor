@@ -51,10 +51,48 @@ COMPLEX_TYPES = {
 }
 
 # Classification keywords that are simple enough to resolve locally
-SIMPLE_TYPES = {"logo", "icon", "decorative", "photo", "screenshot", "other"}
+SIMPLE_TYPES = {"logo", "icon", "decorative", "photo", "screenshot"}
+
+# Minimum ratio of printable characters for a description to be considered valid
+MIN_PRINTABLE_RATIO = 0.6
+
+# How many times to retry the local LLM when it returns garbled output
+LLM_MAX_RETRIES = 2
 
 # Local LLM prompt — keep it dead simple so small models don't choke
 DESCRIBE_PROMPT = "Describe this image from an electronics datasheet."
+
+
+# ---------------------------------------------------------------------------
+# LLM output validation
+# ---------------------------------------------------------------------------
+
+
+def _is_valid_description(text: str) -> bool:
+    """Return True if *text* looks like real natural-language output.
+
+    Some local vision models (especially quantized ones) emit control
+    characters, ``<unk>`` / ``<s>`` tokens, or other gibberish instead of
+    readable text.  This catches those cases so they aren't treated as
+    successful descriptions.
+    """
+    if not text or not text.strip():
+        return False
+
+    # Strip common special tokens before checking
+    cleaned = text.replace("<unk>", "").replace("<s>", "").replace("</s>", "")
+
+    # Must have enough printable (non-control) characters
+    printable = sum(1 for ch in cleaned if ch.isprintable())
+    if len(cleaned) == 0 or printable / len(cleaned) < MIN_PRINTABLE_RATIO:
+        return False
+
+    # Must contain at least a few alphabetic word characters
+    alpha = sum(1 for ch in cleaned if ch.isalpha())
+    if alpha < 10:
+        return False
+
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -267,12 +305,19 @@ def process_figure(
 
     if ollama_model:
         response = _ollama_generate(ollama_model, DESCRIBE_PROMPT, image_path)
-        if response:
+        if response and _is_valid_description(response):
             description = response.strip()
             classification = _infer_classification(description)
             status["stage"] = "local_llm"
             status["local_llm_classification"] = classification
             status["local_llm_description"] = description
+        elif response:
+            logger.warning(
+                "  %s: local LLM returned non-text/garbled output, treating as failed",
+                figure_id,
+            )
+            status["stage"] = "local_llm_failed"
+            status["local_llm_description"] = ""
 
     # --- Decide resolved vs needs_external ---
     resolved = _is_resolved_locally(classification, description)

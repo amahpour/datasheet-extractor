@@ -5,6 +5,7 @@ import logging
 import sys
 from pathlib import Path
 
+from src.extract_docling import DEFAULT_MAX_TOKENS
 from src.pipeline import run_pipeline
 
 
@@ -24,6 +25,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-figures", type=int, default=25)
     parser.add_argument("--ollama-model", default=None,
                         help="Ollama vision model for local figure processing (auto-detected if omitted)")
+    parser.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS,
+                        help=f"Max tokens per text block chunk (default: {DEFAULT_MAX_TOKENS})")
     return parser
 
 
@@ -56,6 +59,7 @@ def main() -> int:
         no_tables=args.no_tables,
         max_figures=args.max_figures,
         ollama_model=args.ollama_model,
+        max_tokens=args.max_tokens,
     )
     return 0
 
