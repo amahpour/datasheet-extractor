@@ -190,9 +190,9 @@ def process_pdf(
             desc_text = status.get("local_llm_description", "")
             llm_cls = status.get("local_llm_classification", "")
 
-            # Update the figure classification from LLM inference when
-            # the rule-based classifier had no signal (empty caption).
-            if llm_cls and figure.classification.type == "other":
+            # Use local LLM classification as the canonical post-processing
+            # label so document/report/rollup outputs stay consistent.
+            if llm_cls:
                 figure.classification.type = llm_cls
                 figure.classification.confidence = status.get("confidence", 0.0)
                 figure.classification.rationale = "local_llm classification"
