@@ -86,6 +86,12 @@ Return your analysis as a JSON object with this exact schema:
     "description": "<detailed text description of what is visible>"
   },
   "component_references": ["<part numbers, IC names, or component refs mentioned>"],
+  "analysis_meta": {
+    "provider": "<LLM provider name, e.g. openai/anthropic/google/ollama>",
+    "model": "<exact model name or tag>",
+    "generated_at": "<ISO8601 UTC timestamp>",
+    "prompt_version": "figure_analysis.md@v1"
+  },
   "key_values": {
     // Any important electrical values visible in the image:
     // e.g. "voltage_range": "3.3V - 5V", "i2c_address": "0x4C"
@@ -104,19 +110,30 @@ Return your analysis as a JSON object with this exact schema:
 6. **For tables**, transcribe every row and column exactly.
 7. **Omit keys** from `structured_data` that don't apply to the classification.
 8. **`component_references`** should list any IC part numbers, connector types, or named components visible (e.g. "DAC7578", "STEMMA QT", "RP2040").
+9. **Set `analysis_meta.provider` and `analysis_meta.model` explicitly** for traceability.
 
 ---
 
 ## Batch usage
+
+For agent-style runs, prepend a concrete value for `OUT_PDF_DIR` and then use
+the workflow below.
+
+```
+OUT_PDF_DIR = <OUT_PDF_DIR>  # e.g. out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac
+PDF_STEM = basename(OUT_PDF_DIR)
+ANALYSIS_ROOT = analysis/PDF_STEM
+```
 
 To process all figures from a datasheet extraction run, **check each figure's
 processing status first** to avoid re-analysing figures that have already been
 handled (either locally or in a previous external pass).
 
 ```
-for each image in out/<pdf_stem>/figures/fig_*.png:
+for each image in OUT_PDF_DIR/figures/fig_*.png:
     fig_id   = stem of the image filename (e.g. "fig_0042")
-    status   = load out/<pdf_stem>/processing/<fig_id>.json   # per-figure status
+    status   = load OUT_PDF_DIR/processing/<fig_id>.json   # per-figure status
+    analysis = ANALYSIS_ROOT/derived/figures/<fig_id>/llm_analysis.json
 
     # ── Skip rules ──────────────────────────────────────────
     # 1. Already resolved locally (local LLM was sufficient)
@@ -124,19 +141,24 @@ for each image in out/<pdf_stem>/figures/fig_*.png:
         skip
 
     # 2. Already processed by an external LLM in a prior run
-    if file exists out/<pdf_stem>/derived/figures/<fig_id>/llm_analysis.json:
+    if file exists analysis:
         skip
 
     # ── Process ─────────────────────────────────────────────
     # Only figures with status "needs_external" (or missing status) should be sent.
     send this prompt + the image to your vision LLM
-    save the JSON response to out/<pdf_stem>/derived/figures/<fig_id>/llm_analysis.json
+    save the JSON response to analysis
 
     # Optionally update the processing status:
     status.status = "resolved_external"
-    write status back to out/<pdf_stem>/processing/<fig_id>.json
+    status.external_llm_result = load JSON from analysis
+    status.external_llm_provider = status.external_llm_result.analysis_meta.provider
+    status.external_llm_model = status.external_llm_result.analysis_meta.model
+    write status back to OUT_PDF_DIR/processing/<fig_id>.json
 ```
 
-**Key:** the `processing/<fig_id>.json` files are written during Stage 1 (local
-processing) and record the tier, classification, and whether the figure was
-resolved. Only figures marked `needs_external` should be sent to the paid LLM.
+**Key:** Stage 1 status files remain in `OUT_PDF_DIR/processing/`, but
+external Stage 2 analysis artifacts live under
+`analysis/PDF_STEM/derived/figures/<fig_id>/llm_analysis.json` so they are
+kept separate from extraction outputs while preserving the same per-figure path
+shape.

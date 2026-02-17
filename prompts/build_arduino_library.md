@@ -1,4 +1,10 @@
-  Given this extracted datasheet folder (`out_demo/dac5578`), generate a minimal but correct Arduino I2C driver library for the chip family using built-in Wire only.
+Given this extracted datasheet folder (`OUT_PDF_DIR`), generate a minimal but
+correct Arduino I2C driver library for the chip family using built-in Wire
+only.
+
+Optional: if `ANALYSIS_PDF_DIR` is provided (for example
+`analysis/<pdf_stem>`), use it to improve correctness/coverage where external
+figure analysis exists.
 
   - library.properties
   - one basic example sketch

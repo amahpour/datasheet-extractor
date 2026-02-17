@@ -119,6 +119,8 @@ Figures are classified and routed:
 Open `processing_rollup.md` to see what still needs processing. For each figure flagged as `needs_external`, use the prompt template in `prompts/figure_analysis.md` with a vision-capable LLM (GPT-4o, Claude, etc.).
 
 After processing, update the figure's status file in `processing/` to `"status": "resolved_external"` and fill in `external_llm_result`.
+Also record which external model produced that result by setting
+`external_llm_provider` and `external_llm_model`.
 
 ## Output layout
 
@@ -150,8 +152,12 @@ Each `processing/fig_XXXX.json` tracks:
   "image_path": "out/dac5578/figures/fig_0017.png",
   "status": "needs_external",
   "stage": "local_llm",
+  "local_llm_provider": "ollama",
+  "local_llm_model": "moondream",
   "local_llm_description": "Graph showing linearity error vs digital input code...",
   "local_llm_classification": "plot",
+  "external_llm_provider": "",
+  "external_llm_model": "",
   "external_llm_result": null,
   "needs_external": true,
   "confidence": 0.3,

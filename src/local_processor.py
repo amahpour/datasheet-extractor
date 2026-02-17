@@ -120,15 +120,19 @@ def write_status(processing_dir: Path, status: dict) -> None:
     p.write_text(json.dumps(status, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def _new_status(figure_id: str, image_path: str) -> dict:
+def _new_status(figure_id: str, image_path: str, ollama_model: str | None = None) -> dict:
     """Create a default status payload for a new figure-processing run."""
     return {
         "figure_id": figure_id,
         "image_path": image_path,
         "status": "needs_external",
         "stage": "",
+        "local_llm_provider": "ollama",
+        "local_llm_model": ollama_model or "",
         "local_llm_description": "",
         "local_llm_classification": "",
+        "external_llm_provider": "",
+        "external_llm_model": "",
         "external_llm_result": None,
         "needs_external": True,
         "confidence": 0.0,
@@ -270,7 +274,7 @@ def process_figure(
             )
             return existing
 
-    status = _new_status(figure_id, str(image_path))
+    status = _new_status(figure_id, str(image_path), ollama_model=ollama_model)
     now = datetime.now(timezone.utc).isoformat()
 
     if not image_path.exists():
