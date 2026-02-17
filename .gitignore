@@ -1,5 +1,7 @@
 out/
+out_notebook/
 build/
 *.egg-info/
 __pycache__/
 .pytest_cache/
+notebooks/.local_env.json

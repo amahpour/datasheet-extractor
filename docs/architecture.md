@@ -5,8 +5,9 @@
 ```mermaid
 flowchart LR
   A[Input PDFs] --> B[Pipeline Orchestrator]
-  B --> C[Extract Content<br/>text, tables, figures]
-  C --> D[Structure Into Document Model]
+  B --> C[Extract Content<br/>tables, figures, raw document]
+  C --> C2[HybridChunker<br/>structure-aware token-aligned chunks]
+  C2 --> D[Structure Into Document Model]
   D --> E[Enrich Metadata<br/>tags, classification, descriptions]
   E --> F[Export Artifacts<br/>document.json, tables, figure metadata]
   F --> G[Generate Manual Follow-up Report]
@@ -68,10 +69,11 @@ sequenceDiagram
     P->>PP: process_pdf(pdf,...)
     PP->>U: ensure_dir(out/<pdf_stem>)
 
-    PP->>E: extract_document(pdf, out_dir)
-    E-->>PP: raw {page_count, blocks, tables, figures}
+    PP->>E: extract_document(pdf, out_dir, max_tokens)
+    Note right of E: Uses HybridChunker with<br/>MiniLM-L6-v2 tokenizer.<br/>Chunks carry headings + enriched_text.
+    E-->>PP: raw {page_count, blocks[], tables, figures}
     PP->>E: to_blocks(raw.blocks)
-    E-->>PP: Block[]
+    E-->>PP: Block[] (deterministic IDs, headings, enriched_text)
 
     alt tables enabled
       loop each raw table
@@ -99,6 +101,9 @@ sequenceDiagram
     alt figures directory exists
       PP->>LP: process_all_figures(figures_dir, processing_dir,...)
       LP->>U: write processing/<fig_id>.json (per figure status)
+      Note right of PP: Fold LLM results back into<br/>Figure objects and rewrite<br/>document.json + derived files.
+      PP->>U: rewrite document.json (with LLM descriptions)
+      PP->>U: rewrite derived/figures/* meta + description.md
       PP->>LP: write_rollup(processing_dir, out/<pdf>)
       LP->>U: write processing_rollup.{json,md}
     end

@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import logging
+import shutil
 from pathlib import Path
 
 from src.export_figures import derive_description
 from src.export_tables import export_table
-from src.extract_docling import extract_document, to_blocks
-from src.local_processor import process_all_figures, write_rollup
+from src.extract_docling import DEFAULT_MAX_TOKENS, extract_document, to_blocks
+from src.local_processor import process_all_figures, read_status, write_rollup
 from src.report import write_manual_report
 from src.schema import (
     Derived,
@@ -38,14 +39,26 @@ def process_pdf(
     force: bool = False,
     no_images: bool = False,
     no_tables: bool = False,
-    max_figures: int = 25,
+    max_figures: int | None = None,
     ollama_model: str | None = None,
+    max_tokens: int = DEFAULT_MAX_TOKENS,
 ) -> dict:
     """Process a single PDF and persist all per-document artifacts."""
     pdf_out = ensure_dir(out_root / pdf_path.stem)
 
+    # Clean stale artifacts from prior runs so downstream consumers never
+    # see orphaned figures, processing statuses, or derived files.
+    for subdir in ("figures", "tables", "processing", "derived"):
+        stale = pdf_out / subdir
+        if stale.is_dir():
+            shutil.rmtree(stale)
+
     # Pass ``out_dir`` so Docling can write figure images directly to disk.
-    raw = extract_document(pdf_path, out_dir=pdf_out if not no_images else None)
+    raw = extract_document(
+        pdf_path,
+        out_dir=pdf_out if not no_images else None,
+        max_tokens=max_tokens,
+    )
     blocks = to_blocks(raw.get("blocks", []))
     page_filter = parse_page_ranges(pages)
     if page_filter:
@@ -73,7 +86,9 @@ def process_pdf(
     figures: list[Figure] = []
     if not no_images:
         raw_figures = raw.get("figures", [])
-        for i, fig_data in enumerate(raw_figures[:max_figures], start=1):
+        if max_figures is not None:
+            raw_figures = raw_figures[:max_figures]
+        for i, fig_data in enumerate(raw_figures, start=1):
             fig_id = fig_data.get("id", deterministic_id("fig", i))
             caption = fig_data.get("caption", "")
             page = fig_data.get("page", 1)
@@ -99,6 +114,19 @@ def process_pdf(
             )
             figure = derive_description(figure)
             figures.append(figure)
+
+        # Keep only finalized figure images so output artifacts match the
+        # filtered figure list (e.g., page filters / max_figures limits).
+        figures_dir = pdf_out / "figures"
+        if figures_dir.is_dir():
+            keep_names = {Path(f.image_path).name for f in figures if f.image_path}
+            removed = 0
+            for img_path in figures_dir.glob("*.png"):
+                if img_path.name not in keep_names:
+                    img_path.unlink()
+                    removed += 1
+            if removed:
+                logger.info("Removed %d unreferenced figure image(s)", removed)
 
     stat = pdf_path.stat()
     doc = Document(
@@ -138,8 +166,6 @@ def process_pdf(
             encoding="utf-8",
         )
 
-    per_pdf_report = write_manual_report(figures, pdf_out)
-
     # Stage 2.5: local vision LLM pass with per-figure status files.
     processing_statuses = []
     if not no_images and (pdf_out / "figures").is_dir():
@@ -154,6 +180,51 @@ def process_pdf(
             force=force,
             figure_ids=filtered_ids,
         )
+        # Fold local LLM results back into the Figure objects so that
+        # document.json, derived files, and the manual report all reflect
+        # the actual LLM output rather than pre-LLM placeholders.
+        for figure in figures:
+            status = read_status(processing_dir, figure.id)
+            if status is None:
+                continue
+            desc_text = status.get("local_llm_description", "")
+            llm_cls = status.get("local_llm_classification", "")
+
+            # Use local LLM classification as the canonical post-processing
+            # label so document/report/rollup outputs stay consistent.
+            if llm_cls:
+                figure.classification.type = llm_cls
+                figure.classification.confidence = status.get("confidence", 0.0)
+                figure.classification.rationale = "local_llm classification"
+
+            if desc_text:
+                figure.derived.description.text = desc_text
+                figure.derived.description.confidence = status.get("confidence", 0.0)
+                figure.derived.description.notes = (
+                    f"local_llm ({llm_cls})" if llm_cls else "local_llm"
+                )
+            elif status.get("stage") == "skip":
+                figure.derived.description.text = status.get(
+                    "local_llm_description", "Skipped"
+                )
+                figure.derived.description.notes = "skipped"
+            else:
+                figure.derived.description.text = "Pending external LLM processing."
+                figure.derived.description.notes = "needs_external"
+
+        # Rewrite document.json with updated descriptions and classifications.
+        doc.figures = figures
+        write_json(pdf_out / "document.json", doc.model_dump())
+
+        # Rewrite per-figure derived description files.
+        for figure in figures:
+            derived_dir = ensure_dir(pdf_out / "derived" / "figures" / figure.id)
+            write_json(derived_dir / "meta.json", {"figure": figure.model_dump()})
+            (derived_dir / "description.md").write_text(
+                f"# {figure.id}\n\n{figure.derived.description.text}\n",
+                encoding="utf-8",
+            )
+
         # Write per-PDF rollup
         rollup = write_rollup(processing_dir, pdf_out)
         logger.info(
@@ -162,6 +233,11 @@ def process_pdf(
             rollup["needs_external"],
             rollup["summary"]["percent_complete"],
         )
+
+    # Write manual report AFTER LLM processing so classifications and
+    # descriptions are up-to-date.  This ensures the report's routing
+    # decisions are consistent with the processing rollup.
+    per_pdf_report = write_manual_report(figures, pdf_out)
 
     return {
         "pdf": str(pdf_path),
@@ -180,8 +256,9 @@ def run_pipeline(
     force: bool = False,
     no_images: bool = False,
     no_tables: bool = False,
-    max_figures: int = 25,
+    max_figures: int | None = None,
     ollama_model: str | None = None,
+    max_tokens: int = DEFAULT_MAX_TOKENS,
 ) -> dict:
     """Run the extraction pipeline for all matching PDFs in ``input_dir``."""
     ensure_dir(out_dir)
@@ -199,6 +276,7 @@ def run_pipeline(
             no_tables=no_tables,
             max_figures=max_figures,
             ollama_model=ollama_model,
+            max_tokens=max_tokens,
         )
         for pdf in pdfs
     ]

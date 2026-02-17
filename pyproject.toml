@@ -20,6 +20,7 @@ pillow = "*"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"
+ipykernel = "^7.2.0"
 
 [tool.poetry.scripts]
 datasheet-extract = "cli.ds_extract:main"

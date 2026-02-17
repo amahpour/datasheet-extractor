@@ -31,6 +31,21 @@ ollama serve            # or open the Ollama macOS app
 ollama pull moondream   # fast, ~1.7GB
 ```
 
+## Interactive notebook demo
+
+Use the walkthrough notebook to demo the "before vs after" pipeline:
+
+```bash
+poetry run pip install jupyter ipykernel
+poetry run jupyter notebook notebooks/pipeline_walkthrough.ipynb
+```
+
+The notebook shows:
+
+- raw Docling extraction output
+- schema-normalized objects and enrichment
+- end-to-end `process_pdf()` run with rollups and reports
+
 ## CLI usage
 
 Use `--file` to process a single PDF, or `--dir` to process every PDF in a directory.
@@ -83,6 +98,7 @@ python -m cli.smoke_test
 - `--no-tables`
 - `--max-figures N`
 - `--ollama-model NAME` — Ollama vision model (auto-detected if omitted)
+- `--max-tokens N` (default `256`) — max tokens per text block chunk (aligned to embedding model tokenizer)
 
 ## Two-stage workflow
 
@@ -90,7 +106,7 @@ python -m cli.smoke_test
 
 The pipeline runs two phases in one command:
 
-1. **Docling extraction** — text (markdown), tables (CSV/MD/JSON), and all figure images (PNG)
+1. **Docling extraction** — text is chunked using Docling's `HybridChunker`, which provides structure-aware, token-aligned chunks with section heading context. Each chunk carries its parent heading hierarchy and an `enriched_text` field ready for embedding. The chunker uses the `sentence-transformers/all-MiniLM-L6-v2` tokenizer (configurable via `--max-tokens`, default 256). Tables are exported as CSV/MD/JSON, and figure images as PNG.
 2. **Local figure processing** — each figure is classified and described by Ollama. Results are written to per-figure status files.
 
 Figures are classified and routed:
@@ -108,7 +124,7 @@ After processing, update the figure's status file in `processing/` to `"status":
 
 Per PDF (`out/<pdf_stem>/`):
 
-- `document.json` — full extraction: text blocks, tables, figures
+- `document.json` — full extraction: structure-aware chunked text blocks (with headings and enriched text), tables, figures
 - `index.json` — paths to all artifacts
 - `figures/fig_0001.png` — extracted figure images
 - `tables/table_0001.{json,csv,md}` — extracted tables
@@ -151,5 +167,7 @@ Stage 2 skips any figure where status is `resolved_local` or `resolved_external`
 
 - **Docling is required.** There is no fallback PDF extractor — if Docling fails, the error propagates.
 - Figures that Docling cannot extract an image for are skipped (logged as warnings), not replaced with placeholders.
-- Local vision models (moondream, llava) hallucinate on complex figures — they're used for classification/triage only, not precision extraction.
+- Local vision models (moondream, llava) hallucinate on complex figures — they're used for classification/triage only, not precision extraction. Garbled or non-text output (control characters, `<unk>` tokens) is automatically detected and treated as a failed description.
 - Complex figures (plots, pinouts, schematics) are intentionally deferred to external LLM via the rollup report.
+- **Docling does not extract figure captions or bounding boxes** for many PDF layouts. Figures will have empty `caption` fields and zeroed `bbox` values. This limits rule-based classification (which falls back to page context or LLM inference).
+- **Table header OCR artifacts** (e.g., `THERMAL.THERMAL`, `PACKAGE- LEAD`) are passed through as-is from Docling's table extraction. These are upstream OCR/layout issues, not pipeline bugs.

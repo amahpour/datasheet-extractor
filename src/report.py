@@ -11,6 +11,8 @@ from src.utils import write_json
 def _recommend_action(figure: Figure) -> tuple[str, str, float]:
     """Suggest whether a figure needs external/manual interpretation."""
     fig_type = figure.classification.type
+    notes = figure.derived.description.notes
+
     if fig_type == "plot":
         return (
             "LLM: convert plot to CSV",
@@ -23,7 +25,19 @@ def _recommend_action(figure: Figure) -> tuple[str, str, float]:
             "diagram interpretation is not reliable locally",
             0.8,
         )
-    if figure.derived.description.notes == "LLM recommended":
+    if fig_type in {"register_map", "pinout", "schematic", "table_image", "wiring_diagram"}:
+        return (
+            "LLM: describe complex figure",
+            f"{fig_type} requires detailed external analysis",
+            0.8,
+        )
+    if notes == "needs_external":
+        return (
+            "LLM: describe image",
+            "local LLM could not resolve this figure",
+            0.7,
+        )
+    if notes == "LLM recommended":
         return "LLM: describe image", "insufficient local text extraction", 0.7
     return "none", "local extraction sufficient", 0.6
 
