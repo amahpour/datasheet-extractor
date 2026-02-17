@@ -1,0 +1,11 @@
+{
+  "classification": "photo",
+  "title": "DAC Package 3D Render (SOIC/TSSOP Style)",
+  "summary": "Rendered image of a black gull-wing lead IC package used as a package illustration.",
+  "structured_data": {
+    "description": "Small perspective render of a rectangular black molded IC with gull-wing leads on both sides against a light background."
+  },
+  "component_references": ["DACx578"],
+  "key_values": {},
+  "confidence": 0.74
+}

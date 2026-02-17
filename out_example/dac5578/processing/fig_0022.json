@@ -1,0 +1,236 @@
+{
+  "figure_id": "fig_0022",
+  "image_path": "out/dac5578/figures/fig_0022.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with two lines, one representing the digital input code and the other showing the differential linearity error. The x-axis of the graph is labeled \"Digital input code\" while the y-axis is labeled \"Differential linearity error\". The graph displays the relationship between these two variables, with the digital input code on the left side and the differential linearity error on the right side.\n\nThe graph shows that there are eight channels shown in the external reference, which indicates a wide range of data being processed by the system. Additionally, the graph reveals that the digital input code is 0.15 bits, while the differential linearity error is 0.12 bits. The x-axis also displays the values 0.05 and 0.25 for the digital input code and the external reference respectively.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "DNL vs Digital Input Code (DAC7578, 12-bit, +125C)",
+    "summary": "Differential nonlinearity plot for all channels at +125C, external reference 5V.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-4096)",
+      "y_axis": "Error (LSB), axis -0.25 to 0.25",
+      "series": [
+        {
+          "name": "CH A",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            },
+            {
+              "x": 2048,
+              "y": 0.0
+            },
+            {
+              "x": 3072,
+              "y": 0.0
+            },
+            {
+              "x": 4096,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "CH B",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            },
+            {
+              "x": 2048,
+              "y": 0.0
+            },
+            {
+              "x": 3072,
+              "y": 0.0
+            },
+            {
+              "x": 4096,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "CH C",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            },
+            {
+              "x": 2048,
+              "y": 0.0
+            },
+            {
+              "x": 3072,
+              "y": 0.0
+            },
+            {
+              "x": 4096,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "CH D",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            },
+            {
+              "x": 2048,
+              "y": 0.0
+            },
+            {
+              "x": 3072,
+              "y": 0.0
+            },
+            {
+              "x": 4096,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "CH E",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            },
+            {
+              "x": 2048,
+              "y": 0.0
+            },
+            {
+              "x": 3072,
+              "y": 0.0
+            },
+            {
+              "x": 4096,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "CH F",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            },
+            {
+              "x": 2048,
+              "y": 0.0
+            },
+            {
+              "x": 3072,
+              "y": 0.0
+            },
+            {
+              "x": 4096,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "CH G",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            },
+            {
+              "x": 2048,
+              "y": 0.0
+            },
+            {
+              "x": 3072,
+              "y": 0.0
+            },
+            {
+              "x": 4096,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "CH H",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            },
+            {
+              "x": 2048,
+              "y": 0.0
+            },
+            {
+              "x": 3072,
+              "y": 0.0
+            },
+            {
+              "x": 4096,
+              "y": 0.0
+            }
+          ]
+        }
+      ],
+      "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.04,0.04\\n2048,-0.04,0.04\\n4096,-0.04,0.04"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "5V",
+      "approx_channel_envelope_lsb": "[-0.04, 0.04]",
+      "note": "labeled as Figure 7 in image"
+    },
+    "confidence": 0.78
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:32:58.657303+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "figure_id": "fig_0182",
+  "image_path": "out/dac5578/figures/fig_0182.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed black and white diagram of a microcontroller circuit board, specifically focusing on the ADC (Adc) component. The ADC is shown as a single-pin device with multiple inputs and outputs, connected to various resistors and other components within the circuit. The diagram also includes labels for the ADC's input pins, output pins, and the ADC itself.",
+  "local_llm_classification": "pinout",
+  "external_llm_result": {
+    "classification": "wiring_diagram",
+    "title": "Single DACx578 I2C Connection with Pull-Ups",
+    "summary": "Connection diagram showing a microcontroller I2C port wired to one DACx578 with external pull-up resistors to VDD.",
+    "structured_data": {
+      "connections": [
+        {
+          "from": "MCU.SCL",
+          "to": "DACx578.SCL",
+          "wire_color": "not shown"
+        },
+        {
+          "from": "MCU.SDA",
+          "to": "DACx578.SDA",
+          "wire_color": "not shown"
+        },
+        {
+          "from": "VDD",
+          "to": "SCL pull-up",
+          "wire_color": "not shown"
+        },
+        {
+          "from": "VDD",
+          "to": "SDA pull-up",
+          "wire_color": "not shown"
+        }
+      ]
+    },
+    "component_references": [
+      "DACx578",
+      "microcontroller"
+    ],
+    "key_values": {
+      "pull_up_resistor_range": "1k to 10k (typ)"
+    },
+    "confidence": 0.94
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:41:58.907922+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

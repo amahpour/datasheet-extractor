@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "Power Supply Current vs Temperature (2.5V ref)",
+  "summary": "Power current rises with temperature for external reference 2.5V.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "Power Supply Current (mA), axis 0.6 to 1.3",
+    "series": [],
+    "csv": "temperature_c,current_ma\\n-40,0.68\\n-25,0.71\\n0,0.75\\n25,0.78\\n50,0.82\\n75,0.86\\n100,0.89\\n125,0.93"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.92
+}

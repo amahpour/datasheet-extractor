@@ -1,0 +1,29 @@
+{
+  "figure_id": "fig_0004",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0004.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image shows a small electronic device, possibly a circuit board or component, placed on top of a coin. The device is black and has a silver color scheme with gold accents. It appears to be a small electronic device that could be used for various purposes such as communication, data storage, or control systems. The coin serves as the base for the device, providing stability while it's in use.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "photo",
+    "title": "DAC7578 Breakout Side Connector Close-Up",
+    "summary": "Low-angle close-up emphasizing one JST-SH connector on the DAC7578 breakout board. The board edge thickness and through-hole pads are visible.",
+    "structured_data": {
+      "description": "Front edge close-up photo of the PCB with the near STEMMA QT connector in focus and the opposite connector blurred in the background. Through-hole pin pads and edge mounting hole plating are visible."
+    },
+    "component_references": [
+      "DAC7578",
+      "STEMMA QT"
+    ],
+    "key_values": {},
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:29:40.322809+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:47:29Z"
+  }
+}

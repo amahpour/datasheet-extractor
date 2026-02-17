@@ -1,0 +1,35 @@
+{
+  "figure_id": "fig_0133",
+  "image_path": "out/dac5578/figures/fig_0133.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the relationship between voltage and current in a DC circuit, with two lines representing the voltage and current values respectively. The x-axis of the graph is labeled \"Voltage\" and the y-axis is labeled \"Current\". The graph shows an upward trend from left to right, indicating that as the voltage increases, so does the current flowing through the circuit. There are also labels for the source current (2.45A) and external reference (2.5V), which provide additional context about the data being presented in the graph.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Source Current at Positive Rail (Channel G, FFFh, 2.5V ref)",
+    "summary": "Output voltage droop versus source current for channel G.",
+    "structured_data": {
+      "x_axis": "Source Current (mA), 0 to 10",
+      "y_axis": "Output Voltage (V), axis 2.45 to 2.50",
+      "series": [],
+      "csv": "source_current_ma,output_voltage_v\\n0,2.495\\n2,2.488\\n4,2.480\\n6,2.472\\n8,2.463\\n10,2.453"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "channel": "G",
+      "code": "FFFh",
+      "external_reference": "2.5V"
+    },
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:39:17.965620+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

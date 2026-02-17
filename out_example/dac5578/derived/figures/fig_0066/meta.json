@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0066",
+    "page": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0066.png",
+    "classification": {
+      "type": "other",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image shows a close-up view of three black and white license plates, each with the number \"DAC\" printed on them in a larger font size than the others. The first plate is positioned at the top left corner, the second one is located at the bottom center, and the third one is situated at the bottom right corner. Each plate has the same design but varying sizes to create an interesting visual effect.",
+        "confidence": 0.7,
+        "notes": "local_llm (other)"
+      }
+    }
+  }
+}

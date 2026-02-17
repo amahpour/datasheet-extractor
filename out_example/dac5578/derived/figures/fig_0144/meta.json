@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0144",
+    "page": 24,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0144.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a black and white diagram that illustrates the falling edge of a trigger pulse, with time intervals represented by numbers on the x-axis and voltage levels depicted as lines on the y-axis. The diagram also includes text providing information about the falling edge's characteristics and its relationship to external reference values. (Figure 100)",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

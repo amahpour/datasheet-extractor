@@ -1,0 +1,31 @@
+{
+  "figure_id": "fig_0203",
+  "image_path": "out/dac5578/figures/fig_0203.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed blueprints of a microcontroller, specifically the pin index area and the seating plane. The pin index area is shown in the top left corner with a square shape and a grid pattern on it. The seating plane is located in the bottom right corner, depicted as a rectangular shape with a grid pattern. Both areas are outlined in blue, providing a clear visual representation of their respective components.",
+  "local_llm_classification": "pinout",
+  "external_llm_result": {
+    "classification": "mechanical",
+    "title": "QFN-24 Package Mechanical Drawing",
+    "summary": "Detailed package dimensions and tolerances for the 24-pin QFN package with exposed pad.",
+    "structured_data": {
+      "description": "Shows top, side, and bottom views including overall body dimensions (3.9 to 4.1 mm), lead geometry, exposed pad, pin index area, and GD&T references. Drawing revision/date visible: 4219016/A, 08/2017."
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "package": "QFN-24 with exposed pad",
+      "body_size_mm": "3.9 to 4.1"
+    },
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:43:03.915601+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

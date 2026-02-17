@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0006",
+    "page": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0006.png",
+    "classification": {
+      "type": "pinout",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a black and gold circuit board with various components, including a small circuit board with multiple pins on the left side of the frame. The main circuit board is situated in the center of the image, surrounded by smaller components that are not visible due to their position relative to the main circuit board. This assembly of electronic components suggests it could be part of a larger project or device.",
+        "confidence": 0.3,
+        "notes": "local_llm (pinout)"
+      }
+    }
+  }
+}

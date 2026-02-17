@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0210",
+  "image_path": "out/dac5578/figures/fig_0210.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image features a logo for Texas Instruments (TI) that is predominantly black and white in color, with the company's name prominently displayed in large, capital letters at the top of the design. Below the company name, there are three smaller text boxes containing the website address \"www.ti.com\" and the company's name \"TI\". The layout of the logo suggests a sense of balance and symmetry, with the company name taking center stage against a simple gray background.",
+  "local_llm_classification": "logo",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:43:24.228170+00:00"
+}

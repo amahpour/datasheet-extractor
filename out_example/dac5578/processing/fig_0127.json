@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0127",
+  "image_path": "out/dac5578/figures/fig_0127.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with temperature values on the y-axis and time intervals on the x-axis, showing how the temperature changes over time for different electronic devices. The graph displays various data points representing the temperature of each device at specific time intervals. The temperatures are represented in degrees Celsius (°C), and there is a legend indicating the type of device being measured.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Power-Down Current vs Temperature (AVDD=2.7V, Vref=2.5V)",
+    "summary": "Power-down current in microamps vs temperature, increasing strongly above ~95C.",
+    "structured_data": {
+      "x_axis": "Temperature (C), -40 to 125",
+      "y_axis": "Power Supply Current (uA), axis 0.0 to 4.7",
+      "series": [],
+      "csv": "temperature_c,current_ua\\n-40,0.12\\n0,0.12\\n25,0.12\\n50,0.15\\n65,0.16\\n80,0.20\\n95,0.30\\n110,0.45\\n125,0.75"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "avdd": "2.7V",
+      "external_reference": "2.5V"
+    },
+    "confidence": 0.91
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:38:58.506637+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

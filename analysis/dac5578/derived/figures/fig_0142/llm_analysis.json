@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Rising Edge Capture (Code 000h to FFFh, 2.5V ref)",
+  "summary": "Oscilloscope screenshot of full-scale rising edge with zoomed residual.",
+  "structured_data": {
+    "description": "Annotations show rising edge 2 V/div, zoomed rising edge 100 uV/div, trigger pulse 5 V/div, transition 000h to FFFh."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "step_codes": "000h to FFFh",
+    "time_scale": "5 us/div"
+  },
+  "confidence": 0.9
+}

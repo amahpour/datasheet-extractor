@@ -1,0 +1,30 @@
+{
+  "figure_id": "fig_0005",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0005.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image shows a close-up view of a black circuit board with two white wires attached to it, one on each side. The circuit board is resting on a gray surface and appears to be in good condition. There are no other objects or text visible in the image.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "photo",
+    "title": "DAC7578 Breakout Top-Down Front View",
+    "summary": "Top-down product photo of the DAC7578 breakout showing component placement and pin labels clearly. Both STEMMA QT connectors and through-hole breakout pads are visible.",
+    "structured_data": {
+      "description": "Top row pad labels read VRF, 0, 1, 2, 3, 4, 5, 6, 7, GND. Bottom labels include VCC, SCL, SDA, LDAC, CLR, and GND near center. Silkscreen identifies 'DAC7578' and '8x12bit I2C DAC'."
+    },
+    "component_references": [
+      "DAC7578",
+      "STEMMA QT",
+      "Adafruit"
+    ],
+    "key_values": {},
+    "confidence": 0.97
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:29:41.981243+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:47:29Z"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0005",
+    "page": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0005.png",
+    "classification": {
+      "type": "block_diagram",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image shows a close-up view of a black circuit board with two white wires attached to it, one on each side. The circuit board is resting on a gray surface and appears to be in good condition. There are no other objects or text visible in the image.",
+        "confidence": 0.3,
+        "notes": "local_llm (block_diagram)"
+      }
+    }
+  }
+}

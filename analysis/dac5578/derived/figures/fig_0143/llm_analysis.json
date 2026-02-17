@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Falling Edge Capture (Code FFFh to 000h, 2.5V ref)",
+  "summary": "Oscilloscope screenshot of full-scale falling edge and zoomed settling/noise.",
+  "structured_data": {
+    "description": "Annotations: falling edge 2 V/div, zoomed falling edge 100 uV/div, trigger pulse 5 V/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "step_codes": "FFFh to 000h",
+    "time_scale": "5 us/div"
+  },
+  "confidence": 0.9
+}

@@ -1,0 +1,29 @@
+{
+  "classification": "schematic",
+  "title": "Adafruit DAC7578 Breakout Schematic",
+  "summary": "Complete board schematic for the Adafruit DAC7578 breakout with power supply conditioning, I2C pull-ups/level-shift support, status LED, DAC7578 IC, and STEMMA QT connectors.",
+  "structured_data": {
+    "components": [
+      {"ref": "U3", "type": "DAC IC", "value": "DAC7578"},
+      {"ref": "SJ3", "type": "solder jumper", "value": "ADDR0"},
+      {"ref": "CONNMAG1", "type": "connector", "value": "STEMMA_I2C_QT"},
+      {"ref": "CONNAG1", "type": "connector", "value": "STEMMA_I2C_QT"},
+      {"ref": "R*", "type": "resistor", "value": "I2C pull-ups / LED / bias"},
+      {"ref": "C*", "type": "capacitor", "value": "supply decoupling"}
+    ],
+    "nets": [
+      "VCC",
+      "GND",
+      "SCL",
+      "SDA",
+      "LDAC",
+      "CLR",
+      "VRF",
+      "VOUTA..VOUTH"
+    ],
+    "description": "Schematic shows DAC7578 converting I2C commands into eight analog outputs (VOUTA through VOUTH), with breakout headers and STEMMA QT connectors exposing power, I2C, and control signals."
+  },
+  "component_references": ["DAC7578", "STEMMA QT", "Adafruit"],
+  "key_values": {},
+  "confidence": 0.62
+}

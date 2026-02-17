@@ -1,0 +1,32 @@
+{
+  "figure_id": "fig_0144",
+  "image_path": "out/dac5578/figures/fig_0144.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram that illustrates the falling edge of a trigger pulse, with time intervals represented by numbers on the x-axis and voltage levels depicted as lines on the y-axis. The diagram also includes text providing information about the falling edge's characteristics and its relationship to external reference values. (Figure 100)",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Falling Edge Capture (Code C00h to 400h, 2.5V ref)",
+    "summary": "Oscilloscope screenshot of mid-code falling edge with zoomed residual.",
+    "structured_data": {
+      "description": "Labeled falling edge 2 V/div, zoomed falling edge 100 uV/div, trigger pulse 5 V/div, time 5 us/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "step_codes": "C00h to 400h",
+      "time_scale": "5 us/div"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:39:55.956250+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0126",
+    "page": 22,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0126.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with the x-axis labeled \"External Reference\" and the y-axis labeled \"Temperature (°C)\". The graph displays four lines, each representing a different temperature range in degrees Celsius. The first line represents 0 to 2.5V, the second line represents 2.5 to 5V, the third line represents 5 to 10V, and the fourth line represents 10 to 25V. The graph also includes text that reads \"Gain error vs Temperature\" and \"External reference = 2.5V\".",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

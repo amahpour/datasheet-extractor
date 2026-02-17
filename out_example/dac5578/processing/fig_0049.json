@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0049",
+  "image_path": "out/dac5578/figures/fig_0049.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"External Reference\" and the y-axis labeled \"Voltage (V)\", indicating that it is a graph of external reference values against voltage values. The graph shows a line connecting the points, which are represented by different colors for each data point. There are four distinct lines on the graph, with one being the highest at the top left corner and another being the lowest at the bottom right corner. The remaining two lines are located in between these two extreme points.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Offset Error vs Temperature",
+    "summary": "Offset error in millivolts versus temperature for channels A-H with gradual positive drift.",
+    "structured_data": {
+      "x_axis": "Temperature (C), -40 to 125",
+      "y_axis": "Offset Error (mV), axis -4 to +4",
+      "series": [],
+      "csv": "temperature_c,ch_a,ch_b,ch_c,ch_d,ch_e,ch_f,ch_g,ch_h\\n-40,0.8,1.2,0.5,0.7,1.0,0.9,0.8,0.7\\n25,0.9,1.2,0.6,0.8,1.1,1.0,0.9,0.8\\n125,1.1,1.3,0.8,1.0,1.2,1.1,1.0,0.9"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "5V"
+    },
+    "confidence": 0.8
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:34:29.079125+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

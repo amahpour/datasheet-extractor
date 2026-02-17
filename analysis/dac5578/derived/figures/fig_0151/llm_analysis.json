@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Power-Off Glitch (Zero-Scale)",
+  "summary": "Scope capture of output behavior during AVDD power-off ramp with DAC at zero scale.",
+  "structured_data": {
+    "description": "Traces include VOUT 1 mV/div and AVDD 2 V/div during shutdown."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "condition": "power-off",
+    "dac_code": "zero scale"
+  },
+  "confidence": 0.88
+}

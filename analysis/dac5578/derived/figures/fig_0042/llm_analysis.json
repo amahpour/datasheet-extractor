@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "DNL Error vs Temperature (DAC5578, 8-bit)",
+  "summary": "Two-trace plot of DNL maximum and DNL minimum versus temperature for DAC5578 at 8-bit resolution.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "DNL Error (LSB), axis -0.25 to +0.25",
+    "series": [],
+    "csv": "temperature_c,dnl_min_lsb,dnl_max_lsb\\n-40,-0.01,0.01\\n25,-0.01,0.01\\n125,-0.01,0.005"
+  },
+  "component_references": [
+    "DAC5578"
+  ],
+  "key_values": {
+    "external_reference": "5V",
+    "metrics": "DNL MIN and DNL MAX"
+  },
+  "confidence": 0.84
+}

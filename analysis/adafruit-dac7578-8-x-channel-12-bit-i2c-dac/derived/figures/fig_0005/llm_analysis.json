@@ -1,0 +1,11 @@
+{
+  "classification": "photo",
+  "title": "DAC7578 Breakout Top-Down Front View",
+  "summary": "Top-down product photo of the DAC7578 breakout showing component placement and pin labels clearly. Both STEMMA QT connectors and through-hole breakout pads are visible.",
+  "structured_data": {
+    "description": "Top row pad labels read VRF, 0, 1, 2, 3, 4, 5, 6, 7, GND. Bottom labels include VCC, SCL, SDA, LDAC, CLR, and GND near center. Silkscreen identifies 'DAC7578' and '8x12bit I2C DAC'."
+  },
+  "component_references": ["DAC7578", "STEMMA QT", "Adafruit"],
+  "key_values": {},
+  "confidence": 0.97
+}

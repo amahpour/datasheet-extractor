@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0152",
+    "page": 25,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 106.",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0152.png",
+    "classification": {
+      "type": "icon",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a black and white diagram that illustrates the relationship between external reference, voltage, and current in an electrical circuit. The diagram is divided into two sections, with one section representing the external reference (code 80th to 800h) and the other section showing the voltage and current values at different points within the circuit.\n\nThe diagram includes arrows pointing from the external reference section towards the voltage and current sections, indicating the direction of flow between these components. The text \"From Code 80th to 800h\" is written in black above the external reference section, while the text \"External Reference = 2.5 V / s\" is written below it.",
+        "confidence": 0.7,
+        "notes": "local_llm (icon)"
+      }
+    }
+  }
+}

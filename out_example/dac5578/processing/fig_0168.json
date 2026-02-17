@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0168",
+  "image_path": "out/dac5578/figures/fig_0168.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed diagram of a digital circuit, specifically focusing on the clock line and its relationship to other components in the circuit. The circuit is designed for use with a VHDL processor, as indicated by the presence of a VHDL start/stop condition. The diagram includes various symbols representing different parts of the circuit, such as resistors, capacitors, and transistors. The clock line is clearly labeled, indicating its function within the circuit.",
+  "local_llm_classification": "icon",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:41:18.268243+00:00"
+}

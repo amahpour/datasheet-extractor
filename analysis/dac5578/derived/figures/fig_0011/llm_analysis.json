@@ -1,0 +1,30 @@
+{
+  "classification": "pinout",
+  "title": "DACx578 16-Pin Package Pinout",
+  "summary": "Pin assignment diagram for a 16-pin DACx578 package showing control pins on the left and digital/analog outputs on the right.",
+  "structured_data": {
+    "pins": [
+      {"number": 1, "name": "LDAC", "function": "Load DAC input / update control"},
+      {"number": 2, "name": "ADDR0", "function": "I2C address select bit 0"},
+      {"number": 3, "name": "AVDD", "function": "Analog supply"},
+      {"number": 4, "name": "VOUTA", "function": "Channel A analog output"},
+      {"number": 5, "name": "VOUTC", "function": "Channel C analog output"},
+      {"number": 6, "name": "VOUTE", "function": "Channel E analog output"},
+      {"number": 7, "name": "VOUTG", "function": "Channel G analog output"},
+      {"number": 8, "name": "VREFIN", "function": "Reference voltage input"},
+      {"number": 9, "name": "CLR", "function": "Clear / reset DAC outputs"},
+      {"number": 10, "name": "VOUTH", "function": "Channel H analog output"},
+      {"number": 11, "name": "VOUTF", "function": "Channel F analog output"},
+      {"number": 12, "name": "VOUTD", "function": "Channel D analog output"},
+      {"number": 13, "name": "VOUTB", "function": "Channel B analog output"},
+      {"number": 14, "name": "GND", "function": "Ground"},
+      {"number": 15, "name": "SDA", "function": "I2C data"},
+      {"number": 16, "name": "SCL", "function": "I2C clock"}
+    ]
+  },
+  "component_references": ["DACx578"],
+  "key_values": {
+    "pin_count": "16"
+  },
+  "confidence": 0.97
+}

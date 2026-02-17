@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0071",
+  "image_path": "out/dac5578/figures/fig_0071.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white line graph that displays the relationship between two variables, with each variable represented by a different color on the x and y axes respectively. The x-axis is labeled \"Falling Edge\" in black text, while the y-axis is labeled \"Edge\" in black text. The graph shows a downward trend from Code CO06 to 400 h, indicating that the falling edge of an electronic device is decreasing over time.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Power-On Glitch Reset-to-Mid-Scale",
+    "summary": "Scope screenshot of AVDD ramp and corresponding VOUT response during reset-to-mid-scale behavior.",
+    "structured_data": {
+      "description": "Two traces: VOUT at 2 V/div and AVDD at 2 V/div with time scale 20 ms/div; note says DAC unloaded, DAC at zero scale."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "time_scale": "20 ms/div",
+      "vout_scale": "2 V/div",
+      "avdd_scale": "2 V/div"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:35:46.171148+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

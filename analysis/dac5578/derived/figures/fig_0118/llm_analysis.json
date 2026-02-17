@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "INL Error vs Temperature (DAC5578, 8-bit, 2.5V ref)",
+  "summary": "INL max/min versus temperature for DAC5578 8-bit.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "INL Error (LSB), axis -0.25 to +0.25",
+    "series": [],
+    "csv": "temperature_c,inl_min_lsb,inl_max_lsb\\n-40,-0.01,0.015\\n25,-0.01,0.015\\n65,-0.01,0.017\\n95,-0.01,0.017\\n125,-0.01,0.015"
+  },
+  "component_references": [
+    "DAC5578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.9
+}

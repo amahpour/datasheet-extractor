@@ -1,0 +1,149 @@
+{
+  "total_figures": 23,
+  "resolved_local": 7,
+  "resolved_external": 0,
+  "needs_external": 16,
+  "summary": {
+    "fully_processed": 7,
+    "pending_external": 16,
+    "percent_complete": 30.4
+  },
+  "figures": {
+    "resolved_local": [
+      {
+        "id": "fig_0001",
+        "classification": "other",
+        "description": "The image features a black and white illustration of a flower with five petals, each containing a seed. The flower is ce"
+      },
+      {
+        "id": "fig_0008",
+        "classification": "screenshot",
+        "description": "The image presents a detailed electronic datasheet, divided into four sections with purple text and numbers. The first s"
+      },
+      {
+        "id": "fig_0013",
+        "classification": "icon",
+        "description": "The image presents a screenshot of a computer screen displaying the interface for a circuit board. The circuit board is "
+      },
+      {
+        "id": "fig_0017",
+        "classification": "other",
+        "description": "The image shows a computer screen displaying a page from an electronics datasheet for Arduino. The page is titled \"Verif"
+      },
+      {
+        "id": "fig_0018",
+        "classification": "other",
+        "description": "The image shows a computer screen displaying the settings of an ADC library. The ADC library is located in the Archives "
+      },
+      {
+        "id": "fig_0019",
+        "classification": "other",
+        "description": "The image shows a computer screen displaying a window with the text \"The library ADCARTLITACD7578Library 1.0.0 needs som"
+      },
+      {
+        "id": "fig_0022",
+        "classification": "icon",
+        "description": "The image presents a detailed circuit board layout, specifically for a microcontroller device. The board is divided into"
+      }
+    ],
+    "needs_external": [
+      {
+        "id": "fig_0002",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0002.png",
+        "classification": "block_diagram",
+        "description": "The image shows a black and gold electronic device, likely a small circuit board or microcontroller, resting on a gray s"
+      },
+      {
+        "id": "fig_0003",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0003.png",
+        "classification": "pinout",
+        "description": "The image shows a black circuit board with various components, including resistors and capacitors. The board is designed"
+      },
+      {
+        "id": "fig_0004",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0004.png",
+        "classification": "block_diagram",
+        "description": "The image shows a small electronic device, possibly a circuit board or component, placed on top of a coin. The device is"
+      },
+      {
+        "id": "fig_0005",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0005.png",
+        "classification": "block_diagram",
+        "description": "The image shows a close-up view of a black circuit board with two white wires attached to it, one on each side. The circ"
+      },
+      {
+        "id": "fig_0006",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0006.png",
+        "classification": "pinout",
+        "description": "The image presents a black and gold circuit board with various components, including a small circuit board with multiple"
+      },
+      {
+        "id": "fig_0007",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0007.png",
+        "classification": "block_diagram",
+        "description": "The image presents two electronic components, a black circuit board and a black component, both of which are labeled wit"
+      },
+      {
+        "id": "fig_0009",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0009.png",
+        "classification": "pinout",
+        "description": "The image presents a circuit board with two components connected by wires, one of which is a small device labeled \"DAC77"
+      },
+      {
+        "id": "fig_0010",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0010.png",
+        "classification": "block_diagram",
+        "description": "The image presents a circuit board with two electronic components, one black and one yellow, connected by wires. The bla"
+      },
+      {
+        "id": "fig_0011",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0011.png",
+        "classification": "block_diagram",
+        "description": "The image presents a Raspberry Pi board with various components, including a green Raspberry Pi board and a black circui"
+      },
+      {
+        "id": "fig_0012",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0012.png",
+        "classification": "block_diagram",
+        "description": "The image presents a Raspberry Pi board with various components, including a green Raspberry Pi board and wires connecti"
+      },
+      {
+        "id": "fig_0014",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0014.png",
+        "classification": "schematic",
+        "description": "The image shows a black and white electronic circuit diagram with two distinct waves, one yellow and one blue, displayed"
+      },
+      {
+        "id": "fig_0015",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0015.png",
+        "classification": "block_diagram",
+        "description": "The image presents a circuit board with various components, including a black circuit board and wires in different color"
+      },
+      {
+        "id": "fig_0016",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0016.png",
+        "classification": "block_diagram",
+        "description": "The image presents a circuit board with various electronic components, including a black and white ADC (Digital Accelero"
+      },
+      {
+        "id": "fig_0020",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0020.png",
+        "classification": "timing_diagram",
+        "description": "The image shows a black and white electronic device with a display screen that is currently turned on, displaying a wave"
+      },
+      {
+        "id": "fig_0021",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0021.png",
+        "classification": "pinout",
+        "description": "The image presents a detailed electronic circuit diagram, specifically for the ADCfruit product. The diagram is color-co"
+      },
+      {
+        "id": "fig_0023",
+        "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0023.png",
+        "classification": "block_diagram",
+        "description": "The image presents a black circuit board with various components, including two black resistors and a small white star-s"
+      }
+    ],
+    "resolved_external": []
+  }
+}

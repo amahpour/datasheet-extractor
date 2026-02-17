@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0214",
+    "page": 59,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0214.png",
+    "classification": {
+      "type": "screenshot",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed technical drawing of a soldering iron, with the focus on its components and their dimensions. The drawing is predominantly in black and white, providing clear instructions for assembly or disassembly. The soldering iron features two red bars that are connected by a thin line, indicating the joining of two components. The drawing also includes labels such as \"Solder paste example\" and \"Based on 2x25mm thick stencil\", which provide further context about the soldering iron's design and functionality.",
+        "confidence": 0.7,
+        "notes": "local_llm (screenshot)"
+      }
+    }
+  }
+}

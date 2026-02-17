@@ -1,0 +1,4 @@
+0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+S,MSB,…,R/W(0),ACK,MSB,…,LSB,ACK,Sr,MSB …,R/W(1),ACK,,…,LSB,ACK,MSB,…,ACK
+,Address Byte,Address Byte,Address Byte,Command/Access Byte,Command/Access Byte,Command/Access Byte,Command/Access Byte,,Sr,Address Byte,Address Byte,,MSDB,MSDB,MSDB,,LSDB,LSDB,LSDB
+,From master,From master,From master,Slave,,From master,From master,Slave,,From master,From master,slave,From Slave,From Slave,,Master,From Slave,,Master

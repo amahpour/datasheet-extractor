@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "LDAC Feedthrough (Code 80h to 81h, 2.5V ref)",
+  "summary": "Scope screenshot of small code step with LDAC clock feedthrough and settling.",
+  "structured_data": {
+    "description": "VOUT 5 mV/div, LDAC trigger pulse 5 V/div, time 2 us/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "step_codes": "80h to 81h",
+    "time_scale": "2 us/div"
+  },
+  "confidence": 0.89
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "Power-Down Supply Current vs Temperature",
+  "summary": "Power-down current in microamps vs temperature, rising gradually and then more steeply above about 100C.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "Power Supply Current (uA), axis 0 to 6",
+    "series": [],
+    "csv": "temperature_c,current_ua\\n-40,0.40\\n0,0.40\\n25,0.42\\n50,0.43\\n75,0.50\\n95,0.60\\n110,0.80\\n125,1.30"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V"
+  },
+  "confidence": 0.9
+}

@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0003",
+  "image_path": "out/dac5578/figures/fig_0003.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image features a black and white triangle-shaped logo with two weights, one on each side of the triangle. The weights are depicted as a pair of scales, symbolizing balance or fairness. The triangle is centrally positioned within the frame, creating a sense of symmetry in the design.",
+  "local_llm_classification": "logo",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:31:56.835253+00:00"
+}

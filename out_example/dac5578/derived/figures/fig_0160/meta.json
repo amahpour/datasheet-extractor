@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0160",
+    "page": 27,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 112. Resistor String",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0160.png",
+    "classification": {
+      "type": "schematic",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed circuit diagram for an amplifier, with the components clearly labeled and organized in a vertical line. The diagram includes a series of resistors connected to the amplifier via wires, as well as a power supply component. The diagram is color-coded, with black text on white paper, providing a clear visual representation of the electronic components and their connections.",
+        "confidence": 0.3,
+        "notes": "local_llm (schematic)"
+      }
+    }
+  }
+}

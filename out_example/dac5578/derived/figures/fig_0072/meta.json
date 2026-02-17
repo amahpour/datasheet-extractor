@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0072",
+    "page": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0072.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with two lines, one labeled \"2V\" and the other \"2m/s\". The graph is set against a black background, making it easy to read and understand. Below the graph, there are labels indicating that the graph represents the voltage (in volts) of an electrical device at different time intervals or in different scales.\n\nThe text on the image provides information about the device's operation: \"DAC Unloaded DAC at Zero Scale\" and \"Figure 46\". The text also includes a reference number, G45, which may be used to locate the specific graph or data point being referred to within the document.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

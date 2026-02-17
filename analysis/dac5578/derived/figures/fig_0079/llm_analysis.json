@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "LDAC Clock Feedthrough (Code 81h to 801h)",
+  "summary": "Scope capture of larger downward step showing LDAC clock feedthrough and settling.",
+  "structured_data": {
+    "description": "VOUT scale 5 mV/div, LDAC trigger pulse 5 V/div, timebase 2 us/div; annotated transition 81h to 801h."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "step_codes": "81h to 801h",
+    "vout_scale": "5 mV/div",
+    "time_scale": "2 us/div"
+  },
+  "confidence": 0.89
+}

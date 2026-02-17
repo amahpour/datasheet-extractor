@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0166",
+    "page": 29,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 115. I 2 C Bus Bit Transfer",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0166.png",
+    "classification": {
+      "type": "icon",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed diagram of a data line stable (DSL) circuit, with the components clearly labeled and organized in a grid format. The DSL circuit is designed to store and process digital information using a data line, which is a continuous path for electrical current flow. The diagram includes various components such as resistors, capacitors, and transistors that are essential parts of the DSL circuit. The diagram also provides instructions on how to change the Data Line Stable (DSL) setting, allowing users to adjust the characteristics of the DSL circuit according to their needs.\n\nThe image is predominantly black and white, with the exception of a few labels and arrows pointing out specific components or connections within the DSL circuit. The diagram is well-organized and easy to follow, making it an ideal resource for understanding DSL circuits and their inner workings.",
+        "confidence": 0.7,
+        "notes": "local_llm (icon)"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0077",
+  "image_path": "out/dac5578/figures/fig_0077.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed electronic datasheet for a device that measures the trigger pulse of a signal. The device is designed to measure the trigger pulse at different voltage levels, ranging from 2V to 5V. The trigger pulse is shown in black and white on the device's display screen, indicating its functionality. The device is accompanied by a legend that provides information about the various settings it offers.",
+  "local_llm_classification": "screenshot",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:36:05.463550+00:00"
+}

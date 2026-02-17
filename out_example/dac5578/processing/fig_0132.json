@@ -1,0 +1,35 @@
+{
+  "figure_id": "fig_0132",
+  "image_path": "out/dac5578/figures/fig_0132.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the relationship between the input voltage and current of a DC load, as well as the external reference value (2.5V). The x-axis of the graph represents the input voltage in volts, while the y-axis represents the current flowing through the load in amperes.\n\nThe graph shows an upward trend from left to right, indicating that increasing the input voltage results in a corresponding increase in the current flowing through the DC load. This relationship is depicted by a line on the graph, which slopes upwards from left to right. The external reference value (2.5V) is also shown at the top of the graph, representing the maximum allowed current for the DC load.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Source Current at Positive Rail (Channel B, FFFh, 2.5V ref)",
+    "summary": "Output voltage droop versus source current for channel B.",
+    "structured_data": {
+      "x_axis": "Source Current (mA), 0 to 10",
+      "y_axis": "Output Voltage (V), axis 2.45 to 2.50",
+      "series": [],
+      "csv": "source_current_ma,output_voltage_v\\n0,2.495\\n2,2.488\\n4,2.480\\n6,2.471\\n8,2.463\\n10,2.455"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "channel": "B",
+      "code": "FFFh",
+      "external_reference": "2.5V"
+    },
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:39:13.822948+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

@@ -1,0 +1,240 @@
+# Global Manual Processing Report
+
+- fig_0001: none
+- fig_0002: LLM: convert diagram to ASCII/Mermaid
+- fig_0003: LLM: describe complex figure
+- fig_0004: LLM: convert diagram to ASCII/Mermaid
+- fig_0005: LLM: convert diagram to ASCII/Mermaid
+- fig_0006: LLM: describe complex figure
+- fig_0007: LLM: convert diagram to ASCII/Mermaid
+- fig_0008: none
+- fig_0009: LLM: describe complex figure
+- fig_0010: LLM: convert diagram to ASCII/Mermaid
+- fig_0011: LLM: convert diagram to ASCII/Mermaid
+- fig_0012: LLM: convert diagram to ASCII/Mermaid
+- fig_0013: none
+- fig_0014: LLM: describe complex figure
+- fig_0015: LLM: convert diagram to ASCII/Mermaid
+- fig_0016: LLM: convert diagram to ASCII/Mermaid
+- fig_0017: none
+- fig_0018: none
+- fig_0019: none
+- fig_0020: LLM: convert diagram to ASCII/Mermaid
+- fig_0021: LLM: describe complex figure
+- fig_0022: none
+- fig_0023: LLM: convert diagram to ASCII/Mermaid
+- fig_0001: none
+- fig_0002: LLM: describe complex figure
+- fig_0003: none
+- fig_0004: none
+- fig_0005: none
+- fig_0006: none
+- fig_0007: none
+- fig_0008: none
+- fig_0009: none
+- fig_0010: none
+- fig_0011: LLM: convert diagram to ASCII/Mermaid
+- fig_0012: LLM: convert diagram to ASCII/Mermaid
+- fig_0013: none
+- fig_0014: none
+- fig_0015: none
+- fig_0016: none
+- fig_0017: LLM: convert plot to CSV
+- fig_0018: LLM: convert plot to CSV
+- fig_0019: LLM: convert plot to CSV
+- fig_0020: LLM: convert plot to CSV
+- fig_0021: LLM: convert plot to CSV
+- fig_0022: LLM: convert plot to CSV
+- fig_0023: none
+- fig_0024: none
+- fig_0025: none
+- fig_0026: LLM: convert plot to CSV
+- fig_0027: LLM: convert plot to CSV
+- fig_0028: LLM: describe complex figure
+- fig_0029: LLM: convert plot to CSV
+- fig_0030: LLM: convert plot to CSV
+- fig_0031: LLM: convert plot to CSV
+- fig_0032: none
+- fig_0033: none
+- fig_0034: LLM: convert plot to CSV
+- fig_0035: LLM: convert plot to CSV
+- fig_0036: LLM: convert plot to CSV
+- fig_0037: LLM: convert plot to CSV
+- fig_0038: LLM: convert plot to CSV
+- fig_0039: LLM: convert plot to CSV
+- fig_0040: none
+- fig_0041: none
+- fig_0042: LLM: convert plot to CSV
+- fig_0043: none
+- fig_0044: none
+- fig_0045: LLM: convert plot to CSV
+- fig_0046: LLM: convert plot to CSV
+- fig_0047: LLM: convert plot to CSV
+- fig_0048: LLM: convert plot to CSV
+- fig_0049: LLM: convert plot to CSV
+- fig_0050: none
+- fig_0051: none
+- fig_0052: LLM: convert plot to CSV
+- fig_0053: LLM: convert plot to CSV
+- fig_0054: LLM: convert plot to CSV
+- fig_0055: LLM: convert plot to CSV
+- fig_0056: LLM: convert plot to CSV
+- fig_0057: LLM: convert plot to CSV
+- fig_0058: none
+- fig_0059: none
+- fig_0060: LLM: convert plot to CSV
+- fig_0061: LLM: convert plot to CSV
+- fig_0062: LLM: convert plot to CSV
+- fig_0063: LLM: convert plot to CSV
+- fig_0064: LLM: convert plot to CSV
+- fig_0065: none
+- fig_0066: none
+- fig_0067: none
+- fig_0068: LLM: convert plot to CSV
+- fig_0069: LLM: convert diagram to ASCII/Mermaid
+- fig_0070: LLM: convert plot to CSV
+- fig_0071: LLM: convert plot to CSV
+- fig_0072: LLM: convert plot to CSV
+- fig_0073: none
+- fig_0074: none
+- fig_0075: none
+- fig_0076: LLM: convert diagram to ASCII/Mermaid
+- fig_0077: none
+- fig_0078: LLM: convert diagram to ASCII/Mermaid
+- fig_0079: LLM: convert plot to CSV
+- fig_0080: none
+- fig_0081: LLM: convert plot to CSV
+- fig_0082: none
+- fig_0083: none
+- fig_0084: LLM: convert plot to CSV
+- fig_0085: LLM: convert plot to CSV
+- fig_0086: none
+- fig_0087: LLM: convert plot to CSV
+- fig_0088: LLM: convert plot to CSV
+- fig_0089: LLM: convert plot to CSV
+- fig_0090: none
+- fig_0091: none
+- fig_0092: LLM: convert plot to CSV
+- fig_0093: LLM: convert plot to CSV
+- fig_0094: LLM: convert plot to CSV
+- fig_0095: LLM: convert plot to CSV
+- fig_0096: LLM: convert plot to CSV
+- fig_0097: LLM: convert plot to CSV
+- fig_0098: none
+- fig_0099: none
+- fig_0100: none
+- fig_0101: LLM: convert plot to CSV
+- fig_0102: LLM: convert plot to CSV
+- fig_0103: LLM: convert plot to CSV
+- fig_0104: LLM: convert plot to CSV
+- fig_0105: LLM: convert plot to CSV
+- fig_0106: LLM: convert plot to CSV
+- fig_0107: none
+- fig_0108: LLM: convert plot to CSV
+- fig_0109: LLM: convert plot to CSV
+- fig_0110: LLM: convert plot to CSV
+- fig_0111: LLM: convert plot to CSV
+- fig_0112: LLM: convert plot to CSV
+- fig_0113: LLM: convert plot to CSV
+- fig_0114: none
+- fig_0115: none
+- fig_0116: LLM: convert plot to CSV
+- fig_0117: LLM: convert plot to CSV
+- fig_0118: LLM: convert plot to CSV
+- fig_0119: LLM: convert plot to CSV
+- fig_0120: LLM: convert plot to CSV
+- fig_0121: LLM: convert plot to CSV
+- fig_0122: none
+- fig_0123: none
+- fig_0124: LLM: convert plot to CSV
+- fig_0125: LLM: convert plot to CSV
+- fig_0126: LLM: convert plot to CSV
+- fig_0127: LLM: convert plot to CSV
+- fig_0128: LLM: convert plot to CSV
+- fig_0129: none
+- fig_0130: none
+- fig_0131: LLM: convert plot to CSV
+- fig_0132: LLM: convert plot to CSV
+- fig_0133: LLM: convert plot to CSV
+- fig_0134: LLM: convert plot to CSV
+- fig_0135: LLM: convert plot to CSV
+- fig_0136: LLM: convert plot to CSV
+- fig_0137: none
+- fig_0138: none
+- fig_0139: LLM: convert plot to CSV
+- fig_0140: LLM: convert plot to CSV
+- fig_0141: LLM: convert plot to CSV
+- fig_0142: LLM: convert plot to CSV
+- fig_0143: LLM: convert plot to CSV
+- fig_0144: LLM: convert plot to CSV
+- fig_0145: none
+- fig_0146: none
+- fig_0147: LLM: convert diagram to ASCII/Mermaid
+- fig_0148: LLM: convert plot to CSV
+- fig_0149: LLM: describe complex figure
+- fig_0150: LLM: convert plot to CSV
+- fig_0151: LLM: convert diagram to ASCII/Mermaid
+- fig_0152: none
+- fig_0153: none
+- fig_0154: LLM: convert diagram to ASCII/Mermaid
+- fig_0155: LLM: convert diagram to ASCII/Mermaid
+- fig_0156: none
+- fig_0157: LLM: convert diagram to ASCII/Mermaid
+- fig_0158: none
+- fig_0159: none
+- fig_0160: LLM: describe complex figure
+- fig_0161: none
+- fig_0162: none
+- fig_0163: none
+- fig_0164: none
+- fig_0165: none
+- fig_0166: none
+- fig_0167: none
+- fig_0168: none
+- fig_0169: none
+- fig_0170: none
+- fig_0171: none
+- fig_0172: none
+- fig_0173: none
+- fig_0174: none
+- fig_0175: none
+- fig_0176: none
+- fig_0177: none
+- fig_0178: none
+- fig_0179: none
+- fig_0180: none
+- fig_0181: LLM: describe complex figure
+- fig_0182: LLM: describe complex figure
+- fig_0183: none
+- fig_0184: none
+- fig_0185: LLM: describe complex figure
+- fig_0186: none
+- fig_0187: none
+- fig_0188: none
+- fig_0189: none
+- fig_0190: none
+- fig_0191: none
+- fig_0192: none
+- fig_0193: none
+- fig_0194: none
+- fig_0195: none
+- fig_0196: none
+- fig_0197: none
+- fig_0198: none
+- fig_0199: none
+- fig_0200: none
+- fig_0201: none
+- fig_0202: none
+- fig_0203: LLM: describe complex figure
+- fig_0204: none
+- fig_0205: LLM: convert diagram to ASCII/Mermaid
+- fig_0206: none
+- fig_0207: LLM: convert diagram to ASCII/Mermaid
+- fig_0208: none
+- fig_0209: LLM: convert diagram to ASCII/Mermaid
+- fig_0210: none
+- fig_0211: LLM: describe complex figure
+- fig_0212: none
+- fig_0213: none
+- fig_0214: none
+- fig_0215: none

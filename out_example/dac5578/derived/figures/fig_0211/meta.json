@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0211",
+    "page": 57,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0211.png",
+    "classification": {
+      "type": "pinout",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed technical drawing of a pin-sized electronic device, likely a component or part of a larger circuit board. The drawing is meticulously labeled with measurements and dimensions in millimeters (mm), providing a clear understanding of the device's size and layout. The device appears to be a small square-shaped component, possibly used for precision tasks or as an integral part of a larger system.",
+        "confidence": 0.3,
+        "notes": "local_llm (pinout)"
+      }
+    }
+  }
+}

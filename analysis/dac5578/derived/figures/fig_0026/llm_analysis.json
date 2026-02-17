@@ -1,0 +1,221 @@
+{
+  "classification": "plot",
+  "title": "INL vs Digital Input Code (DAC6578, 10-bit, -40C)",
+  "summary": "Integral nonlinearity for all eight channels of DAC6578 at -40C, external reference 5V.",
+  "structured_data": {
+    "x_axis": "Digital Input Code (0-1024)",
+    "y_axis": "Error (LSB), axis -0.5 to 0.5",
+    "series": [
+      {
+        "name": "DAC A",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          },
+          {
+            "x": 512,
+            "y": 0.0
+          },
+          {
+            "x": 768,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC B",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          },
+          {
+            "x": 512,
+            "y": 0.0
+          },
+          {
+            "x": 768,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC C",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          },
+          {
+            "x": 512,
+            "y": 0.0
+          },
+          {
+            "x": 768,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC D",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          },
+          {
+            "x": 512,
+            "y": 0.0
+          },
+          {
+            "x": 768,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC E",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          },
+          {
+            "x": 512,
+            "y": 0.0
+          },
+          {
+            "x": 768,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC F",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          },
+          {
+            "x": 512,
+            "y": 0.0
+          },
+          {
+            "x": 768,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC G",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          },
+          {
+            "x": 512,
+            "y": 0.0
+          },
+          {
+            "x": 768,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC H",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          },
+          {
+            "x": 512,
+            "y": 0.0
+          },
+          {
+            "x": 768,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          }
+        ]
+      }
+    ],
+    "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.04,0.04\\n512,-0.04,0.04\\n1024,-0.04,0.04"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V",
+    "approx_channel_envelope_lsb": "[-0.04, 0.04]",
+    "note": "legend uses DAC A..DAC H"
+  },
+  "confidence": 0.78
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "photo",
+  "title": "DAC7578 Breakout Front-Angle Product Photo",
+  "summary": "A front-angle product photo of an Adafruit DAC7578 breakout board on a gray background. The board silkscreen and pin labels are visible, including I2C and power/control pins.",
+  "structured_data": {
+    "description": "Black PCB with two JST-SH STEMMA QT connectors, DAC IC at center, and through-hole pads around edges. Top row labels: VRF, 0, 1, 2, 3, 4, 5, 6, 7, GND. Bottom row labels: VCC, SCL, SDA, LDAC, CLR, and GND marking near center. Silkscreen text includes 'DAC7578' and '8x12bit I2C DAC'."
+  },
+  "component_references": ["DAC7578", "STEMMA QT", "Adafruit"],
+  "key_values": {},
+  "confidence": 0.95
+}

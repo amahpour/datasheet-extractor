@@ -1,0 +1,16 @@
+{
+  "classification": "mechanical",
+  "title": "QFN-24 Solder Paste Stencil Example",
+  "summary": "Recommended solder paste aperture pattern for exposed-pad QFN package.",
+  "structured_data": {
+    "description": "Annotated as solder paste example based on 0.125 mm thick stencil with 78% printed coverage by area; includes aperture geometry and reference dimensions."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "stencil_thickness_mm": "0.125",
+    "coverage": "78%"
+  },
+  "confidence": 0.95
+}

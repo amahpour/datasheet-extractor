@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0131",
+    "page": 23,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 89.",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0131.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph that displays the relationship between voltage and current in a DC circuit, specifically focusing on the source current at a positive rail. The x-axis of the graph represents the voltage, while the y-axis represents the current. The graph shows a downward slope from left to right, indicating an increase in current as the voltage increases. The source current is represented by a blue line that starts at 2.5V and ends at 2.75V on the x-axis.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

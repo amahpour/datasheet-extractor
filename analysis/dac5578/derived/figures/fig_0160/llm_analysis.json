@@ -1,0 +1,26 @@
+{
+  "classification": "schematic",
+  "title": "Resistor-String DAC Segment Concept",
+  "summary": "Conceptual schematic of a resistor-string ladder from VREF to ground with tap-select switches feeding an output amplifier input noted as 2x gain.",
+  "structured_data": {
+    "components": [
+      {"ref": "RDIVIDER", "type": "resistor", "value": "top divider resistor"},
+      {"ref": "R", "type": "resistor", "value": "repeated string elements"},
+      {"ref": "SWx", "type": "analog switch", "value": "tap selection switches"},
+      {"ref": "AMP", "type": "output amplifier", "value": "2x gain"}
+    ],
+    "nets": [
+      "VREF",
+      "VREF/2",
+      "tap nodes",
+      "selected tap bus",
+      "GND"
+    ],
+    "description": "A resistor-string DAC topology where one of many ladder tap voltages is selected through switches and routed to an output amplifier."
+  },
+  "component_references": ["DACx578"],
+  "key_values": {
+    "output_amplifier_gain": "2x"
+  },
+  "confidence": 0.93
+}

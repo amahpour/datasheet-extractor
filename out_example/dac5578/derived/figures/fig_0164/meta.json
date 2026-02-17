@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0164",
+    "page": 28,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 114. Acknowledge and Not Acknowledge Signals on the I 2 C Bus",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0164.png",
+    "classification": {
+      "type": "icon",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed diagram of a digital circuit, specifically focusing on the input and output components. The circuit is divided into three distinct sections, each representing a different component or function within the system. The diagram includes labels for the inputs and outputs, as well as arrows indicating the direction of data flow between these components.",
+        "confidence": 0.7,
+        "notes": "local_llm (icon)"
+      }
+    }
+  }
+}

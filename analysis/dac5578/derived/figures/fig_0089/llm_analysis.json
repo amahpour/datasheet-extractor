@@ -1,0 +1,20 @@
+{
+  "classification": "plot",
+  "title": "Power Supply Current vs Digital Input Code (3.6V/3.3V)",
+  "summary": "Power current versus digital code with rapid low-code rise and upper plateau near 1.24 mA.",
+  "structured_data": {
+    "x_axis": "Digital Input Code (0-4096)",
+    "y_axis": "Power Supply Current (mA), axis 0.0 to 1.30",
+    "series": [],
+    "csv": "digital_input_code,current_ma\\n0,0.68\\n64,1.07\\n256,1.15\\n512,1.18\\n1024,1.20\\n2048,1.23\\n3072,1.24\\n4096,1.23"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "avdd": "3.6V",
+    "external_reference": "3.3V",
+    "condition": "code loaded to all eight DAC channels"
+  },
+  "confidence": 0.92
+}

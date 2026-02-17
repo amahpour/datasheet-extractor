@@ -1,0 +1,221 @@
+{
+  "classification": "plot",
+  "title": "INL vs Digital Input Code (DAC5578, 8-bit, +125C)",
+  "summary": "Integral nonlinearity for all DAC5578 channels at +125C.",
+  "structured_data": {
+    "x_axis": "Digital Input Code (0-256)",
+    "y_axis": "Error (LSB), axis -0.25 to 0.25",
+    "series": [
+      {
+        "name": "DAC A",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 64,
+            "y": 0.0
+          },
+          {
+            "x": 128,
+            "y": 0.0
+          },
+          {
+            "x": 192,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC B",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 64,
+            "y": 0.0
+          },
+          {
+            "x": 128,
+            "y": 0.0
+          },
+          {
+            "x": 192,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC C",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 64,
+            "y": 0.0
+          },
+          {
+            "x": 128,
+            "y": 0.0
+          },
+          {
+            "x": 192,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC D",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 64,
+            "y": 0.0
+          },
+          {
+            "x": 128,
+            "y": 0.0
+          },
+          {
+            "x": 192,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC E",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 64,
+            "y": 0.0
+          },
+          {
+            "x": 128,
+            "y": 0.0
+          },
+          {
+            "x": 192,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC F",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 64,
+            "y": 0.0
+          },
+          {
+            "x": 128,
+            "y": 0.0
+          },
+          {
+            "x": 192,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC G",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 64,
+            "y": 0.0
+          },
+          {
+            "x": 128,
+            "y": 0.0
+          },
+          {
+            "x": 192,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "DAC H",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 64,
+            "y": 0.0
+          },
+          {
+            "x": 128,
+            "y": 0.0
+          },
+          {
+            "x": 192,
+            "y": 0.0
+          },
+          {
+            "x": 256,
+            "y": 0.0
+          }
+        ]
+      }
+    ],
+    "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.01,0.01\\n128,-0.01,0.01\\n256,-0.01,0.01"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V",
+    "approx_channel_envelope_lsb": "[-0.01, 0.01]",
+    "note": "all channels shown"
+  },
+  "confidence": 0.78
+}

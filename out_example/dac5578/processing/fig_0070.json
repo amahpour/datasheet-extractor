@@ -1,0 +1,32 @@
+{
+  "figure_id": "fig_0070",
+  "image_path": "out/dac5578/figures/fig_0070.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with two lines on it, each representing the power-on glidech screen of a device. The first line is labeled \"Power-On Glitch\" and shows that the device has been powered on for 2 seconds at a voltage of 2V. The second line is labeled \"Reset-to-Middle Scale\" and displays the same information as the first line, indicating that the device was powered on for 2 seconds at a voltage of 2V.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Oscilloscope Falling Edge (Code C00h to 400h)",
+    "summary": "Scope capture of DAC output falling edge and zoomed residual after a code step from C00h to 400h.",
+    "structured_data": {
+      "description": "Annotations show falling edge at 2 V/div, zoomed falling edge at 100 uV/div, trigger pulse at 5 V/div, and timebase 5 us/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "step_codes": "C00h to 400h",
+      "time_scale": "5 us/div"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:35:42.494912+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

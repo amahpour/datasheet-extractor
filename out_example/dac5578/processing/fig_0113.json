@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0113",
+  "image_path": "out/dac5578/figures/fig_0113.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays the relationship between digital input code (DAC) and the corresponding differential linearity error (DLER). The graph shows that as the DAC increases, so does the DLER. This suggests a positive correlation between the two variables.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "INL Error vs Temperature (DAC7578, 12-bit, 2.5V ref)",
+    "summary": "INL max and min trends versus temperature for DAC7578 12-bit.",
+    "structured_data": {
+      "x_axis": "Temperature (C), -40 to 125",
+      "y_axis": "INL Error (LSB), axis -1.0 to +1.0",
+      "series": [],
+      "csv": "temperature_c,inl_min_lsb,inl_max_lsb\\n-40,-0.30,0.35\\n25,-0.23,0.35\\n65,-0.18,0.35\\n95,-0.16,0.33\\n125,-0.18,0.28"
+    },
+    "component_references": [
+      "DAC7578"
+    ],
+    "key_values": {
+      "external_reference": "2.5V"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:38:09.837930+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "Source Current at Positive Rail (Channel C, FFFh)",
+  "summary": "Output voltage at channel C while sourcing current near positive rail; voltage droops slightly as source current increases.",
+  "structured_data": {
+    "x_axis": "Source Current (mA), 0 to 10",
+    "y_axis": "Output Voltage (V), axis 4.8 to 5.0",
+    "series": [],
+    "csv": "source_current_ma,output_voltage_v\\n0,5.00\\n2,4.99\\n4,4.98\\n6,4.975\\n8,4.968\\n10,4.96"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "channel": "C",
+    "code": "FFFh"
+  },
+  "confidence": 0.94
+}

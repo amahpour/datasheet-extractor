@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0150",
+  "image_path": "out/dac5578/figures/fig_0150.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram of an electronic device, with the x-axis labeled \"Time\" and the y-axis labeled \"Voltage (Volts)\". The device is shown in two stages - it is initially at rest, as indicated by the absence of any data points on the graph.\n\nThe first stage of the device's operation is marked by a single data point at the origin, representing 0 V. As time progresses and the device operates, more data points are added to the graph, indicating an increase in voltage or current over time. The final stage of the device's operation is shown with multiple data points scattered across the graph, signifying that the device has reached its maximum capacity for power consumption.\n\nThe diagram also includes text that provides information about the device and its operation, such as \"External Reference = 2.5 VAC\", which indicates the reference voltage being used by the device.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Power-On Glitch (Zero-Scale, ~1.8 mVpp, 2.5V ref)",
+    "summary": "Scope capture of startup glitch at zero-scale while AVDD ramps.",
+    "structured_data": {
+      "description": "Annotation shows approximately 1.8 mVpp glitch. Traces: VOUT 2 mV/div, AVDD 2 V/div, time 10 ms/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "glitch": "~1.8 mVpp",
+      "external_reference": "2.5V",
+      "time_scale": "10 ms/div"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:40:14.510645+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

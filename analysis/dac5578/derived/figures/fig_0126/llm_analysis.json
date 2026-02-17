@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "Offset Error vs Temperature (2.5V ref)",
+  "summary": "Offset error in mV versus temperature for channels A-H with gradual positive drift.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "Offset Error (mV), axis -4 to +4",
+    "series": [],
+    "csv": "temperature_c,ch_a,ch_b,ch_c,ch_d,ch_e,ch_f,ch_g,ch_h\\n-40,0.6,1.0,0.2,0.4,0.9,0.8,0.5,0.4\\n25,0.7,1.0,0.3,0.5,0.9,0.8,0.6,0.5\\n125,0.9,1.1,0.4,0.6,1.0,0.9,0.8,0.7"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.82
+}

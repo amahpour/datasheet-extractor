@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "Full-Scale Error vs Temperature",
+  "summary": "Full-scale error (%FSR) versus temperature for channels A-H; traces are near small positive offsets.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "Full-Scale Error (%FSR), axis -0.20 to +0.20",
+    "series": [],
+    "csv": "temperature_c,ch_a,ch_b,ch_c,ch_d,ch_e,ch_f,ch_g,ch_h\\n-40,0.008,0.015,0.004,0.006,0.012,0.010,0.014,0.011\\n25,0.007,0.014,0.004,0.006,0.011,0.009,0.013,0.010\\n125,0.010,0.016,0.006,0.008,0.013,0.011,0.015,0.012"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V"
+  },
+  "confidence": 0.8
+}

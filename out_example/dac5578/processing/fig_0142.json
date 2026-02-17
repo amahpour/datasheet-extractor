@@ -1,0 +1,32 @@
+{
+  "figure_id": "fig_0142",
+  "image_path": "out/dac5578/figures/fig_0142.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the power supply current of a device over time, with the x-axis representing time and the y-axis representing the current in amperes (A). The graph shows a series of blue bars, each corresponding to a specific time period, indicating the change in current over time. The graph is labeled \"Power Supply Current Histogram\" at the top, and it also includes a legend that explains what each bar represents.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Rising Edge Capture (Code 000h to FFFh, 2.5V ref)",
+    "summary": "Oscilloscope screenshot of full-scale rising edge with zoomed residual.",
+    "structured_data": {
+      "description": "Annotations show rising edge 2 V/div, zoomed rising edge 100 uV/div, trigger pulse 5 V/div, transition 000h to FFFh."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "step_codes": "000h to FFFh",
+      "time_scale": "5 us/div"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:39:48.944377+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

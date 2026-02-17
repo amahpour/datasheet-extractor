@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0078",
+  "image_path": "out/dac5578/figures/fig_0078.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram of an electronic device, with the x-axis labeled \"Time (s)\" and the y-axis labeled \"Voltage (V)\". The device is shown as a clock that feeds data through it at a rate of 5 mV/s. A trigger pulse is also present in the image, located on the left side of the device.",
+  "local_llm_classification": "timing_diagram",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "LDAC Clock Feedthrough (Code 80h to 81h)",
+    "summary": "Scope capture of small code step with visible LDAC-induced feedthrough impulse.",
+    "structured_data": {
+      "description": "VOUT scale 5 mV/div, LDAC trigger pulse 5 V/div, timebase 2 us/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DAC5578"
+    ],
+    "key_values": {
+      "step_codes": "80h to 81h",
+      "vout_scale": "5 mV/div",
+      "time_scale": "2 us/div"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:36:08.897449+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

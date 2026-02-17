@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0200",
+    "page": 52,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "B - Alignment groove width",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0200.png",
+    "classification": {
+      "type": "mechanical",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed diagram of a tube with measurements and specifications for its dimensions, including the length (L), diameter (d), and width (w). The diagram is color-coded to indicate different types of tubes or materials used in their construction.",
+        "confidence": 0.7,
+        "notes": "local_llm (mechanical)"
+      }
+    }
+  }
+}

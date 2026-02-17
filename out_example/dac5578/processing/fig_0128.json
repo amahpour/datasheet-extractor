@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0128",
+  "image_path": "out/dac5578/figures/fig_0128.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with temperature values on the y-axis and time intervals on the x-axis, indicating that it is a temperature vs. time graph. The graph shows a range of temperatures over time, with the highest point being at 0 degrees Celsius (32 degrees Fahrenheit) and the lowest point being at 100 degrees Celsius (212 degrees Fahrenheit). The graph also includes labels for each temperature value and a legend to identify the different temperature intervals.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Full-Scale Error vs Temperature (2.5V ref)",
+    "summary": "Full-scale error for channels A-H vs temperature, all traces near small positive offsets.",
+    "structured_data": {
+      "x_axis": "Temperature (C), -40 to 125",
+      "y_axis": "Full-Scale Error (%FSR), axis -0.20 to +0.20",
+      "series": [],
+      "csv": "temperature_c,ch_a,ch_b,ch_c,ch_d,ch_e,ch_f,ch_g,ch_h\\n-40,0.015,0.035,0.003,0.006,0.040,0.030,0.022,0.018\\n25,0.018,0.034,0.005,0.008,0.036,0.028,0.023,0.020\\n125,0.024,0.031,0.010,0.012,0.032,0.025,0.028,0.024"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "2.5V"
+    },
+    "confidence": 0.83
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:39:01.850078+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "classification": "photo",
+  "title": "DAC7578 Breakout Back Side with Size Reference",
+  "summary": "Back-side product photo of the DAC7578 board next to a US quarter for scale. Rear silkscreen text includes default and broadcast I2C addresses and operating voltage.",
+  "structured_data": {
+    "description": "Rear of board shows pin holes and silkscreen labels including 'DAC7578', 'I2C Octal 12bit DAC', 'Default I2C Addr 0x4C', 'Broadcast Address 0x47', and 'VLogic/Vcc: 3-5VDC'. A US quarter coin is placed to the right for size comparison."
+  },
+  "component_references": ["DAC7578", "STEMMA QT"],
+  "key_values": {
+    "default_i2c_address": "0x4C",
+    "broadcast_i2c_address": "0x47",
+    "logic_supply": "3-5VDC"
+  },
+  "confidence": 0.98
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0113",
+    "page": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 77.",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0113.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays the relationship between digital input code (DAC) and the corresponding differential linearity error (DLER). The graph shows that as the DAC increases, so does the DLER. This suggests a positive correlation between the two variables.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

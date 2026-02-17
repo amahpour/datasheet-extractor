@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0087",
+  "image_path": "out/dac5578/figures/fig_0087.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with two lines, one representing the external reference and the other indicating the current temperature of a power supply. The x-axis displays the units \"External Reference\" in mV, while the y-axis shows the units \"Temperature (°C)\" for both reference and current values.\n\nThe graph illustrates that the external reference is 3.3V, as indicated by the line on the left side of the image. On the right side, there are two lines representing the temperature at different times: one line represents a time period from 0 to 5 minutes (0-5 m), and another line shows temperatures ranging from 0 to 65 degrees Celsius (0°C) over this same time frame. The graph is color-coded with blue for reference and green for current values, making it easy to differentiate between the two lines.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "DAC Output Noise (0.1Hz to 10Hz)",
+    "summary": "Time-domain low-frequency output noise capture, annotated approximately 3 uVpp.",
+    "structured_data": {
+      "description": "Oscilloscope/graticule style image with VOUT channel at 1 uV/div and time scale 2 s/div over 0.1 Hz to 10 Hz band."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "band": "0.1 Hz to 10 Hz",
+      "amplitude": "~3 uVpp",
+      "vout_scale": "1 uV/div",
+      "time_scale": "2 s/div"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:36:38.983372+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0002",
+    "page": 1,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0002.png",
+    "classification": {
+      "type": "block_diagram",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image shows a black and gold electronic device, likely a small circuit board or microcontroller, resting on a gray surface. The device is composed of various components, including two white wires extending outwards from the center, with one wire attached to a yellow connector at the top left corner and another wire connected to a green connector at the bottom right corner.\n\nThe device appears to be a small electronic gadget or circuit board designed for use in electronics projects. The black background of the image contrasts with the gold accents on the components, making it easy to identify the different parts of the device.",
+        "confidence": 0.3,
+        "notes": "local_llm (block_diagram)"
+      }
+    }
+  }
+}

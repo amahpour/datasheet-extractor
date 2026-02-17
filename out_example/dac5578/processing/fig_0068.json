@@ -1,0 +1,32 @@
+{
+  "figure_id": "fig_0068",
+  "image_path": "out/dac5578/figures/fig_0068.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white line graph that displays the rise and fall of a signal over time, with the x-axis representing time in hours and the y-axis indicating the signal's value. The graph shows a significant drop in the signal at the beginning and end points, suggesting a change or transition in the electronic device being measured.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Oscilloscope Rising Edge (Code 400h to C00h)",
+    "summary": "Oscilloscope screenshot of a smaller code-step transition with zoomed edge residual.",
+    "structured_data": {
+      "description": "On-image labels indicate transition from code 400h to C00h, trigger pulse 5 V/div, rising edge 2 V/div, and zoomed edge 100 uV/div. Time base shown as 5 us/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "time_scale": "5 us/div",
+      "step_codes": "400h to C00h"
+    },
+    "confidence": 0.89
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:35:34.937939+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

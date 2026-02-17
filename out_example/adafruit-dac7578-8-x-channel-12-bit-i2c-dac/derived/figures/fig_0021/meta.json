@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0021",
+    "page": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0021.png",
+    "classification": {
+      "type": "pinout",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed electronic circuit diagram, specifically for the ADCfruit product. The diagram is color-coded and includes various components such as resistors, capacitors, and transistors. The diagram also provides information about the ADCfruit product's specifications, including its power supply, resistance values, and the number of input pins it supports.\n\nThe diagram is neatly organized into different sections, each representing a specific component or part of the circuit. The layout includes labels for the resistors, capacitors, and transistors, as well as the ADCfruit product's name and specifications.",
+        "confidence": 0.3,
+        "notes": "local_llm (pinout)"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0057",
+    "page": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0057.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with two lines, one representing the DC current and the other representing the AC voltage. The DC current line is at 0V, while the AC voltage line is at 10V. The graph also includes text that reads \"Channel H DAC Loaded With 00h\" and \"Sink Current (ma)\", which are likely to be related to the electrical components of a circuit or device being measured.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

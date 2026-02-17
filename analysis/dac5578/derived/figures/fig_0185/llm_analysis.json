@@ -1,0 +1,21 @@
+{
+  "classification": "wiring_diagram",
+  "title": "Multiple DACx578 Devices on Shared I2C Bus",
+  "summary": "Bus wiring example with one microcontroller and three DACx578 devices sharing SDA/SCL lines with pull-up resistors.",
+  "structured_data": {
+    "connections": [
+      {"from": "MCU.SCL", "to": "DACx578(1).SCL", "wire_color": "not shown"},
+      {"from": "MCU.SCL", "to": "DACx578(2).SCL", "wire_color": "not shown"},
+      {"from": "MCU.SCL", "to": "DACx578(3).SCL", "wire_color": "not shown"},
+      {"from": "MCU.SDA", "to": "DACx578(1).SDA", "wire_color": "not shown"},
+      {"from": "MCU.SDA", "to": "DACx578(2).SDA", "wire_color": "not shown"},
+      {"from": "MCU.SDA", "to": "DACx578(3).SDA", "wire_color": "not shown"},
+      {"from": "VDD", "to": "SCL/SDA pull-ups", "wire_color": "not shown"}
+    ]
+  },
+  "component_references": ["DACx578", "microcontroller"],
+  "key_values": {
+    "pull_up_resistor_range": "1k to 10k (typ)"
+  },
+  "confidence": 0.94
+}

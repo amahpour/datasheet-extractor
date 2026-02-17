@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "DAC Output Noise vs Frequency",
+  "summary": "Voltage noise spectral trend versus frequency for zero-scale, mid-scale, and full-scale outputs with DAC output unloaded.",
+  "structured_data": {
+    "x_axis": "Frequency (Hz), log scale ~20 to 100k",
+    "y_axis": "Voltage Noise (nV/sqrtHz), axis 0 to 300",
+    "series": [],
+    "csv": "frequency_hz,full_scale_nv_per_sqrt_hz,mid_scale_nv_per_sqrt_hz,zero_scale_nv_per_sqrt_hz\\n20,250,180,130\\n50,140,110,55\\n100,125,110,40\\n1000,110,105,15\\n10000,105,95,12\\n100000,98,108,10"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V",
+    "load": "DAC output unloaded"
+  },
+  "confidence": 0.88
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "Power Supply Current vs Temperature",
+  "summary": "Power supply current increases approximately linearly with temperature for external reference 5V.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "Power Supply Current (mA), axis 0.8 to 1.4",
+    "series": [],
+    "csv": "temperature_c,current_ma\\n-40,0.92\\n-25,0.95\\n0,0.99\\n25,1.01\\n50,1.04\\n75,1.08\\n100,1.11\\n125,1.15"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V"
+  },
+  "confidence": 0.9
+}

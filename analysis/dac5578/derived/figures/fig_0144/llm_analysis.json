@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Falling Edge Capture (Code C00h to 400h, 2.5V ref)",
+  "summary": "Oscilloscope screenshot of mid-code falling edge with zoomed residual.",
+  "structured_data": {
+    "description": "Labeled falling edge 2 V/div, zoomed falling edge 100 uV/div, trigger pulse 5 V/div, time 5 us/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "step_codes": "C00h to 400h",
+    "time_scale": "5 us/div"
+  },
+  "confidence": 0.9
+}

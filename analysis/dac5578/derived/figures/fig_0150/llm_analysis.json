@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Power-On Glitch (Zero-Scale, ~1.8 mVpp, 2.5V ref)",
+  "summary": "Scope capture of startup glitch at zero-scale while AVDD ramps.",
+  "structured_data": {
+    "description": "Annotation shows approximately 1.8 mVpp glitch. Traces: VOUT 2 mV/div, AVDD 2 V/div, time 10 ms/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "glitch": "~1.8 mVpp",
+    "external_reference": "2.5V",
+    "time_scale": "10 ms/div"
+  },
+  "confidence": 0.9
+}

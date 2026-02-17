@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "INL vs Digital Input Code (DAC6578, 10-bit, +25C, 2.5V ref)",
+  "summary": "INL for DAC6578 channels at +25C with external reference 2.5V.",
+  "structured_data": {
+    "x_axis": "Digital Input Code (0-1024)",
+    "y_axis": "INL Error (LSB), axis -0.5 to +0.5",
+    "series": [],
+    "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.05,0.05\\n512,-0.05,0.06\\n1024,-0.05,0.05"
+  },
+  "component_references": [
+    "DAC6578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V",
+    "temperature": "+25C"
+  },
+  "confidence": 0.85
+}

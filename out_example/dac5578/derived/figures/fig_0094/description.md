@@ -1,0 +1,3 @@
+# fig_0094
+
+The image presents a graph that displays the relationship between digital input code (DAC) and channel numbers, with channels numbered CH-A, CH-B, CH-C, and CH-E shown on the x and y axes respectively. The graph shows that all eight channels shown are external reference channels, with values ranging from 0 to 12 bits. The x-axis of the graph is labeled "Digital input code (DAC)", while the y-axis is labeled "Channel numbers". The graph also includes a legend indicating the channel numbers on the y-axis and an error message at the top that reads "Linearity error vs digital input code DAC77, 12 bit + 125".

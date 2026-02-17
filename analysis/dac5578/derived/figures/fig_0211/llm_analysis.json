@@ -1,0 +1,16 @@
+{
+  "classification": "mechanical",
+  "title": "16-Pin Package Mechanical Drawing",
+  "summary": "Mechanical dimension drawing for a 16-pin gull-wing package with top/side views and lead detail.",
+  "structured_data": {
+    "description": "Contains package body dimensions (6.2 to 6.6 typ length, 4.9 to 5.1 width), lead pitch details, seating plane references, and detail A lead-form geometry. Drawing revision/date visible: 4220204/B, 12/2023."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "pin_count": "16",
+    "drawing_rev": "4220204/B"
+  },
+  "confidence": 0.95
+}

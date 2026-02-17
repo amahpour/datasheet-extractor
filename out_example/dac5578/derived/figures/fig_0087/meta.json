@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0087",
+    "page": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0087.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with two lines, one representing the external reference and the other indicating the current temperature of a power supply. The x-axis displays the units \"External Reference\" in mV, while the y-axis shows the units \"Temperature (°C)\" for both reference and current values.\n\nThe graph illustrates that the external reference is 3.3V, as indicated by the line on the left side of the image. On the right side, there are two lines representing the temperature at different times: one line represents a time period from 0 to 5 minutes (0-5 m), and another line shows temperatures ranging from 0 to 65 degrees Celsius (0°C) over this same time frame. The graph is color-coded with blue for reference and green for current values, making it easy to differentiate between the two lines.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

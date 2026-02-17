@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0181",
+    "page": 41,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 118. Bipolar Output Range Using External Reference at 5V",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0181.png",
+    "classification": {
+      "type": "schematic",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a black and white circuit diagram that illustrates the components of a digital audio processing system, including a DAC (Digital Audio Coder) and an amplifier. The DAC is connected to the amplifier via wires, with the DAC's output terminals labeled \"DAC578\" and \"OPA303\". The amplifier has two input terminals: one for the DAC and another for the OPA303. The circuit diagram also includes a series of resistors that are part of the audio processing system.",
+        "confidence": 0.3,
+        "notes": "local_llm (schematic)"
+      }
+    }
+  }
+}

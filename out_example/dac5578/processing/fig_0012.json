@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0012",
+  "image_path": "out/dac5578/figures/fig_0012.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed diagram of a circuit board, specifically focusing on the DACX5828 chip. The DACX5828 is a type of digital amplifier used in various electronic devices for signal processing and control functions. The diagram shows the ADC (Adc) and DAC (Dac) chips connected to each other, along with their respective inputs and outputs. The ADC chip has an input of 1V and an output of 2V, while the DAC chip also has an input of 1V and an output of 2V. The DACX5828 chip is shown in black, making it easy to identify its components within the circuit board.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "mechanical",
+    "title": "RGE QFN-24 (Top View) Package and Pin Labels",
+    "summary": "Top-view package drawing labeled 'RGE PACKAGE (QFN-24)' for DACx578, showing pin numbers, signal names, and a central thermal pad.",
+    "structured_data": {
+      "description": "QFN-24 pin map with corner marker and labeled pins including AVDD, GND, SDA, SCL, LDAC, TWOC, RSTSEL, ADDR0, ADDR1, CLR, VREFIN, and VOUTA/VOUTB/VOUTC/VOUTD/VOUTE/VOUTF/VOUTG/VOUTH. Several pins are marked NC. A dashed central area is labeled Thermal pad."
+    },
+    "component_references": [
+      "DACx578",
+      "RGE",
+      "QFN-24"
+    ],
+    "key_values": {
+      "package": "QFN-24",
+      "thermal_pad": "present"
+    },
+    "confidence": 0.96
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:32:24.417304+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

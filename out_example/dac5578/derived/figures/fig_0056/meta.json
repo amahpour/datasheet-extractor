@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0056",
+    "page": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0056.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with two lines, one representing the DC current and the other representing the AC voltage. The DC current line is blue, while the AC voltage line is black. Both lines are connected to a single point on the graph, which indicates that they are measuring the same quantity of electricity. (0.6)",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

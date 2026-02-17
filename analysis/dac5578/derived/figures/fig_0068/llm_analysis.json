@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Oscilloscope Rising Edge (Code 400h to C00h)",
+  "summary": "Oscilloscope screenshot of a smaller code-step transition with zoomed edge residual.",
+  "structured_data": {
+    "description": "On-image labels indicate transition from code 400h to C00h, trigger pulse 5 V/div, rising edge 2 V/div, and zoomed edge 100 uV/div. Time base shown as 5 us/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "time_scale": "5 us/div",
+    "step_codes": "400h to C00h"
+  },
+  "confidence": 0.89
+}

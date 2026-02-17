@@ -1,0 +1,3 @@
+# fig_0060
+
+The image presents a graph that displays the relationship between power supply current and digital input code for an electronic device, likely a computer or a similar appliance. The x-axis of the graph represents the power supply current in milliampere-hours (mA), while the y-axis represents the digital input code in bits per second (bps). The graph shows that as the power supply current increases, so does the digital input code. This suggests that a higher power supply current can be used to achieve a desired level of digital functionality or performance for the electronic device.

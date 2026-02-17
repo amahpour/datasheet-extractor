@@ -1,0 +1,3 @@
+# fig_0021
+
+The image presents a graph with the x-axis labeled "Digital input code" and the y-axis labeled "Differential linearity error". The graph displays the relationship between digital input code (DAC) and the corresponding differential linearity error, represented by a purple line on the graph. The x-axis shows four channels of DAC values: 0.0, 0.25, 0.45, and 0.75, while the y-axis shows the corresponding errors in linearity for each channel. The graph is labeled with text that reads "All eight channels shown External reference = 5V", indicating a relationship between DAC and external reference value of 5V.

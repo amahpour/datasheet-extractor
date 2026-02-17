@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Oscilloscope Rising Edge (Code 000h to FFFh)",
+  "summary": "Oscilloscope screenshot showing a DAC output step edge, with zoomed residual/noise trace after the rising transition.",
+  "structured_data": {
+    "description": "Annotated graticule shows Trigger Pulse at 5 V/div, Rising Edge at 2 V/div, and zoomed rising edge at 100 uV/div. Horizontal scale text indicates Time (5 us/div)."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "time_scale": "5 us/div",
+    "trigger_pulse_scale": "5 V/div",
+    "zoom_scale": "100 uV/div"
+  },
+  "confidence": 0.89
+}

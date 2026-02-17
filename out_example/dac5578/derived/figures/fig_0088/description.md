@@ -1,0 +1,5 @@
+# fig_0088
+
+The image presents a graph that displays the relationship between power supply current and digital input code for an electronic device, likely a computer or a similar gadget. The x-axis of the graph represents the power supply current in milliampere-hours (mW), while the y-axis shows the corresponding digital input code in bits per second (bps). The graph is colored red to indicate the change in the two variables over time, with a line connecting the data points.
+
+The graph also includes text that provides information about the relationship between power supply current and digital input code for an electronic device. It states that the power supply current is directly proportional to the digital input code, which means that as the power supply current increases, so does the digital input code. The text further explains that the external reference is used to load the code onto all eight channels of a DAC (Digital Amplification Circuit), and it also mentions that the figure 58 represents the digital input code for an electronic device.

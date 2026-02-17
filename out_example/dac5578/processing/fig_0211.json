@@ -1,0 +1,31 @@
+{
+  "figure_id": "fig_0211",
+  "image_path": "out/dac5578/figures/fig_0211.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed technical drawing of a pin-sized electronic device, likely a component or part of a larger circuit board. The drawing is meticulously labeled with measurements and dimensions in millimeters (mm), providing a clear understanding of the device's size and layout. The device appears to be a small square-shaped component, possibly used for precision tasks or as an integral part of a larger system.",
+  "local_llm_classification": "pinout",
+  "external_llm_result": {
+    "classification": "mechanical",
+    "title": "16-Pin Package Mechanical Drawing",
+    "summary": "Mechanical dimension drawing for a 16-pin gull-wing package with top/side views and lead detail.",
+    "structured_data": {
+      "description": "Contains package body dimensions (6.2 to 6.6 typ length, 4.9 to 5.1 width), lead pitch details, seating plane references, and detail A lead-form geometry. Drawing revision/date visible: 4220204/B, 12/2023."
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "pin_count": "16",
+      "drawing_rev": "4220204/B"
+    },
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:43:27.893570+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

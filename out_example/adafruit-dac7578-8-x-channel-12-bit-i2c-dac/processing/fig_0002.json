@@ -1,0 +1,30 @@
+{
+  "figure_id": "fig_0002",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0002.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image shows a black and gold electronic device, likely a small circuit board or microcontroller, resting on a gray surface. The device is composed of various components, including two white wires extending outwards from the center, with one wire attached to a yellow connector at the top left corner and another wire connected to a green connector at the bottom right corner.\n\nThe device appears to be a small electronic gadget or circuit board designed for use in electronics projects. The black background of the image contrasts with the gold accents on the components, making it easy to identify the different parts of the device.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "photo",
+    "title": "DAC7578 Breakout Front-Angle Product Photo",
+    "summary": "A front-angle product photo of an Adafruit DAC7578 breakout board on a gray background. The board silkscreen and pin labels are visible, including I2C and power/control pins.",
+    "structured_data": {
+      "description": "Black PCB with two JST-SH STEMMA QT connectors, DAC IC at center, and through-hole pads around edges. Top row labels: VRF, 0, 1, 2, 3, 4, 5, 6, 7, GND. Bottom row labels: VCC, SCL, SDA, LDAC, CLR, and GND marking near center. Silkscreen text includes 'DAC7578' and '8x12bit I2C DAC'."
+    },
+    "component_references": [
+      "DAC7578",
+      "STEMMA QT",
+      "Adafruit"
+    ],
+    "key_values": {},
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:29:33.203125+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:47:29Z"
+  }
+}

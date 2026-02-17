@@ -1,0 +1,35 @@
+{
+  "figure_id": "fig_0089",
+  "image_path": "out/dac5578/figures/fig_0089.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a line graph that displays the supply current of a particular electronic component over time, with each point on the graph representing a specific moment in time. The x-axis of the graph is labeled \"Time\" and the y-axis is labeled \"Supply Current (mA)\". The graph shows a gradual increase in supply current from left to right, indicating that the component's performance has improved over time.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Power Supply Current vs Digital Input Code (3.6V/3.3V)",
+    "summary": "Power current versus digital code with rapid low-code rise and upper plateau near 1.24 mA.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-4096)",
+      "y_axis": "Power Supply Current (mA), axis 0.0 to 1.30",
+      "series": [],
+      "csv": "digital_input_code,current_ma\\n0,0.68\\n64,1.07\\n256,1.15\\n512,1.18\\n1024,1.20\\n2048,1.23\\n3072,1.24\\n4096,1.23"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "avdd": "3.6V",
+      "external_reference": "3.3V",
+      "condition": "code loaded to all eight DAC channels"
+    },
+    "confidence": 0.92
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:36:46.468228+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

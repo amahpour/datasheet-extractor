@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "Gain Error vs Temperature",
+  "summary": "Gain error (%FSR) for channels A-H versus temperature with slight negative drift.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "Gain Error (%FSR), axis -0.15 to +0.15",
+    "series": [],
+    "csv": "temperature_c,ch_a,ch_b,ch_c,ch_d,ch_e,ch_f,ch_g,ch_h\\n-40,-0.005,-0.004,-0.006,-0.004,-0.003,-0.004,-0.005,-0.004\\n25,-0.006,-0.005,-0.007,-0.005,-0.004,-0.005,-0.006,-0.005\\n125,-0.010,-0.009,-0.011,-0.009,-0.008,-0.009,-0.010,-0.009"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V"
+  },
+  "confidence": 0.8
+}

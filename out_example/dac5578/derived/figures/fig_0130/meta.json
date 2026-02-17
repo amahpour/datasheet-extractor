@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0130",
+    "page": 23,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0130.png",
+    "classification": {
+      "type": "other",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image shows a close-up view of three black and white license plates, each with the number \"DAC\" written in capital letters on them. The license plates are arranged vertically, one above the other, creating a sense of depth to the scene. The text \"DAC\" is clearly visible on all three plates, indicating that they belong to an electronic device or vehicle.",
+        "confidence": 0.7,
+        "notes": "local_llm (other)"
+      }
+    }
+  }
+}

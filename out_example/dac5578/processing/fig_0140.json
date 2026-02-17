@@ -1,0 +1,32 @@
+{
+  "figure_id": "fig_0140",
+  "image_path": "out/dac5578/figures/fig_0140.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed electronic datasheet for a device that measures the rise and fall of an external reference signal, such as an FHV (External Reference Voltage) or an FHV/Voltage Drop sensor. The device is designed to measure the voltage drop across a surface over time, providing valuable information about the electrical properties of the object being measured. The datasheet includes a diagram that illustrates the rise and fall of the signal, along with the trigger pulse and reference values for the device's operation.\n\nThe device is shown in black and white, with the rise and fall of the signal represented by lines on the graph. The reference voltage or voltage drop across the surface is indicated as a vertical line, while the trigger pulse is depicted as a horizontal line. The datasheet also includes text that provides information about the device's functionality and operation.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Rising Edge Capture (Code 400h to C00h, 2.5V ref)",
+    "summary": "Oscilloscope screenshot of DAC rising edge and zoomed residual for mid-code step.",
+    "structured_data": {
+      "description": "Annotations: rising edge 2 V/div, zoomed rising edge 100 uV/div, trigger pulse 5 V/div, time 5 us/div, transition 400h to C00h."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "step_codes": "400h to C00h",
+      "time_scale": "5 us/div"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:39:40.657236+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

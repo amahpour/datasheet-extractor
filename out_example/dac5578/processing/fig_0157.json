@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0157",
+  "image_path": "out/dac5578/figures/fig_0157.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram of an electronic device, with the device's functionality labeled in black text against a white background. The device is designed to measure external reference values, such as voltage or current, using a trigger pulse method. The diagram also includes a legend that explains the different components of the device, including the trigger pulse, LDAAC clock feed-through, and external reference.\n\nThe diagram features a time scale on the left side, with the units \"time (2ps/d)\" indicating the duration for which the device is measuring the values. The device's functionality is clearly labeled in black text against a white background, making it easy to understand its purpose and operation.",
+  "local_llm_classification": "timing_diagram",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "LDAC Feedthrough (Code 81h to 80h, 2.5V ref)",
+    "summary": "Oscilloscope screenshot of downward small-step transition with LDAC clock feedthrough.",
+    "structured_data": {
+      "description": "VOUT at 5 mV/div, LDAC trigger at 5 V/div, transition from code 81h to 80h, horizontal scale 2 us/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "2.5V",
+      "step_codes": "81h to 80h",
+      "time_scale": "2 us/div"
+    },
+    "confidence": 0.89
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:40:40.029365+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

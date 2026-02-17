@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "DNL Error vs Temperature (DAC7578, 12-bit, 2.5V ref)",
+  "summary": "DNL max/min versus temperature for DAC7578 12-bit.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "DNL Error (LSB), axis -0.25 to +0.25",
+    "series": [],
+    "csv": "temperature_c,dnl_min_lsb,dnl_max_lsb\\n-40,-0.08,0.08\\n25,-0.07,0.06\\n65,-0.07,0.08\\n95,-0.06,0.07\\n125,-0.06,0.06"
+  },
+  "component_references": [
+    "DAC7578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.88
+}

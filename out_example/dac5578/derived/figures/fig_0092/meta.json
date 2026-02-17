@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0092",
+    "page": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0092.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linear error\". The graph displays four channels, each represented by a different color - purple, green, blue, and red. The channels are shown in relation to their respective external reference values, which are 2.5V, 12V, 1.0K, and 40K. The graph also includes text that provides information about the linear error for each channel.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

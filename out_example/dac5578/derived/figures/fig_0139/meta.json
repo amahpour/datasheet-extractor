@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0139",
+    "page": 24,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 95.",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0139.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph that displays the power supply of an electronic device, with the x-axis representing time and the y-axis representing power. The graph shows a steady increase in power over time, indicating that the device is functioning properly. The graph also includes a legend that explains the units used for measuring power, such as milliampere-hours (mAh) or amperes (A).",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

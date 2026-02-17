@@ -1,0 +1,29 @@
+{
+  "figure_id": "fig_0006",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0006.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and gold circuit board with various components, including a small circuit board with multiple pins on the left side of the frame. The main circuit board is situated in the center of the image, surrounded by smaller components that are not visible due to their position relative to the main circuit board. This assembly of electronic components suggests it could be part of a larger project or device.",
+  "local_llm_classification": "pinout",
+  "external_llm_result": {
+    "classification": "photo",
+    "title": "DAC7578 Breakout with Included Header Strip",
+    "summary": "Product photo showing the DAC7578 breakout board and a separate male header strip accessory above it. The board front silkscreen and pin breakout pads are visible.",
+    "structured_data": {
+      "description": "A straight male header strip is shown above the board, indicating included solderable pin headers. Board silkscreen again shows DAC7578 labeling and analog output channels 0-7 plus reference and control pins."
+    },
+    "component_references": [
+      "DAC7578",
+      "male pin header"
+    ],
+    "key_values": {},
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:29:45.096595+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:47:29Z"
+  }
+}

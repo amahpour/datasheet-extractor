@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "INL Error vs Temperature (DAC7578, 12-bit, 2.5V ref)",
+  "summary": "INL max and min trends versus temperature for DAC7578 12-bit.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "INL Error (LSB), axis -1.0 to +1.0",
+    "series": [],
+    "csv": "temperature_c,inl_min_lsb,inl_max_lsb\\n-40,-0.30,0.35\\n25,-0.23,0.35\\n65,-0.18,0.35\\n95,-0.16,0.33\\n125,-0.18,0.28"
+  },
+  "component_references": [
+    "DAC7578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.9
+}

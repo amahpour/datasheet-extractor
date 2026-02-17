@@ -1,0 +1,28 @@
+{
+  "figure_id": "fig_0209",
+  "image_path": "out/dac5578/figures/fig_0209.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black electronic component, likely a circuit board or integrated circuit, resting on its side against a white background. The component is the sole focus of the image and occupies most of the frame. It's positioned in such a way that it appears to be facing upwards, giving a clear view of its structure and design.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "photo",
+    "title": "DAC Package 3D Render (SOIC/TSSOP Style)",
+    "summary": "Rendered image of a black gull-wing lead IC package used as a package illustration.",
+    "structured_data": {
+      "description": "Small perspective render of a rectangular black molded IC with gull-wing leads on both sides against a light background."
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {},
+    "confidence": 0.74
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:43:21.009681+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

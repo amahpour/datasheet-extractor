@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0080",
+  "image_path": "out/dac5578/figures/fig_0080.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed electronic datasheet, likely for a device or component that measures the trigger pulse of a circuit. The datasheet is divided into three sections, each representing a different aspect of the trigger pulse measurement process. The first section provides information about the input and output values, while the second section explains how to interpret the trigger pulse value. The third section offers guidance on how to use the trigger pulse measurement tool effectively.",
+  "local_llm_classification": "screenshot",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:36:15.809994+00:00"
+}

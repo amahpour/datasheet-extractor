@@ -1,0 +1,75 @@
+{
+  "figure_id": "fig_0181",
+  "image_path": "out/dac5578/figures/fig_0181.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white circuit diagram that illustrates the components of a digital audio processing system, including a DAC (Digital Audio Coder) and an amplifier. The DAC is connected to the amplifier via wires, with the DAC's output terminals labeled \"DAC578\" and \"OPA303\". The amplifier has two input terminals: one for the DAC and another for the OPA303. The circuit diagram also includes a series of resistors that are part of the audio processing system.",
+  "local_llm_classification": "schematic",
+  "external_llm_result": {
+    "classification": "schematic",
+    "title": "DACx578 with OPA703 External Amplifier Configuration",
+    "summary": "Application schematic showing DACx578 connected to external reference input and an OPA703 op-amp stage with gain-setting resistors.",
+    "structured_data": {
+      "components": [
+        {
+          "ref": "U1",
+          "type": "DAC",
+          "value": "DACx578"
+        },
+        {
+          "ref": "U2",
+          "type": "op-amp",
+          "value": "OPA703"
+        },
+        {
+          "ref": "R1",
+          "type": "resistor",
+          "value": "10k"
+        },
+        {
+          "ref": "R2",
+          "type": "resistor",
+          "value": "10k"
+        },
+        {
+          "ref": "C1",
+          "type": "capacitor",
+          "value": "10uF"
+        },
+        {
+          "ref": "C2",
+          "type": "capacitor",
+          "value": "0.1uF"
+        }
+      ],
+      "nets": [
+        "VREFEXT",
+        "AVDD",
+        "VREFIN/VREFOUT",
+        "VOUT",
+        "GND",
+        "+5V",
+        "+6V",
+        "-6V"
+      ],
+      "description": "External reference and compensation capacitors feed DACx578 reference pins; DAC output drives an op-amp with 10k/10k network and dual supply rails."
+    },
+    "component_references": [
+      "DACx578",
+      "OPA703"
+    ],
+    "key_values": {
+      "r1": "10k",
+      "r2": "10k",
+      "supplies": "+6V/-6V and +5V node"
+    },
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:41:55.197662+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

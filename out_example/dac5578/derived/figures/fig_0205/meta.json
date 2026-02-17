@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0205",
+    "page": 55,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0205.png",
+    "classification": {
+      "type": "block_diagram",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed technical drawing of a circuit board, specifically focusing on the land pattern and the soldering mask details. The drawing is in black and white, providing clear instructions for assembly. It includes various components such as resistors, capacitors, and other electronic parts that are essential to understanding how the circuit board works. The drawing also provides measurements and dimensions of the components, which can be crucial for accurate assembly.",
+        "confidence": 0.3,
+        "notes": "local_llm (block_diagram)"
+      }
+    }
+  }
+}

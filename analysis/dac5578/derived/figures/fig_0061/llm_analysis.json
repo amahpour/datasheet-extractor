@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "Power-Down Current vs Power Supply Voltage",
+  "summary": "Power-down current rises with AVDD from about 0.15 uA at 2.7V to about 0.39 uA at 5.5V.",
+  "structured_data": {
+    "x_axis": "Power Supply Voltage (V), 2.7 to 5.5",
+    "y_axis": "Power Supply Current (uA), axis 0.0 to 0.45",
+    "series": [],
+    "csv": "avdd_v,current_ua\\n2.7,0.15\\n3.1,0.18\\n3.5,0.22\\n3.9,0.26\\n4.3,0.30\\n4.7,0.34\\n5.1,0.37\\n5.5,0.39"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "avdd_range": "2.7V to 5.5V"
+  },
+  "confidence": 0.93
+}

@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0116",
+  "image_path": "out/dac5578/figures/fig_0116.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with two lines, one representing the linearity error and the other showing the temperature of the device. The x-axis displays the reference value for the external reference, while the y-axis represents the temperature in degrees Celsius (°C). The graph shows that the linearity error is relatively low at around 1.0e-3, indicating a good level of accuracy in the measurement. On the other hand, the temperature of the device is shown as 2.5°C, which might be too high for optimal performance or could indicate an overheating issue.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "DNL vs Digital Input Code (DAC5578, 8-bit, +25C, 2.5V ref)",
+    "summary": "DNL for DAC5578 channels at +25C and 2.5V reference.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-256)",
+      "y_axis": "DNL Error (LSB), axis -0.25 to +0.25",
+      "series": [],
+      "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.01,0.01\\n128,-0.01,0.01\\n256,-0.01,0.01"
+    },
+    "component_references": [
+      "DAC5578"
+    ],
+    "key_values": {
+      "external_reference": "2.5V",
+      "temperature": "+25C"
+    },
+    "confidence": 0.92
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:38:19.987050+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Glitch Energy Rising Edge (12-bit 1 LSB Step)",
+  "summary": "Scope screenshot of 1-LSB rising transition showing LDAC clock feedthrough impulse.",
+  "structured_data": {
+    "description": "Image text indicates 5V, 12-bit, 1LSB step from code 800h to 801h. VOUT scale 500 uV/div, trigger pulse 5 V/div, time 2 us/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DAC7578"
+  ],
+  "key_values": {
+    "step_codes": "800h to 801h",
+    "vout_scale": "500 uV/div",
+    "time_scale": "2 us/div"
+  },
+  "confidence": 0.91
+}

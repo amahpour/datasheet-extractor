@@ -1,0 +1,31 @@
+{
+  "figure_id": "fig_0207",
+  "image_path": "out/dac5578/figures/fig_0207.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed technical drawing of a circuit board, specifically focusing on the soldering paste used in its assembly. The drawing is meticulously labeled with measurements and dimensions, providing valuable information for those working with electronic components. The circuit board itself is a complex network of interconnected parts, including resistors, capacitors, and other electronic components.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "mechanical",
+    "title": "QFN-24 Land Pattern and Solder Mask Details",
+    "summary": "PCB land pattern example and solder-mask guidance for QFN package implementation.",
+    "structured_data": {
+      "description": "Includes pad/via layout, keepout/spacing dimensions, and separate non-solder-mask-defined vs solder-mask-defined pad detail drawings."
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "package": "QFN-24",
+      "scale": "20X"
+    },
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:43:17.544486+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

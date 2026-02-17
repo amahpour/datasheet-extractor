@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0119",
+    "page": 21,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0119.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with two lines, one representing the external reference and the other representing the temperature. The graph is set against a white background, making it easy to differentiate between the two lines. The x-axis of the graph displays the values 0.15 and 0.25, while the y-axis shows 0.05 and 0.26. The graph illustrates that there are differences in the external reference and temperature, with one line being higher than the other.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

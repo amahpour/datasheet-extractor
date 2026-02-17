@@ -1,0 +1,31 @@
+{
+  "figure_id": "fig_0205",
+  "image_path": "out/dac5578/figures/fig_0205.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed technical drawing of a circuit board, specifically focusing on the land pattern and the soldering mask details. The drawing is in black and white, providing clear instructions for assembly. It includes various components such as resistors, capacitors, and other electronic parts that are essential to understanding how the circuit board works. The drawing also provides measurements and dimensions of the components, which can be crucial for accurate assembly.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "mechanical",
+    "title": "QFN-24 Solder Paste Stencil Example",
+    "summary": "Recommended solder paste aperture pattern for exposed-pad QFN package.",
+    "structured_data": {
+      "description": "Annotated as solder paste example based on 0.125 mm thick stencil with 78% printed coverage by area; includes aperture geometry and reference dimensions."
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "stencil_thickness_mm": "0.125",
+      "coverage": "78%"
+    },
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:43:10.732077+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

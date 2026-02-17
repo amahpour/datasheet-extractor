@@ -1,0 +1,3 @@
+# fig_0096
+
+The image presents a graph with the x-axis labeled "Digital input code" and the y-axis labeled "Differential linearity error". The graph displays four lines, each representing a different digital input code. The first line is labeled "DAC7778", the second line is labeled "DAC7778, 12 bit", the third line is labeled "DAC7778, 25 bit", and the fourth line is labeled "DAC7778, 35 bit". Each line has a distinct color: purple for DAC7778, green for DAC7778, blue for DAC7778, and yellow for DAC7778. The graph shows that there are differences in the digital input codes used by different devices or systems.

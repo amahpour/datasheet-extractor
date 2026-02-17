@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0215",
+  "image_path": "out/dac5578/figures/fig_0215.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology. The logo is prominently displayed on a white background, with black text that reads \"Texas Instruments\" and \"www.ti.com\". The website address \"www.ti.com\" is also visible below the logo.",
+  "local_llm_classification": "logo",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:43:42.188149+00:00"
+}

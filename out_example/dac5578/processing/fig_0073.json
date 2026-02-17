@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0073",
+  "image_path": "out/dac5578/figures/fig_0073.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram that illustrates the power-off glitch of a DAC (Digital Audio Coder) amplifier, with two different voltage levels represented by arrows pointing in opposite directions. The diagram also includes text that provides information about the amplifier's performance characteristics.",
+  "local_llm_classification": "icon",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:35:52.089039+00:00"
+}

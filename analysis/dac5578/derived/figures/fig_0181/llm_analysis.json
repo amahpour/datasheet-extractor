@@ -1,0 +1,33 @@
+{
+  "classification": "schematic",
+  "title": "DACx578 with OPA703 External Amplifier Configuration",
+  "summary": "Application schematic showing DACx578 connected to external reference input and an OPA703 op-amp stage with gain-setting resistors.",
+  "structured_data": {
+    "components": [
+      {"ref": "U1", "type": "DAC", "value": "DACx578"},
+      {"ref": "U2", "type": "op-amp", "value": "OPA703"},
+      {"ref": "R1", "type": "resistor", "value": "10k"},
+      {"ref": "R2", "type": "resistor", "value": "10k"},
+      {"ref": "C1", "type": "capacitor", "value": "10uF"},
+      {"ref": "C2", "type": "capacitor", "value": "0.1uF"}
+    ],
+    "nets": [
+      "VREFEXT",
+      "AVDD",
+      "VREFIN/VREFOUT",
+      "VOUT",
+      "GND",
+      "+5V",
+      "+6V",
+      "-6V"
+    ],
+    "description": "External reference and compensation capacitors feed DACx578 reference pins; DAC output drives an op-amp with 10k/10k network and dual supply rails."
+  },
+  "component_references": ["DACx578", "OPA703"],
+  "key_values": {
+    "r1": "10k",
+    "r2": "10k",
+    "supplies": "+6V/-6V and +5V node"
+  },
+  "confidence": 0.95
+}

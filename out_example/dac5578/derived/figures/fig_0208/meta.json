@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0208",
+    "page": 56,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0208.png",
+    "classification": {
+      "type": "logo",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image features a black and white logo for Texas Instruments (TI). The logo is prominently displayed in the center of the frame, with the company's name written in large, bold letters above it. Below the main text, there are smaller lines that connect the words \"Texas\" and \"Instruments\", reinforcing the connection between the two elements.",
+        "confidence": 0.7,
+        "notes": "local_llm (logo)"
+      }
+    }
+  }
+}

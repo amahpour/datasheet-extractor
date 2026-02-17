@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0020",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0020.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image shows a black and white electronic device with a display screen that is currently turned on, displaying a waveform graph. The waveform appears to be in the form of a sine wave or a sawtooth wave, depending on the specific part of the device being viewed. This type of display can provide valuable information about electrical signals, such as voltage levels and current flows.",
+  "local_llm_classification": "timing_diagram",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Oscilloscope Screenshot with Low-Frequency Sine and Ripple",
+    "summary": "Rigol oscilloscope screenshot with yellow and cyan traces, where the cyan trace is higher frequency ripple and the yellow trace is lower-frequency waveform. Measurements show CH1 near 1.00 Hz and CH2 near 4.17 Hz.",
+    "structured_data": {
+      "description": "Rigol interface in RUN mode. Timebase shows 500 ms/div. Bottom readout shows both channels at 2.50 V/div. Frequency measurements displayed are approximately CH1 1.00 Hz and CH2 4.17 Hz."
+    },
+    "component_references": [
+      "Rigol oscilloscope"
+    ],
+    "key_values": {
+      "timebase": "500 ms/div",
+      "ch1_frequency": "~1.00 Hz",
+      "ch2_frequency": "~4.17 Hz",
+      "ch1_scale": "2.50 V/div",
+      "ch2_scale": "2.50 V/div"
+    },
+    "confidence": 0.91
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:30:31.554837+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:47:29Z"
+  }
+}

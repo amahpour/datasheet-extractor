@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0009",
+    "page": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0009.png",
+    "classification": {
+      "type": "pinout",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a circuit board with two components connected by wires, one of which is a small device labeled \"DAC7776\" and the other being a larger component. The smaller device has a green light on its top right corner, while the larger component features a pink light on its left side.",
+        "confidence": 0.3,
+        "notes": "local_llm (pinout)"
+      }
+    }
+  }
+}

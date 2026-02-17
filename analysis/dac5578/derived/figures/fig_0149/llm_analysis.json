@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Glitch Energy Rising Edge (Code 800h to 801h, 2.5V ref)",
+  "summary": "1-LSB rising-edge glitch energy capture with LDAC clock feedthrough.",
+  "structured_data": {
+    "description": "VOUT 500 uV/div, LDAC trigger pulse 5 V/div, timebase 2 us/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "step_codes": "800h to 801h",
+    "time_scale": "2 us/div"
+  },
+  "confidence": 0.91
+}

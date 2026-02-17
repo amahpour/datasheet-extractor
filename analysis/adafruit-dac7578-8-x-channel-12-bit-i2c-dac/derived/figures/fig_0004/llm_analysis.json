@@ -1,0 +1,11 @@
+{
+  "classification": "photo",
+  "title": "DAC7578 Breakout Side Connector Close-Up",
+  "summary": "Low-angle close-up emphasizing one JST-SH connector on the DAC7578 breakout board. The board edge thickness and through-hole pads are visible.",
+  "structured_data": {
+    "description": "Front edge close-up photo of the PCB with the near STEMMA QT connector in focus and the opposite connector blurred in the background. Through-hole pin pads and edge mounting hole plating are visible."
+  },
+  "component_references": ["DAC7578", "STEMMA QT"],
+  "key_values": {},
+  "confidence": 0.9
+}

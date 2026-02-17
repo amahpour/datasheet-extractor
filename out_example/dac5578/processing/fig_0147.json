@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0147",
+  "image_path": "out/dac5578/figures/fig_0147.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph of an electrical circuit, with the x-axis labeled \"Time\" and the y-axis labeled \"Voltage (V)\". The graph displays two lines on the same page, one representing the external reference voltage and the other representing the clock feedthrough impulse. This information is presented in black text against a white background.",
+  "local_llm_classification": "timing_diagram",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Clock Feedthrough Impulse (~0.5 nV-s, 2.5V ref)",
+    "summary": "Oscilloscope screenshot showing VOUT feedthrough correlated with SCL transitions.",
+    "structured_data": {
+      "description": "Text indicates clock feedthrough impulse ~0.5 nV-s at external reference 2.5V. Scales: VOUT 5 mV/div, SCL 5 V/div, time 1 us/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "clock_feedthrough_impulse": "~0.5 nV-s",
+      "external_reference": "2.5V",
+      "time_scale": "1 us/div"
+    },
+    "confidence": 0.91
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:40:04.186541+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

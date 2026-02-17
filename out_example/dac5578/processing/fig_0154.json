@@ -1,0 +1,31 @@
+{
+  "figure_id": "fig_0154",
+  "image_path": "out/dac5578/figures/fig_0154.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram of an electronic device, with the device's name prominently displayed in the top left corner. The device is connected to a clock that displays the time as 2:15 pm. Below the clock, there are three lines representing different input sources for the device: 1/4th voltage divider, 5/6th trigger pulse, and 2/5th feed-through.",
+  "local_llm_classification": "timing_diagram",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "LDAC Feedthrough (Code 200h to 201h, 2.5V ref)",
+    "summary": "Scope screenshot of a small code increment with LDAC feedthrough impulse.",
+    "structured_data": {
+      "description": "Annotations: VOUT 1 mV/div, LDAC trigger pulse 5 V/div, external reference 2.5V."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "step_codes": "200h to 201h"
+    },
+    "confidence": 0.89
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:40:30.742886+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

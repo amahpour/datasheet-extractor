@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0064",
+  "image_path": "out/dac5578/figures/fig_0064.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the external reference for a 5V power supply current, with the x-axis representing time and the y-axis representing the current in milliampere-hours (mAh). The graph shows a steady increase in the supply current over time, indicating that the device is receiving an adequate amount of power.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Power Supply Current vs Power Supply Voltage",
+    "summary": "Power supply current increases with AVDD from about 0.73 mA at 2.7V to about 1.09 mA at 5.5V.",
+    "structured_data": {
+      "x_axis": "Power Supply Voltage (V), 2.7 to 5.5",
+      "y_axis": "Power Supply Current (mA), axis 0.6 to 1.4",
+      "series": [],
+      "csv": "avdd_v,current_ma\\n2.7,0.73\\n3.1,0.77\\n3.5,0.81\\n3.9,0.87\\n4.3,0.92\\n4.7,0.97\\n5.1,1.03\\n5.5,1.09"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "avdd_range": "2.7V to 5.5V"
+    },
+    "confidence": 0.93
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:35:21.016013+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

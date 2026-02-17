@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Power-On Glitch (Zero-Scale)",
+  "summary": "Scope capture of a small VOUT glitch during AVDD ramp; glitch noted around 2 mVpp.",
+  "structured_data": {
+    "description": "Annotations include VOUT 2 mV/div, AVDD 2 V/div, ~2 mVpp indication, and time scale 10 ms/div with DAC unloaded at zero scale."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "time_scale": "10 ms/div",
+    "glitch": "~2 mVpp"
+  },
+  "confidence": 0.9
+}

@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0060",
+  "image_path": "out/dac5578/figures/fig_0060.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the relationship between power supply current and digital input code for an electronic device, likely a computer or a similar appliance. The x-axis of the graph represents the power supply current in milliampere-hours (mA), while the y-axis represents the digital input code in bits per second (bps). The graph shows that as the power supply current increases, so does the digital input code. This suggests that a higher power supply current can be used to achieve a desired level of digital functionality or performance for the electronic device.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Power Supply Current vs Digital Input Code",
+    "summary": "Power current increases rapidly at low code then flattens near 1.05 to 1.07 mA at higher codes when all eight channels are loaded.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-4096)",
+      "y_axis": "Power Supply Current (mA), axis 0.0 to 1.4",
+      "series": [],
+      "csv": "digital_input_code,current_ma\\n0,0.55\\n64,0.90\\n512,1.00\\n1024,1.03\\n2048,1.06\\n3072,1.06\\n4096,1.07"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "5V",
+      "condition": "code loaded to all eight DAC channels"
+    },
+    "confidence": 0.92
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:35:08.488807+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

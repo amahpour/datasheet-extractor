@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0005",
+  "image_path": "out/dac5578/figures/fig_0005.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image shows a close-up view of three black and white numbers, each with the same length - 5 digits long. The first number is positioned on the left side of the frame, followed by two more numbers in the center, and then the third number on the right side. These numbers are arranged in a straight line, creating a sense of order and symmetry within the image.",
+  "local_llm_classification": "screenshot",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:32:03.231187+00:00"
+}

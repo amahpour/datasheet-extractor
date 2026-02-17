@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "Sink Current at Negative Rail (Channel D, 000h)",
+  "summary": "Negative-rail compliance for channel D with code 000h.",
+  "structured_data": {
+    "x_axis": "Sink Current (mA), 0 to 10",
+    "y_axis": "Output Voltage (V), axis 0.0 to 0.6",
+    "series": [],
+    "csv": "sink_current_ma,output_voltage_v\\n0,0.00\\n2,0.10\\n4,0.20\\n6,0.30\\n8,0.39\\n10,0.49"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "channel": "D",
+    "code": "000h"
+  },
+  "confidence": 0.95
+}

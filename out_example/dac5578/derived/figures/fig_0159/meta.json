@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0159",
+    "page": 27,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 111. Device Architecture",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0159.png",
+    "classification": {
+      "type": "other",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a black and white diagram of an electronic circuit, likely used for a DAC (Digital Amplifier Controller) or REF (Resistor String) component. The circuit is connected to a power supply unit, which is part of the circuit's functionality. The components are clearly labeled with numbers and letters, indicating their respective roles in the circuit.",
+        "confidence": 0.7,
+        "notes": "local_llm (other)"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0063",
+  "image_path": "out/dac5578/figures/fig_0063.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the relationship between power supply voltage and current, with the x-axis representing the voltage in volts (V) and the y-axis representing the current in amperes (A). The graph shows a positive linear relationship between these two variables, indicating that as the voltage increases, so does the current.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Supply Current Histogram",
+    "summary": "Histogram of population versus supply current with peak around ~1.02 to 1.05 mA.",
+    "structured_data": {
+      "x_axis": "Supply Current (mA), 0.90 to 1.15",
+      "y_axis": "% of Population, axis 0 to 14",
+      "series": [],
+      "csv": "supply_current_ma,percent_population\\n0.94,1.5\\n0.97,3.8\\n1.00,6.4\\n1.02,9.5\\n1.03,11.7\\n1.05,8.6\\n1.08,6.0\\n1.10,3.0\\n1.12,1.0"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "5V"
+    },
+    "confidence": 0.86
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:35:19.488791+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

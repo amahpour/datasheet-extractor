@@ -1,0 +1,32 @@
+{
+  "figure_id": "fig_0149",
+  "image_path": "out/dac5578/figures/fig_0149.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed electronic circuit diagram, with various components and their respective values labeled in black text against a white background. The diagram is divided into two sections, each containing different types of electronic devices such as resistors, capacitors, and transistors. The diagram also includes labels for the voltage and current values at different points within the circuit.",
+  "local_llm_classification": "schematic",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Glitch Energy Rising Edge (Code 800h to 801h, 2.5V ref)",
+    "summary": "1-LSB rising-edge glitch energy capture with LDAC clock feedthrough.",
+    "structured_data": {
+      "description": "VOUT 500 uV/div, LDAC trigger pulse 5 V/div, timebase 2 us/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "step_codes": "800h to 801h",
+      "time_scale": "2 us/div"
+    },
+    "confidence": 0.91
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:40:11.126332+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

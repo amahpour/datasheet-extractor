@@ -1,0 +1,221 @@
+{
+  "classification": "plot",
+  "title": "DNL vs Digital Input Code (DAC7578, 12-bit, -40C)",
+  "summary": "Differential nonlinearity plot for all channels at -40C, external reference 5V.",
+  "structured_data": {
+    "x_axis": "Digital Input Code (0-4096)",
+    "y_axis": "Error (LSB), axis -0.25 to 0.25",
+    "series": [
+      {
+        "name": "CH A",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          },
+          {
+            "x": 2048,
+            "y": 0.0
+          },
+          {
+            "x": 3072,
+            "y": 0.0
+          },
+          {
+            "x": 4096,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "CH B",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          },
+          {
+            "x": 2048,
+            "y": 0.0
+          },
+          {
+            "x": 3072,
+            "y": 0.0
+          },
+          {
+            "x": 4096,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "CH C",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          },
+          {
+            "x": 2048,
+            "y": 0.0
+          },
+          {
+            "x": 3072,
+            "y": 0.0
+          },
+          {
+            "x": 4096,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "CH D",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          },
+          {
+            "x": 2048,
+            "y": 0.0
+          },
+          {
+            "x": 3072,
+            "y": 0.0
+          },
+          {
+            "x": 4096,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "CH E",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          },
+          {
+            "x": 2048,
+            "y": 0.0
+          },
+          {
+            "x": 3072,
+            "y": 0.0
+          },
+          {
+            "x": 4096,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "CH F",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          },
+          {
+            "x": 2048,
+            "y": 0.0
+          },
+          {
+            "x": 3072,
+            "y": 0.0
+          },
+          {
+            "x": 4096,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "CH G",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          },
+          {
+            "x": 2048,
+            "y": 0.0
+          },
+          {
+            "x": 3072,
+            "y": 0.0
+          },
+          {
+            "x": 4096,
+            "y": 0.0
+          }
+        ]
+      },
+      {
+        "name": "CH H",
+        "data_points": [
+          {
+            "x": 0,
+            "y": 0.0
+          },
+          {
+            "x": 1024,
+            "y": 0.0
+          },
+          {
+            "x": 2048,
+            "y": 0.0
+          },
+          {
+            "x": 3072,
+            "y": 0.0
+          },
+          {
+            "x": 4096,
+            "y": 0.0
+          }
+        ]
+      }
+    ],
+    "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.05,0.05\\n2048,-0.05,0.05\\n4096,-0.05,0.05"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V",
+    "approx_channel_envelope_lsb": "[-0.05, 0.05]",
+    "note": "dense traces with near-zero mean"
+  },
+  "confidence": 0.78
+}

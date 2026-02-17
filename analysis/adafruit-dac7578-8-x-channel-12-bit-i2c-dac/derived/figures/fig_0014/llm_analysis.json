@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Oscilloscope Capture of DAC Output and Modulation",
+  "summary": "A Rigol oscilloscope screenshot showing two traces: a lower-frequency yellow waveform and a higher-frequency cyan waveform. On-screen measurements indicate approximately 1.00 Hz and 3.01 Hz frequencies.",
+  "structured_data": {
+    "description": "Rigol UI screenshot with CH1 (yellow) and CH2 (cyan). Timebase appears 200 ms/div. Measurement panel shows CH1 around 1.00 Hz and CH2 around 3.01 Hz, with CH1 around 500 mV/div and CH2 around 112 mV/div displayed at the bottom."
+  },
+  "component_references": ["Rigol oscilloscope"],
+  "key_values": {
+    "timebase": "200 ms/div",
+    "ch1_frequency": "~1.00 Hz",
+    "ch2_frequency": "~3.01 Hz",
+    "ch1_scale": "500 mV/div",
+    "ch2_scale": "112 mV/div"
+  },
+  "confidence": 0.9
+}

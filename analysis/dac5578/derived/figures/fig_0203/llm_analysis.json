@@ -1,0 +1,16 @@
+{
+  "classification": "mechanical",
+  "title": "QFN-24 Package Mechanical Drawing",
+  "summary": "Detailed package dimensions and tolerances for the 24-pin QFN package with exposed pad.",
+  "structured_data": {
+    "description": "Shows top, side, and bottom views including overall body dimensions (3.9 to 4.1 mm), lead geometry, exposed pad, pin index area, and GD&T references. Drawing revision/date visible: 4219016/A, 08/2017."
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "package": "QFN-24 with exposed pad",
+    "body_size_mm": "3.9 to 4.1"
+  },
+  "confidence": 0.95
+}

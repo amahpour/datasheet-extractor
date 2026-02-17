@@ -1,0 +1,3 @@
+# fig_0084
+
+The image presents a graph that displays the relationship between frequency and AC output, with three different lines representing the DC output at various frequencies. The x-axis of the graph is labeled "Frequency (Hz)", while the y-axis is labeled "DC output". Each line on the graph represents a specific frequency range, with the first line indicating DC output at 200 Hz or less, the second line showing DC output between 200 and 500 Hz, and the third line representing DC output above 500 Hz. The graph also includes text that explains the relationship between frequency and AC output, stating "DC output unloaded external reference = 5V".

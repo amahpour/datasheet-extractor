@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0101",
+    "page": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0101.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph that displays the relationship between digital input code (DAC) and linear error. The graph shows that DAC channels are shown as eight channels, with each channel having an external reference of 2.5V. The x-axis represents DAC channels, while the y-axis represents linear error in dB. The graph is color-coded to indicate different DAC channels, with each channel being assigned a unique color.\n\nThe graph also includes a legend that explains the relationship between DAC channels and linear error. The legend indicates that each channel has an external reference of 2.5V, which corresponds to a linear error of 2.5 dB.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

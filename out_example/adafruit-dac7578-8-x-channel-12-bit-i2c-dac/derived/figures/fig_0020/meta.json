@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0020",
+    "page": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0020.png",
+    "classification": {
+      "type": "timing_diagram",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image shows a black and white electronic device with a display screen that is currently turned on, displaying a waveform graph. The waveform appears to be in the form of a sine wave or a sawtooth wave, depending on the specific part of the device being viewed. This type of display can provide valuable information about electrical signals, such as voltage levels and current flows.",
+        "confidence": 0.3,
+        "notes": "local_llm (timing_diagram)"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "Power Supply Current Histogram (2.5V ref)",
+  "summary": "Histogram of supply current population with peak around 0.80 to 0.82 mA.",
+  "structured_data": {
+    "x_axis": "Supply Current (mA), 0.70 to 0.90",
+    "y_axis": "% of Population, axis 0 to 18",
+    "series": [],
+    "csv": "supply_current_ma,percent_population\\n0.73,3.8\\n0.76,5.0\\n0.78,10.3\\n0.80,14.6\\n0.81,15.3\\n0.82,8.8\\n0.83,10.3\\n0.84,6.5\\n0.86,2.2"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.88
+}

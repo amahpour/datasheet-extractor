@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0201",
+    "page": 53,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0201.png",
+    "classification": {
+      "type": "icon",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a black and white electronic device, possibly a semiconductor chip or a component of a larger circuit board. The device is placed on top of another identical device, both of which are square in shape with a border around the edges. They appear to be made of metal, giving them a sleek and modern appearance. The devices are positioned side by side, suggesting that they might be part of a larger assembly or used for comparison purposes.",
+        "confidence": 0.7,
+        "notes": "local_llm (icon)"
+      }
+    }
+  }
+}

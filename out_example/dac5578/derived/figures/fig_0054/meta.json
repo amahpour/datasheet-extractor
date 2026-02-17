@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0054",
+    "page": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0054.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph that displays the relationship between voltage and current in a circuit, with the x-axis representing voltage and the y-axis representing current. The graph shows a downward trend, indicating that as the voltage increases, the current decreases. There is also a line of best fit on the graph, which suggests an equation to describe this relationship. The text \"Source Current at Positive Rail\" is present in the image, but its relevance to the graph's content cannot be determined without additional context or information about the circuit being depicted.\n\nThe graph is labeled with numbers and units for both voltage and current, providing a clear representation of the data points. The source current (SRC) is represented by the equation \"Voltage (V) = Current (I)\", which can be used to calculate the source current in the circuit based on the given values of voltage and resistance.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

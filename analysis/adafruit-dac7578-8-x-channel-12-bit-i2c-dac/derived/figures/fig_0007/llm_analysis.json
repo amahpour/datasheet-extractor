@@ -1,0 +1,15 @@
+{
+  "classification": "photo",
+  "title": "DAC7578 Breakout Front and Back Comparison",
+  "summary": "Side-by-side product photo of the board front and back. The rear side includes printed electrical details such as default I2C address and supply range.",
+  "structured_data": {
+    "description": "Left image shows populated front side with IC and connectors; right image shows back side silkscreen with text 'Default I2C Addr 0x4C', 'Broadcast Address 0x47', and 'VLogic/Vcc: 3-5VDC'."
+  },
+  "component_references": ["DAC7578", "STEMMA QT"],
+  "key_values": {
+    "default_i2c_address": "0x4C",
+    "broadcast_i2c_address": "0x47",
+    "logic_supply": "3-5VDC"
+  },
+  "confidence": 0.96
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0172",
+    "page": 34,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0172.png",
+    "classification": {
+      "type": "logo",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology. The logo is displayed on a white background, with black text that reads \"Texas Instruments\" at the top and \"TI\" below it. Below the main text, there's an illustration of a Texas Instrument logo, which consists of a stylized letter \"T\" surrounded by a circle containing a stylized \"I\".",
+        "confidence": 0.7,
+        "notes": "local_llm (logo)"
+      }
+    }
+  }
+}

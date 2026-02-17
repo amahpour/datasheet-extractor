@@ -1,0 +1,35 @@
+{
+  "figure_id": "fig_0134",
+  "image_path": "out/dac5578/figures/fig_0134.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with two lines, one representing the DC load and the other representing the AC load on a circuit board. The DC line is at 0V, while the AC line is at 2V. The graph also includes text that provides information about the current values of the loads in the circuit.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Sink Current at Negative Rail (Channel A, 000h, 2.5V ref)",
+    "summary": "Negative-rail compliance for channel A with code 000h.",
+    "structured_data": {
+      "x_axis": "Sink Current (mA), 0 to 10",
+      "y_axis": "Output Voltage (V), axis 0.0 to 0.6",
+      "series": [],
+      "csv": "sink_current_ma,output_voltage_v\\n0,0.00\\n2,0.10\\n4,0.20\\n6,0.30\\n8,0.40\\n10,0.50"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "channel": "A",
+      "code": "000h",
+      "external_reference": "2.5V"
+    },
+    "confidence": 0.96
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:39:21.778900+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

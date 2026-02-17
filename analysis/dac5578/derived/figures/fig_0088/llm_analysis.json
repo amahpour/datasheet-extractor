@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "IDD Histogram (AVDD=3.6V, Vref=3.3V)",
+  "summary": "Histogram of supply current distribution centered around approximately 0.86 to 0.89 mA.",
+  "structured_data": {
+    "x_axis": "IDD Supply Current (mA), ~0.765 to 0.975",
+    "y_axis": "% of Population, axis 0 to 14",
+    "series": [],
+    "csv": "idd_ma,percent_population\\n0.79,2.7\\n0.82,3.2\\n0.85,6.0\\n0.86,10.3\\n0.87,12.2\\n0.88,12.5\\n0.89,9.8\\n0.90,9.5\\n0.91,8.2\\n0.92,6.3\\n0.93,2.9\\n0.94,2.2"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "avdd": "3.6V",
+    "external_reference": "3.3V"
+  },
+  "confidence": 0.88
+}

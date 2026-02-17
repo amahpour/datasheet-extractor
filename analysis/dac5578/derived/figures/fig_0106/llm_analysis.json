@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "DNL vs Digital Input Code (DAC6578, 10-bit, +125C, 2.5V ref)",
+  "summary": "DNL for DAC6578 channels at +125C and 2.5V reference.",
+  "structured_data": {
+    "x_axis": "Digital Input Code (0-1024)",
+    "y_axis": "DNL Error (LSB), axis -0.5 to +0.5",
+    "series": [],
+    "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.02,0.02\\n512,-0.02,0.02\\n1024,-0.02,0.02"
+  },
+  "component_references": [
+    "DAC6578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V",
+    "temperature": "+125C"
+  },
+  "confidence": 0.88
+}

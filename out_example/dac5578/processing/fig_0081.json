@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0081",
+  "image_path": "out/dac5578/figures/fig_0081.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram of an electronic device, with the x-axis labeled \"Time\" and the y-axis labeled \"Voltage\". The device is shown to be a trigger pulse transducer, which measures the voltage in the circuit over time. A line graph is displayed on the diagram, indicating the change in voltage over time for the device. The text at the bottom of the image provides information about the device's functionality and its use in measuring electrical signals or currents.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Glitch Energy Falling Edge (12-bit 1 LSB Step)",
+    "summary": "Scope screenshot for falling-edge 1-LSB step with LDAC feedthrough impulse and settling tail.",
+    "structured_data": {
+      "description": "Annotated for 5V, 12-bit, step 801h to 800h. VOUT 500 uV/div, LDAC trigger 5 V/div, time 2 us/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DAC7578"
+    ],
+    "key_values": {
+      "step_codes": "801h to 800h",
+      "vout_scale": "500 uV/div",
+      "time_scale": "2 us/div"
+    },
+    "confidence": 0.91
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:36:17.469985+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

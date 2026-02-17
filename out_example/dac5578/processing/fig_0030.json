@@ -1,0 +1,236 @@
+{
+  "figure_id": "fig_0030",
+  "image_path": "out/dac5578/figures/fig_0030.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays the relationship between the digital input code (DAC) and the differential linearity error, represented by the number of channels shown on the external reference.\n\nThere are six channels shown in the graph, with the first channel being the DAC and the remaining five channels being the channels shown on the external reference. The x-axis shows the DAC codes from 0 to 10 bits, while the y-axis displays the linearity error in percentage terms.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "DNL vs Digital Input Code (DAC6578, 10-bit, -40C)",
+    "summary": "Differential nonlinearity for all DAC6578 channels at -40C.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-1024)",
+      "y_axis": "Error (LSB), axis -0.5 to 0.5",
+      "series": [
+        {
+          "name": "DAC A",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 256,
+              "y": 0.0
+            },
+            {
+              "x": 512,
+              "y": 0.0
+            },
+            {
+              "x": 768,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "DAC B",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 256,
+              "y": 0.0
+            },
+            {
+              "x": 512,
+              "y": 0.0
+            },
+            {
+              "x": 768,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "DAC C",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 256,
+              "y": 0.0
+            },
+            {
+              "x": 512,
+              "y": 0.0
+            },
+            {
+              "x": 768,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "DAC D",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 256,
+              "y": 0.0
+            },
+            {
+              "x": 512,
+              "y": 0.0
+            },
+            {
+              "x": 768,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "DAC E",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 256,
+              "y": 0.0
+            },
+            {
+              "x": 512,
+              "y": 0.0
+            },
+            {
+              "x": 768,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "DAC F",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 256,
+              "y": 0.0
+            },
+            {
+              "x": 512,
+              "y": 0.0
+            },
+            {
+              "x": 768,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "DAC G",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 256,
+              "y": 0.0
+            },
+            {
+              "x": 512,
+              "y": 0.0
+            },
+            {
+              "x": 768,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            }
+          ]
+        },
+        {
+          "name": "DAC H",
+          "data_points": [
+            {
+              "x": 0,
+              "y": 0.0
+            },
+            {
+              "x": 256,
+              "y": 0.0
+            },
+            {
+              "x": 512,
+              "y": 0.0
+            },
+            {
+              "x": 768,
+              "y": 0.0
+            },
+            {
+              "x": 1024,
+              "y": 0.0
+            }
+          ]
+        }
+      ],
+      "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.01,0.01\\n512,-0.01,0.01\\n1024,-0.01,0.01"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "5V",
+      "approx_channel_envelope_lsb": "[-0.01, 0.01]",
+      "note": "trace cluster is tightly centered around 0 LSB"
+    },
+    "confidence": 0.78
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:33:25.541939+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

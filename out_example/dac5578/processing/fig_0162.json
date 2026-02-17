@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0162",
+  "image_path": "out/dac5578/figures/fig_0162.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed black and white diagram of an electronic circuit, specifically focusing on the components of a digital clock. The circuit is divided into two parallel lines, each representing a different component or function within the clock. On one side, there are three vertical lines that symbolize the three main components of a digital clock: the hours, minutes, and seconds. These lines are connected to a horizontal line below them, which represents the timekeeping mechanism of the clock. The diagram also includes labels for each component, such as \"SDA\", \"SLA\", \"P\", \"RCL\", and \"CONDITION\".",
+  "local_llm_classification": "icon",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:40:58.047858+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "classification": "wiring_diagram",
+  "title": "Feather to DAC7578 Basic I2C Wiring",
+  "summary": "A Fritzing-style wiring diagram connecting an Adafruit Feather board to the DAC7578 breakout. Two additional wires leave the DAC board to a 'DAC Signal Output' node.",
+  "structured_data": {
+    "connections": [
+      {"from": "Feather.3V", "to": "DAC7578.VCC", "wire_color": "red"},
+      {"from": "Feather.GND", "to": "DAC7578.GND", "wire_color": "black"},
+      {"from": "Feather.SDA", "to": "DAC7578.SDA", "wire_color": "blue"},
+      {"from": "Feather.SCL", "to": "DAC7578.SCL", "wire_color": "yellow"},
+      {"from": "DAC7578.output_node", "to": "DAC Signal Output", "wire_color": "magenta/black"}
+    ]
+  },
+  "component_references": ["DAC7578", "Adafruit Feather"],
+  "key_values": {},
+  "confidence": 0.86
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Glitch Energy Falling Edge (12-bit 1 LSB Step)",
+  "summary": "Scope screenshot for falling-edge 1-LSB step with LDAC feedthrough impulse and settling tail.",
+  "structured_data": {
+    "description": "Annotated for 5V, 12-bit, step 801h to 800h. VOUT 500 uV/div, LDAC trigger 5 V/div, time 2 us/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DAC7578"
+  ],
+  "key_values": {
+    "step_codes": "801h to 800h",
+    "vout_scale": "500 uV/div",
+    "time_scale": "2 us/div"
+  },
+  "confidence": 0.91
+}

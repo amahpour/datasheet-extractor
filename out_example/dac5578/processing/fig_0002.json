@@ -1,0 +1,94 @@
+{
+  "figure_id": "fig_0002",
+  "image_path": "out/dac5578/figures/fig_0002.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed black and white diagram of a digital circuit board, specifically focusing on the DAC5728 chip. The DAC5728 is a type of digital filter used in various electronic devices for filtering out specific frequency ranges or amplifying certain signals. The diagram shows the DAC5728 chip's internal components, such as the data buffer, DAC register, and control logic, arranged in a grid-like structure on the board.",
+  "local_llm_classification": "register_map",
+  "external_llm_result": {
+    "classification": "block_diagram",
+    "title": "DACx578 Functional Block Diagram",
+    "summary": "Functional architecture of the DACx578 showing eight channel data buffers, DAC registers, and output DAC blocks with shared control logic and power-down control. Serial interface pins, reference input, and channel outputs are identified.",
+    "structured_data": {
+      "mermaid": "flowchart LR\n  SDA[SDA] --> ICL[Input Control Logic]\n  SCL[SCL] --> ICL\n  ICL --> BC[Buffer Control]\n  ICL --> RC[Register Control]\n  BC --> DBA[Data Buffer A]\n  BC --> DBH[Data Buffer H]\n  DBA --> DRA[DAC Register A]\n  DBH --> DRH[DAC Register H]\n  DRA --> DACA[8/10/12-bit DAC A]\n  DRH --> DACH[8/10/12-bit DAC H]\n  DACA --> VOUTA[VOUT_A]\n  DACH --> VOUTH[VOUT_H]\n  AVDD[AVDD] --> CORE[DACx578 Core]\n  VREF[VREFIN] --> CORE\n  LDAC[LDAC] --> BC\n  CLR[CLR] --> RC\n  RSTSEL[RSTSEL] --> RC\n  ADDR0[ADDR0] --> ICL\n  ADDR1[ADDR1] --> ICL\n  PDL[Power-Down Control Logic] --> CORE",
+      "nodes": [
+        "Input Control Logic",
+        "Buffer Control",
+        "Register Control",
+        "Data Buffer A-H",
+        "DAC Register A-H",
+        "8/10/12-Bit DAC A-H",
+        "Power-Down Control Logic",
+        "AVDD",
+        "VREFIN",
+        "SCL",
+        "SDA",
+        "ADDR0",
+        "ADDR1",
+        "LDAC",
+        "RSTSEL",
+        "CLR",
+        "GND",
+        "VOUTA-VOUTH"
+      ],
+      "connections": [
+        {
+          "from": "SCL/SDA",
+          "to": "Input Control Logic",
+          "label": "I2C interface"
+        },
+        {
+          "from": "Input Control Logic",
+          "to": "Buffer Control",
+          "label": "control"
+        },
+        {
+          "from": "Input Control Logic",
+          "to": "Register Control",
+          "label": "control"
+        },
+        {
+          "from": "Data Buffer A-H",
+          "to": "DAC Register A-H",
+          "label": "channel data"
+        },
+        {
+          "from": "DAC Register A-H",
+          "to": "8/10/12-Bit DAC A-H",
+          "label": "code"
+        },
+        {
+          "from": "8/10/12-Bit DAC A-H",
+          "to": "VOUTA-VOUTH",
+          "label": "analog outputs"
+        },
+        {
+          "from": "VREFIN",
+          "to": "8/10/12-Bit DAC A-H",
+          "label": "reference"
+        },
+        {
+          "from": "AVDD/GND",
+          "to": "DAC core",
+          "label": "power"
+        }
+      ]
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "channels": "8",
+      "resolution_family": "8/10/12-bit",
+      "outputs": "VOUTA to VOUTH"
+    },
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:31:53.282658+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

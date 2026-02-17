@@ -1,0 +1,17 @@
+{
+  "classification": "wiring_diagram",
+  "title": "DAC7578 to Metro Board Wiring",
+  "summary": "Wiring diagram of a DAC7578 breakout connected to an Adafruit Metro board. Four wires connect I2C, power, and ground, with separate DAC output leads shown.",
+  "structured_data": {
+    "connections": [
+      {"from": "Metro.3V", "to": "DAC7578.VCC", "wire_color": "red"},
+      {"from": "Metro.GND", "to": "DAC7578.GND", "wire_color": "black"},
+      {"from": "Metro.SDA", "to": "DAC7578.SDA", "wire_color": "blue"},
+      {"from": "Metro.SCL", "to": "DAC7578.SCL", "wire_color": "yellow"},
+      {"from": "DAC7578.output_node", "to": "DAC Signal Output", "wire_color": "magenta/black"}
+    ]
+  },
+  "component_references": ["DAC7578", "Adafruit Metro"],
+  "key_values": {},
+  "confidence": 0.87
+}

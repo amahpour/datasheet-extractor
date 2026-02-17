@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0076",
+  "image_path": "out/dac5578/figures/fig_0076.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the relationship between voltage and current in a circuit, with time on the x-axis and voltage or current on the y-axis. The graph shows a steady increase in both voltage and current over time, indicating a continuous flow of electricity through the circuit. The text at the bottom of the image provides additional information about the circuit's operation, specifically that it is an LDA (Logic Design Automation) Clock Feed-through device.",
+  "local_llm_classification": "timing_diagram",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Glitch Energy Rising Edge (12-bit 1 LSB Step)",
+    "summary": "Scope screenshot of 1-LSB rising transition showing LDAC clock feedthrough impulse.",
+    "structured_data": {
+      "description": "Image text indicates 5V, 12-bit, 1LSB step from code 800h to 801h. VOUT scale 500 uV/div, trigger pulse 5 V/div, time 2 us/div."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DAC7578"
+    ],
+    "key_values": {
+      "step_codes": "800h to 801h",
+      "vout_scale": "500 uV/div",
+      "time_scale": "2 us/div"
+    },
+    "confidence": 0.91
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:36:01.879171+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

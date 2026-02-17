@@ -1,0 +1,17 @@
+{
+  "classification": "wiring_diagram",
+  "title": "Feather and DAC7578 on Breadboard",
+  "summary": "Breadboard wiring diagram showing an Adafruit Feather connected to a DAC7578 breakout. Power, ground, and I2C lines are routed through the breadboard area.",
+  "structured_data": {
+    "connections": [
+      {"from": "Feather.3V", "to": "DAC7578.VCC", "wire_color": "red"},
+      {"from": "Feather.GND", "to": "DAC7578.GND", "wire_color": "black"},
+      {"from": "Feather.SDA", "to": "DAC7578.SDA", "wire_color": "blue"},
+      {"from": "Feather.SCL", "to": "DAC7578.SCL", "wire_color": "yellow"},
+      {"from": "DAC7578.output_node", "to": "DAC Signal Output", "wire_color": "magenta/black"}
+    ]
+  },
+  "component_references": ["DAC7578", "Adafruit Feather", "breadboard"],
+  "key_values": {},
+  "confidence": 0.84
+}

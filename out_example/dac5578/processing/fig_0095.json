@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0095",
+  "image_path": "out/dac5578/figures/fig_0095.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays four channels, each represented by a different color - purple, green, orange, and blue. The channels are shown as varying shades of purple, indicating their respective values on the digital input code. The graph also includes text that provides information about the channels' values and the reference value for the channel's linearity error.\n\nThe image is labeled with a title \"Digital input code vs. Digital input code\" at the top, and it is accompanied by a legend that explains the colors used to represent each channel on the graph.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "DNL vs Digital Input Code (DAC7578, 12-bit, -40C, 2.5V ref)",
+    "summary": "DNL for all channels at -40C with 2.5V external reference.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-4096)",
+      "y_axis": "DNL Error (LSB), axis -0.25 to +0.25",
+      "series": [],
+      "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.10,0.08\\n2048,-0.10,0.08\\n4096,-0.10,0.08"
+    },
+    "component_references": [
+      "DAC7578"
+    ],
+    "key_values": {
+      "external_reference": "2.5V",
+      "temperature": "-40C"
+    },
+    "confidence": 0.84
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:37:08.005384+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

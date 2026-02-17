@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0022",
+    "page": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0022.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with two lines, one representing the digital input code and the other showing the differential linearity error. The x-axis of the graph is labeled \"Digital input code\" while the y-axis is labeled \"Differential linearity error\". The graph displays the relationship between these two variables, with the digital input code on the left side and the differential linearity error on the right side.\n\nThe graph shows that there are eight channels shown in the external reference, which indicates a wide range of data being processed by the system. Additionally, the graph reveals that the digital input code is 0.15 bits, while the differential linearity error is 0.12 bits. The x-axis also displays the values 0.05 and 0.25 for the digital input code and the external reference respectively.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Oscilloscope Falling Edge (Code C00h to 400h)",
+  "summary": "Scope capture of DAC output falling edge and zoomed residual after a code step from C00h to 400h.",
+  "structured_data": {
+    "description": "Annotations show falling edge at 2 V/div, zoomed falling edge at 100 uV/div, trigger pulse at 5 V/div, and timebase 5 us/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "step_codes": "C00h to 400h",
+    "time_scale": "5 us/div"
+  },
+  "confidence": 0.9
+}

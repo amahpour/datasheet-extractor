@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "DNL Error vs Temperature (DAC6578, 10-bit, 2.5V ref)",
+  "summary": "DNL max/min versus temperature for DAC6578 10-bit.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "DNL Error (LSB), axis -0.5 to +0.5",
+    "series": [],
+    "csv": "temperature_c,dnl_min_lsb,dnl_max_lsb\\n-40,-0.03,0.03\\n25,-0.03,0.03\\n65,-0.03,0.03\\n95,-0.03,0.03\\n125,-0.03,0.03"
+  },
+  "component_references": [
+    "DAC6578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.9
+}

@@ -1,0 +1,16 @@
+{
+  "classification": "screenshot",
+  "title": "LDAC Feedthrough (Code 200h to 201h, 2.5V ref)",
+  "summary": "Scope screenshot of a small code increment with LDAC feedthrough impulse.",
+  "structured_data": {
+    "description": "Annotations: VOUT 1 mV/div, LDAC trigger pulse 5 V/div, external reference 2.5V."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "step_codes": "200h to 201h"
+  },
+  "confidence": 0.89
+}

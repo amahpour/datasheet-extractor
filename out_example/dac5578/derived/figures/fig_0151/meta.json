@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0151",
+    "page": 25,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Time (10 ms/div)",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0151.png",
+    "classification": {
+      "type": "timing_diagram",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a black and white diagram of a power-off glitch, which is a type of electrical interference that occurs when two or more AC waves interfere with each other, resulting in a fluctuating pattern of voltage across the system. The diagram shows three different AC waveforms labeled \"DAC = 0.1 mV\", \"DAC = 1 mV\", and \"DAC = 2 mV\". These waveforms are represented by vertical lines on the graph, indicating their respective amplitudes or voltages. The diagram also includes a legend that explains the meaning of each line representing an AC waveform.",
+        "confidence": 0.3,
+        "notes": "local_llm (timing_diagram)"
+      }
+    }
+  }
+}

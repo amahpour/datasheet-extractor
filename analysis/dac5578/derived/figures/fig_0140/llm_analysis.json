@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Rising Edge Capture (Code 400h to C00h, 2.5V ref)",
+  "summary": "Oscilloscope screenshot of DAC rising edge and zoomed residual for mid-code step.",
+  "structured_data": {
+    "description": "Annotations: rising edge 2 V/div, zoomed rising edge 100 uV/div, trigger pulse 5 V/div, time 5 us/div, transition 400h to C00h."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "step_codes": "400h to C00h",
+    "time_scale": "5 us/div"
+  },
+  "confidence": 0.9
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0149",
+    "page": 25,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 105.",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0149.png",
+    "classification": {
+      "type": "schematic",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed electronic circuit diagram, with various components and their respective values labeled in black text against a white background. The diagram is divided into two sections, each containing different types of electronic devices such as resistors, capacitors, and transistors. The diagram also includes labels for the voltage and current values at different points within the circuit.",
+        "confidence": 0.3,
+        "notes": "local_llm (schematic)"
+      }
+    }
+  }
+}

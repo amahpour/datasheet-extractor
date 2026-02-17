@@ -1,0 +1,33 @@
+{
+  "pdf": "/home/amahpour/code/datasheet-extractor/examples/dac7578/adafruit-dac7578-8-x-channel-12-bit-i2c-dac.pdf",
+  "document_json": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/document.json",
+  "figures": [
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0001.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0002.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0003.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0004.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0005.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0006.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0007.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0008.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0009.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0010.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0011.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0012.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0013.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0014.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0015.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0016.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0017.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0018.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0019.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0020.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0021.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0022.png",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0023.png"
+  ],
+  "tables": [
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/tables/table_0001.json",
+    "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/tables/table_0002.json"
+  ]
+}

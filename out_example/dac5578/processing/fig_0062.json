@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0062",
+  "image_path": "out/dac5578/figures/fig_0062.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram of a sensor's output, which is displayed in a graph format. The x-axis represents time, while the y-axis shows the voltage or current. The graph displays a rise and fall pattern over time, indicating the sensor's response to an input signal. The text at the bottom of the image provides information about the sensor's functionality and its ability to measure voltage or current.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Oscilloscope Rising Edge (Code 000h to FFFh)",
+    "summary": "Oscilloscope screenshot showing a DAC output step edge, with zoomed residual/noise trace after the rising transition.",
+    "structured_data": {
+      "description": "Annotated graticule shows Trigger Pulse at 5 V/div, Rising Edge at 2 V/div, and zoomed rising edge at 100 uV/div. Horizontal scale text indicates Time (5 us/div)."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "time_scale": "5 us/div",
+      "trigger_pulse_scale": "5 V/div",
+      "zoom_scale": "100 uV/div"
+    },
+    "confidence": 0.89
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:35:15.974276+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

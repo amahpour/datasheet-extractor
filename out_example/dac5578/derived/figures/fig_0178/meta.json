@@ -1,0 +1,29 @@
+{
+  "figure": {
+    "id": "fig_0178",
+    "page": 39,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 117. Output Stage During Power-Down",
+    "tags": [
+      "power"
+    ],
+    "image_path": "out/dac5578/figures/fig_0178.png",
+    "classification": {
+      "type": "icon",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a black and white diagram of an electronic circuit, specifically focusing on the components involved in a power-down circuit. The circuit is composed of three main parts: a resistor, an amplifier, and a voltage source (Voltage Source X). Each component is clearly labeled with its function, and arrows are used to indicate the direction of current flow within the circuit.",
+        "confidence": 0.7,
+        "notes": "local_llm (icon)"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "DNL vs Digital Input Code (DAC7578, 12-bit, +25C, 2.5V ref)",
+  "summary": "DNL for all channels at +25C with 2.5V external reference.",
+  "structured_data": {
+    "x_axis": "Digital Input Code (0-4096)",
+    "y_axis": "DNL Error (LSB), axis -0.25 to +0.25",
+    "series": [],
+    "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.08,0.07\\n2048,-0.08,0.07\\n4096,-0.08,0.07"
+  },
+  "component_references": [
+    "DAC7578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V",
+    "temperature": "+25C"
+  },
+  "confidence": 0.84
+}

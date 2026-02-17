@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "LDAC Clock Feedthrough (Code 80h to 81h)",
+  "summary": "Scope capture of small code step with visible LDAC-induced feedthrough impulse.",
+  "structured_data": {
+    "description": "VOUT scale 5 mV/div, LDAC trigger pulse 5 V/div, timebase 2 us/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DAC5578"
+  ],
+  "key_values": {
+    "step_codes": "80h to 81h",
+    "vout_scale": "5 mV/div",
+    "time_scale": "2 us/div"
+  },
+  "confidence": 0.9
+}

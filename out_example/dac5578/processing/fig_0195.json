@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0195",
+  "image_path": "out/dac5578/figures/fig_0195.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed technical drawing of a circular device, likely a part or component of a larger electronic system. The drawing is divided into two sections, with the left side providing measurements and dimensions in millimeters (mm) for the circular object, while the right side displays a diagram illustrating the device's structure and layout.\n\nThe drawing includes labels such as \"Reel Dimensions\" and \"Tape Dimensions\", indicating that these are crucial measurements to consider when working on or understanding the device. The diagram provides a clear visual representation of the circular component, allowing for better comprehension of its design and function within the larger electronic system.",
+  "local_llm_classification": "screenshot",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:42:40.218533+00:00"
+}

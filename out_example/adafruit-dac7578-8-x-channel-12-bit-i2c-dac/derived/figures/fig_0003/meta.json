@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0003",
+    "page": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0003.png",
+    "classification": {
+      "type": "pinout",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image shows a black circuit board with various components, including resistors and capacitors. The board is designed for use in electronic devices such as digital cameras or audio equipment. It features gold-colored pins that connect the components together, creating a complex network of electrical connections.",
+        "confidence": 0.3,
+        "notes": "local_llm (pinout)"
+      }
+    }
+  }
+}

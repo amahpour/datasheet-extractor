@@ -1,0 +1,20 @@
+{
+  "classification": "plot",
+  "title": "Power Supply Current vs Digital Input Code (AVDD=2.7V, Vref=2.5V)",
+  "summary": "Power current versus code at low supply voltage, flattening near high codes.",
+  "structured_data": {
+    "x_axis": "Digital Input Code (0-4096)",
+    "y_axis": "Power Supply Current (mA), axis 0.0 to 1.30",
+    "series": [],
+    "csv": "digital_input_code,current_ma\\n0,0.61\\n64,0.76\\n256,0.80\\n1024,0.84\\n2048,0.85\\n3072,0.86\\n4096,0.84"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "avdd": "2.7V",
+    "external_reference": "2.5V",
+    "condition": "code loaded to all eight DAC channels"
+  },
+  "confidence": 0.92
+}

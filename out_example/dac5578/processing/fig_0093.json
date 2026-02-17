@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0093",
+  "image_path": "out/dac5578/figures/fig_0093.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a line graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Linearity error\". The graph displays four lines, each representing a different digital input code (DAC7778, ADC7778, ADC7779, ADC7780). The data points on the graph show that the DAC7778 and ADC7778 codes are not aligned correctly.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "INL vs Digital Input Code (DAC7578, 12-bit, +25C, 2.5V ref)",
+    "summary": "INL for all channels at +25C, 2.5V reference.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-4096)",
+      "y_axis": "INL Error (LSB), axis -1.0 to +1.0",
+      "series": [],
+      "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.15,0.25\\n2048,-0.20,0.25\\n4096,-0.20,0.20"
+    },
+    "component_references": [
+      "DAC7578"
+    ],
+    "key_values": {
+      "external_reference": "2.5V",
+      "temperature": "+25C"
+    },
+    "confidence": 0.82
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:37:00.396494+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

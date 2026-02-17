@@ -1,0 +1,29 @@
+{
+  "figure_id": "fig_0023",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0023.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black circuit board with various components, including two black resistors and a small white star-shaped component on the right side of the board. The circuit board is set against a dark blue background, which highlights its features.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "photo",
+    "title": "DAC7578 3D Render",
+    "summary": "A rendered 3D view of the DAC7578 breakout board showing placement of IC, passives, connectors, and labeled breakout pads. The image uses a dark blue background and perspective camera angle.",
+    "structured_data": {
+      "description": "3D CAD-style rendering with visible labels VRF, channels 0-7, GND, VCC, SCL, SDA, LDAC, and CLR. Two STEMMA QT connectors are shown at left and right, along with mounting holes and central DAC package."
+    },
+    "component_references": [
+      "DAC7578",
+      "STEMMA QT"
+    ],
+    "key_values": {},
+    "confidence": 0.95
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:30:40.712371+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:47:29Z"
+  }
+}

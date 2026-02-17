@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0004",
+    "page": 1,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0004.png",
+    "classification": {
+      "type": "logo",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents two electronic components, a larger component and a smaller one, both featuring the logo of the state of Texas on them. The larger component is positioned slightly to the left of the center, while the smaller one is located more towards the right side. Both components are black in color, contrasting with their white logos.",
+        "confidence": 0.7,
+        "notes": "local_llm (logo)"
+      }
+    }
+  }
+}

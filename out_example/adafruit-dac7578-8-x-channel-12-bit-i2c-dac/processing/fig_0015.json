@@ -1,0 +1,55 @@
+{
+  "figure_id": "fig_0015",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0015.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a circuit board with various components, including a black circuit board and wires in different colors such as red, yellow, green, blue, and white. The circuit board is connected to a small device that appears to be a sensor or a microcontroller. The device has a label on it indicating its purpose, which reads \"DAC Signal Outlet\".",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "wiring_diagram",
+    "title": "DAC7578 to Metro Board Wiring",
+    "summary": "Wiring diagram of a DAC7578 breakout connected to an Adafruit Metro board. Four wires connect I2C, power, and ground, with separate DAC output leads shown.",
+    "structured_data": {
+      "connections": [
+        {
+          "from": "Metro.3V",
+          "to": "DAC7578.VCC",
+          "wire_color": "red"
+        },
+        {
+          "from": "Metro.GND",
+          "to": "DAC7578.GND",
+          "wire_color": "black"
+        },
+        {
+          "from": "Metro.SDA",
+          "to": "DAC7578.SDA",
+          "wire_color": "blue"
+        },
+        {
+          "from": "Metro.SCL",
+          "to": "DAC7578.SCL",
+          "wire_color": "yellow"
+        },
+        {
+          "from": "DAC7578.output_node",
+          "to": "DAC Signal Output",
+          "wire_color": "magenta/black"
+        }
+      ]
+    },
+    "component_references": [
+      "DAC7578",
+      "Adafruit Metro"
+    ],
+    "key_values": {},
+    "confidence": 0.87
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:30:14.254273+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:47:29Z"
+  }
+}

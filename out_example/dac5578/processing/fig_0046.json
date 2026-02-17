@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0046",
+  "image_path": "out/dac5578/figures/fig_0046.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with two lines, one representing the external reference voltage (V) and the other representing the temperature in degrees Celsius (°C). The graph shows that the temperature is relatively low, as indicated by the blue line on the graph. The x-axis of the graph displays values from 0 to 5, while the y-axis represents the temperature in degrees Celsius.\n\nThe text \"External Reference = V\" and \"Figure 28\" are also present in the image, providing additional information about the data being presented.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Power-Down Supply Current vs Temperature",
+    "summary": "Power-down current in microamps vs temperature, rising gradually and then more steeply above about 100C.",
+    "structured_data": {
+      "x_axis": "Temperature (C), -40 to 125",
+      "y_axis": "Power Supply Current (uA), axis 0 to 6",
+      "series": [],
+      "csv": "temperature_c,current_ua\\n-40,0.40\\n0,0.40\\n25,0.42\\n50,0.43\\n75,0.50\\n95,0.60\\n110,0.80\\n125,1.30"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "5V"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:34:19.702737+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

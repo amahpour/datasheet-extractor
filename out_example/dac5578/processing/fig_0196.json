@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0196",
+  "image_path": "out/dac5578/figures/fig_0196.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed diagram of a sprockets pocket quadrant, which is a component used in electronic devices to store and organize data. The diagram is black and white, with the sprockets pocket quadrant labeled as \"Pocket Quadrants\" at the top, followed by \"SPROCKET HOLES\" below it, and finally \"USER DIRECTION OF FEED\" at the bottom. The diagram also includes arrows pointing to different parts of the sprockets pocket quadrant, indicating its function or location within a device.",
+  "local_llm_classification": "icon",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:42:44.273565+00:00"
+}

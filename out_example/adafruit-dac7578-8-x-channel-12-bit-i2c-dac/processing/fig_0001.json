@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0001",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0001.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image features a black and white illustration of a flower with five petals, each containing a seed. The flower is centrally positioned against a stark white background, making it the focal point of the image.",
+  "local_llm_classification": "other",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:29:30.155198+00:00"
+}

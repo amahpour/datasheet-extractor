@@ -1,0 +1,14 @@
+{
+  "classification": "mechanical",
+  "title": "RGE QFN-24 (Top View) Package and Pin Labels",
+  "summary": "Top-view package drawing labeled 'RGE PACKAGE (QFN-24)' for DACx578, showing pin numbers, signal names, and a central thermal pad.",
+  "structured_data": {
+    "description": "QFN-24 pin map with corner marker and labeled pins including AVDD, GND, SDA, SCL, LDAC, TWOC, RSTSEL, ADDR0, ADDR1, CLR, VREFIN, and VOUTA/VOUTB/VOUTC/VOUTD/VOUTE/VOUTF/VOUTG/VOUTH. Several pins are marked NC. A dashed central area is labeled Thermal pad."
+  },
+  "component_references": ["DACx578", "RGE", "QFN-24"],
+  "key_values": {
+    "package": "QFN-24",
+    "thermal_pad": "present"
+  },
+  "confidence": 0.96
+}

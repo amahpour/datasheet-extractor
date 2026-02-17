@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0042",
+    "page": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 23.",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0042.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with two lines, one representing the external reference and the other representing the maximum value of a temperature sensor. The x-axis is labeled \"External Reference\" in black text, while the y-axis is labeled \"Temperature (°C)\" in white text. The graph shows that the maximum temperature reached by the sensor was 0.8 degrees Celsius.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

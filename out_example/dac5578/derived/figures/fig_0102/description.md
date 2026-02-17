@@ -1,0 +1,3 @@
+# fig_0102
+
+The image presents a graph that displays the relationship between linearity error and digital input code (DAC) for various channels. The x-axis of the graph represents DAC, while the y-axis shows linearity error in bits. The graph is divided into six sections, each representing a different channel with its own DAC value. The data points on the graph are connected by lines to show the relationship between linearity error and DAC.

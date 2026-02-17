@@ -1,0 +1,1246 @@
+{
+  "source": {
+    "path": "/home/amahpour/code/datasheet-extractor/examples/dac7578/adafruit-dac7578-8-x-channel-12-bit-i2c-dac.pdf",
+    "sha256": "3a012b0317f44d1718ebcf9ac59c714113b674d49c8e67f549d46273e60eb7c0",
+    "size": 1443926,
+    "mtime": 1771181835.8276613
+  },
+  "doc_stats": {
+    "page_count": 17,
+    "block_count": 33,
+    "table_count": 2,
+    "figure_count": 23
+  },
+  "blocks": [
+    {
+      "id": "blk_0001",
+      "type": "text",
+      "page": 1,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Created by Liz Clark\nhttps://learn.adafruit.com/adafruit-dac7578-8-x-channel-12-bit-i2c-dac\nLast updated on 2025-06-04 05:12:31 PM EDT",
+      "enriched_text": "Adafruit DACx578 - 8 x Channel I2C DAC\nCreated by Liz Clark\nhttps://learn.adafruit.com/adafruit-dac7578-8-x-channel-12-bit-i2c-dac\nLast updated on 2025-06-04 05:12:31 PM EDT",
+      "headings": [
+        "Adafruit DACx578 - 8 x Channel I2C DAC"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0002",
+      "type": "text",
+      "page": 2,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Pinouts, 3 = 5. • Power Pins • I2C Logic Pins • DAC Output Pins • Other Pins • I2C Address Jumper, 3 = . CircuitPython and Python • CircuitPython Microcontroller Wiring, 3 = 8. • Python Computer Wiring • Python Installation of DACx578 Library • CircuitPython Usage • Python Usage • Example Code, 3 = . Python Docs, 3 = 12. Arduino, 3 = 12. • Wiring • Library Installation • Example Code, 3 = . Arduino Docs, 3 = 16. Downloads, 3 = 16",
+      "enriched_text": "Table of Contents\nPinouts, 3 = 5. • Power Pins • I2C Logic Pins • DAC Output Pins • Other Pins • I2C Address Jumper, 3 = . CircuitPython and Python • CircuitPython Microcontroller Wiring, 3 = 8. • Python Computer Wiring • Python Installation of DACx578 Library • CircuitPython Usage • Python Usage • Example Code, 3 = . Python Docs, 3 = 12. Arduino, 3 = 12. • Wiring • Library Installation • Example Code, 3 = . Arduino Docs, 3 = 16. Downloads, 3 = 16",
+      "headings": [
+        "Table of Contents"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0003",
+      "type": "text",
+      "page": 3,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "There are two variants of this DAC: the 10-bit DAC6578 and the 12-bit DAC7578.\nIf you've ever said to yourself, \"Gee, I wish I had eight DACs that came in a single package\", well I have good news. The Adafruit DACx578 Breakouts are the answer to your wishes! Within its little package, the DACx578 has eight DACs for whatever voltage setting needs you may have, easily controlled over I2C.",
+      "enriched_text": "Overview\nThere are two variants of this DAC: the 10-bit DAC6578 and the 12-bit DAC7578.\nIf you've ever said to yourself, \"Gee, I wish I had eight DACs that came in a single package\", well I have good news. The Adafruit DACx578 Breakouts are the answer to your wishes! Within its little package, the DACx578 has eight DACs for whatever voltage setting needs you may have, easily controlled over I2C.",
+      "headings": [
+        "Overview"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0004",
+      "type": "text",
+      "page": 4,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "The DACx578 can easily work with 3.3V or 5V power and logic so no matter what microcontroller / microcomputer you're using, you'll get full range output. Note that this DAC is 'ratiometric' - that means that 0 is ground and 4095 is whatever the Vref voltage is. By default the Vref is tied to the power pin, but you could cut a jumper to set the top voltage to anything between 0 and the power pin. E.g. if you want a precision 4.095V reference, you'll need to power with 5V, and provide 4.095V on the VRef pin.\nThe breakout for the DACx578 is populated with the required support circuitry to use it with your microcontroller of choice or Blinka-supported computer. The SparkFun Qwiic (https://adafru.it/Fpw) compatible STEMMA QT (https://adafru.it/Ft4) JST SH connectors ease the process of connecting the DACx578 to your project and allows",
+      "enriched_text": "Overview\nThe DACx578 can easily work with 3.3V or 5V power and logic so no matter what microcontroller / microcomputer you're using, you'll get full range output. Note that this DAC is 'ratiometric' - that means that 0 is ground and 4095 is whatever the Vref voltage is. By default the Vref is tied to the power pin, but you could cut a jumper to set the top voltage to anything between 0 and the power pin. E.g. if you want a precision 4.095V reference, you'll need to power with 5V, and provide 4.095V on the VRef pin.\nThe breakout for the DACx578 is populated with the required support circuitry to use it with your microcontroller of choice or Blinka-supported computer. The SparkFun Qwiic (https://adafru.it/Fpw) compatible STEMMA QT (https://adafru.it/Ft4) JST SH connectors ease the process of connecting the DACx578 to your project and allows",
+      "headings": [
+        "Overview"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0005",
+      "type": "text",
+      "page": 5,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "you to easily share an I2C bus with other STEMMA QT, Qwiic, Grove, or other compatible sensors. QT Cable is not included , but we have a variety in the shop (https://adafru.it/17VE)\nOur drivers, wiring diagrams, and example code for Arduino, CircuitPython and Python make it easy to get started so you can get rolling with your project instead of figuring out how to wire things or get the code working.",
+      "enriched_text": "Overview\nyou to easily share an I2C bus with other STEMMA QT, Qwiic, Grove, or other compatible sensors. QT Cable is not included , but we have a variety in the shop (https://adafru.it/17VE)\nOur drivers, wiring diagrams, and example code for Arduino, CircuitPython and Python make it easy to get started so you can get rolling with your project instead of figuring out how to wire things or get the code working.",
+      "headings": [
+        "Overview"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0006",
+      "type": "text",
+      "page": 5,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "The default I2C address is 0x4C .\nThere are two variants of this DAC: the 10-bit DAC6578 and the 12-bit DAC7578. The pinout is the same for both.",
+      "enriched_text": "Pinouts\nThe default I2C address is 0x4C .\nThere are two variants of this DAC: the 10-bit DAC6578 and the 12-bit DAC7578. The pinout is the same for both.",
+      "headings": [
+        "Pinouts"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0007",
+      "type": "text",
+      "page": 6,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "- VCC - this is the power pin. To power the board, give it the same power as the logic level of your microcontroller - e.g. for a 5V micro like Arduino, use 5V. ·\n- Vrf Jumper - this is the reference voltage jumper. It is located on the front of the board, to the left of the DACx578 chip. If you cut this jumper, the VRf pin is disconnected from VCC and can be connected to to any voltage between 0 and the VCC voltage level. For example, if you want a precision 4.095V reference, you'll need to cut the Vrf jumper , power with 5V to VCC , and provide 4.095V on the VRf pin. ·\n- VRf - this is the reference voltage pin. By default, it is tied to VCC and as a result will share the same voltage level. ·\n- GND - common ground for power and logic ·",
+      "enriched_text": "Power Pins\n- VCC - this is the power pin. To power the board, give it the same power as the logic level of your microcontroller - e.g. for a 5V micro like Arduino, use 5V. ·\n- Vrf Jumper - this is the reference voltage jumper. It is located on the front of the board, to the left of the DACx578 chip. If you cut this jumper, the VRf pin is disconnected from VCC and can be connected to to any voltage between 0 and the VCC voltage level. For example, if you want a precision 4.095V reference, you'll need to cut the Vrf jumper , power with 5V to VCC , and provide 4.095V on the VRf pin. ·\n- VRf - this is the reference voltage pin. By default, it is tied to VCC and as a result will share the same voltage level. ·\n- GND - common ground for power and logic ·",
+      "headings": [
+        "Power Pins"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0008",
+      "type": "text",
+      "page": 6,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "- SCL - I2C clock pin, connect to your microcontroller's I2C clock line. This pin can use 3-5V logic, and there's a 10K pullup on this pin. ·\n- STEMMA QT (https://adafru.it/Ft4) These connectors allow you to connect to dev boards with STEMMA QT (qwiic) connectors or to other things with various associated accessories (https://adafru.it/Ft6) ·\n- SDA - I2C data pin, connect to your microcontroller's I2C data line. This pin can use 3-5V logic, and there's a 10K pullup on this pin. ·",
+      "enriched_text": "I2C Logic Pins\n- SCL - I2C clock pin, connect to your microcontroller's I2C clock line. This pin can use 3-5V logic, and there's a 10K pullup on this pin. ·\n- STEMMA QT (https://adafru.it/Ft4) These connectors allow you to connect to dev boards with STEMMA QT (qwiic) connectors or to other things with various associated accessories (https://adafru.it/Ft6) ·\n- SDA - I2C data pin, connect to your microcontroller's I2C data line. This pin can use 3-5V logic, and there's a 10K pullup on this pin. ·",
+      "headings": [
+        "I2C Logic Pins"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0009",
+      "type": "text",
+      "page": 6,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Along the top edge of the board are the DAC output pins. They are labeled 0 -7 . Each pin is connected to one of the eight channel outputs from the DACx578.",
+      "enriched_text": "DAC Output Pins\nAlong the top edge of the board are the DAC output pins. They are labeled 0 -7 . Each pin is connected to one of the eight channel outputs from the DACx578.",
+      "headings": [
+        "DAC Output Pins"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0010",
+      "type": "text",
+      "page": 6,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "- LDAC - This is the load DAC pin. LDAC is used for synchronous or asynchronous updating of the DAC outputs. According to the datasheet, you should be able to toggle this pin to send the buffer to the output pins after using the write only command. However, in testing, this pin has not worked as described. ·\n- CLR - This is the clear pin. It clears all DAC registers and buffers, replacing them with the value stored in the clear code register. The register can be set to zeroscale, mid-scale, full-scale, or disabled. The default setting of the clear code register sets the output of all DAC channels to 0V when the CLR pin is brought low. ·\nIn testing, the LDAC pin has not worked as described in the datasheet. Its believed to be a silicon bug in the DACx578.",
+      "enriched_text": "Other Pins\n- LDAC - This is the load DAC pin. LDAC is used for synchronous or asynchronous updating of the DAC outputs. According to the datasheet, you should be able to toggle this pin to send the buffer to the output pins after using the write only command. However, in testing, this pin has not worked as described. ·\n- CLR - This is the clear pin. It clears all DAC registers and buffers, replacing them with the value stored in the clear code register. The register can be set to zeroscale, mid-scale, full-scale, or disabled. The default setting of the clear code register sets the output of all DAC channels to 0V when the CLR pin is brought low. ·\nIn testing, the LDAC pin has not worked as described in the datasheet. Its believed to be a silicon bug in the DACx578.",
+      "headings": [
+        "Other Pins"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0011",
+      "type": "text",
+      "page": 7,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "On the back of the board is a three section jumper labeled AD0 , directly above the DACx578 label on the board silk. This jumper allow you to chain up to 3 of these boards on the same pair of I2C clock and data pins. To do so, you solder the jumpers \"closed\" by connecting the two pads.\nThe default I2C address is 0x4C . This address is set by leaving the address pin floating. None of the jumper pads soldered closed.\nIf you solder the center jumper pad to the pad to its left, you connect the address pin to GND and set the I2C address to 0x48 .\nIf you solder the center jumper pad to the pad to its right, you connect the address pin to VCC and set the I2C address to 0x4A .\nThe table below shows all possible addresses and the jumper positions.\n0x48, ADO = GND. 0x4A, ADO = VCC. 0x4C, ADO = FLOAT",
+      "enriched_text": "I2C Address Jumper\nOn the back of the board is a three section jumper labeled AD0 , directly above the DACx578 label on the board silk. This jumper allow you to chain up to 3 of these boards on the same pair of I2C clock and data pins. To do so, you solder the jumpers \"closed\" by connecting the two pads.\nThe default I2C address is 0x4C . This address is set by leaving the address pin floating. None of the jumper pads soldered closed.\nIf you solder the center jumper pad to the pad to its left, you connect the address pin to GND and set the I2C address to 0x48 .\nIf you solder the center jumper pad to the pad to its right, you connect the address pin to VCC and set the I2C address to 0x4A .\nThe table below shows all possible addresses and the jumper positions.\n0x48, ADO = GND. 0x4A, ADO = VCC. 0x4C, ADO = FLOAT",
+      "headings": [
+        "I2C Address Jumper"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0012",
+      "type": "text",
+      "page": 7,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "- Power LED In the upper left corner, above the STEMMA connector, on the front of the board, is the power LED, labeled on . It is a green LED. ·\n- LED jumper - This jumper, labeled LED on the board silk, is located on the back of the board, on the right. Cut the trace on this jumper to cut power to the \"on\" LED. ·",
+      "enriched_text": "Power LED and LED Jumper\n- Power LED In the upper left corner, above the STEMMA connector, on the front of the board, is the power LED, labeled on . It is a green LED. ·\n- LED jumper - This jumper, labeled LED on the board silk, is located on the back of the board, on the right. Cut the trace on this jumper to cut power to the \"on\" LED. ·",
+      "headings": [
+        "Power LED and LED Jumper"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0013",
+      "type": "text",
+      "page": 8,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "The DACx578 chips support broadcast addressing. This means that you can update DACx578 devices synchronously. This only supports write mode, you cannot perform reads with it. The broadcast address is 0x47 .",
+      "enriched_text": "Broadcast Addressing\nThe DACx578 chips support broadcast addressing. This means that you can update DACx578 devices synchronously. This only supports write mode, you cannot perform reads with it. The broadcast address is 0x47 .",
+      "headings": [
+        "Broadcast Addressing"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0014",
+      "type": "text",
+      "page": 8,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "It's easy to use the DACx578 with Python or CircuitPython, and the Adafruit_CircuitPython_x578 (https://adafru.it/1aeQ) module. This module allows you to easily write Python code to write data to the DAC outputs.\nYou can use this driver with any CircuitPython microcontroller board or with a computer that has GPIO and Python thanks to Adafruit_Blinka, our CircuitPython-forPython compatibility library (https://adafru.it/BSN).",
+      "enriched_text": "CircuitPython and Python\nIt's easy to use the DACx578 with Python or CircuitPython, and the Adafruit_CircuitPython_x578 (https://adafru.it/1aeQ) module. This module allows you to easily write Python code to write data to the DAC outputs.\nYou can use this driver with any CircuitPython microcontroller board or with a computer that has GPIO and Python thanks to Adafruit_Blinka, our CircuitPython-forPython compatibility library (https://adafru.it/BSN).",
+      "headings": [
+        "CircuitPython and Python"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0015",
+      "type": "text",
+      "page": 8,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "First wire up the DAC to your board exactly as follows. The following is the DAC wired to a Feather RP2040 using the STEMMA connector:\nBoard STEMMA 3V to DAC VCC (red wire) Board STEMMA GND to DAC GND (black wire) Board STEMMA SCL to DAC SCL (yellow wire) Board STEMMA SDA to DAC SDA (blue\nDAC channels.\nwire) You can output a signal from any of the 8\nThe following is the DAC wired to a Feather RP2040 using a solderless breadboard:",
+      "enriched_text": "CircuitPython Microcontroller Wiring\nFirst wire up the DAC to your board exactly as follows. The following is the DAC wired to a Feather RP2040 using the STEMMA connector:\nBoard STEMMA 3V to DAC VCC (red wire) Board STEMMA GND to DAC GND (black wire) Board STEMMA SCL to DAC SCL (yellow wire) Board STEMMA SDA to DAC SDA (blue\nDAC channels.\nwire) You can output a signal from any of the 8\nThe following is the DAC wired to a Feather RP2040 using a solderless breadboard:",
+      "headings": [
+        "CircuitPython Microcontroller Wiring"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0016",
+      "type": "text",
+      "page": 9,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Since there are dozens of Linux computers/boards you can use, we will show wiring for Raspberry Pi. For other platforms, please visit the guide for CircuitPython on Linux to see whether your platform is supported (https://adafru.it/BSN).\nHere's the Raspberry Pi wired with I2C using the STEMMA connector:\nPi 3V to DAC VCC (red wire) Pi GND to DAC GND (black wire) Pi SCL to DAC SCL (yellow wire) Pi SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.\nHere's the Raspberry Pi wired with I2C using a solderless breadboard:\nPi 3V to DAC VCC (red wire) Pi GND to DAC GND (black wire) Pi SCL to DAC SCL (yellow wire) Pi SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.",
+      "enriched_text": "Python Computer Wiring\nSince there are dozens of Linux computers/boards you can use, we will show wiring for Raspberry Pi. For other platforms, please visit the guide for CircuitPython on Linux to see whether your platform is supported (https://adafru.it/BSN).\nHere's the Raspberry Pi wired with I2C using the STEMMA connector:\nPi 3V to DAC VCC (red wire) Pi GND to DAC GND (black wire) Pi SCL to DAC SCL (yellow wire) Pi SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.\nHere's the Raspberry Pi wired with I2C using a solderless breadboard:\nPi 3V to DAC VCC (red wire) Pi GND to DAC GND (black wire) Pi SCL to DAC SCL (yellow wire) Pi SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.",
+      "headings": [
+        "Python Computer Wiring"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0017",
+      "type": "text",
+      "page": 9,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Board 3V to DAC VCC (red wire) Board GND to DAC GND (black wire) Board SCL to DAC SCL (yellow wire) Board SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.",
+      "enriched_text": "Python Computer Wiring\nBoard 3V to DAC VCC (red wire) Board GND to DAC GND (black wire) Board SCL to DAC SCL (yellow wire) Board SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.",
+      "headings": [
+        "Python Computer Wiring"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0018",
+      "type": "text",
+      "page": 10,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "You'll need to install the Adafruit_Blinka library that provides the CircuitPython support in Python. This may also require enabling I2C on your platform and verifying you are running Python 3. Since each platform is a little different, and Linux changes often, please visit the CircuitPython on Linux guide to get your computer ready (https://adafru.it/BSN)!\nOnce that's done, from your command line run the following command:\n- pip3 install adafruit-circuitpython-dacx578 ·\nIf your default Python is version 3 you may need to run 'pip' instead. Just make sure you aren't trying to use CircuitPython on Python 2.x, it isn't supported!",
+      "enriched_text": "Python Installation of DACx578 Library\nYou'll need to install the Adafruit_Blinka library that provides the CircuitPython support in Python. This may also require enabling I2C on your platform and verifying you are running Python 3. Since each platform is a little different, and Linux changes often, please visit the CircuitPython on Linux guide to get your computer ready (https://adafru.it/BSN)!\nOnce that's done, from your command line run the following command:\n- pip3 install adafruit-circuitpython-dacx578 ·\nIf your default Python is version 3 you may need to run 'pip' instead. Just make sure you aren't trying to use CircuitPython on Python 2.x, it isn't supported!",
+      "headings": [
+        "Python Installation of DACx578 Library"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0019",
+      "type": "text",
+      "page": 10,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "To use with CircuitPython, you need to first install the Adafruit_CircuitPython_DACx578 library, and its dependencies, into the lib folder on your CIRCUITPY drive. Then you need to update code.py with the example script.\nThankfully, we can do this in one go. In the example below, click the Download Project Bundle button below to download the necessary libraries and the code.py file in a zip file. Extract the contents of the zip file, and copy the entire lib folder and the code.py file to your CIRCUITPY drive.\nYour CIRCUITPY/lib folder should contain the following folder and file:\n- adafruit_bus_device/ ·\n- adafruit_dacx578.mpy ·",
+      "enriched_text": "CircuitPython Usage\nTo use with CircuitPython, you need to first install the Adafruit_CircuitPython_DACx578 library, and its dependencies, into the lib folder on your CIRCUITPY drive. Then you need to update code.py with the example script.\nThankfully, we can do this in one go. In the example below, click the Download Project Bundle button below to download the necessary libraries and the code.py file in a zip file. Extract the contents of the zip file, and copy the entire lib folder and the code.py file to your CIRCUITPY drive.\nYour CIRCUITPY/lib folder should contain the following folder and file:\n- adafruit_bus_device/ ·\n- adafruit_dacx578.mpy ·",
+      "headings": [
+        "CircuitPython Usage"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0020",
+      "type": "text",
+      "page": 11,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Once you have the library pip3 installed on your computer, copy or download the following example to your computer, and run the following, replacing code.py with whatever you named the file:",
+      "enriched_text": "Python Usage\nOnce you have the library pip3 installed on your computer, copy or download the following example to your computer, and run the following, replacing code.py with whatever you named the file:",
+      "headings": [
+        "Python Usage"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0021",
+      "type": "text",
+      "page": 11,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "If running CircuitPython: Once everything is saved to the CIRCUITPY drive, connect to the serial console (https://adafru.it/Bec) to see the data printed out!\nIf running Python: The console output will appear wherever you are running Python.\n```",
+      "enriched_text": "Example Code\nIf running CircuitPython: Once everything is saved to the CIRCUITPY drive, connect to the serial console (https://adafru.it/Bec) to see the data printed out!\nIf running Python: The console output will appear wherever you are running Python.\n```",
+      "headings": [
+        "Example Code"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0022",
+      "type": "text",
+      "page": 11,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "# SPDX-FileCopyrightText: Copyright (c) 2025 Liz Clark for Adafruit Industries # # SPDX-License-Identifier: MIT import math import time import board import adafruit_dacx578 # Initialize I2C and DAC i2c = board.I2C() dac = adafruit_dacx578.DACx578(i2c) MAX_VALUE = 65535 # 16-bit value BASE_FREQ = 1.0 # frequency in Hz SAMPLE_RATE = 100 # samples per second FREQ_MULTIPLIERS = [ 1.0, # Channel 0: 1 Hz 2.0, # Channel 1: 2 Hz 3.0, # Channel 2: 3 Hz 4.0, # Channel 3: 4 Hz 5.0, # Channel 4: 5 Hz 6.0, # Channel 5: 6 Hz 7.0, # Channel 6: 7 Hz 8.0, # Channel 7: 8 Hz ] def calculate_sinewave(frequency, time_point): angle = 2 * math.pi * frequency * time_point return",
+      "enriched_text": "Example Code\n# SPDX-FileCopyrightText: Copyright (c) 2025 Liz Clark for Adafruit Industries # # SPDX-License-Identifier: MIT import math import time import board import adafruit_dacx578 # Initialize I2C and DAC i2c = board.I2C() dac = adafruit_dacx578.DACx578(i2c) MAX_VALUE = 65535 # 16-bit value BASE_FREQ = 1.0 # frequency in Hz SAMPLE_RATE = 100 # samples per second FREQ_MULTIPLIERS = [ 1.0, # Channel 0: 1 Hz 2.0, # Channel 1: 2 Hz 3.0, # Channel 2: 3 Hz 4.0, # Channel 3: 4 Hz 5.0, # Channel 4: 5 Hz 6.0, # Channel 5: 6 Hz 7.0, # Channel 6: 7 Hz 8.0, # Channel 7: 8 Hz ] def calculate_sinewave(frequency, time_point): angle = 2 * math.pi * frequency * time_point return",
+      "headings": [
+        "Example Code"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0023",
+      "type": "text",
+      "page": 11,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "int((math.sin(angle) + 1) * (MAX_VALUE / 2)) start_time = time.monotonic() while True: current_time = time.monotonic() -start_time for channel_num in range(8): frequency = BASE_FREQ * FREQ_MULTIPLIERS[channel_num] value = calculate_sinewave(frequency, current_time) dac.channels[channel_num].value = value time.sleep(1 / SAMPLE_RATE)\n```\nFirst, the DAC is instantiated over I2C. Then, in the loop, the sinewaves are written to each of the 8 DAC outputs. Each sinewave is generated at a different frequency. You can connect the outputs to your oscilloscope to measure them. In the image below, channels 0 and 2 on the DAC are connected to the two inputs on an oscilloscope. Channel 0 is operating at 1 Hz and channel 2 is operating at 3 Hz.",
+      "enriched_text": "Example Code\nint((math.sin(angle) + 1) * (MAX_VALUE / 2)) start_time = time.monotonic() while True: current_time = time.monotonic() -start_time for channel_num in range(8): frequency = BASE_FREQ * FREQ_MULTIPLIERS[channel_num] value = calculate_sinewave(frequency, current_time) dac.channels[channel_num].value = value time.sleep(1 / SAMPLE_RATE)\n```\nFirst, the DAC is instantiated over I2C. Then, in the loop, the sinewaves are written to each of the 8 DAC outputs. Each sinewave is generated at a different frequency. You can connect the outputs to your oscilloscope to measure them. In the image below, channels 0 and 2 on the DAC are connected to the two inputs on an oscilloscope. Channel 0 is operating at 1 Hz and channel 2 is operating at 3 Hz.",
+      "headings": [
+        "Example Code"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0024",
+      "type": "text",
+      "page": 12,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Python Docs (https://adafru.it/1aeC)",
+      "enriched_text": "Python Docs\nPython Docs (https://adafru.it/1aeC)",
+      "headings": [
+        "Python Docs"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0025",
+      "type": "text",
+      "page": 12,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Using the DACx578 breakout with Arduino involves wiring up the breakout to your Arduino-compatible microcontroller, installing the Adafruit_DACX578 (https://adafru.it/ 1aeR) library, and running the provided example code.",
+      "enriched_text": "Arduino\nUsing the DACx578 breakout with Arduino involves wiring up the breakout to your Arduino-compatible microcontroller, installing the Adafruit_DACX578 (https://adafru.it/ 1aeR) library, and running the provided example code.",
+      "headings": [
+        "Arduino"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0026",
+      "type": "text",
+      "page": 12,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Wire as shown for a 5V board like an Uno. If you are using a 3V board, like an Adafruit Feather, wire the board's 3V pin to the DAC VIN.\nHere is an Adafruit Metro wired up to the DAC using the STEMMA QT connector:\nBoard 5V to DAC VCC (red wire) Board GND to DAC GND (black wire) Board SCL to DAC SCL (yellow wire) Board SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.\nHere is an Adafruit Metro wired up using a solderless breadboard:",
+      "enriched_text": "Wiring\nWire as shown for a 5V board like an Uno. If you are using a 3V board, like an Adafruit Feather, wire the board's 3V pin to the DAC VIN.\nHere is an Adafruit Metro wired up to the DAC using the STEMMA QT connector:\nBoard 5V to DAC VCC (red wire) Board GND to DAC GND (black wire) Board SCL to DAC SCL (yellow wire) Board SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.\nHere is an Adafruit Metro wired up using a solderless breadboard:",
+      "headings": [
+        "Wiring"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0027",
+      "type": "text",
+      "page": 13,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "You can install the Adafruit_DACX578 library for Arduino using the Library Manager in the Arduino IDE.\nClick the Manage Libraries ... menu item, search for Adafruit_DAC7578 , and select the Adafruit DAC7578 library:\nBoard 5V to DAC VCC (red wire) Board GND to DAC GND (black wire) Board SCL to DAC SCL (yellow wire) Board SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.\nIf asked about dependencies, click \"Install all\".\nIf the \"Dependencies\" window does not come up, then you already have the dependencies installed.\nIf the dependencies are already installed, you must make sure you update them through the Arduino Library Manager before loading the example!",
+      "enriched_text": "Library Installation\nYou can install the Adafruit_DACX578 library for Arduino using the Library Manager in the Arduino IDE.\nClick the Manage Libraries ... menu item, search for Adafruit_DAC7578 , and select the Adafruit DAC7578 library:\nBoard 5V to DAC VCC (red wire) Board GND to DAC GND (black wire) Board SCL to DAC SCL (yellow wire) Board SDA to DAC SDA (blue wire)\nYou can output a signal from any of the 8 DAC channels.\nIf asked about dependencies, click \"Install all\".\nIf the \"Dependencies\" window does not come up, then you already have the dependencies installed.\nIf the dependencies are already installed, you must make sure you update them through the Arduino Library Manager before loading the example!",
+      "headings": [
+        "Library Installation"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0028",
+      "type": "text",
+      "page": 14,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "```\n#include <Adafruit_DACX578.h> #include <math.h> Adafruit_DACX578 dac(12); // Assuming 12-bit resolution const float frequencies[8] = {1, 2, 4, 8, 16, 32, 40, 50}; // Hz const uint16_t amplitude = 2048; // Half of full scale for 12-bit DAC (0 to 4095) const uint16_t offset = 2048; // DC offset to keep sine wave positive const uint32_t sampleRate = 370; // Measured actual rate const uint32_t period = 2700; // Measured cycle time in microseconds void setup() { Serial.begin(115200); while (!Serial) delay(10);\n```\n```",
+      "enriched_text": "Example Code\n```\n#include <Adafruit_DACX578.h> #include <math.h> Adafruit_DACX578 dac(12); // Assuming 12-bit resolution const float frequencies[8] = {1, 2, 4, 8, 16, 32, 40, 50}; // Hz const uint16_t amplitude = 2048; // Half of full scale for 12-bit DAC (0 to 4095) const uint16_t offset = 2048; // DC offset to keep sine wave positive const uint32_t sampleRate = 370; // Measured actual rate const uint32_t period = 2700; // Measured cycle time in microseconds void setup() { Serial.begin(115200); while (!Serial) delay(10);\n```\n```",
+      "headings": [
+        "Example Code"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0029",
+      "type": "text",
+      "page": 15,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Serial.println(\"Adafruit DACX578 Sine Wave Test\"); if (!dac.begin()) { Serial.println(\"Failed to find DAC7578 chip\"); while (1) delay(10); } Serial.println(\"DAC7578 initialized\"); // Set I2C frequency to 800 kHz for faster communication Wire.setClock(800000); } void loop() { static uint32_t lastTime = micros(); static float phase[8] = {0}; uint32_t currentTime = micros(); if (currentTime -lastTime >= period) { lastTime = currentTime; // Use actual time for (uint8_t channel = 0; channel < 8; channel++) { float sineValue = sin(phase[channel]) * amplitude + offset; dac.writeAndUpdateChannelValue(channel, (uint16_t)sineValue); // Update phase using actual sample rate phase[channel] += 2 * M_PI *",
+      "enriched_text": "Example Code\nSerial.println(\"Adafruit DACX578 Sine Wave Test\"); if (!dac.begin()) { Serial.println(\"Failed to find DAC7578 chip\"); while (1) delay(10); } Serial.println(\"DAC7578 initialized\"); // Set I2C frequency to 800 kHz for faster communication Wire.setClock(800000); } void loop() { static uint32_t lastTime = micros(); static float phase[8] = {0}; uint32_t currentTime = micros(); if (currentTime -lastTime >= period) { lastTime = currentTime; // Use actual time for (uint8_t channel = 0; channel < 8; channel++) { float sineValue = sin(phase[channel]) * amplitude + offset; dac.writeAndUpdateChannelValue(channel, (uint16_t)sineValue); // Update phase using actual sample rate phase[channel] += 2 * M_PI *",
+      "headings": [
+        "Example Code"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0030",
+      "type": "text",
+      "page": 15,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "frequencies[channel] / sampleRate; if (phase[channel] >= 2 * M_PI) { phase[channel] -= 2 * M_PI; } } } }\n```\nUpload the sketch to your board and open up the Serial Monitor ( Tools -> Serial Monitor ) at 115200 baud. You'll see the DACx578 recognized over I2C. Then, sinewaves will be output to each of the 8 channels on the DAC. You can connect these outputs to your oscilloscope to measure the frequency. In the image above, channels 0 (1 Hz) and 2 (4 Hz) on the DAC are connected to the two input channels on the oscilloscope.",
+      "enriched_text": "Example Code\nfrequencies[channel] / sampleRate; if (phase[channel] >= 2 * M_PI) { phase[channel] -= 2 * M_PI; } } } }\n```\nUpload the sketch to your board and open up the Serial Monitor ( Tools -> Serial Monitor ) at 115200 baud. You'll see the DACx578 recognized over I2C. Then, sinewaves will be output to each of the 8 channels on the DAC. You can connect these outputs to your oscilloscope to measure the frequency. In the image above, channels 0 (1 Hz) and 2 (4 Hz) on the DAC are connected to the two input channels on the oscilloscope.",
+      "headings": [
+        "Example Code"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0031",
+      "type": "text",
+      "page": 16,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "Arduino Docs (https://adafru.it/1aeD)",
+      "enriched_text": "Arduino Docs\nArduino Docs (https://adafru.it/1aeD)",
+      "headings": [
+        "Arduino Docs"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0032",
+      "type": "text",
+      "page": 16,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "- DACx578 Datasheet (https://adafru.it/1aeS) ·\n- EagleCAD PCB Files on GitHub (https://adafru.it/1aeT) ·\n- 3D models on GitHub (https://adafru.it/1aka) ·\n- Fritzing object in the Adafruit Fritzing Library (https://adafru.it/1aeU) ·",
+      "enriched_text": "Files\n- DACx578 Datasheet (https://adafru.it/1aeS) ·\n- EagleCAD PCB Files on GitHub (https://adafru.it/1aeT) ·\n- 3D models on GitHub (https://adafru.it/1aka) ·\n- Fritzing object in the Adafruit Fritzing Library (https://adafru.it/1aeU) ·",
+      "headings": [
+        "Files"
+      ],
+      "heading_level": null
+    },
+    {
+      "id": "blk_0033",
+      "type": "text",
+      "page": 17,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "text": "LDAC",
+      "enriched_text": "Schematic and Fab Print\nLDAC",
+      "headings": [
+        "Schematic and Fab Print"
+      ],
+      "heading_level": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table_0001",
+      "page": 2,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "grid": [
+        [
+          "Overview",
+          "3"
+        ],
+        [
+          "Pinouts",
+          "5"
+        ],
+        [
+          "• Power Pins • I2C Logic Pins • DAC Output Pins • Other Pins • I2C Address Jumper",
+          ""
+        ],
+        [
+          "CircuitPython and Python • CircuitPython Microcontroller Wiring",
+          "8"
+        ],
+        [
+          "• Python Computer Wiring • Python Installation of DACx578 Library • CircuitPython Usage • Python Usage • Example Code",
+          ""
+        ],
+        [
+          "Python Docs",
+          "12"
+        ],
+        [
+          "Arduino",
+          "12"
+        ],
+        [
+          "• Wiring • Library Installation • Example Code",
+          ""
+        ],
+        [
+          "Arduino Docs",
+          "16"
+        ],
+        [
+          "Downloads",
+          "16"
+        ]
+      ],
+      "markdown_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/tables/table_0001.md",
+      "csv_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/tables/table_0001.csv",
+      "json_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/tables/table_0001.json"
+    },
+    {
+      "id": "table_0002",
+      "page": 7,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "grid": [
+        [
+          "ADDR",
+          "ADO"
+        ],
+        [
+          "0x48",
+          "GND"
+        ],
+        [
+          "0x4A",
+          "VCC"
+        ],
+        [
+          "0x4C",
+          "FLOAT"
+        ]
+      ],
+      "markdown_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/tables/table_0002.md",
+      "csv_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/tables/table_0002.csv",
+      "json_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/tables/table_0002.json"
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig_0001",
+      "page": 1,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0001.png",
+      "classification": {
+        "type": "other",
+        "confidence": 0.7,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image features a black and white illustration of a flower with five petals, each containing a seed. The flower is centrally positioned against a stark white background, making it the focal point of the image.",
+          "confidence": 0.7,
+          "notes": "local_llm (other)"
+        }
+      }
+    },
+    {
+      "id": "fig_0002",
+      "page": 1,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0002.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image shows a black and gold electronic device, likely a small circuit board or microcontroller, resting on a gray surface. The device is composed of various components, including two white wires extending outwards from the center, with one wire attached to a yellow connector at the top left corner and another wire connected to a green connector at the bottom right corner.\n\nThe device appears to be a small electronic gadget or circuit board designed for use in electronics projects. The black background of the image contrasts with the gold accents on the components, making it easy to identify the different parts of the device.",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0003",
+      "page": 3,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0003.png",
+      "classification": {
+        "type": "pinout",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image shows a black circuit board with various components, including resistors and capacitors. The board is designed for use in electronic devices such as digital cameras or audio equipment. It features gold-colored pins that connect the components together, creating a complex network of electrical connections.",
+          "confidence": 0.3,
+          "notes": "local_llm (pinout)"
+        }
+      }
+    },
+    {
+      "id": "fig_0004",
+      "page": 4,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0004.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image shows a small electronic device, possibly a circuit board or component, placed on top of a coin. The device is black and has a silver color scheme with gold accents. It appears to be a small electronic device that could be used for various purposes such as communication, data storage, or control systems. The coin serves as the base for the device, providing stability while it's in use.",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0005",
+      "page": 4,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0005.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image shows a close-up view of a black circuit board with two white wires attached to it, one on each side. The circuit board is resting on a gray surface and appears to be in good condition. There are no other objects or text visible in the image.",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0006",
+      "page": 5,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0006.png",
+      "classification": {
+        "type": "pinout",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a black and gold circuit board with various components, including a small circuit board with multiple pins on the left side of the frame. The main circuit board is situated in the center of the image, surrounded by smaller components that are not visible due to their position relative to the main circuit board. This assembly of electronic components suggests it could be part of a larger project or device.",
+          "confidence": 0.3,
+          "notes": "local_llm (pinout)"
+        }
+      }
+    },
+    {
+      "id": "fig_0007",
+      "page": 5,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0007.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents two electronic components, a black circuit board and a black component, both of which are labeled with numbers and letters. The circuit board is placed on top of a gray surface, while the component sits below it. Both items appear to be electronic devices or parts used in electronics projects.",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0008",
+      "page": 7,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0008.png",
+      "classification": {
+        "type": "screenshot",
+        "confidence": 0.7,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a detailed electronic datasheet, divided into four sections with purple text and numbers. The first section is titled \"ADDR\" in black text at the top left corner, followed by \"0x48\" on the left side of the page. The third section is labeled \"GND\" in black text at the bottom right corner. The fourth section is titled \"VCC\" in black text at the bottom center and reads \"floating point\".",
+          "confidence": 0.7,
+          "notes": "local_llm (screenshot)"
+        }
+      }
+    },
+    {
+      "id": "fig_0009",
+      "page": 8,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0009.png",
+      "classification": {
+        "type": "pinout",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a circuit board with two components connected by wires, one of which is a small device labeled \"DAC7776\" and the other being a larger component. The smaller device has a green light on its top right corner, while the larger component features a pink light on its left side.",
+          "confidence": 0.3,
+          "notes": "local_llm (pinout)"
+        }
+      }
+    },
+    {
+      "id": "fig_0010",
+      "page": 9,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0010.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a circuit board with two electronic components, one black and one yellow, connected by wires. The black component is positioned on the left side of the board, while the yellow component is located on the right side. Both components are attached to a wire that extends from the top center of the board towards the bottom edge. A note or label can be seen in the background, possibly providing information about the circuit board's functionality and design.",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0011",
+      "page": 9,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0011.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a Raspberry Pi board with various components, including a green Raspberry Pi board and a black circuit board connected to it using red, white, and blue wires. The circuit board is attached to the Raspberry Pi board by a small yellow connector.",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0012",
+      "page": 9,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0012.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a Raspberry Pi board with various components, including a green Raspberry Pi board and wires connecting it to other boards. The Raspberry Pi board is connected to a black circuit board that displays the text \"HDMI\" and \"DIGITAL SIGNAL OUTPUT\".",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0013",
+      "page": 10,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0013.png",
+      "classification": {
+        "type": "icon",
+        "confidence": 0.7,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a screenshot of a computer screen displaying the interface for a circuit board. The circuit board is divided into multiple tabs, each representing a different feature or function. The first tab displays the text \"circuitpy\" and its corresponding icon, while the second tab shows the text \"circuitsd\" and an icon depicting a circuit board. The third tab features the text \"metadatatest\" and an icon of a circuit board with multiple components. The fourth tab contains the text \"thisfunkt\" and an icon representing a circuit board component, such as a switch or resistor. The fifth tab displays the text \"trash\" and an icon for a trash bin on the circuit board.",
+          "confidence": 0.7,
+          "notes": "local_llm (icon)"
+        }
+      }
+    },
+    {
+      "id": "fig_0014",
+      "page": 12,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0014.png",
+      "classification": {
+        "type": "schematic",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image shows a black and white electronic circuit diagram with two distinct waves, one yellow and one blue, displayed on the screen. The wave on the left is slightly higher than the wave on the right, creating a sense of depth in the image. The circuit appears to be measuring or displaying an electrical signal, possibly related to audio equipment such as a speaker or microphone.",
+          "confidence": 0.3,
+          "notes": "local_llm (schematic)"
+        }
+      }
+    },
+    {
+      "id": "fig_0015",
+      "page": 13,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0015.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a circuit board with various components, including a black circuit board and wires in different colors such as red, yellow, green, blue, and white. The circuit board is connected to a small device that appears to be a sensor or a microcontroller. The device has a label on it indicating its purpose, which reads \"DAC Signal Outlet\".",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0016",
+      "page": 13,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0016.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a circuit board with various electronic components, including a black and white ADC (Digital Accelerometer) connected to the board by wires. The ADC is part of a larger circuit that includes a microcontroller, a battery pack, and other components. The circuit board is placed on top of a white background, making it easy to read and understand the layout of the electronic components.",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0017",
+      "page": 13,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0017.png",
+      "classification": {
+        "type": "other",
+        "confidence": 0.7,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image shows a computer screen displaying a page from an electronics datasheet for Arduino. The page is titled \"VerifyCompile\" and has a list of options, including \"Show Sketch Folder\", \"Include Library\", and \"Add File\". The text on the page suggests that the user can use this software to create and manage their own projects using Arduino programming language.\n\nThe screen also features a code editor window with an open file named \"codeeditor.py\" in the left corner, which is likely used for writing and testing code.",
+          "confidence": 0.7,
+          "notes": "local_llm (other)"
+        }
+      }
+    },
+    {
+      "id": "fig_0018",
+      "page": 14,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0018.png",
+      "classification": {
+        "type": "other",
+        "confidence": 0.7,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image shows a computer screen displaying the settings of an ADC library. The ADC library is located in the Archives department, and it contains information about the ADC7/8 channel. The ADC7/8 channel can be accessed through the ADC7/8 library for the ADC7/8 channel. The screen also displays options to install or update the ADC7/8 library.",
+          "confidence": 0.7,
+          "notes": "local_llm (other)"
+        }
+      }
+    },
+    {
+      "id": "fig_0019",
+      "page": 14,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0019.png",
+      "classification": {
+        "type": "other",
+        "confidence": 0.7,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image shows a computer screen displaying a window with the text \"The library ADCARTLITACD7578Library 1.0.0 needs some other library dependencies currently not installed.\" The window also contains two buttons, one labeled \"Install ADCartLitacd7578Library 1.0.0\" and another labeled \"All missing dependencies\", suggesting that the user should install both libraries to resolve any missing dependencies.",
+          "confidence": 0.7,
+          "notes": "local_llm (other)"
+        }
+      }
+    },
+    {
+      "id": "fig_0020",
+      "page": 15,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0020.png",
+      "classification": {
+        "type": "timing_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image shows a black and white electronic device with a display screen that is currently turned on, displaying a waveform graph. The waveform appears to be in the form of a sine wave or a sawtooth wave, depending on the specific part of the device being viewed. This type of display can provide valuable information about electrical signals, such as voltage levels and current flows.",
+          "confidence": 0.3,
+          "notes": "local_llm (timing_diagram)"
+        }
+      }
+    },
+    {
+      "id": "fig_0021",
+      "page": 16,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0021.png",
+      "classification": {
+        "type": "pinout",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a detailed electronic circuit diagram, specifically for the ADCfruit product. The diagram is color-coded and includes various components such as resistors, capacitors, and transistors. The diagram also provides information about the ADCfruit product's specifications, including its power supply, resistance values, and the number of input pins it supports.\n\nThe diagram is neatly organized into different sections, each representing a specific component or part of the circuit. The layout includes labels for the resistors, capacitors, and transistors, as well as the ADCfruit product's name and specifications.",
+          "confidence": 0.3,
+          "notes": "local_llm (pinout)"
+        }
+      }
+    },
+    {
+      "id": "fig_0022",
+      "page": 16,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0022.png",
+      "classification": {
+        "type": "icon",
+        "confidence": 0.7,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a detailed circuit board layout, specifically for a microcontroller device. The board is divided into multiple sections, each marked with various symbols and numbers. The top left section features the symbol \"VRI\" along with the number \"0\". The bottom right section displays the number \"1.8\". The middle section contains the symbols \"GND\", \"SDA\", \"CLR\", and \"LDCA\". The layout is meticulously organized, providing a clear understanding of each component's function within the device.",
+          "confidence": 0.7,
+          "notes": "local_llm (icon)"
+        }
+      }
+    },
+    {
+      "id": "fig_0023",
+      "page": 17,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "caption": "",
+      "tags": [],
+      "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0023.png",
+      "classification": {
+        "type": "block_diagram",
+        "confidence": 0.3,
+        "rationale": "local_llm classification"
+      },
+      "derived": {
+        "description": {
+          "text": "The image presents a black circuit board with various components, including two black resistors and a small white star-shaped component on the right side of the board. The circuit board is set against a dark blue background, which highlights its features.",
+          "confidence": 0.3,
+          "notes": "local_llm (block_diagram)"
+        }
+      }
+    }
+  ]
+}

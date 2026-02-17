@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0112",
+  "image_path": "out/dac5578/figures/fig_0112.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"Digital input code\" and the y-axis labeled \"Differential linearity error\". The graph displays the relationship between the digital input code (DAC) and the differential linearity error, represented by a line on the graph. The line slopes upwards from left to right, indicating that as DAC increases, so does the linearity error.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "DNL vs Digital Input Code (DAC5578, 8-bit, +125C, 2.5V ref)",
+    "summary": "DNL for DAC5578 channels at +125C and 2.5V reference.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-256)",
+      "y_axis": "DNL Error (LSB), axis -0.25 to +0.25",
+      "series": [],
+      "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.01,0.01\\n128,-0.01,0.01\\n256,-0.01,0.01"
+    },
+    "component_references": [
+      "DAC5578"
+    ],
+    "key_values": {
+      "external_reference": "2.5V",
+      "temperature": "+125C"
+    },
+    "confidence": 0.92
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:38:08.279225+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

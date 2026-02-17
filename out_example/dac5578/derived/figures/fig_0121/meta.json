@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0121",
+    "page": 21,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0121.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph with two lines, one representing the external reference and the other representing the temperature. The graph is labeled \"DIFFERENTIAL LINARITY ERROR vs Temperature (DAC5578 8-bit)\" in black text at the top of the image. The x-axis shows the temperature values from 0 to 100 degrees Celsius, while the y-axis represents the external reference and its corresponding value. The graph displays two lines: one representing the external reference and the other representing the temperature.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

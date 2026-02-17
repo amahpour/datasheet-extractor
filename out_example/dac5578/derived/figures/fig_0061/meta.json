@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0061",
+    "page": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 39.",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0061.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph that displays the relationship between power supply voltage and current in a circuit. The x-axis of the graph represents the voltage, while the y-axis represents the current. A line is drawn on the graph to represent the relationship between these two variables. The slope of this line indicates the change in current for every unit increase in voltage. The graph shows that as the power supply voltage increases, so does the current flowing through the circuit.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+| DB15 | DB14 | OPERATING MODES |
+| --- | --- | --- |
+| 0 | 0 | Default Software reset. Equivalent to Power- on-Reset |
+| x | 1 | Software reset and set part in High Speed Mode |
+| 1 | 0 | Software reset and maintain High Speed Mode state |

@@ -1,0 +1,32 @@
+{
+  "figure_id": "fig_0151",
+  "image_path": "out/dac5578/figures/fig_0151.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram of a power-off glitch, which is a type of electrical interference that occurs when two or more AC waves interfere with each other, resulting in a fluctuating pattern of voltage across the system. The diagram shows three different AC waveforms labeled \"DAC = 0.1 mV\", \"DAC = 1 mV\", and \"DAC = 2 mV\". These waveforms are represented by vertical lines on the graph, indicating their respective amplitudes or voltages. The diagram also includes a legend that explains the meaning of each line representing an AC waveform.",
+  "local_llm_classification": "timing_diagram",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Power-Off Glitch (Zero-Scale)",
+    "summary": "Scope capture of output behavior during AVDD power-off ramp with DAC at zero scale.",
+    "structured_data": {
+      "description": "Traces include VOUT 1 mV/div and AVDD 2 V/div during shutdown."
+    },
+    "component_references": [
+      "oscilloscope",
+      "DACx578"
+    ],
+    "key_values": {
+      "condition": "power-off",
+      "dac_code": "zero scale"
+    },
+    "confidence": 0.88
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:40:19.272404+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

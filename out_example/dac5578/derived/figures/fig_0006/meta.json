@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0006",
+    "page": 2,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0006.png",
+    "classification": {
+      "type": "logo",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image features a striking black and white logo for a company, which is composed of three triangles arranged in a triangular formation with the largest triangle at the top and the smallest one at the bottom. The logo also includes a hand holding a stylized computer mouse, adding a touch of creativity to the design.",
+        "confidence": 0.7,
+        "notes": "local_llm (logo)"
+      }
+    }
+  }
+}

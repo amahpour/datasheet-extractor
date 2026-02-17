@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0192",
+  "image_path": "out/dac5578/figures/fig_0192.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology. The logo is displayed on a gray background, with the company's name written in bold red letters above it. Below the name, there are two smaller images representing the company's logo design elements - a stylized \"Texas\" and an image of a Texas Instrument logo.",
+  "local_llm_classification": "logo",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:42:31.688035+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0064",
+    "page": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 40.",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0064.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph that displays the external reference for a 5V power supply current, with the x-axis representing time and the y-axis representing the current in milliampere-hours (mAh). The graph shows a steady increase in the supply current over time, indicating that the device is receiving an adequate amount of power.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

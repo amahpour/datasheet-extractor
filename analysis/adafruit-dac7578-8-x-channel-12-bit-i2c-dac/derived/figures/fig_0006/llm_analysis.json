@@ -1,0 +1,11 @@
+{
+  "classification": "photo",
+  "title": "DAC7578 Breakout with Included Header Strip",
+  "summary": "Product photo showing the DAC7578 breakout board and a separate male header strip accessory above it. The board front silkscreen and pin breakout pads are visible.",
+  "structured_data": {
+    "description": "A straight male header strip is shown above the board, indicating included solderable pin headers. Board silkscreen again shows DAC7578 labeling and analog output channels 0-7 plus reference and control pins."
+  },
+  "component_references": ["DAC7578", "male pin header"],
+  "key_values": {},
+  "confidence": 0.95
+}

@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0018",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0018.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image shows a computer screen displaying the settings of an ADC library. The ADC library is located in the Archives department, and it contains information about the ADC7/8 channel. The ADC7/8 channel can be accessed through the ADC7/8 library for the ADC7/8 channel. The screen also displays options to install or update the ADC7/8 library.",
+  "local_llm_classification": "other",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:30:24.686643+00:00"
+}

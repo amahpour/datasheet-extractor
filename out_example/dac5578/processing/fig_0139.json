@@ -1,0 +1,35 @@
+{
+  "figure_id": "fig_0139",
+  "image_path": "out/dac5578/figures/fig_0139.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the power supply of an electronic device, with the x-axis representing time and the y-axis representing power. The graph shows a steady increase in power over time, indicating that the device is functioning properly. The graph also includes a legend that explains the units used for measuring power, such as milliampere-hours (mAh) or amperes (A).",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Power Supply Current vs Digital Input Code (AVDD=2.7V, Vref=2.5V)",
+    "summary": "Power current versus code at low supply voltage, flattening near high codes.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-4096)",
+      "y_axis": "Power Supply Current (mA), axis 0.0 to 1.30",
+      "series": [],
+      "csv": "digital_input_code,current_ma\\n0,0.61\\n64,0.76\\n256,0.80\\n1024,0.84\\n2048,0.85\\n3072,0.86\\n4096,0.84"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "avdd": "2.7V",
+      "external_reference": "2.5V",
+      "condition": "code loaded to all eight DAC channels"
+    },
+    "confidence": 0.92
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:39:37.187500+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

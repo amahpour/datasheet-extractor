@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0101",
+  "image_path": "out/dac5578/figures/fig_0101.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the relationship between digital input code (DAC) and linear error. The graph shows that DAC channels are shown as eight channels, with each channel having an external reference of 2.5V. The x-axis represents DAC channels, while the y-axis represents linear error in dB. The graph is color-coded to indicate different DAC channels, with each channel being assigned a unique color.\n\nThe graph also includes a legend that explains the relationship between DAC channels and linear error. The legend indicates that each channel has an external reference of 2.5V, which corresponds to a linear error of 2.5 dB.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "INL vs Digital Input Code (DAC6578, 10-bit, -40C, 2.5V ref)",
+    "summary": "INL for DAC6578 channels at -40C with external reference 2.5V.",
+    "structured_data": {
+      "x_axis": "Digital Input Code (0-1024)",
+      "y_axis": "INL Error (LSB), axis -0.5 to +0.5",
+      "series": [],
+      "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.05,0.05\\n512,-0.05,0.06\\n1024,-0.05,0.05"
+    },
+    "component_references": [
+      "DAC6578"
+    ],
+    "key_values": {
+      "external_reference": "2.5V",
+      "temperature": "-40C"
+    },
+    "confidence": 0.85
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:37:28.592040+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

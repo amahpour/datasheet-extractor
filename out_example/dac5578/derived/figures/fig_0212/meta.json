@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0212",
+    "page": 58,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0212.png",
+    "classification": {
+      "type": "screenshot",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a detailed technical drawing of a soldering mask, which is a crucial tool in the field of electronics. The drawing includes various components and labels that provide information about the mask's features and functions. It also contains measurements for different parts of the soldering mask, such as its length, width, height, and depth. The image is color-coded to indicate specific details or functions related to each component.",
+        "confidence": 0.7,
+        "notes": "local_llm (screenshot)"
+      }
+    }
+  }
+}

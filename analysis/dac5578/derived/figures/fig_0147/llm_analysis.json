@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Clock Feedthrough Impulse (~0.5 nV-s, 2.5V ref)",
+  "summary": "Oscilloscope screenshot showing VOUT feedthrough correlated with SCL transitions.",
+  "structured_data": {
+    "description": "Text indicates clock feedthrough impulse ~0.5 nV-s at external reference 2.5V. Scales: VOUT 5 mV/div, SCL 5 V/div, time 1 us/div."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "clock_feedthrough_impulse": "~0.5 nV-s",
+    "external_reference": "2.5V",
+    "time_scale": "1 us/div"
+  },
+  "confidence": 0.91
+}

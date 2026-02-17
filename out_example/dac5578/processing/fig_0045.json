@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0045",
+  "image_path": "out/dac5578/figures/fig_0045.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with two lines, one representing the external reference and the other indicating the current temperature of a power supply. The graph is set against a black background, making it easy to read and understand. The x-axis displays the reference value in millivolts (mV), while the y-axis represents the current temperature in degrees Celsius (°C). The lines on the graph show that there's a significant difference between the external reference and the actual temperature of the power supply, with the reference being higher than the current temperature.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Power Supply Current vs Temperature",
+    "summary": "Power supply current increases approximately linearly with temperature for external reference 5V.",
+    "structured_data": {
+      "x_axis": "Temperature (C), -40 to 125",
+      "y_axis": "Power Supply Current (mA), axis 0.8 to 1.4",
+      "series": [],
+      "csv": "temperature_c,current_ma\\n-40,0.92\\n-25,0.95\\n0,0.99\\n25,1.01\\n50,1.04\\n75,1.08\\n100,1.11\\n125,1.15"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "5V"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:34:15.842308+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

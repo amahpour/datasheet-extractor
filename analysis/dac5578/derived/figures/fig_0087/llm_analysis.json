@@ -1,0 +1,19 @@
+{
+  "classification": "screenshot",
+  "title": "DAC Output Noise (0.1Hz to 10Hz)",
+  "summary": "Time-domain low-frequency output noise capture, annotated approximately 3 uVpp.",
+  "structured_data": {
+    "description": "Oscilloscope/graticule style image with VOUT channel at 1 uV/div and time scale 2 s/div over 0.1 Hz to 10 Hz band."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "band": "0.1 Hz to 10 Hz",
+    "amplitude": "~3 uVpp",
+    "vout_scale": "1 uV/div",
+    "time_scale": "2 s/div"
+  },
+  "confidence": 0.9
+}

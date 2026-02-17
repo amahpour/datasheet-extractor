@@ -1,0 +1,2 @@
+MSB.Byte,···.Byte,LSB.Byte,Address (A),MSB.Address (A),··· Command/Access.Address (A),LSB Byte.Address (A),ACK,MSB.MSDB,···.MSDB,LSB.MSDB,ACK,MSB.LSDB,···.LSDB,LSB.LSDB,ACK.
+DB[32:24],DB[32:24],DB[32:24],,DB[23:16],DB[23:16],DB[23:16],,DB[15:8],DB[15:8],DB[15:8],,DB[7:0],DB[7:0],DB[7:0],

@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0054",
+  "image_path": "out/dac5578/figures/fig_0054.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the relationship between voltage and current in a circuit, with the x-axis representing voltage and the y-axis representing current. The graph shows a downward trend, indicating that as the voltage increases, the current decreases. There is also a line of best fit on the graph, which suggests an equation to describe this relationship. The text \"Source Current at Positive Rail\" is present in the image, but its relevance to the graph's content cannot be determined without additional context or information about the circuit being depicted.\n\nThe graph is labeled with numbers and units for both voltage and current, providing a clear representation of the data points. The source current (SRC) is represented by the equation \"Voltage (V) = Current (I)\", which can be used to calculate the source current in the circuit based on the given values of voltage and resistance.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Source Current at Positive Rail (Channel H, FFFh)",
+    "summary": "Channel H positive-rail source-current compliance curve.",
+    "structured_data": {
+      "x_axis": "Source Current (mA), 0 to 10",
+      "y_axis": "Output Voltage (V), axis 4.8 to 5.0",
+      "series": [],
+      "csv": "source_current_ma,output_voltage_v\\n0,5.00\\n2,4.99\\n4,4.98\\n6,4.975\\n8,4.967\\n10,4.96"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "channel": "H",
+      "code": "FFFh"
+    },
+    "confidence": 0.94
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:34:48.441764+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

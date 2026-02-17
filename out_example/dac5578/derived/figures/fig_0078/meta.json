@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0078",
+    "page": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "Figure 53.",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0078.png",
+    "classification": {
+      "type": "timing_diagram",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a black and white diagram of an electronic device, with the x-axis labeled \"Time (s)\" and the y-axis labeled \"Voltage (V)\". The device is shown as a clock that feeds data through it at a rate of 5 mV/s. A trigger pulse is also present in the image, located on the left side of the device.",
+        "confidence": 0.3,
+        "notes": "local_llm (timing_diagram)"
+      }
+    }
+  }
+}

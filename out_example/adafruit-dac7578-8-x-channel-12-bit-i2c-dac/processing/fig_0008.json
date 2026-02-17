@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0008",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0008.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed electronic datasheet, divided into four sections with purple text and numbers. The first section is titled \"ADDR\" in black text at the top left corner, followed by \"0x48\" on the left side of the page. The third section is labeled \"GND\" in black text at the bottom right corner. The fourth section is titled \"VCC\" in black text at the bottom center and reads \"floating point\".",
+  "local_llm_classification": "screenshot",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:29:51.720916+00:00"
+}

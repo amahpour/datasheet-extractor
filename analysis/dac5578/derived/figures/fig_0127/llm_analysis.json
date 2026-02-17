@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "Power-Down Current vs Temperature (AVDD=2.7V, Vref=2.5V)",
+  "summary": "Power-down current in microamps vs temperature, increasing strongly above ~95C.",
+  "structured_data": {
+    "x_axis": "Temperature (C), -40 to 125",
+    "y_axis": "Power Supply Current (uA), axis 0.0 to 4.7",
+    "series": [],
+    "csv": "temperature_c,current_ua\\n-40,0.12\\n0,0.12\\n25,0.12\\n50,0.15\\n65,0.16\\n80,0.20\\n95,0.30\\n110,0.45\\n125,0.75"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "avdd": "2.7V",
+    "external_reference": "2.5V"
+  },
+  "confidence": 0.91
+}

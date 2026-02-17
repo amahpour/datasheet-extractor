@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0014",
+    "page": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0014.png",
+    "classification": {
+      "type": "schematic",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image shows a black and white electronic circuit diagram with two distinct waves, one yellow and one blue, displayed on the screen. The wave on the left is slightly higher than the wave on the right, creating a sense of depth in the image. The circuit appears to be measuring or displaying an electrical signal, possibly related to audio equipment such as a speaker or microphone.",
+        "confidence": 0.3,
+        "notes": "local_llm (schematic)"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0132",
+    "page": 23,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0132.png",
+    "classification": {
+      "type": "plot",
+      "confidence": 0.3,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image presents a graph that displays the relationship between the input voltage and current of a DC load, as well as the external reference value (2.5V). The x-axis of the graph represents the input voltage in volts, while the y-axis represents the current flowing through the load in amperes.\n\nThe graph shows an upward trend from left to right, indicating that increasing the input voltage results in a corresponding increase in the current flowing through the DC load. This relationship is depicted by a line on the graph, which slopes upwards from left to right. The external reference value (2.5V) is also shown at the top of the graph, representing the maximum allowed current for the DC load.",
+        "confidence": 0.3,
+        "notes": "local_llm (plot)"
+      }
+    }
+  }
+}

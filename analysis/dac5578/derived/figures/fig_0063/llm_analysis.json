@@ -1,0 +1,18 @@
+{
+  "classification": "plot",
+  "title": "Supply Current Histogram",
+  "summary": "Histogram of population versus supply current with peak around ~1.02 to 1.05 mA.",
+  "structured_data": {
+    "x_axis": "Supply Current (mA), 0.90 to 1.15",
+    "y_axis": "% of Population, axis 0 to 14",
+    "series": [],
+    "csv": "supply_current_ma,percent_population\\n0.94,1.5\\n0.97,3.8\\n1.00,6.4\\n1.02,9.5\\n1.03,11.7\\n1.05,8.6\\n1.08,6.0\\n1.10,3.0\\n1.12,1.0"
+  },
+  "component_references": [
+    "DACx578"
+  ],
+  "key_values": {
+    "external_reference": "5V"
+  },
+  "confidence": 0.86
+}

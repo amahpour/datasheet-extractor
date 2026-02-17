@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0014",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0014.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image shows a black and white electronic circuit diagram with two distinct waves, one yellow and one blue, displayed on the screen. The wave on the left is slightly higher than the wave on the right, creating a sense of depth in the image. The circuit appears to be measuring or displaying an electrical signal, possibly related to audio equipment such as a speaker or microphone.",
+  "local_llm_classification": "schematic",
+  "external_llm_result": {
+    "classification": "screenshot",
+    "title": "Oscilloscope Capture of DAC Output and Modulation",
+    "summary": "A Rigol oscilloscope screenshot showing two traces: a lower-frequency yellow waveform and a higher-frequency cyan waveform. On-screen measurements indicate approximately 1.00 Hz and 3.01 Hz frequencies.",
+    "structured_data": {
+      "description": "Rigol UI screenshot with CH1 (yellow) and CH2 (cyan). Timebase appears 200 ms/div. Measurement panel shows CH1 around 1.00 Hz and CH2 around 3.01 Hz, with CH1 around 500 mV/div and CH2 around 112 mV/div displayed at the bottom."
+    },
+    "component_references": [
+      "Rigol oscilloscope"
+    ],
+    "key_values": {
+      "timebase": "200 ms/div",
+      "ch1_frequency": "~1.00 Hz",
+      "ch2_frequency": "~3.01 Hz",
+      "ch1_scale": "500 mV/div",
+      "ch2_scale": "112 mV/div"
+    },
+    "confidence": 0.9
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:30:10.913298+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:47:29Z"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "classification": "plot",
+  "title": "INL vs Digital Input Code (DAC5578, 8-bit, -40C, 2.5V ref)",
+  "summary": "INL for DAC5578 channels at -40C with external reference 2.5V.",
+  "structured_data": {
+    "x_axis": "Digital Input Code (0-256)",
+    "y_axis": "INL Error (LSB), axis -0.25 to +0.25",
+    "series": [],
+    "csv": "digital_input_code,all_channels_min_lsb,all_channels_max_lsb\\n0,-0.01,0.01\\n128,-0.01,0.01\\n256,-0.01,0.01"
+  },
+  "component_references": [
+    "DAC5578"
+  ],
+  "key_values": {
+    "external_reference": "2.5V",
+    "temperature": "-40C"
+  },
+  "confidence": 0.9
+}

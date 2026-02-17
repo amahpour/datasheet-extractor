@@ -1,0 +1,34 @@
+{
+  "figure_id": "fig_0088",
+  "image_path": "out/dac5578/figures/fig_0088.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph that displays the relationship between power supply current and digital input code for an electronic device, likely a computer or a similar gadget. The x-axis of the graph represents the power supply current in milliampere-hours (mW), while the y-axis shows the corresponding digital input code in bits per second (bps). The graph is colored red to indicate the change in the two variables over time, with a line connecting the data points.\n\nThe graph also includes text that provides information about the relationship between power supply current and digital input code for an electronic device. It states that the power supply current is directly proportional to the digital input code, which means that as the power supply current increases, so does the digital input code. The text further explains that the external reference is used to load the code onto all eight channels of a DAC (Digital Amplification Circuit), and it also mentions that the figure 58 represents the digital input code for an electronic device.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "IDD Histogram (AVDD=3.6V, Vref=3.3V)",
+    "summary": "Histogram of supply current distribution centered around approximately 0.86 to 0.89 mA.",
+    "structured_data": {
+      "x_axis": "IDD Supply Current (mA), ~0.765 to 0.975",
+      "y_axis": "% of Population, axis 0 to 14",
+      "series": [],
+      "csv": "idd_ma,percent_population\\n0.79,2.7\\n0.82,3.2\\n0.85,6.0\\n0.86,10.3\\n0.87,12.2\\n0.88,12.5\\n0.89,9.8\\n0.90,9.5\\n0.91,8.2\\n0.92,6.3\\n0.93,2.9\\n0.94,2.2"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "avdd": "3.6V",
+      "external_reference": "3.3V"
+    },
+    "confidence": 0.88
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:36:43.486161+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

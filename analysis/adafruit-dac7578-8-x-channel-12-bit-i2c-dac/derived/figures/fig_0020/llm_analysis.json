@@ -1,0 +1,17 @@
+{
+  "classification": "screenshot",
+  "title": "Oscilloscope Screenshot with Low-Frequency Sine and Ripple",
+  "summary": "Rigol oscilloscope screenshot with yellow and cyan traces, where the cyan trace is higher frequency ripple and the yellow trace is lower-frequency waveform. Measurements show CH1 near 1.00 Hz and CH2 near 4.17 Hz.",
+  "structured_data": {
+    "description": "Rigol interface in RUN mode. Timebase shows 500 ms/div. Bottom readout shows both channels at 2.50 V/div. Frequency measurements displayed are approximately CH1 1.00 Hz and CH2 4.17 Hz."
+  },
+  "component_references": ["Rigol oscilloscope"],
+  "key_values": {
+    "timebase": "500 ms/div",
+    "ch1_frequency": "~1.00 Hz",
+    "ch2_frequency": "~4.17 Hz",
+    "ch1_scale": "2.50 V/div",
+    "ch2_scale": "2.50 V/div"
+  },
+  "confidence": 0.91
+}

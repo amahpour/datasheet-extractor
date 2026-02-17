@@ -1,0 +1,18 @@
+{
+  "classification": "screenshot",
+  "title": "Power-On Glitch Reset-to-Mid-Scale",
+  "summary": "Scope screenshot of AVDD ramp and corresponding VOUT response during reset-to-mid-scale behavior.",
+  "structured_data": {
+    "description": "Two traces: VOUT at 2 V/div and AVDD at 2 V/div with time scale 20 ms/div; note says DAC unloaded, DAC at zero scale."
+  },
+  "component_references": [
+    "oscilloscope",
+    "DACx578"
+  ],
+  "key_values": {
+    "time_scale": "20 ms/div",
+    "vout_scale": "2 V/div",
+    "avdd_scale": "2 V/div"
+  },
+  "confidence": 0.9
+}

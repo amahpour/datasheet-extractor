@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0141",
+  "image_path": "out/dac5578/figures/fig_0141.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a black and white diagram of a sensor's output, which is displayed in millivolts (mV). The diagram shows the sensor's output at different time intervals, ranging from 0 to 5 seconds. There are three peaks on the graph, each representing a specific time point during the measurement process. The text \"From Code 400h to Cs = 2.5 V\" is also present in the image, indicating that the sensor was used for measuring an external reference voltage of 2.5V over a period of 4 hours.",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Power Supply Current Histogram (2.5V ref)",
+    "summary": "Histogram of supply current population with peak around 0.80 to 0.82 mA.",
+    "structured_data": {
+      "x_axis": "Supply Current (mA), 0.70 to 0.90",
+      "y_axis": "% of Population, axis 0 to 18",
+      "series": [],
+      "csv": "supply_current_ma,percent_population\\n0.73,3.8\\n0.76,5.0\\n0.78,10.3\\n0.80,14.6\\n0.81,15.3\\n0.82,8.8\\n0.83,10.3\\n0.84,6.5\\n0.86,2.2"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "2.5V"
+    },
+    "confidence": 0.88
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:39:45.165292+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

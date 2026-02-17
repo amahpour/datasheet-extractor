@@ -1,0 +1,12 @@
+{
+  "figure_id": "fig_0164",
+  "image_path": "out/dac5578/figures/fig_0164.png",
+  "status": "resolved_local",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a detailed diagram of a digital circuit, specifically focusing on the input and output components. The circuit is divided into three distinct sections, each representing a different component or function within the system. The diagram includes labels for the inputs and outputs, as well as arrows indicating the direction of data flow between these components.",
+  "local_llm_classification": "icon",
+  "external_llm_result": null,
+  "needs_external": false,
+  "confidence": 0.7,
+  "processed_at": "2026-02-17T04:41:03.848159+00:00"
+}

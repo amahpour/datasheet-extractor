@@ -1,0 +1,27 @@
+{
+  "figure": {
+    "id": "fig_0193",
+    "page": 49,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "caption": "",
+    "tags": [],
+    "image_path": "out/dac5578/figures/fig_0193.png",
+    "classification": {
+      "type": "logo",
+      "confidence": 0.7,
+      "rationale": "local_llm classification"
+    },
+    "derived": {
+      "description": {
+        "text": "The image features the logo of Texas Instruments (TI), a company that specializes in electronic products and technology. The logo is displayed on a gray background, with the word \"Texas\" written in bold red letters at the top and the phrase \"TI\" written below it in smaller black text.",
+        "confidence": 0.7,
+        "notes": "local_llm (logo)"
+      }
+    }
+  }
+}

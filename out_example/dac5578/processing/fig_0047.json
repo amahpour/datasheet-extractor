@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig_0047",
+  "image_path": "out/dac5578/figures/fig_0047.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a graph with the x-axis labeled \"External Reference\" and the y-axis labeled \"Voltage\". The graph displays five different voltage values, each represented by a line on the graph. The first line is at 0.05, the second line is at 0.15, the third line is at 0.25, the fourth line is at 0.35, and the fifth line is at 0.42. The y-axis also shows temperature in degrees Celsius (°C).",
+  "local_llm_classification": "plot",
+  "external_llm_result": {
+    "classification": "plot",
+    "title": "Gain Error vs Temperature",
+    "summary": "Gain error (%FSR) for channels A-H versus temperature with slight negative drift.",
+    "structured_data": {
+      "x_axis": "Temperature (C), -40 to 125",
+      "y_axis": "Gain Error (%FSR), axis -0.15 to +0.15",
+      "series": [],
+      "csv": "temperature_c,ch_a,ch_b,ch_c,ch_d,ch_e,ch_f,ch_g,ch_h\\n-40,-0.005,-0.004,-0.006,-0.004,-0.003,-0.004,-0.005,-0.004\\n25,-0.006,-0.005,-0.007,-0.005,-0.004,-0.005,-0.006,-0.005\\n125,-0.010,-0.009,-0.011,-0.009,-0.008,-0.009,-0.010,-0.009"
+    },
+    "component_references": [
+      "DACx578"
+    ],
+    "key_values": {
+      "external_reference": "5V"
+    },
+    "confidence": 0.8
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:34:23.547186+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:46:14Z"
+  }
+}

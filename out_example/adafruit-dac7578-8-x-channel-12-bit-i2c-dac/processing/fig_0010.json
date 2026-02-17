@@ -1,0 +1,56 @@
+{
+  "figure_id": "fig_0010",
+  "image_path": "out/adafruit-dac7578-8-x-channel-12-bit-i2c-dac/figures/fig_0010.png",
+  "status": "resolved_external",
+  "stage": "local_llm",
+  "local_llm_description": "The image presents a circuit board with two electronic components, one black and one yellow, connected by wires. The black component is positioned on the left side of the board, while the yellow component is located on the right side. Both components are attached to a wire that extends from the top center of the board towards the bottom edge. A note or label can be seen in the background, possibly providing information about the circuit board's functionality and design.",
+  "local_llm_classification": "block_diagram",
+  "external_llm_result": {
+    "classification": "wiring_diagram",
+    "title": "Feather and DAC7578 on Breadboard",
+    "summary": "Breadboard wiring diagram showing an Adafruit Feather connected to a DAC7578 breakout. Power, ground, and I2C lines are routed through the breadboard area.",
+    "structured_data": {
+      "connections": [
+        {
+          "from": "Feather.3V",
+          "to": "DAC7578.VCC",
+          "wire_color": "red"
+        },
+        {
+          "from": "Feather.GND",
+          "to": "DAC7578.GND",
+          "wire_color": "black"
+        },
+        {
+          "from": "Feather.SDA",
+          "to": "DAC7578.SDA",
+          "wire_color": "blue"
+        },
+        {
+          "from": "Feather.SCL",
+          "to": "DAC7578.SCL",
+          "wire_color": "yellow"
+        },
+        {
+          "from": "DAC7578.output_node",
+          "to": "DAC Signal Output",
+          "wire_color": "magenta/black"
+        }
+      ]
+    },
+    "component_references": [
+      "DAC7578",
+      "Adafruit Feather",
+      "breadboard"
+    ],
+    "key_values": {},
+    "confidence": 0.84
+  },
+  "needs_external": false,
+  "confidence": 0.3,
+  "processed_at": "2026-02-17T04:29:58.497767+00:00",
+  "external_llm_meta": {
+    "model": "gpt-5-codex",
+    "processed_at_utc": "2026-02-17T04:47:29Z"
+  }
+}
