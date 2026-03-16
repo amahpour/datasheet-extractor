@@ -262,7 +262,7 @@ def process_pdf(
                 "local_llm_provider": "docling",
                 "local_llm_model": "do_chart_extraction",
                 "local_llm_description": desc,
-                "local_llm_classification": figure.docling_classification or "plot",
+                "local_llm_classification": figure.classification.type,
                 "external_llm_provider": "",
                 "external_llm_model": "",
                 "external_llm_result": None,
