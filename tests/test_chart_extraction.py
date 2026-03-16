@@ -47,7 +47,7 @@ startxref
 def _fake_extract(figures_dir: Path, chart_data: list[list[str]] | None, docling_cls: str):
     """Return a fake extract_document function for the given figure config."""
 
-    def fake_extract_document(_pdf_path, out_dir=None, max_tokens=256):
+    def fake_extract_document(_pdf_path, out_dir=None, max_tokens=256, vlm_model=None):
         fdir = out_dir / "figures"
         fdir.mkdir(parents=True, exist_ok=True)
         Image.new("RGB", (60, 60), color="white").save(fdir / "fig_0001.png")
@@ -64,6 +64,7 @@ def _fake_extract(figures_dir: Path, chart_data: list[list[str]] | None, docling
                     "image_path": str(fdir / "fig_0001.png"),
                     "docling_classification": docling_cls,
                     "chart_data": chart_data or [],
+                    "vlm_description": "",
                 }
             ],
         }
@@ -71,7 +72,7 @@ def _fake_extract(figures_dir: Path, chart_data: list[list[str]] | None, docling
     return fake_extract_document
 
 
-def _noop_process_all_figures(figures_dir, processing_dir, ollama_model=None, force=False, figure_ids=None):
+def _noop_process_all_figures(figures_dir, processing_dir, ollama_model=None, force=False, figure_ids=None, pre_descriptions=None):
     """Stand-in that does nothing — real status files are pre-populated by the pipeline."""
     return []
 
@@ -144,7 +145,7 @@ def test_non_chart_figure_unaffected(monkeypatch, tmp_path: Path) -> None:
 
     llm_called = []
 
-    def tracking_process_all(figures_dir, processing_dir, ollama_model=None, force=False, figure_ids=None):
+    def tracking_process_all(figures_dir, processing_dir, ollama_model=None, force=False, figure_ids=None, pre_descriptions=None):
         llm_called.append(True)
         return []
 
