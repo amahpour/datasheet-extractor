@@ -16,7 +16,7 @@ def main() -> int:
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
-    run_pipeline(input_dir=args.input, out_dir=args.out, force=True)
+    run_pipeline(input_dir=args.input, out_dir=args.out, force=True, do_chart_extraction=False)
 
     pdfs = sorted(args.input.glob("*.pdf"))
     if not pdfs:

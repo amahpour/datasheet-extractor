@@ -18,6 +18,7 @@ dependencies = [
 
 [project.scripts]
 datasheet-extract = "cli.ds_extract:main"
+datasheet-enrich = "cli.ds_enrich:main"
 datasheet-smoke-test = "cli.smoke_test:main"
 
 [dependency-groups]

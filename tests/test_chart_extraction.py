@@ -47,7 +47,7 @@ startxref
 def _fake_extract(figures_dir: Path, chart_data: list[list[str]] | None, docling_cls: str):
     """Return a fake extract_document function for the given figure config."""
 
-    def fake_extract_document(_pdf_path, out_dir=None, max_tokens=256, vlm_model=None):
+    def fake_extract_document(_pdf_path, out_dir=None, max_tokens=256, vlm_model=None, do_chart_extraction=False):
         fdir = out_dir / "figures"
         fdir.mkdir(parents=True, exist_ok=True)
         Image.new("RGB", (60, 60), color="white").save(fdir / "fig_0001.png")

@@ -50,7 +50,7 @@ def test_local_llm_classification_is_canonical(monkeypatch, tmp_path: Path) -> N
     out_root = tmp_path / "out"
 
     # Pretend extraction produced one figure with a non-"other" rule label.
-    def fake_extract_document(_pdf_path, out_dir=None, max_tokens=256, vlm_model=None):
+    def fake_extract_document(_pdf_path, out_dir=None, max_tokens=256, vlm_model=None, do_chart_extraction=False):
         assert out_dir is not None
         figures_dir = out_dir / "figures"
         figures_dir.mkdir(parents=True, exist_ok=True)

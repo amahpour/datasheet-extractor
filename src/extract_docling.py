@@ -48,6 +48,7 @@ def _extract_with_docling(
     out_dir: Path | None = None,
     max_tokens: int = DEFAULT_MAX_TOKENS,
     vlm_model: str | None = None,
+    do_chart_extraction: bool = False,
 ) -> dict[str, Any]:
     """Extract text, tables, and figures from a PDF using Docling.
 
@@ -71,15 +72,11 @@ def _extract_with_docling(
     from docling_core.types.doc import PictureItem, TableItem
     from transformers import AutoTokenizer
 
-    # Configure pipeline to generate images and run chart extraction.
-    # do_chart_extraction also auto-enables picture classification so every
-    # PictureItem gets a class label (bar_chart, line_chart, etc.) in addition
-    # to structured tabular data when the chart can be parsed.
     pipeline_options = PdfPipelineOptions()
     pipeline_options.images_scale = IMAGE_RESOLUTION_SCALE
     pipeline_options.generate_page_images = False
     pipeline_options.generate_picture_images = True
-    pipeline_options.do_chart_extraction = True
+    pipeline_options.do_chart_extraction = do_chart_extraction
 
     if vlm_model:
         # Embed VLM descriptions during Docling conversion via Ollama's
@@ -289,6 +286,7 @@ def extract_document(
     out_dir: Path | None = None,
     max_tokens: int = DEFAULT_MAX_TOKENS,
     vlm_model: str | None = None,
+    do_chart_extraction: bool = False,
 ) -> dict[str, Any]:
     """Extract document content using Docling.
 
@@ -297,9 +295,17 @@ def extract_document(
     each picture.  The description is embedded in the returned figure dicts
     under the key ``vlm_description`` and can be used downstream to skip a
     redundant second Ollama call.
+
+    When *do_chart_extraction* is True, Docling loads the IBM Granite VLM
+    (~6 GB) in-process to parse chart data and classify pictures.  This is
+    very slow and memory-hungry; leave disabled when using an Ollama VLM.
     """
     return _extract_with_docling(
-        pdf_path, out_dir=out_dir, max_tokens=max_tokens, vlm_model=vlm_model
+        pdf_path,
+        out_dir=out_dir,
+        max_tokens=max_tokens,
+        vlm_model=vlm_model,
+        do_chart_extraction=do_chart_extraction,
     )
 
 
