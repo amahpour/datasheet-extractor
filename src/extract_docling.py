@@ -56,11 +56,15 @@ def _extract_with_docling(
     from docling_core.types.doc import PictureItem, TableItem
     from transformers import AutoTokenizer
 
-    # Configure pipeline to generate images for pictures (and optionally pages)
+    # Configure pipeline to generate images and run chart extraction.
+    # do_chart_extraction also auto-enables picture classification so every
+    # PictureItem gets a class label (bar_chart, line_chart, etc.) in addition
+    # to structured tabular data when the chart can be parsed.
     pipeline_options = PdfPipelineOptions()
     pipeline_options.images_scale = IMAGE_RESOLUTION_SCALE
     pipeline_options.generate_page_images = False
     pipeline_options.generate_picture_images = True
+    pipeline_options.do_chart_extraction = True
 
     converter = DocumentConverter(
         format_options={
@@ -171,6 +175,40 @@ def _extract_with_docling(
                 elif hasattr(element, "text"):
                     caption = str(element.text) if element.text else ""
 
+                # Extract Docling picture classification (enabled by do_chart_extraction).
+                docling_classification = ""
+                if getattr(element, "meta", None) is not None:
+                    cls_meta = getattr(element.meta, "classification", None)
+                    if cls_meta is not None:
+                        try:
+                            docling_classification = cls_meta.get_main_prediction().class_name
+                        except Exception:
+                            pass
+
+                # Extract tabular chart data when Docling successfully parsed it.
+                chart_data: list[list[str]] = []
+                if getattr(element, "meta", None) is not None:
+                    tabular_chart = getattr(element.meta, "tabular_chart", None)
+                    if tabular_chart is not None:
+                        table_data = getattr(tabular_chart, "chart_data", None)
+                        if table_data is not None:
+                            try:
+                                grid: list[list[str]] = [
+                                    [""] * table_data.num_cols
+                                    for _ in range(table_data.num_rows)
+                                ]
+                                for cell in table_data.table_cells:
+                                    grid[cell.start_row_offset_idx][
+                                        cell.start_col_offset_idx
+                                    ] = cell.text
+                                chart_data = grid
+                            except Exception as exc:
+                                logger.warning(
+                                    "Could not extract chart data for %s: %s",
+                                    fig_id,
+                                    exc,
+                                )
+
                 figures_out.append(
                     {
                         "id": fig_id,
@@ -178,6 +216,8 @@ def _extract_with_docling(
                         "bbox": [0.0, 0.0, 0.0, 0.0],
                         "caption": caption,
                         "image_path": str(image_path),
+                        "docling_classification": docling_classification,
+                        "chart_data": chart_data,
                     }
                 )
 
