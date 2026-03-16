@@ -196,6 +196,51 @@ def _detect_ollama_model() -> str | None:
     return None
 
 
+def detect_ollama_model_for_tier(tier: int) -> str | None:
+    """Pick the best available Ollama vision model for the given tier.
+
+    Tier 1 prefers lightweight models (moondream) for speed.
+    Tier 2 prefers capable models (qwen2.5vl) for richer descriptions.
+    """
+    import ollama
+
+    try:
+        result = ollama.list()
+    except Exception as exc:
+        logger.debug("Could not list ollama models: %s", exc)
+        return None
+
+    if hasattr(result, "models"):
+        model_list = result.models
+    elif isinstance(result, dict):
+        model_list = result.get("models", [])
+    else:
+        model_list = []
+
+    model_names = []
+    for m in model_list:
+        if hasattr(m, "model"):
+            name = m.model
+        elif isinstance(m, dict):
+            name = m.get("name", "") or m.get("model", "")
+        else:
+            name = str(m)
+        model_names.append(name.lower())
+
+    if tier == 1:
+        # Tier 1: prefer small/fast models first
+        preference = ["moondream", "qwen2.5vl", "qwen2.5-vl", "qwen2-vl", "qwen2vl"]
+    else:
+        # Tier 2+: prefer capable models first
+        preference = ["qwen2.5vl", "qwen2.5-vl", "qwen2-vl", "qwen2vl", "moondream"]
+
+    for candidate in preference:
+        for name in model_names:
+            if candidate in name:
+                return name
+    return None
+
+
 def _infer_classification(description: str) -> str:
     """Infer a classification from a free-text description using keywords."""
     text = description.lower()

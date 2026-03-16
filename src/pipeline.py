@@ -94,6 +94,7 @@ def process_pdf(
     max_figures: int | None = None,
     ollama_model: str | None = None,
     max_tokens: int = DEFAULT_MAX_TOKENS,
+    do_chart_extraction: bool = False,
 ) -> dict:
     """Process a single PDF and persist all per-document artifacts."""
     pdf_out = ensure_dir(out_root / pdf_path.stem)
@@ -106,12 +107,14 @@ def process_pdf(
             shutil.rmtree(stale)
 
     # Pass ``out_dir`` so Docling can write figure images directly to disk.
-    # Pass ``vlm_model`` so Docling embeds VLM descriptions during conversion.
+    # Tier 1 (do_chart_extraction=False): no Docling VLM, fast layout+OCR only.
+    # Tier 2 (do_chart_extraction=True): enable Docling VLM descriptions via ollama.
     raw = extract_document(
         pdf_path,
         out_dir=pdf_out if not no_images else None,
         max_tokens=max_tokens,
-        vlm_model=ollama_model,
+        vlm_model=ollama_model if do_chart_extraction else None,
+        do_chart_extraction=do_chart_extraction,
     )
     blocks = to_blocks(raw.get("blocks", []))
     page_filter = parse_page_ranges(pages)
@@ -384,6 +387,7 @@ def run_pipeline(
     max_figures: int | None = None,
     ollama_model: str | None = None,
     max_tokens: int = DEFAULT_MAX_TOKENS,
+    do_chart_extraction: bool = False,
 ) -> dict:
     """Run the extraction pipeline for all matching PDFs in ``input_dir``."""
     ensure_dir(out_dir)
@@ -402,6 +406,7 @@ def run_pipeline(
             max_figures=max_figures,
             ollama_model=ollama_model,
             max_tokens=max_tokens,
+            do_chart_extraction=do_chart_extraction,
         )
         for pdf in pdfs
     ]
