@@ -4,14 +4,23 @@ from __future__ import annotations
 
 import logging
 import shutil
+from datetime import datetime, timezone
 from pathlib import Path
+
+import pandas as pd
 
 from src.export_figures import derive_description
 from src.export_tables import export_table
 from src.extract_docling import DEFAULT_MAX_TOKENS, extract_document, to_blocks
-from src.local_processor import process_all_figures, read_status, write_rollup
+from src.local_processor import (
+    process_all_figures,
+    read_status,
+    write_rollup,
+    write_status,
+)
 from src.report import write_manual_report
 from src.schema import (
+    Classification,
     Derived,
     Description,
     DocStats,
@@ -30,6 +39,49 @@ from src.utils import (
 )
 
 logger = logging.getLogger(__name__)
+
+# Docling picture-classification class names that map to our "plot" type.
+# do_chart_extraction returns names like "bar_chart", "line_chart", etc.
+_DOCLING_CHART_TYPES: frozenset[str] = frozenset(
+    {
+        "bar_chart",
+        "grouped_bar_chart",
+        "stacked_bar_chart",
+        "line_chart",
+        "pie_chart",
+        "scatter_chart",
+        "area_chart",
+        "histogram",
+        "chart",
+    }
+)
+
+
+def _classification_from_docling(docling_cls: str) -> Classification | None:
+    """Map a Docling picture class name to a Classification, or None."""
+    if not docling_cls:
+        return None
+    if docling_cls in _DOCLING_CHART_TYPES:
+        return Classification(
+            type="plot",
+            confidence=0.95,
+            rationale=f"docling classification: {docling_cls}",
+        )
+    # Non-chart picture types reported by Docling's picture classifier.
+    _OTHER_MAP = {
+        "logo": "logo",
+        "icon": "icon",
+        "photograph": "photo",
+        "screenshot": "screenshot",
+    }
+    mapped = _OTHER_MAP.get(docling_cls)
+    if mapped:
+        return Classification(
+            type=mapped,
+            confidence=0.9,
+            rationale=f"docling classification: {docling_cls}",
+        )
+    return None
 
 
 def process_pdf(
@@ -100,6 +152,14 @@ def process_pdf(
             context = " ".join(b.text[:200] for b in blocks if b.page == page)
             classification = classify_figure(caption, context)
 
+            # Prefer Docling's picture classifier over keyword rules when available.
+            docling_cls = fig_data.get("docling_classification", "")
+            docling_classification = _classification_from_docling(docling_cls)
+            if docling_classification is not None:
+                classification = docling_classification
+
+            chart_data: list[list[str]] = fig_data.get("chart_data", [])
+
             figure = Figure(
                 id=fig_id,
                 page=page,
@@ -111,6 +171,8 @@ def process_pdf(
                 derived=Derived(
                     description=Description(text="", confidence=0.0, notes="")
                 ),
+                docling_classification=docling_cls,
+                chart_data=chart_data,
             )
             figure = derive_description(figure)
             figures.append(figure)
@@ -170,6 +232,52 @@ def process_pdf(
     processing_statuses = []
     if not no_images and (pdf_out / "figures").is_dir():
         processing_dir = ensure_dir(pdf_out / "processing")
+
+        # Pre-populate status files for figures that Docling has already
+        # classified AND from which chart data was extracted.  These figures
+        # don't need the local Ollama LLM or an external model.
+        for figure in figures:
+            if not figure.chart_data:
+                continue
+            _now = datetime.now(timezone.utc).isoformat()
+            chart_csv = ""
+            try:
+                chart_csv = pd.DataFrame(figure.chart_data).to_csv(
+                    index=False, header=False
+                )
+            except Exception:
+                chart_csv = "\n".join(",".join(row) for row in figure.chart_data)
+
+            desc = (
+                f"Chart type: {figure.docling_classification or 'chart'}. "
+                f"Extracted data ({len(figure.chart_data)} rows x "
+                f"{len(figure.chart_data[0]) if figure.chart_data else 0} cols):\n"
+                f"{chart_csv.strip()}"
+            )
+            pre_status = {
+                "figure_id": figure.id,
+                "image_path": figure.image_path,
+                "status": "resolved_local",
+                "stage": "docling_chart_extraction",
+                "local_llm_provider": "docling",
+                "local_llm_model": "do_chart_extraction",
+                "local_llm_description": desc,
+                "local_llm_classification": figure.classification.type,
+                "external_llm_provider": "",
+                "external_llm_model": "",
+                "external_llm_result": None,
+                "needs_external": False,
+                "confidence": 0.95,
+                "processed_at": _now,
+            }
+            write_status(processing_dir, pre_status)
+            logger.info(
+                "  %s: pre-populated from Docling chart extraction (type=%s, %d rows)",
+                figure.id,
+                figure.docling_classification,
+                len(figure.chart_data),
+            )
+
         logger.info("Running local figure processing for %s ...", pdf_path.stem)
         # Only process figures that survived the page filter.
         filtered_ids = {f.id for f in figures} if page_filter else None
