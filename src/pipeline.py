@@ -106,10 +106,12 @@ def process_pdf(
             shutil.rmtree(stale)
 
     # Pass ``out_dir`` so Docling can write figure images directly to disk.
+    # Pass ``vlm_model`` so Docling embeds VLM descriptions during conversion.
     raw = extract_document(
         pdf_path,
         out_dir=pdf_out if not no_images else None,
         max_tokens=max_tokens,
+        vlm_model=ollama_model,
     )
     blocks = to_blocks(raw.get("blocks", []))
     page_filter = parse_page_ranges(pages)
@@ -229,6 +231,8 @@ def process_pdf(
         )
 
     # Stage 2.5: local vision LLM pass with per-figure status files.
+    # If Docling's embedded VLM produced descriptions during extraction, pass
+    # them as pre_descriptions so process_all_figures can skip redundant calls.
     processing_statuses = []
     if not no_images and (pdf_out / "figures").is_dir():
         processing_dir = ensure_dir(pdf_out / "processing")
@@ -281,12 +285,25 @@ def process_pdf(
         logger.info("Running local figure processing for %s ...", pdf_path.stem)
         # Only process figures that survived the page filter.
         filtered_ids = {f.id for f in figures} if page_filter else None
+        # Build pre-description map from Docling-embedded VLM output.
+        pre_descriptions: dict[str, str] = {
+            fig_data["id"]: fig_data["vlm_description"]
+            for fig_data in raw.get("figures", [])
+            if fig_data.get("vlm_description")
+        }
+        if pre_descriptions:
+            logger.info(
+                "  Using Docling-embedded VLM descriptions for %d/%d figure(s)",
+                len(pre_descriptions),
+                len(raw.get("figures", [])),
+            )
         processing_statuses = process_all_figures(
             figures_dir=pdf_out / "figures",
             processing_dir=processing_dir,
             ollama_model=ollama_model,
             force=force,
             figure_ids=filtered_ids,
+            pre_descriptions=pre_descriptions or None,
         )
         # Fold local LLM results back into the Figure objects so that
         # document.json, derived files, and the manual report all reflect

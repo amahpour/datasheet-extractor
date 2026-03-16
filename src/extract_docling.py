@@ -13,6 +13,17 @@ logger = logging.getLogger(__name__)
 
 IMAGE_RESOLUTION_SCALE = 2.0
 
+# Ollama OpenAI-compatible endpoint used by PictureDescriptionApiOptions
+OLLAMA_API_URL = "http://localhost:11434/v1/chat/completions"
+
+# Prompt sent to the embedded VLM — specific enough for datasheet images
+VLM_DESCRIBE_PROMPT = (
+    "You are analyzing an image from an electronics component datasheet. "
+    "Describe what this image shows: its type (e.g. block diagram, timing diagram, "
+    "pin diagram, schematic, register map, graph/plot, table, photo, logo), "
+    "key components or labels visible, and what technical information it conveys."
+)
+
 
 def _page_from_provenance(element: object) -> int:
     """Extract the page number from a Docling element's provenance metadata.
@@ -36,6 +47,7 @@ def _extract_with_docling(
     pdf_path: Path,
     out_dir: Path | None = None,
     max_tokens: int = DEFAULT_MAX_TOKENS,
+    vlm_model: str | None = None,
 ) -> dict[str, Any]:
     """Extract text, tables, and figures from a PDF using Docling.
 
@@ -48,7 +60,10 @@ def _extract_with_docling(
     """
     from docling.chunking import HybridChunker
     from docling.datamodel.base_models import InputFormat
-    from docling.datamodel.pipeline_options import PdfPipelineOptions
+    from docling.datamodel.pipeline_options import (
+        PdfPipelineOptions,
+        PictureDescriptionApiOptions,
+    )
     from docling.document_converter import DocumentConverter, PdfFormatOption
     from docling_core.transforms.chunker.tokenizer.huggingface import (
         HuggingFaceTokenizer,
@@ -65,6 +80,20 @@ def _extract_with_docling(
     pipeline_options.generate_page_images = False
     pipeline_options.generate_picture_images = True
     pipeline_options.do_chart_extraction = True
+
+    if vlm_model:
+        # Embed VLM descriptions during Docling conversion via Ollama's
+        # OpenAI-compatible API. This avoids a separate post-processing call
+        # and gives richer descriptions than small models like Moondream.
+        pipeline_options.do_picture_description = True
+        pipeline_options.enable_remote_services = True
+        pipeline_options.picture_description_options = PictureDescriptionApiOptions(
+            url=OLLAMA_API_URL,
+            params={"model": vlm_model, "max_completion_tokens": 300},
+            prompt=VLM_DESCRIBE_PROMPT,
+            timeout=90,
+        )
+        logger.info("Docling VLM enrichment enabled: model=%s", vlm_model)
 
     converter = DocumentConverter(
         format_options={
@@ -209,6 +238,19 @@ def _extract_with_docling(
                                     exc,
                                 )
 
+                # Read Docling-embedded VLM description from annotations.
+                # When do_picture_description=True, Docling stores each
+                # PictureDescriptionData annotation on the element after
+                # conversion. We take the first non-empty one.
+                vlm_description = ""
+                for annotation in getattr(element, "annotations", []):
+                    ann_text = getattr(annotation, "text", None)
+                    if ann_text and str(ann_text).strip():
+                        vlm_description = str(ann_text).strip()
+                        break
+                if vlm_description:
+                    logger.debug("%s: Docling VLM description: %.80s…", fig_id, vlm_description)
+
                 figures_out.append(
                     {
                         "id": fig_id,
@@ -218,6 +260,7 @@ def _extract_with_docling(
                         "image_path": str(image_path),
                         "docling_classification": docling_classification,
                         "chart_data": chart_data,
+                        "vlm_description": vlm_description,
                     }
                 )
 
@@ -245,9 +288,19 @@ def extract_document(
     pdf_path: Path,
     out_dir: Path | None = None,
     max_tokens: int = DEFAULT_MAX_TOKENS,
+    vlm_model: str | None = None,
 ) -> dict[str, Any]:
-    """Extract document content using Docling."""
-    return _extract_with_docling(pdf_path, out_dir=out_dir, max_tokens=max_tokens)
+    """Extract document content using Docling.
+
+    When *vlm_model* is provided, Docling calls the model via Ollama's
+    OpenAI-compatible API during extraction to produce a rich description for
+    each picture.  The description is embedded in the returned figure dicts
+    under the key ``vlm_description`` and can be used downstream to skip a
+    redundant second Ollama call.
+    """
+    return _extract_with_docling(
+        pdf_path, out_dir=out_dir, max_tokens=max_tokens, vlm_model=vlm_model
+    )
 
 
 def to_blocks(raw_blocks: list[dict[str, Any]]) -> list[Block]:
