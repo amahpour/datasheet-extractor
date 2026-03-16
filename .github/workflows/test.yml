@@ -1,6 +1,5 @@
 name: Tests
 # Cache fix: python-version ensures setup-uv cache key matches project Python
-
 on:
   pull_request:
     types: [opened, synchronize, reopened]
