@@ -5,3 +5,6 @@ build/
 __pycache__/
 .pytest_cache/
 notebooks/.local_env.json
+.coverage
+coverage.xml
+.venv/
