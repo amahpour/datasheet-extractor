@@ -10,6 +10,7 @@ from src.export_figures import derive_description
 from src.export_tables import export_table
 from src.extract_docling import DEFAULT_MAX_TOKENS, extract_document, to_blocks
 from src.local_processor import process_all_figures, read_status, write_rollup
+from src.prompt_generator import write_prompt
 from src.report import write_manual_report
 from src.schema import (
     Derived,
@@ -233,6 +234,18 @@ def process_pdf(
             rollup["needs_external"],
             rollup["summary"]["percent_complete"],
         )
+
+        # Generate one-shot prompt for low-confidence figures.
+        analysis_dir = Path("analysis") / pdf_path.stem
+        prompt_template = Path("prompts/figure_analysis.md")
+        prompt_path = write_prompt(
+            processing_dir=processing_dir,
+            analysis_dir=analysis_dir,
+            output_path=pdf_out / "external_analysis_prompt.md",
+            prompt_template_path=prompt_template,
+        )
+        if prompt_path:
+            logger.info("  External analysis prompt: %s", prompt_path)
 
     # Write manual report AFTER LLM processing so classifications and
     # descriptions are up-to-date.  This ensures the report's routing
