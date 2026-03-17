@@ -28,15 +28,8 @@ def build_parser() -> argparse.ArgumentParser:
         default=None,
         help="Maximum number of figures to process (default: no limit)",
     )
-    parser.add_argument(
-        "--ollama-model",
-        default=None,
-        help=(
-            "Ollama vision model used both for Docling's embedded VLM enrichment "
-            "and post-extraction figure classification. "
-            "Recommended: qwen2.5vl:7b (auto-detected if omitted)."
-        ),
-    )
+    parser.add_argument("--ollama-model", default=None,
+                        help="Ollama vision model for local figure processing (auto-detected if omitted)")
     parser.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS,
                         help=f"Max tokens per text block chunk (default: {DEFAULT_MAX_TOKENS})")
     return parser

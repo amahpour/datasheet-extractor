@@ -23,7 +23,6 @@ datasheet-smoke-test = "cli.smoke_test:main"
 [dependency-groups]
 dev = [
     "pytest",
-    "pytest-cov",
     "ipykernel>=7.2.0",
 ]
 

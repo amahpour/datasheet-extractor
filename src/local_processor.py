@@ -187,9 +187,7 @@ def _detect_ollama_model() -> str | None:
             name = str(m)
         model_names.append(name.lower())
 
-    # Prefer capable mainstream models over the older moondream fallback.
-    # qwen2.5vl and qwen2-vl produce significantly better technical descriptions.
-    for candidate in ["qwen2.5vl", "qwen2.5-vl", "qwen2-vl", "qwen2vl", "moondream"]:
+    for candidate in ["moondream"]:
         for name in model_names:
             if candidate in name:
                 return name
@@ -259,16 +257,10 @@ def process_figure(
     processing_dir: Path,
     ollama_model: str | None = None,
     force: bool = False,
-    pre_description: str | None = None,
 ) -> dict:
     """Process a single figure locally and write its status file.
 
     Skips processing if a status file already exists (unless force=True).
-
-    When *pre_description* is provided (e.g. from Docling's embedded VLM),
-    it is used directly and the separate Ollama call is skipped, avoiding
-    redundant model inference.
-
     Returns the status dict.
     """
     # Check for existing status
@@ -314,16 +306,7 @@ def process_figure(
     classification = "other"
     description = ""
 
-    if pre_description and _is_valid_description(pre_description):
-        # Description already produced by Docling's embedded VLM — use it
-        # directly and skip a redundant Ollama call.
-        description = pre_description
-        classification = _infer_classification(description)
-        status["stage"] = "docling_vlm"
-        status["local_llm_classification"] = classification
-        status["local_llm_description"] = description
-        logger.debug("  %s: using Docling-embedded VLM description", figure_id)
-    elif ollama_model:
+    if ollama_model:
         response = _ollama_generate(ollama_model, DESCRIBE_PROMPT, image_path)
         if response and _is_valid_description(response):
             description = response.strip()
@@ -361,18 +344,12 @@ def process_all_figures(
     ollama_model: str | None = None,
     force: bool = False,
     figure_ids: set[str] | None = None,
-    pre_descriptions: dict[str, str] | None = None,
 ) -> list[dict]:
     """Process fig_*.png files, write per-figure status, return all statuses.
 
     When *figure_ids* is provided, only figures whose stem (e.g. ``fig_0001``)
     is in the set are processed.  This allows the caller to honour page filters
     without touching the on-disk figures directory.
-
-    When *pre_descriptions* is provided (mapping figure_id → description text),
-    each figure with a pre-existing description skips the Ollama call entirely.
-    Descriptions come from Docling's embedded VLM when ``vlm_model`` was set
-    during extraction.
     """
     # Auto-detect model if not specified
     if ollama_model is None:
@@ -391,14 +368,12 @@ def process_all_figures(
     for i, fig_path in enumerate(fig_paths, start=1):
         fig_id = fig_path.stem
         logger.info("  [%d/%d] Processing %s ...", i, total, fig_id)
-        pre_desc = (pre_descriptions or {}).get(fig_id)
         status = process_figure(
             fig_id,
             fig_path,
             processing_dir,
             ollama_model=ollama_model,
             force=force,
-            pre_description=pre_desc,
         )
         logger.info(
             "    → status=%s, classification=%s",

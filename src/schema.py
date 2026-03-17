@@ -74,8 +74,6 @@ class Figure(BaseModel):
     image_path: str = ""
     classification: Classification
     derived: Derived
-    docling_classification: str = ""
-    chart_data: list[list[str]] = Field(default_factory=list)
 
 
 class DocStats(BaseModel):
