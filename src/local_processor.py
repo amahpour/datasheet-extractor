@@ -3,11 +3,12 @@
 Every figure gets classified and described by a local vision LLM via Ollama.
 
 The result is written to  out/<pdf>/processing/<fig_id>.json  so that
-stage 2 (external LLM) can skip already-resolved figures.
+downstream prompt generation can identify which figures need external
+LLM analysis.
 
 Status values:
-  - resolved_local   – local processing was sufficient
-  - needs_external   – flagged for a more capable external LLM
+  - resolved_local   – local LLM produced a confident description
+  - needs_external   – local LLM confidence was too low; queued for external
   - resolved_external – external LLM has processed it (set by stage 2)
 """
 
@@ -37,21 +38,9 @@ MIN_DESCRIPTION_LEN = 50
 ROLLUP_DESCRIPTION_MAX = 120
 ROLLUP_DESCRIPTION_DISPLAY_MAX = 80
 
-# Classification keywords that mean "needs external for precision"
-COMPLEX_TYPES = {
-    "plot",
-    "pinout",
-    "schematic",
-    "block_diagram",
-    "timing_diagram",
-    "register_map",
-    "wiring_diagram",
-    "state_machine",
-    "table_image",
-}
-
-# Classification keywords that are simple enough to resolve locally
-SIMPLE_TYPES = {"logo", "icon", "decorative", "photo", "screenshot"}
+# Confidence threshold: figures at or above this are resolved locally;
+# below this they are queued for external LLM analysis.
+CONFIDENCE_THRESHOLD = 0.7
 
 # Minimum ratio of printable characters for a description to be considered valid
 MIN_PRINTABLE_RATIO = 0.6
@@ -231,19 +220,21 @@ def _infer_classification(description: str) -> str:
 # ---------------------------------------------------------------------------
 
 
-def _is_resolved_locally(classification: str, description: str) -> bool:
-    """Decide if local processing is sufficient for this figure."""
-    if classification in SIMPLE_TYPES:
-        return True
+def _compute_confidence(classification: str, description: str) -> float:
+    """Compute a confidence score for the local LLM result.
 
-    if classification in COMPLEX_TYPES:
-        return False
+    Returns a value between 0.0 and 1.0.  A description that is long enough
+    and has a non-"other" classification gets the highest local confidence.
+    """
+    if not description or len(description) < MIN_DESCRIPTION_LEN:
+        return 0.3
 
-    # Unknown classification — if we got a decent description, resolve it
-    if len(description) > MIN_DESCRIPTION_LEN:
-        return True
+    # Got a real description — base confidence on whether the classification
+    # is specific (not "other") and description length.
+    if classification == "other":
+        return 0.5
 
-    return False
+    return 0.7
 
 
 # ---------------------------------------------------------------------------
@@ -323,10 +314,11 @@ def process_figure(
             status["local_llm_description"] = ""
 
     # --- Decide resolved vs needs_external ---
-    resolved = _is_resolved_locally(classification, description)
+    confidence = _compute_confidence(classification, description)
+    resolved = confidence >= CONFIDENCE_THRESHOLD
     status["status"] = "resolved_local" if resolved else "needs_external"
     status["needs_external"] = not resolved
-    status["confidence"] = 0.7 if resolved else 0.3
+    status["confidence"] = confidence
     status["processed_at"] = now
 
     write_status(processing_dir, status)
